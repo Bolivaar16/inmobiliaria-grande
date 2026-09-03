@@ -1,0 +1,7 @@
+# Static site, deploy the folder as-is (no build command).
+[build]
+  publish = "."
+
+# Keep .html extensions so inmuebles.html and the inmuebles/ directory do not collide.
+[build.processing.html]
+  pretty_urls = false
