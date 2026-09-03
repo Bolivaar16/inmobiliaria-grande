@@ -1,0 +1,163 @@
+<!--@page {
+  "title": "Inmobiliaria en Granada desde 1970 | Inmobiliaria Grande",
+  "desc": "Pisos, áticos y casas en venta en Granada y su provincia. Inmobiliaria familiar desde 1970, en Calle Recogidas 13. Valoramos su vivienda en 48 horas.",
+  "nav": "home",
+  "alt": "en/index.html",
+  "og": "assets/photos/30002664/1.jpg",
+  "extraHead": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"RealEstateAgent\",\"name\":\"Inmobiliaria Grande\",\"url\":\"https://www.inmobiliariagrande.com/index.html\",\"image\":\"https://www.inmobiliariagrande.com/assets/brand/icon-512.png\",\"telephone\":\"+34958252461\",\"email\":\"info@inmobiliariagrande.com\",\"foundingDate\":\"1970\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Calle Recogidas 13, 1.º A\",\"addressLocality\":\"Granada\",\"postalCode\":\"18005\",\"addressCountry\":\"ES\"},\"openingHours\":\"Mo-Fr 09:30-20:00\",\"areaServed\":{\"@type\":\"AdministrativeArea\",\"name\":\"Granada\"}}</script>"
+}-->
+<main id="main">
+  <section class="hero">
+    <!-- FOTO A PEDIR AL CLIENTE: fachada del Albaicín o vistas a Sierra Nevada, 2400×1350, JPEG < 250 KB.
+         Sustituir el patrón de fondo por <img class="hero__photo" src="assets/hero.jpg" alt="" width="2400" height="1350" fetchpriority="high"> -->
+    <div class="hero__veil" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="hero__kicker">Granada · Vega · Sierra</p>
+        <h1>La casa que busca lleva aquí toda la vida</h1>
+        <p class="hero__lead">300 propiedades en cartera y cinco décadas conociendo cada calle de la provincia.</p>
+        <!-- [DATO A CONFIRMAR] "300 propiedades": la web actual publica 276 anuncios (2026-09-03). -->
+      </div>
+      <p class="hero__note">[ foto a sangre: fachada Albaicín ]</p>
+    </div>
+    <div class="container searchbar-wrap">
+      <form class="searchbar" method="get" action="inmuebles.html" role="search" aria-label="Buscar inmuebles">
+        <div class="searchbar__field">
+          <label class="searchbar__label" for="s-op">Operación</label>
+          <select id="s-op" name="op">
+            <option value="venta">Comprar</option>
+            <option value="alquiler">Alquilar</option>
+            <option value="traspaso">Traspaso</option>
+          </select>
+        </div>
+        <div class="searchbar__field">
+          <label class="searchbar__label" for="s-zona">Zona</label>
+          <select id="s-zona" name="zona">
+            {{ZONE_OPTIONS}}
+          </select>
+        </div>
+        <div class="searchbar__field">
+          <label class="searchbar__label" for="s-tipo">Tipo</label>
+          <select id="s-tipo" name="tipo">
+            {{TYPE_OPTIONS}}
+          </select>
+        </div>
+        <div class="searchbar__field">
+          <label class="searchbar__label" for="s-pmax">Precio</label>
+          <select id="s-pmax" name="pmax">
+            <option value="">Sin límite</option>
+            <option value="150000">Hasta 150.000 €</option>
+            <option value="200000">Hasta 200.000 €</option>
+            <option value="300000">Hasta 300.000 €</option>
+            <option value="400000">Hasta 400.000 €</option>
+          </select>
+        </div>
+        <button class="btn btn--ink" type="submit">Buscar</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section after-search" id="destacados">
+    <div class="container">
+      <div class="section-head">
+        <h2>Recién incorporadas</h2>
+        <div class="tabs" role="group" aria-label="Filtrar destacados">
+          <button class="pill" type="button" data-home-filter="" aria-pressed="true">Todas</button>
+          <button class="pill" type="button" data-home-filter="venta" aria-pressed="false">Venta</button>
+          <button class="pill" type="button" data-home-filter="alquiler" aria-pressed="false">Alquiler</button>
+        </div>
+      </div>
+      <div id="home-showcase">
+      {{FEATURED_SHOWCASE}}
+      </div>
+      <p class="empty" id="home-empty" hidden>Ahora mismo no tenemos inmuebles de ese tipo publicados. <a href="inmuebles.html#alertas">Déjenos su correo</a> y le avisamos en cuanto entre uno.</p>
+      <p style="margin:32px 0 0;text-align:center;"><a class="link-more" href="inmuebles.html">Ver las {{LISTING_COUNT}} propiedades publicadas</a></p>
+    </div>
+  </section>
+
+  <section class="section--tight" id="la-casa">
+    <div class="container">
+      <div class="family">
+        <div>
+          <p class="eyebrow">La casa</p>
+          <h2>Una inmobiliaria de familia, no una franquicia</h2>
+          <p>Abrimos en Recogidas en 1970 y seguimos en la misma calle. Conocemos el barrio, el precio real de cada portal y a los vecinos que llevan aquí toda la vida.</p>
+        </div>
+        <div class="family__stats">
+          <div class="stat"><span class="stat__num">55</span><span class="stat__label">años en Granada</span></div>
+          <div class="stat"><span class="stat__num">300</span><span class="stat__label">propiedades en cartera</span></div>
+          <div class="stat"><span class="stat__num">3</span><span class="stat__label">generaciones</span></div>
+          <div class="stat"><span class="stat__num">17</span><span class="stat__label">idiomas atendidos</span></div>
+          <!-- [DATO A CONFIRMAR] 300 propiedades, 3 generaciones y 17 idiomas: cifras del mockup, pendientes de confirmar con el cliente. -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="vender">
+    <div class="container sell">
+      <div>
+        <p class="eyebrow">Vender con Grande</p>
+        <h2>Sabemos lo que vale su casa. Se lo decimos en 48 horas.</h2>
+        <p class="lead">Valoración presencial con precios de cierre reales de su zona, reportaje fotográfico y publicación en los principales portales. Sin exclusividad obligatoria.</p>
+        <div class="actions">
+          <a class="btn btn--violet" href="vende-tu-casa.html#valoracion">Pedir valoración gratuita</a>
+          <a class="btn btn--ghost" href="vende-tu-casa.html#como-trabajamos">Ver cómo trabajamos</a>
+        </div>
+      </div>
+      <div class="sell__stats">
+        <div class="stat stat--light"><span class="stat__num">55</span><span class="stat__label">años en Recogidas, 13</span></div>
+        <div class="stat stat--light"><span class="stat__num">300</span><span class="stat__label">propiedades activas</span></div>
+        <div class="stat stat--light"><span class="stat__num">48 h</span><span class="stat__label">para la valoración</span></div>
+        <div class="stat stat--ink"><span class="stat__num">3</span><span class="stat__label">generaciones de la familia</span></div>
+        <!-- [DATO A CONFIRMAR] 48 h y 3 generaciones: compromiso propuesto, validar con el cliente. -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light" id="equipo">
+    <div class="container">
+      <div class="section-head">
+        <h2>Quién le va a atender</h2>
+        <a class="link-more" href="sobre-nosotros.html#equipo">Conocer al equipo</a>
+      </div>
+      <div class="team">
+        <div class="person">
+          <div class="person__photo"><span class="to-confirm">[FOTO A CONFIRMAR]</span></div>
+          <p class="person__name">José Antonio Grande</p>
+          <p class="person__role">Fundador</p>
+        </div>
+        <div class="person">
+          <div class="person__photo"><span class="to-confirm">[FOTO A CONFIRMAR]</span></div>
+          <p class="person__name">José Grande Jr.</p>
+          <p class="person__role">Dirección</p>
+        </div>
+        <div class="person">
+          <div class="person__photo"><span class="to-confirm">[FOTO A CONFIRMAR]</span></div>
+          <p class="person__name">Mónica</p>
+          <p class="person__role">Administración</p>
+        </div>
+        <div class="person">
+          <div class="person__photo"><span class="to-confirm">[FOTO A CONFIRMAR]</span></div>
+          <p class="person__name">Javier Corpas</p>
+          <p class="person__role">Agente · <a href="tel:+34664678249">664 678 249</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-bottom:var(--section);">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>¿Hablamos?</h2>
+          <p>Cuéntenos qué busca o qué quiere vender y le contestamos con nombres, calles y precios, no con formularios automáticos. Lunes a viernes, 9:30–20:00.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn--violet" href="tel:+34958252461">Llamar al 958 25 24 61</a>
+          <a class="btn btn--ghost-light" href="contacto.html#llamada">Nosotros le llamamos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

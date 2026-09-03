@@ -1,3 +1,15 @@
+> **Revisión 2026-09-03 — plan superado en lo visual.** El sitio construido sigue la dirección
+> **1b «Galería»** del canvas de Claude Design (paleta morada `#7B4FD1` sobre `#0F0B1E`/`#231A45`,
+> tarjetas de 8 px, pills, héroe a sangre con buscador flotante) con la **tipografía de 1a**
+> (Playfair Display + Libre Franklin + JetBrains Mono, autoalojadas). Quedan **anuladas** las reglas de
+> este documento sobre color (índigo/rojo del gallo), tipografía (Montserrat/Source Sans/Courgette),
+> radios 4–6 px y la prohibición de pills. El sistema vigente está en `docs/BRAND.md`.
+> Siguen vigentes: los criterios de aceptación de la sección 0 (un `<h1>`, `<title>` únicos, copy por
+> zona, lazy-loading, sin frameworks, viewport sin `user-scalable=no`, legales redactados), las reglas de
+> accesibilidad de la sección 6 y la estrategia de pruebas de la sección 8. La estructura de ficheros
+> de la sección 4 ha cambiado: las páginas se generan desde `src/<lang>/` con `scripts/build.mjs`
+> (ver `README.md`).
+
 # Inmobiliaria Grande — nuevo sitio estático: plan de diseño y construcción
 
 Repo: `/home/alejandro/02_PROYECTOS/inmobiliaria-grande`

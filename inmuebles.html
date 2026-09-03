@@ -3,356 +3,415 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Viviendas en venta | Inmobiliaria Grande, Granada</title>
-<meta name="description" content="Todas nuestras viviendas en venta en Granada capital, Monachil, Pulianas, La Malahá y Cogollos de la Vega. Filtra por tipo, zona, precio y dormitorios.">
+<title>Pisos y casas en venta en Granada | Inmobiliaria Grande, desde 1970</title>
+<meta name="description" content="Todos los inmuebles publicados por Inmobiliaria Grande: pisos, áticos, pareados y casas de campo en Granada capital, Monachil, Pulianas, La Malahá y Cogollos de la Vega. Filtre por zona, tipo y precio.">
 <link rel="canonical" href="https://www.inmobiliariagrande.com/inmuebles.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Source+Sans+3:wght@400;600&family=Courgette&display=swap">
+<link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles.html">
+<link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties.html">
+<link rel="alternate" hreflang="x-default" href="https://www.inmobiliariagrande.com/inmuebles.html">
+<link rel="preload" href="assets/fonts/playfair-display-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/libre-franklin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/styles.css">
 <script defer src="js/main.js"></script>
 <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32">
 <link rel="icon" href="assets/brand/icon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
-<meta name="theme-color" content="#2B2350">
+<link rel="manifest" href="assets/brand/site.webmanifest">
+<meta name="theme-color" content="#0F0B1E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Inmobiliaria Grande">
 <meta property="og:locale" content="es_ES">
-<meta property="og:title" content="Viviendas en venta | Inmobiliaria Grande">
-<meta property="og:description" content="Todas nuestras viviendas en venta en Granada capital, Monachil, Pulianas, La Malahá y Cogollos de la Vega.">
+<meta property="og:title" content="Pisos y casas en venta en Granada | Inmobiliaria Grande, desde 1970">
+<meta property="og:description" content="Todos los inmuebles publicados por Inmobiliaria Grande: pisos, áticos, pareados y casas de campo en Granada capital, Monachil, Pulianas, La Malahá y Cogollos de la Vega. Filtre por zona, tipo y precio.">
 <meta property="og:url" content="https://www.inmobiliariagrande.com/inmuebles.html">
 <meta property="og:image" content="https://www.inmobiliariagrande.com/assets/brand/icon-512.png">
 <meta name="twitter:card" content="summary_large_image">
+
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
-
-<header class="site-header">
+<header class="site-header ">
   <div class="container header__inner">
-    <a class="logo" href="index.html" aria-label="Inmobiliaria Grande, desde 1970">
-      <img src="assets/brand/logo.png" alt="Inmobiliaria Grande, desde 1970" width="220" height="52">
+    <a class="brand" href="index.html">
+      <img class="brand__emblem" src="assets/brand/rosette.png" alt="" width="46" height="46">
+      <span class="brand__text">
+        <span class="brand__name">GRANDE</span>
+        <span class="brand__since">DESDE 1970</span>
+      </span>
     </a>
-    <a class="btn btn--red header__cta" href="vende-tu-casa.html">Vende tu casa</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <span class="visually-hidden" data-nav-label>Abrir menú</span>
+      <span class="visually-hidden" data-nav-label data-open="Abrir menú" data-close="Cerrar menú">Abrir menú</span>
       <span class="nav-toggle__icon" aria-hidden="true"></span>
     </button>
     <nav class="nav" id="site-nav" aria-label="Principal">
       <ul class="nav__list">
         <li><a class="nav__link" href="index.html">Inicio</a></li>
-        <li><a class="nav__link" href="inmuebles.html" aria-current="page">Inmuebles</a></li>
-        <li><a class="nav__link" href="vende-tu-casa.html">Vende tu casa</a></li>
-        <li><a class="nav__link" href="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a class="nav__link" href="inmuebles.html?op=venta" aria-current="page">Comprar</a></li>
+        <li><a class="nav__link" href="inmuebles.html?op=alquiler">Alquilar</a></li>
+        <li><a class="nav__link" href="inmuebles.html?tipo=Local">Locales</a></li>
+        <li><a class="nav__link" href="vende-tu-casa.html">Vender</a></li>
+        <li><a class="nav__link" href="sobre-nosotros.html">La casa</a></li>
         <li><a class="nav__link" href="contacto.html">Contacto</a></li>
       </ul>
+      <div class="lang" aria-label="Idioma">
+        <a class="lang__opt" href="inmuebles.html" aria-current="true" lang="es" hreflang="es">ES</a>
+        <a class="lang__opt" href="en/properties.html" lang="en" hreflang="en">EN</a>
+      </div>
       <a class="nav__phone" href="tel:+34958252461">958 25 24 61</a>
     </nav>
   </div>
 </header>
-
 <main id="main">
-  <div class="container">
-    <nav class="breadcrumb" aria-label="Ruta de navegación">
-      <ol>
-        <li><a href="index.html">Inicio</a></li>
-        <li aria-current="page">Inmuebles</li>
-      </ol>
-    </nav>
-  </div>
-
   <section class="page-head">
-    <div class="container page-head__inner">
-      <h1>Viviendas en venta en Granada y provincia</h1>
-      <p class="lead">Todo lo que tenemos publicado a día de hoy: 8 viviendas entre la capital, la vega y la sierra. Si no ves lo tuyo, dínoslo y lo buscamos.</p>
+    <div class="container">
+      <ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Inmuebles</li></ol>
+      <h1 id="results-title">Inmuebles en Granada y provincia</h1>
+      <p class="lead">Cada ficha tiene fotos reales, superficie, referencia y precio. Guarde los que le gusten y descarte los que no: lo recordamos en este navegador.</p>
     </div>
   </section>
 
-  <form class="filterbar" role="search" aria-label="Filtrar inmuebles">
-    <div class="container">
-      <details class="filterbar__wrap">
-        <summary>Filtrar y ordenar</summary>
-        <div class="filterbar__grid">
-          <div class="field">
-            <label class="field__label" for="f-type">Tipo</label>
-            <select id="f-type" name="type">
-              <option value="">Todos los tipos</option>
-              <option value="Piso">Piso</option>
-              <option value="Ático Dúplex">Ático Dúplex</option>
-              <option value="Pareado">Pareado</option>
-              <option value="Casa de campo">Casa de campo</option>
-            </select>
+  <section class="section--tight" style="padding-top:40px;">
+    <div class="container listing-layout">
+      <details class="filters" id="filters">
+        <summary>Filtros</summary>
+        <form class="filters__body filterbar" method="get" action="inmuebles.html" id="filter-form" aria-label="Filtrar inmuebles">
+          <div class="filters__group">
+            <span class="filters__legend" id="lbl-op">Operación</span>
+            <div class="radio-pills" role="radiogroup" aria-labelledby="lbl-op">
+              <label><input type="radio" name="op" value="venta" checked> Venta</label>
+              <label><input type="radio" name="op" value="alquiler"> Alquiler</label>
+              <label><input type="radio" name="op" value="traspaso"> Traspaso</label>
+            </div>
           </div>
           <div class="field">
-            <label class="field__label" for="f-zone">Zona o municipio</label>
-            <select id="f-zone" name="zone">
-              <option value="">Toda la provincia</option>
-              <option value="Granada capital">Granada capital</option>
-              <option value="Centro">Centro</option>
-              <option value="El Serrallo">El Serrallo</option>
-              <option value="Villarejo">Villarejo</option>
-              <option value="Alcampo">Alcampo</option>
-              <option value="Monachil">Monachil</option>
-              <option value="Pulianas">Pulianas</option>
-              <option value="La Malahá">La Malahá</option>
-              <option value="Cogollos de la Vega">Cogollos de la Vega</option>
-            </select>
+            <label class="field__label" for="f-zona">Zona o municipio</label>
+            <select id="f-zona" name="zona"><option value="">Toda la provincia</option>
+<option value="Granada capital">Granada capital</option>
+<option value="Centro">Centro</option>
+<option value="El Serrallo">El Serrallo</option>
+<option value="Calle Madrid">Calle Madrid</option>
+<option value="Monachil">Monachil</option>
+<option value="Villarejo">Villarejo</option>
+<option value="Pulianillas">Pulianillas</option>
+<option value="Pulianas">Pulianas</option>
+<option value="Sierra de Huétor">Sierra de Huétor</option>
+<option value="Cogollos de la Vega">Cogollos de la Vega</option>
+<option value="La Malahá">La Malahá</option>
+<option value="Alcampo">Alcampo</option></select>
           </div>
           <div class="field">
-            <label class="field__label" for="f-price">Precio máximo</label>
-            <select id="f-price" name="pmax">
-              <option value="">Sin límite</option>
-              <option value="175000">Hasta 175.000 €</option>
-              <option value="250000">Hasta 250.000 €</option>
-              <option value="300000">Hasta 300.000 €</option>
-              <option value="350000">Hasta 350.000 €</option>
-            </select>
+            <label class="field__label" for="f-tipo">Tipo</label>
+            <select id="f-tipo" name="tipo"><option value="">Todos los tipos</option>
+<option value="Ático Dúplex">Ático Dúplex</option>
+<option value="Piso">Piso</option>
+<option value="Pareado">Pareado</option>
+<option value="Casa de campo">Casa de campo</option>
+<option value="Local">Local</option>
+<option value="Garaje">Garaje</option>
+<option value="Terreno">Terreno</option></select>
+          </div>
+          <div class="filters__group">
+            <span class="filters__legend">Precio (€)</span>
+            <div class="range">
+              <label class="visually-hidden" for="f-pmin">Precio mínimo</label>
+              <input type="number" id="f-pmin" name="pmin" inputmode="numeric" min="0" step="1000" placeholder="Mín." style="border:1px solid var(--line);border-radius:4px;padding:10px 12px;">
+              <label class="visually-hidden" for="f-pmax">Precio máximo</label>
+              <input type="number" id="f-pmax" name="pmax" inputmode="numeric" min="0" step="1000" placeholder="Máx." style="border:1px solid var(--line);border-radius:4px;padding:10px 12px;">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field__label" for="f-rooms">Dormitorios</label>
+              <select id="f-rooms" name="rooms">
+                <option value="">Indiferente</option>
+                <option value="1">1 o más</option>
+                <option value="2">2 o más</option>
+                <option value="3">3 o más</option>
+                <option value="4">4 o más</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-baths">Baños</label>
+              <select id="f-baths" name="baths">
+                <option value="">Indiferente</option>
+                <option value="1">1 o más</option>
+                <option value="2">2 o más</option>
+                <option value="3">3 o más</option>
+              </select>
+            </div>
           </div>
           <div class="field">
-            <label class="field__label" for="f-rooms">Dormitorios</label>
-            <select id="f-rooms" name="rooms">
-              <option value="">Todos</option>
-              <option value="1">1 o más</option>
-              <option value="2">2 o más</option>
-              <option value="3">3 o más</option>
-              <option value="4">4 o más</option>
-            </select>
+            <label class="field__label" for="f-m2">Superficie mínima (m²)</label>
+            <input type="number" id="f-m2" name="m2" inputmode="numeric" min="0" step="10" placeholder="Ej. 90">
           </div>
-          <div class="field">
-            <label class="field__label" for="f-sort">Ordenar por</label>
+          <fieldset class="filters__group" style="border:0;padding:0;margin:0;">
+            <legend class="filters__legend">Características</legend>
+            <label class="check"><input type="checkbox" name="f" value="Piscina Propia"> Piscina</label>
+            <label class="check"><input type="checkbox" name="f" value="Garaje Incluido"> Parking</label>
+            <label class="check"><input type="checkbox" name="f" value="Ascensor"> Ascensor</label>
+            <label class="check"><input type="checkbox" name="f" value="Terraza"> Terraza</label>
+            <label class="check"><input type="checkbox" name="f" value="Amueblado"> Amueblado</label>
+            <label class="check"><input type="checkbox" name="f" value="Urbanización"> Urbanización</label>
+          </fieldset>
+          <div class="actions" style="margin-top:4px;">
+            <button class="btn btn--violet btn--sm" type="submit">Aplicar filtros</button>
+            <button class="btn btn--ghost btn--sm" type="reset">Limpiar</button>
+          </div>
+        </form>
+      </details>
+
+      <div>
+        <div class="toolbar">
+          <div class="tabs" role="tablist" aria-label="Listas">
+            <button class="pill" type="button" role="tab" data-tab="all" aria-selected="true">Todas</button>
+            <button class="pill" type="button" role="tab" data-tab="fav" aria-selected="false">Favoritas <span class="pill__count" data-count="fav">0</span></button>
+            <button class="pill" type="button" role="tab" data-tab="viewed" aria-selected="false">Vistas <span class="pill__count" data-count="viewed">0</span></button>
+            <button class="pill" type="button" role="tab" data-tab="dismissed" aria-selected="false">Descartadas <span class="pill__count" data-count="dismissed">0</span></button>
+          </div>
+          <div class="sort">
+            <label for="f-sort">Ordenar</label>
             <select id="f-sort" name="sort">
               <option value="">Más recientes</option>
-              <option value="price-asc">Precio: de menor a mayor</option>
-              <option value="price-desc">Precio: de mayor a menor</option>
+              <option value="price-asc">Precio: menor a mayor</option>
+              <option value="price-desc">Precio: mayor a menor</option>
+              <option value="m2-desc">Superficie: mayor a menor</option>
             </select>
           </div>
-          <button class="btn btn--ghost" type="reset">Limpiar filtros</button>
         </div>
-      </details>
-    </div>
-  </form>
+        <p class="toolbar__count" id="results-count" aria-live="polite">Mostrando 8 de 8 inmuebles</p>
 
-  <div class="container">
-    <p class="results-count" id="results-count" aria-live="polite">Mostrando 8 de 8 viviendas</p>
+        <div class="results" id="results" style="margin-top:18px;">
+        <article class="card" data-id="30002664" data-type="Ático Dúplex" data-zone="Centro" data-city="Granada" data-op="venta" data-price="339900" data-rooms="2" data-baths="1" data-m2="146" data-date="2026-09-03" data-features="Balcón|Aire Acondicionado|Terraza|Ascensor|Armarios Empotrados|Trastero|Puerta Blindada|Exterior|Luminoso|Autobuses|Centros Comerciales|Colegios|Supermercados">
+      <span class="badge">En venta</span>
+      <div class="card__actions">
+        <button class="icon-btn" type="button" data-fav="30002664" aria-pressed="false" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.3 21.6 11.7 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+        <button class="icon-btn icon-btn--dismiss" type="button" data-dismiss="30002664" aria-pressed="false" aria-label="Descartar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <a class="card__link" href="inmuebles/atico-duplex-centro-granada-rafael-original.html">
+        <div class="card__media"><picture><source srcset="assets/photos/30002664/1-s.webp" type="image/webp"><img src="assets/photos/30002664/1-s.jpg" alt="Ático Dúplex en Centro, Granada: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></div>
+        <div class="card__body">
+          <p class="card__place">Centro · Granada</p>
+          <h3 class="card__title">Ático Dúplex en Centro, Granada</h3>
+          <ul class="card__specs"><li>146 m²</li><li>2 dorm.</li><li>1 baño</li></ul>
+          <p class="card__price">339.900 €</p>
+        </div>
+      </a>
+    </article>
+<article class="card" data-id="30020091" data-type="Piso" data-zone="El Serrallo" data-city="Granada" data-op="venta" data-price="275000" data-rooms="3" data-baths="2" data-m2="176" data-date="2026-09-03" data-features="Balcón|Alarma Robo|Garaje Incluido|Patio|Terraza|Ascensor|Armarios Empotrados|Trastero|Puerta Blindada|Amueblado|Lavandería|Luminoso|Hospitales|Autobuses|Centros Comerciales|Colegios|Supermercados">
+      <span class="badge">En venta</span>
+      <div class="card__actions">
+        <button class="icon-btn" type="button" data-fav="30020091" aria-pressed="false" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.3 21.6 11.7 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+        <button class="icon-btn icon-btn--dismiss" type="button" data-dismiss="30020091" aria-pressed="false" aria-label="Descartar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <a class="card__link" href="inmuebles/piso-el-serrallo-granada-fh03130.html">
+        <div class="card__media"><picture><source srcset="assets/photos/30020091/1-s.webp" type="image/webp"><img src="assets/photos/30020091/1-s.jpg" alt="Piso en El Serrallo, Granada: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></div>
+        <div class="card__body">
+          <p class="card__place">El Serrallo · Granada</p>
+          <h3 class="card__title">Piso en El Serrallo, Granada</h3>
+          <ul class="card__specs"><li>176 m²</li><li>3 dorm.</li><li>2 baños</li></ul>
+          <p class="card__price">275.000 €</p>
+        </div>
+      </a>
+    </article>
+<article class="card" data-id="29865262" data-type="Pareado" data-zone="Calle Madrid" data-city="Monachil" data-op="venta" data-price="269000" data-rooms="3" data-baths="2" data-m2="152" data-date="2026-09-03" data-features="Garaje Incluido|Patio|Terraza|Trastero|Exterior|Luminoso|Autobuses|Colegios|Supermercados">
+      <span class="badge">En venta</span>
+      <div class="card__actions">
+        <button class="icon-btn" type="button" data-fav="29865262" aria-pressed="false" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.3 21.6 11.7 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+        <button class="icon-btn icon-btn--dismiss" type="button" data-dismiss="29865262" aria-pressed="false" aria-label="Descartar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <a class="card__link" href="inmuebles/pareado-calle-madrid-monachil-rgc-0093.html">
+        <div class="card__media"><picture><source srcset="assets/photos/29865262/1-s.webp" type="image/webp"><img src="assets/photos/29865262/1-s.jpg" alt="Pareado en Calle Madrid, Monachil: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></div>
+        <div class="card__body">
+          <p class="card__place">Calle Madrid · Monachil</p>
+          <h3 class="card__title">Pareado en Calle Madrid, Monachil</h3>
+          <ul class="card__specs"><li>152 m²</li><li>3 dorm.</li><li>2 baños</li></ul>
+          <p class="card__price">269.000 €</p>
+        </div>
+      </a>
+    </article>
+<article class="card" data-id="29868382" data-type="Piso" data-zone="Villarejo" data-city="Granada" data-op="venta" data-price="294900" data-rooms="3" data-baths="2" data-m2="124" data-date="2026-09-03" data-features="Balcón|Terraza|Ascensor|Armarios Empotrados|Aire Acondicionado|Exterior|Luminoso|Hospitales|Metro|Autobuses|Centros Comerciales|Colegios|Supermercados">
+      <span class="badge">En venta</span>
+      <div class="card__actions">
+        <button class="icon-btn" type="button" data-fav="29868382" aria-pressed="false" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.3 21.6 11.7 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+        <button class="icon-btn icon-btn--dismiss" type="button" data-dismiss="29868382" aria-pressed="false" aria-label="Descartar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <a class="card__link" href="inmuebles/piso-villarejo-granada-rpa-ronda202.html">
+        <div class="card__media"><picture><source srcset="assets/photos/29868382/1-s.webp" type="image/webp"><img src="assets/photos/29868382/1-s.jpg" alt="Piso en Villarejo, Granada: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></div>
+        <div class="card__body">
+          <p class="card__place">Villarejo · Granada</p>
+          <h3 class="card__title">Piso en Villarejo, Granada</h3>
+          <ul class="card__specs"><li>124 m²</li><li>3 dorm.</li><li>2 baños</li></ul>
+          <p class="card__price">294.900 €</p>
+        </div>
+      </a>
+    </article>
+<article class="card" data-id="28722775" data-type="Piso" data-zone="Pulianillas" data-city="Pulianas" data-op="venta" data-price="155000" data-rooms="3" data-baths="2" data-m2="114" data-date="2026-09-03" data-features="Garaje Incluido|Ascensor|Armarios Empotrados|Trastero|Puerta Blindada|Luminoso|Autobuses">
+      <span class="badge">En venta</span>
+      <div class="card__actions">
+        <button class="icon-btn" type="button" data-fav="28722775" aria-pressed="false" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.3 21.6 11.7 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+        <button class="icon-btn icon-btn--dismiss" type="button" data-dismiss="28722775" aria-pressed="false" aria-label="Descartar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <a class="card__link" href="inmuebles/piso-pulianillas-pulianas-gr26-09.html">
+        <div class="card__media"><picture><source srcset="assets/photos/28722775/1-s.webp" type="image/webp"><img src="assets/photos/28722775/1-s.jpg" alt="Piso en Pulianillas, Pulianas: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></div>
+        <div class="card__body">
+          <p class="card__place">Pulianillas · Pulianas</p>
+          <h3 class="card__title">Piso en Pulianillas, Pulianas</h3>
+          <ul class="card__specs"><li>114 m²</li><li>3 dorm.</li><li>2 baños</li></ul>
+          <p class="card__price">155.000 €</p>
+        </div>
+      </a>
+    </article>
+<article class="card" data-id="29965705" data-type="Casa de campo" data-zone="Sierra de Huétor" data-city="Cogollos de la Vega" data-op="venta" data-price="190000" data-rooms="4" data-baths="1" data-m2="88" data-date="2026-09-03" data-features="Piscina Propia|Garaje Incluido|Exterior">
+      <span class="badge">En venta</span>
+      <div class="card__actions">
+        <button class="icon-btn" type="button" data-fav="29965705" aria-pressed="false" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.3 21.6 11.7 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+        <button class="icon-btn icon-btn--dismiss" type="button" data-dismiss="29965705" aria-pressed="false" aria-label="Descartar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <a class="card__link" href="inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html">
+        <div class="card__media"><picture><source srcset="assets/photos/29965705/1-s.webp" type="image/webp"><img src="assets/photos/29965705/1-s.jpg" alt="Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></div>
+        <div class="card__body">
+          <p class="card__place">Sierra de Huétor · Cogollos de la Vega</p>
+          <h3 class="card__title">Casa de campo en Sierra de Huétor, Cogollos de la Vega</h3>
+          <ul class="card__specs"><li>88 m²</li><li>4 dorm.</li><li>1 baño</li></ul>
+          <p class="card__price">190.000 €</p>
+        </div>
+      </a>
+    </article>
+<article class="card" data-id="29864049" data-type="Pareado" data-zone="Centro" data-city="La Malahá" data-op="venta" data-price="164000" data-rooms="4" data-baths="2" data-m2="114" data-date="2026-09-03" data-features="Garaje Incluido|Patio|Terraza|Exterior|Luminoso|Autobuses|Centros Comerciales|Colegios|Supermercados">
+      <span class="badge">En venta</span>
+      <div class="card__actions">
+        <button class="icon-btn" type="button" data-fav="29864049" aria-pressed="false" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.3 21.6 11.7 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+        <button class="icon-btn icon-btn--dismiss" type="button" data-dismiss="29864049" aria-pressed="false" aria-label="Descartar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <a class="card__link" href="inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html">
+        <div class="card__media"><picture><source srcset="assets/photos/29864049/1-s.webp" type="image/webp"><img src="assets/photos/29864049/1-s.jpg" alt="Pareado en Centro, La Malahá: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></div>
+        <div class="card__body">
+          <p class="card__place">Centro · La Malahá</p>
+          <h3 class="card__title">Pareado en Centro, La Malahá</h3>
+          <ul class="card__specs"><li>114 m²</li><li>4 dorm.</li><li>2 baños</li></ul>
+          <p class="card__price">164.000 €</p>
+        </div>
+      </a>
+    </article>
+<article class="card" data-id="29899079" data-type="Piso" data-zone="Alcampo" data-city="Granada" data-op="venta" data-price="169900" data-rooms="4" data-baths="2" data-m2="110" data-date="2026-09-03" data-features="Garaje Incluido|Ascensor|Lavandería|Exterior|Luminoso|Autobuses|Supermercados">
+      <span class="badge badge--reserved">Reservado</span>
+      <div class="card__actions">
+        <button class="icon-btn" type="button" data-fav="29899079" aria-pressed="false" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.3 21.6 11.7 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+        <button class="icon-btn icon-btn--dismiss" type="button" data-dismiss="29899079" aria-pressed="false" aria-label="Descartar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <a class="card__link" href="inmuebles/piso-alcampo-granada-rgc-0091.html">
+        <div class="card__media"><picture><source srcset="assets/photos/29899079/1-s.webp" type="image/webp"><img src="assets/photos/29899079/1-s.jpg" alt="Piso en Alcampo, Granada: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></div>
+        <div class="card__body">
+          <p class="card__place">Alcampo · Granada</p>
+          <h3 class="card__title">Piso en Alcampo, Granada</h3>
+          <ul class="card__specs"><li>110 m²</li><li>4 dorm.</li><li>2 baños</li></ul>
+          <p class="card__price">169.900 €</p>
+        </div>
+      </a>
+    </article>
+        </div>
 
-    <div id="results" class="card-grid">
+        <div class="empty" id="no-results" hidden>
+          <h2 style="font-size:1.4rem;">No hay inmuebles con esos filtros</h2>
+          <p style="color:var(--text-muted);">Ahora mismo no tenemos publicado nada que encaje. Afloje algún filtro o déjenos su correo y le avisamos en cuanto entre uno.</p>
+          <button class="btn btn--ghost btn--sm" type="button" id="clear-filters">Quitar filtros</button>
+        </div>
 
-      <article class="card" data-type="Ático Dúplex" data-zone="Centro" data-city="Granada" data-price="339900" data-rooms="2" data-status="disponible">
-        <a class="card__link" href="inmuebles/atico-duplex-centro-granada-rafael-original.html">
-          <div class="card__media">
-            <img src="assets/photos/30002664/1-s.jpg" alt="Ático Dúplex en Centro, Granada: fotografía 1" width="447" height="300" loading="lazy" decoding="async">
-          </div>
-          <div class="card__body">
-            <p class="card__price">339.900 €</p>
-            <h3 class="card__title">Ático Dúplex en Centro, Granada</h3>
-            <p class="card__place">Centro <span class="sep">◆</span> Granada</p>
-            <ul class="chips">
-              <li class="chip">146 m²</li>
-              <li class="chip">2 dorm.</li>
-              <li class="chip">1 baño</li>
-            </ul>
-          </div>
-        </a>
-      </article>
+        <ol class="pagination" aria-label="Paginación"><li><span aria-current="page">1</span></li></ol>
 
-      <article class="card" data-type="Piso" data-zone="El Serrallo" data-city="Granada" data-price="275000" data-rooms="3" data-status="disponible">
-        <a class="card__link" href="inmuebles/piso-el-serrallo-granada-fh03130.html">
-          <div class="card__media">
-            <img src="assets/photos/30020091/1-s.jpg" alt="Piso en El Serrallo, Granada: fotografía 1" width="447" height="300" loading="lazy" decoding="async">
+        <div class="alert-box" id="alertas">
+          <div>
+            <h2>Avísenme de nuevos inmuebles</h2>
+            <p>Le escribimos cuando entre algo que encaje con lo que busca. Sin boletines ni publicidad.</p>
           </div>
-          <div class="card__body">
-            <p class="card__price">275.000 €</p>
-            <h3 class="card__title">Piso en El Serrallo, Granada</h3>
-            <p class="card__place">El Serrallo <span class="sep">◆</span> Granada</p>
-            <ul class="chips">
-              <li class="chip">176 m²</li>
-              <li class="chip">3 dorm.</li>
-              <li class="chip">2 baños</li>
-            </ul>
-          </div>
-        </a>
-      </article>
-
-      <article class="card" data-type="Pareado" data-zone="Calle Madrid" data-city="Monachil" data-price="269000" data-rooms="3" data-status="disponible">
-        <a class="card__link" href="inmuebles/pareado-calle-madrid-monachil-rgc-0093.html">
-          <div class="card__media">
-            <img src="assets/photos/29865262/1-s.jpg" alt="Pareado en Calle Madrid, Monachil: fotografía 1" width="447" height="300" loading="lazy" decoding="async">
-          </div>
-          <div class="card__body">
-            <p class="card__price">269.000 €</p>
-            <h3 class="card__title">Pareado en Calle Madrid, Monachil</h3>
-            <p class="card__place">Calle Madrid <span class="sep">◆</span> Monachil</p>
-            <ul class="chips">
-              <li class="chip">152 m²</li>
-              <li class="chip">3 dorm.</li>
-              <li class="chip">2 baños</li>
-            </ul>
-          </div>
-        </a>
-      </article>
-
-      <article class="card" data-type="Piso" data-zone="Villarejo" data-city="Granada" data-price="294900" data-rooms="3" data-status="disponible">
-        <a class="card__link" href="inmuebles/piso-villarejo-granada-rpa-ronda202.html">
-          <div class="card__media">
-            <img src="assets/photos/29868382/1-s.jpg" alt="Piso en Villarejo, Granada: fotografía 1" width="447" height="300" loading="lazy" decoding="async">
-          </div>
-          <div class="card__body">
-            <p class="card__price">294.900 €</p>
-            <h3 class="card__title">Piso en Villarejo, Granada</h3>
-            <p class="card__place">Villarejo <span class="sep">◆</span> Granada</p>
-            <ul class="chips">
-              <li class="chip">124 m²</li>
-              <li class="chip">3 dorm.</li>
-              <li class="chip">2 baños</li>
-            </ul>
-          </div>
-        </a>
-      </article>
-
-      <article class="card" data-type="Piso" data-zone="Pulianillas" data-city="Pulianas" data-price="155000" data-rooms="3" data-status="disponible">
-        <a class="card__link" href="inmuebles/piso-pulianillas-pulianas-gr26-09.html">
-          <div class="card__media">
-            <img src="assets/photos/28722775/1-s.jpg" alt="Piso en Pulianillas, Pulianas: fotografía 1" width="447" height="300" loading="lazy" decoding="async">
-          </div>
-          <div class="card__body">
-            <p class="card__price">155.000 €</p>
-            <h3 class="card__title">Piso en Pulianillas, Pulianas</h3>
-            <p class="card__place">Pulianillas <span class="sep">◆</span> Pulianas</p>
-            <ul class="chips">
-              <li class="chip">114 m²</li>
-              <li class="chip">3 dorm.</li>
-              <li class="chip">2 baños</li>
-            </ul>
-          </div>
-        </a>
-      </article>
-
-      <article class="card" data-type="Casa de campo" data-zone="Sierra de Huétor" data-city="Cogollos de la Vega" data-price="190000" data-rooms="4" data-status="disponible">
-        <a class="card__link" href="inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html">
-          <div class="card__media">
-            <img src="assets/photos/29965705/1-s.jpg" alt="Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 1" width="447" height="300" loading="lazy" decoding="async">
-          </div>
-          <div class="card__body">
-            <p class="card__price">190.000 €</p>
-            <h3 class="card__title">Casa de campo en Sierra de Huétor, Cogollos de la Vega</h3>
-            <p class="card__place">Sierra de Huétor <span class="sep">◆</span> Cogollos de la Vega</p>
-            <ul class="chips">
-              <li class="chip">88 m²</li>
-              <li class="chip">4 dorm.</li>
-              <li class="chip">1 baño</li>
-            </ul>
-          </div>
-        </a>
-      </article>
-
-      <article class="card" data-type="Pareado" data-zone="Centro" data-city="La Malahá" data-price="164000" data-rooms="4" data-status="disponible">
-        <a class="card__link" href="inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html">
-          <div class="card__media">
-            <img src="assets/photos/29864049/1-s.jpg" alt="Pareado en Centro, La Malahá: fotografía 1" width="447" height="300" loading="lazy" decoding="async">
-          </div>
-          <div class="card__body">
-            <p class="card__price">164.000 €</p>
-            <h3 class="card__title">Pareado en Centro, La Malahá</h3>
-            <p class="card__place">Centro <span class="sep">◆</span> La Malahá</p>
-            <ul class="chips">
-              <li class="chip">114 m²</li>
-              <li class="chip">4 dorm.</li>
-              <li class="chip">2 baños</li>
-            </ul>
-          </div>
-        </a>
-      </article>
-
-      <article class="card card--reserved" data-type="Piso" data-zone="Alcampo" data-city="Granada" data-price="169900" data-rooms="4" data-status="reservado">
-        <a class="card__link" href="inmuebles/piso-alcampo-granada-rgc-0091.html">
-          <div class="card__media">
-            <span class="badge--reserved">Reservado</span>
-            <img src="assets/photos/29899079/1-s.jpg" alt="Piso en Alcampo, Granada: fotografía 1" width="447" height="300" loading="lazy" decoding="async">
-          </div>
-          <div class="card__body">
-            <p class="card__price">169.900 €</p>
-            <h3 class="card__title">Piso en Alcampo, Granada</h3>
-            <p class="card__place">Alcampo <span class="sep">◆</span> Granada</p>
-            <ul class="chips">
-              <li class="chip">110 m²</li>
-              <li class="chip">4 dorm.</li>
-              <li class="chip">2 baños</li>
-            </ul>
-          </div>
-        </a>
-      </article>
-
-    </div>
-
-    <div id="no-results" class="empty" hidden>
-      <h2>Sin resultados</h2>
-      <p>No hay viviendas con esos criterios. Prueba a subir el precio máximo o a quitar la zona.</p>
-      <a class="btn btn--ghost" href="inmuebles.html">Ver todas</a>
-    </div>
-
-    <noscript>
-      <p class="noscript-note">El filtro necesita JavaScript. Abajo tienes todas las viviendas.</p>
-    </noscript>
-  </div>
-
-  <section class="cta-strip">
-    <div class="container cta-strip__inner">
-      <h2>¿No encuentras lo que buscas?</h2>
-      <p>Tenemos viviendas que aún no están publicadas. Cuéntanos qué necesitas y te avisamos cuando entre algo que encaje.</p>
-      <div class="actions">
-        <a class="btn btn--red" href="vende-tu-casa.html">Vende tu casa</a>
-        <a class="btn btn--ghost" href="contacto.html">Contactar</a>
+          <form method="POST" name="alertas" data-netlify="true" data-netlify-honeypot="bot-field" action="gracias.html">
+            <input type="hidden" name="form-name" value="alertas">
+            <p class="hp"><label>No rellene esto: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <div class="field">
+              <label class="field__label" for="al-email">Correo <span class="req">(obligatorio)</span></label>
+              <input type="email" id="al-email" name="email" autocomplete="email" inputmode="email" required data-error="Necesitamos un correo para avisarle." data-error-invalid="Ese correo no parece correcto." aria-describedby="al-email-error">
+              <p class="field__error" id="al-email-error" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="al-zona">Zona</label>
+              <select id="al-zona" name="zona"><option value="">Toda la provincia</option>
+<option value="Granada capital">Granada capital</option>
+<option value="Centro">Centro</option>
+<option value="El Serrallo">El Serrallo</option>
+<option value="Calle Madrid">Calle Madrid</option>
+<option value="Monachil">Monachil</option>
+<option value="Villarejo">Villarejo</option>
+<option value="Pulianillas">Pulianillas</option>
+<option value="Pulianas">Pulianas</option>
+<option value="Sierra de Huétor">Sierra de Huétor</option>
+<option value="Cogollos de la Vega">Cogollos de la Vega</option>
+<option value="La Malahá">La Malahá</option>
+<option value="Alcampo">Alcampo</option></select>
+            </div>
+            <button class="btn btn--violet" type="submit">Avisarme</button>
+            <div class="consent">
+              <input type="checkbox" id="al-consent" name="consentimiento" required data-error="Marque la casilla para que podamos escribirle." aria-describedby="al-consent-error">
+              <label for="al-consent">Acepto la <a href="privacidad.html" style="color:#fff;text-decoration:underline;">política de privacidad</a>.</label>
+            </div>
+            <p class="field__error" id="al-consent-error" hidden style="grid-column:1/-1;color:#FFB4AE;"></p>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 </main>
-
 <footer class="site-footer">
-  <div class="container site-footer__grid">
-    <div>
-      <span class="logo-chip"><img src="assets/brand/logo.png" alt="Inmobiliaria Grande, desde 1970" width="220" height="52"></span>
-      <p class="since">
-        <svg viewBox="0 0 52 16" aria-hidden="true" focusable="false">
-          <path d="M4 12 C10 10 14 4 20 4 C16 8 14 12 4 12 Z" fill="currentColor"></path>
-          <path d="M48 4 C42 6 38 12 32 12 C36 8 38 4 48 4 Z" fill="currentColor"></path>
-        </svg>
-        Desde 1970
-        <svg viewBox="0 0 52 16" aria-hidden="true" focusable="false">
-          <path d="M4 4 C10 6 14 12 20 12 C16 8 14 4 4 4 Z" fill="currentColor"></path>
-          <path d="M48 12 C42 10 38 4 32 4 C36 8 38 12 48 12 Z" fill="currentColor"></path>
-        </svg>
-      </p>
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img class="brand__emblem" src="assets/brand/rosette.png" alt="" width="44" height="44" loading="lazy">
+          <span class="brand__text">
+            <span class="brand__name">GRANDE</span>
+            <span class="brand__since">DESDE 1970</span>
+          </span>
+        </a>
+        <address style="margin-top:16px;">
+          <p>Recogidas, 13 · 1.º A · 18005 Granada<br>
+          <a href="tel:+34958252461">958 25 24 61</a> · <a href="tel:+34622350918">622 350 918</a><br>
+          <a href="mailto:info@inmobiliariagrande.com">info@inmobiliariagrande.com</a></p>
+          <p style="margin-top:8px;">Lunes a viernes, 9:30–20:00</p>
+        </address>
+      </div>
+      <div>
+        <h2>Propiedades</h2>
+        <ul class="footer-links">
+          <li><a href="inmuebles.html?op=venta">Comprar</a></li>
+          <li><a href="inmuebles.html?op=alquiler">Alquilar</a></li>
+          <li><a href="inmuebles.html?tipo=Local">Locales</a></li>
+          <li><a href="inmuebles.html#alertas">Alertas de nuevos inmuebles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Servicios</h2>
+        <ul class="footer-links">
+          <li><a href="vende-tu-casa.html">Vender</a></li>
+          <li><a href="vende-tu-casa.html#valoracion">Valoración gratuita</a></li>
+          <li><a href="vende-tu-casa.html#publicar">Publicar inmueble</a></li>
+          <li><a href="contacto.html#llamada">Nosotros te llamamos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>La casa</h2>
+        <ul class="footer-links">
+          <li><a href="sobre-nosotros.html#equipo">Equipo</a></li>
+          <li><a href="sobre-nosotros.html#historia">Historia</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="privacidad.html">Privacidad</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h2>Dirección</h2>
-      <address>
-        <p>Inmobiliaria Grande</p>
-        <p>Calle Recogidas 13, 1.º A</p>
-        <p>18005 Granada</p>
-      </address>
+    <div class="footer-bottom">
+      <span>© 2026 Inmobiliaria Grande · Desde 1970</span>
+      <span class="diamonds" aria-hidden="true"><span></span><span></span><span></span></span>
     </div>
-    <div>
-      <h2>Contacto</h2>
-      <address>
-        <p><a href="tel:+34958252461">958 25 24 61 (oficina)</a></p>
-        <p><a href="tel:+34664678249">664 678 249 (Javier Corpas)</a></p>
-        <p><a href="mailto:info@inmobiliariagrande.com">info@inmobiliariagrande.com</a></p>
-      </address>
-    </div>
-    <div>
-      <h2>Enlaces</h2>
-      <ul class="footer-links">
-        <li><a href="inmuebles.html">Inmuebles</a></li>
-        <li><a href="vende-tu-casa.html">Vende tu casa</a></li>
-        <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="aviso-legal.html">Aviso legal</a></li>
-        <li><a href="privacidad.html">Política de privacidad</a></li>
-        <li><a href="cookies.html">Política de cookies</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container"><p>© 2026 Inmobiliaria Grande. Todos los derechos reservados.</p></div>
   </div>
 </footer>
 
@@ -360,15 +419,20 @@
   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.27z"></path></svg>
 </a>
 
-<div class="cookie-banner" role="dialog" aria-modal="false" aria-labelledby="cookie-title" hidden>
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="false" aria-labelledby="cookie-title" hidden>
   <div class="container cookie-banner__inner">
     <div>
       <h2 id="cookie-title">Cookies</h2>
-      <p>Usamos solo cookies propias necesarias para que la web funcione y para recordar esta elección. No hay cookies de publicidad ni de terceros. Puedes leer la <a href="cookies.html">política de cookies</a>.</p>
+      <p>Usamos cookies propias necesarias para que la web funcione y recordar tus favoritos. El mapa de contacto carga Google Maps solo si lo aceptas. Más en la <a href="cookies.html">política de cookies</a>.</p>
+      <div class="cookie-prefs" id="cookie-prefs" hidden>
+        <label><input type="checkbox" checked disabled> Necesarias</label>
+        <label><input type="checkbox" id="cookie-pref-maps"> Mapas (Google Maps)</label>
+      </div>
     </div>
     <div class="actions">
-      <button type="button" class="btn btn--indigo" id="cookie-accept">Aceptar</button>
-      <button type="button" class="btn btn--ghost" id="cookie-essential">Solo las necesarias</button>
+      <button type="button" class="btn btn--ghost-light btn--sm" id="cookie-manage">Gestionar</button>
+      <button type="button" class="btn btn--ink btn--sm" id="cookie-reject">Rechazar</button>
+      <button type="button" class="btn btn--violet btn--sm" id="cookie-accept">Aceptar todas</button>
     </div>
   </div>
 </div>

@@ -1,0 +1,13 @@
+# Netlify edge headers. Static assets are content-addressed by path only (no
+# hashed filenames), so cache for a week and let a redeploy bust the CDN cache
+# rather than caching "immutable" for a year.
+/assets/fonts/*
+  Cache-Control: public, max-age=604800, immutable
+/assets/photos/*
+  Cache-Control: public, max-age=604800
+/assets/brand/*
+  Cache-Control: public, max-age=604800
+/css/*
+  Cache-Control: public, max-age=86400
+/js/*
+  Cache-Control: public, max-age=86400

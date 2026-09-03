@@ -1,43 +1,70 @@
-# Brand system (derived from the 2026 rebranding assets)
+# Brand and visual system (revision 2026-09-03, direction "1b Galería")
 
-Source: two photographs of the printed business card supplied by the client
-(logo face and personal face). The logo only exists as a photo; `assets/brand/logo.png`
-is a white-balanced crop, not a vector. Production needs the original vector file.
+The site follows direction **1b "Galería"** from the Claude Design canvas
+(`Rebranding Inmobiliaria Grande.dc.html`, project `5556b49e-…`) for layout, palette and
+components, combined with the **typography of direction 1a** (serif display). The earlier
+indigo/red system (Montserrat + Source Sans + Courgette, 4–6 px radii, single red accent) is
+superseded; `docs/DESIGN-PLAN.md` keeps the old plan for reference with a note at the top.
 
-## Palette (sampled from the cleaned logo crop with ImageMagick `-colors 10` histogram)
+## Palette (`css/styles.css` `:root`)
 
-| Token            | Hex       | Sampled from                    | Use |
-|------------------|-----------|---------------------------------|-----|
-| `--indigo-900`   | `#2B2350` | wordmark "INMOBILIARIA GRANDE" (#34305C measured, darkened for text contrast) | headings, nav, footer background |
-| `--indigo-700`   | `#34305C` | wordmark, dark tiles of rosette | primary buttons, links |
-| `--violet-600`   | `#593A83` | rosette tiles (#593A83 measured) | secondary accents, laurel motif |
-| `--violet-400`   | `#8F76B8` | light rosette tiles, lightened   | hover states, chips |
-| `--violet-100`   | `#EEE9F5` | tint of violet                   | section backgrounds |
-| `--rooster-red`  | `#C8102E` | rooster comb (#F41023 measured, desaturated for print/AA) | single CTA accent (WhatsApp / "Vende tu casa"), price highlight |
-| `--gold-400`     | `#E8B84A` | rooster beak                     | tiny accent only (icons), never text |
-| `--paper`        | `#FAF8F5` | warm off-white                   | page background |
-| `--ink`          | `#1F1B2E` | near-black with indigo cast      | body text |
-| `--ink-muted`    | `#5C5870` |                                  | secondary text (AA on paper) |
-| `--line`         | `#E3DEE9` |                                  | borders, dividers |
+| Token | Hex | Use |
+|---|---|---|
+| `--deep` | `#0F0B1E` | header, footer, page heads, hero veil |
+| `--ink` | `#231A45` | headings, body text, primary dark button, active pills |
+| `--ink-2` / `--ink-3` | `#241C4F` / `#2A1F52` | dark bands (family block, CTA band), hero base |
+| `--violet` | `#7B4FD1` | primary accent: phone pill, main CTA buttons, badges, eyebrows |
+| `--violet-hover` | `#6A40BD` | hover of the above |
+| `--violet-soft` | `#8E6BC8` | diamonds ornament, eyebrows on dark |
+| `--lilac` / `--lilac-light` / `--lilac-pale` | `#A99BD0` / `#C6BCE0` / `#DDD6EE` | text on dark, kickers, image placeholders |
+| `--paper` | `#FAF8FC` | page background |
+| `--white` | `#FFFFFF` | cards, panels, search bar |
+| `--text-muted` / `--text-soft` | `#5B5273` / `#8A81A3` | secondary text, labels |
+| `--line` / `--line-soft` | `#DED7EA` / `#EDE9F4` | borders, dividers |
+| `--danger` / `--ok` | `#B3261E` / `#1E7A4D` | form errors / rent badge |
 
-Contrast checked: indigo-900 on paper 12.9:1; ink-muted on paper 6.1:1; white on rooster-red 5.9:1; white on indigo-700 10.3:1.
+The rooster red of the business card is **not** used in the UI (direction 1b); it survives only
+inside the rosette emblem. WhatsApp keeps its own green (`#25D366`) on the floating button.
 
-## Typography
+Contrast (WCAG AA): white on `--violet` 5.5:1; `--ink` on `--paper` 13.6:1; `--text-muted` on
+`--paper` 6.9:1; `--lilac-light` on `--deep` 11.2:1.
 
-- Wordmark is a bold geometric sans in caps with tight tracking. Closest Google Fonts face:
-  **Montserrat** (weights 600/800) for display and headings, uppercase with `letter-spacing: 0.04em`.
-- "Desde 1970" is a brush script. Closest: **Courgette** — use ONLY for the "Desde 1970" mark, nowhere else.
-- Body: **Source Sans 3** (400/600), fallback `system-ui, -apple-system, "Segoe UI", sans-serif`.
+## Typography (self-hosted variable fonts in `assets/fonts/`)
 
-## Motif
+- **Playfair Display** (`--font-display`, wght 400–900): every heading, prices, big numbers,
+  key figures. Weight 600 for headings, 700 for prices.
+- **Libre Franklin** (`--font-body`, wght 100–900): body, navigation, buttons, forms.
+- **JetBrains Mono** (`--font-mono`, wght 400–800): eyebrows, kickers, references, labels,
+  breadcrumbs — always uppercase with 0.1–0.24 em tracking, 0.68–0.75 rem.
 
-The rosette (four diamond tiles around a square, Nasrid/Alhambra tiling reference) is the brand's
-geometric signature. Use it as: favicon, section ornaments (single small rosette, never tiled
-wallpaper), and a diamond-shaped bullet. The laurel appears only next to "Desde 1970".
+Files: `playfair-display-var.woff2` (38 KB), `libre-franklin-var.woff2` (29 KB),
+`jetbrains-mono-var.woff2` (31 KB), latin subset, `font-display: swap`, the first two preloaded.
 
-## Contact data (from the business card and the current website)
+## Shapes and components
+
+- Cards and panels: 8 px radius, white, `--shadow-card`. Buttons: 4 px radius. Filters, tabs,
+  language toggle, phone and badges: pills (999 px).
+- Header: dark (`--deep`), transparent over the home hero (`site-header--overlay`), emblem +
+  "GRANDE / DESDE 1970" text wordmark, nav, ES/EN pill toggle, phone pill in `--violet`.
+- Hero: 720 px, full-bleed photo (placeholder pattern until the client supplies one), vertical
+  veil, serif h1 up to 4.75 rem, floating white search bar overlapping the next section by 50 %.
+- Showcase: 1.6fr feature card with gradient veil + two horizontal side cards, then a row of four.
+- Family block (from direction 1a): dark `--ink-2` band, serif heading "Una inmobiliaria de
+  familia, no una franquicia", 2×2 stats separated by 1 px lines.
+- Ornament: three rotated squares (diamonds) in `--violet-soft`, footer only. No tiled wallpaper.
+
+## Logo
+
+`assets/brand/rosette.png` (254×258, cleaned crop of the business card) is the emblem. The
+wordmark is set in text (Libre Franklin 700, 0.16 em tracking + JetBrains Mono "DESDE 1970").
+The vector emblem and wordmark from the Claude Design project (`assets/emblem.png`,
+`assets/wordmark.png`) could not be exported (256 KiB API cap); production needs the client's
+vector file.
+
+## Contact data (business card + current website)
 
 - Inmobiliaria Grande, Calle Recogidas 13, 1.º A, 18005 Granada
-- Tel. 958 25 24 61 · Móvil 664 678 249 (Javier Corpas, agente) · 622 350 918 (current website)
-- info@inmobiliariagrande.com · www.inmobiliariagrande.com
-- Owner: José Antonio Grande. Founded 1970 ("Desde 1970").
+- Tel. 958 25 24 61 · 622 350 918 · Javier Corpas (agent) 664 678 249
+- info@inmobiliariagrande.com · Mon–Fri 9:30–20:00 (source: oopiniones.com listing, unverified)
+- Founder José Antonio Grande, 1970. Team on the current site: José Antonio Grande, José Grande
+  Jr., Mónica, Javier Corpas.

@@ -1,21 +1,30 @@
 # Inmobiliaria Grande
 
-Inmobiliaria Grande is a real-estate agency in Granada, Spain, operating since 1970.
-This is its static marketing website, listing homes for sale in Granada capital and
-province (Monachil, Pulianas, La Malahá and Cogollos de la Vega).
+Inmobiliaria Grande is a family-run real-estate agency in Granada, Spain, founded in 1970 and
+still at Calle Recogidas 13. This is its static website: homes for sale and to rent in Granada
+city and province (Monachil, Pulianas, La Malahá, Cogollos de la Vega), a free valuation
+service for sellers, and a Spanish/English interface.
 
 Key facts:
 - Address: Calle Recogidas 13, 1.º A, 18005 Granada
-- Phone: +34 958 25 24 61
-- WhatsApp / mobile (Javier Corpas): +34 664 678 249
+- Phone: +34 958 25 24 61 · +34 622 350 918
+- WhatsApp / mobile (Javier Corpas, agent): +34 664 678 249
 - Email: info@inmobiliariagrande.com
+- Hours: Monday–Friday 9:30–20:00
 - Founded: 1970
 
-Main pages:
+Main pages (Spanish):
 - https://www.inmobiliariagrande.com/index.html
-- https://www.inmobiliariagrande.com/inmuebles.html
-- https://www.inmobiliariagrande.com/vende-tu-casa.html
-- https://www.inmobiliariagrande.com/sobre-nosotros.html
+- https://www.inmobiliariagrande.com/inmuebles.html (all listings, filters, favourites)
+- https://www.inmobiliariagrande.com/vende-tu-casa.html (valuation in 48 h, list your property)
+- https://www.inmobiliariagrande.com/sobre-nosotros.html (history, team)
 - https://www.inmobiliariagrande.com/contacto.html
 
-The site is plain HTML + CSS + a small vanilla JS file, with no frameworks.
+English:
+- https://www.inmobiliariagrande.com/en/index.html
+- https://www.inmobiliariagrande.com/en/properties.html
+- https://www.inmobiliariagrande.com/en/sell-your-home.html
+- https://www.inmobiliariagrande.com/en/contact.html
+
+Each listing has its own page under /inmuebles/ (Spanish) and /en/properties/ (English) with
+schema.org RealEstateListing markup. The site is plain HTML + CSS + one small vanilla JS file.

@@ -1,0 +1,147 @@
+<!--@page {
+  "title": "Pisos y casas en venta en Granada | Inmobiliaria Grande, desde 1970",
+  "desc": "Todos los inmuebles publicados por Inmobiliaria Grande: pisos, áticos, pareados y casas de campo en Granada capital, Monachil, Pulianas, La Malahá y Cogollos de la Vega. Filtre por zona, tipo y precio.",
+  "nav": "comprar",
+  "alt": "en/properties.html"
+}-->
+<main id="main">
+  <section class="page-head">
+    <div class="container">
+      <ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Inmuebles</li></ol>
+      <h1 id="results-title">Inmuebles en Granada y provincia</h1>
+      <p class="lead">Cada ficha tiene fotos reales, superficie, referencia y precio. Guarde los que le gusten y descarte los que no: lo recordamos en este navegador.</p>
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-top:40px;">
+    <div class="container listing-layout">
+      <details class="filters" id="filters">
+        <summary>Filtros</summary>
+        <form class="filters__body filterbar" method="get" action="inmuebles.html" id="filter-form" aria-label="Filtrar inmuebles">
+          <div class="filters__group">
+            <span class="filters__legend" id="lbl-op">Operación</span>
+            <div class="radio-pills" role="radiogroup" aria-labelledby="lbl-op">
+              <label><input type="radio" name="op" value="venta" checked> Venta</label>
+              <label><input type="radio" name="op" value="alquiler"> Alquiler</label>
+              <label><input type="radio" name="op" value="traspaso"> Traspaso</label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="f-zona">Zona o municipio</label>
+            <select id="f-zona" name="zona">{{ZONE_OPTIONS}}</select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="f-tipo">Tipo</label>
+            <select id="f-tipo" name="tipo">{{TYPE_OPTIONS}}</select>
+          </div>
+          <div class="filters__group">
+            <span class="filters__legend">Precio (€)</span>
+            <div class="range">
+              <label class="visually-hidden" for="f-pmin">Precio mínimo</label>
+              <input type="number" id="f-pmin" name="pmin" inputmode="numeric" min="0" step="1000" placeholder="Mín." style="border:1px solid var(--line);border-radius:4px;padding:10px 12px;">
+              <label class="visually-hidden" for="f-pmax">Precio máximo</label>
+              <input type="number" id="f-pmax" name="pmax" inputmode="numeric" min="0" step="1000" placeholder="Máx." style="border:1px solid var(--line);border-radius:4px;padding:10px 12px;">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field__label" for="f-rooms">Dormitorios</label>
+              <select id="f-rooms" name="rooms">
+                <option value="">Indiferente</option>
+                <option value="1">1 o más</option>
+                <option value="2">2 o más</option>
+                <option value="3">3 o más</option>
+                <option value="4">4 o más</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-baths">Baños</label>
+              <select id="f-baths" name="baths">
+                <option value="">Indiferente</option>
+                <option value="1">1 o más</option>
+                <option value="2">2 o más</option>
+                <option value="3">3 o más</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="f-m2">Superficie mínima (m²)</label>
+            <input type="number" id="f-m2" name="m2" inputmode="numeric" min="0" step="10" placeholder="Ej. 90">
+          </div>
+          <fieldset class="filters__group" style="border:0;padding:0;margin:0;">
+            <legend class="filters__legend">Características</legend>
+            <label class="check"><input type="checkbox" name="f" value="Piscina Propia"> Piscina</label>
+            <label class="check"><input type="checkbox" name="f" value="Garaje Incluido"> Parking</label>
+            <label class="check"><input type="checkbox" name="f" value="Ascensor"> Ascensor</label>
+            <label class="check"><input type="checkbox" name="f" value="Terraza"> Terraza</label>
+            <label class="check"><input type="checkbox" name="f" value="Amueblado"> Amueblado</label>
+            <label class="check"><input type="checkbox" name="f" value="Urbanización"> Urbanización</label>
+          </fieldset>
+          <div class="actions" style="margin-top:4px;">
+            <button class="btn btn--violet btn--sm" type="submit">Aplicar filtros</button>
+            <button class="btn btn--ghost btn--sm" type="reset">Limpiar</button>
+          </div>
+        </form>
+      </details>
+
+      <div>
+        <div class="toolbar">
+          <div class="tabs" role="tablist" aria-label="Listas">
+            <button class="pill" type="button" role="tab" data-tab="all" aria-selected="true">Todas</button>
+            <button class="pill" type="button" role="tab" data-tab="fav" aria-selected="false">Favoritas <span class="pill__count" data-count="fav">0</span></button>
+            <button class="pill" type="button" role="tab" data-tab="viewed" aria-selected="false">Vistas <span class="pill__count" data-count="viewed">0</span></button>
+            <button class="pill" type="button" role="tab" data-tab="dismissed" aria-selected="false">Descartadas <span class="pill__count" data-count="dismissed">0</span></button>
+          </div>
+          <div class="sort">
+            <label for="f-sort">Ordenar</label>
+            <select id="f-sort" name="sort">
+              <option value="">Más recientes</option>
+              <option value="price-asc">Precio: menor a mayor</option>
+              <option value="price-desc">Precio: mayor a menor</option>
+              <option value="m2-desc">Superficie: mayor a menor</option>
+            </select>
+          </div>
+        </div>
+        <p class="toolbar__count" id="results-count" aria-live="polite">Mostrando {{LISTING_COUNT}} de {{LISTING_COUNT}} inmuebles</p>
+
+        <div class="results" id="results" style="margin-top:18px;">
+        {{LISTING_CARDS}}
+        </div>
+
+        <div class="empty" id="no-results" hidden>
+          <h2 style="font-size:1.4rem;">No hay inmuebles con esos filtros</h2>
+          <p style="color:var(--text-muted);">Ahora mismo no tenemos publicado nada que encaje. Afloje algún filtro o déjenos su correo y le avisamos en cuanto entre uno.</p>
+          <button class="btn btn--ghost btn--sm" type="button" id="clear-filters">Quitar filtros</button>
+        </div>
+
+        <ol class="pagination" aria-label="Paginación"><li><span aria-current="page">1</span></li></ol>
+
+        <div class="alert-box" id="alertas">
+          <div>
+            <h2>Avísenme de nuevos inmuebles</h2>
+            <p>Le escribimos cuando entre algo que encaje con lo que busca. Sin boletines ni publicidad.</p>
+          </div>
+          <form method="POST" name="alertas" data-netlify="true" data-netlify-honeypot="bot-field" action="gracias.html">
+            <input type="hidden" name="form-name" value="alertas">
+            <p class="hp"><label>No rellene esto: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <div class="field">
+              <label class="field__label" for="al-email">Correo <span class="req">(obligatorio)</span></label>
+              <input type="email" id="al-email" name="email" autocomplete="email" inputmode="email" required data-error="Necesitamos un correo para avisarle." data-error-invalid="Ese correo no parece correcto." aria-describedby="al-email-error">
+              <p class="field__error" id="al-email-error" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="al-zona">Zona</label>
+              <select id="al-zona" name="zona">{{ZONE_OPTIONS}}</select>
+            </div>
+            <button class="btn btn--violet" type="submit">Avisarme</button>
+            <div class="consent">
+              <input type="checkbox" id="al-consent" name="consentimiento" required data-error="Marque la casilla para que podamos escribirle." aria-describedby="al-consent-error">
+              <label for="al-consent">Acepto la <a href="privacidad.html" style="color:#fff;text-decoration:underline;">política de privacidad</a>.</label>
+            </div>
+            <p class="field__error" id="al-consent-error" hidden style="grid-column:1/-1;color:#FFB4AE;"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

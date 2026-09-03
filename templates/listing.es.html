@@ -1,0 +1,173 @@
+<main id="main" data-listing="{{ID}}">
+  <section class="detail-head">
+    <div class="container">
+      <ol class="breadcrumb"><li><a href="{{ROOT}}index.html">Inicio</a></li><li><a href="{{ROOT}}inmuebles.html">Inmuebles</a></li><li aria-current="page">{{REF}}</li></ol>
+      <div class="detail-head__row">
+        <div>
+          <p class="detail-head__meta">{{OP}} · {{ZONE}}, {{CITY}} · Ref. {{REF}}</p>
+          <h1>{{H1}}{{BADGE}}</h1>
+          {{HEADLINE_P}}
+        </div>
+        <div>
+          <p class="detail-head__price">{{PRICE_FMT}}</p>
+          <div class="detail-actions">
+            <button class="pill" type="button" data-fav="{{ID}}" aria-pressed="false">♡ Guardar</button>
+            <button class="pill" type="button" data-dismiss="{{ID}}" aria-pressed="false">Descartar</button>
+            <button class="pill" type="button" data-share="{{SHARE_URL}}" data-share-title="{{H1}}">Compartir</button>
+          </div>
+          <p class="visually-hidden" aria-live="polite" data-share-status></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-top:28px;">
+    <div class="container">
+      {{GALLERY}}
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-top:0;">
+    <div class="container detail-layout">
+      <div class="detail-main">
+        <section>
+          <h2>Datos principales</h2>
+          <div class="figures">
+        {{FIGURES}}
+          </div>
+        </section>
+        <section>
+          <h2>Descripción</h2>
+          <div class="prose">
+            {{DESCRIPTION}}
+            {{LEGAL_NOTE}}
+          </div>
+        </section>
+        <section>
+          <h2>Características</h2>
+          <ul class="features">
+              {{FEATURES}}
+          </ul>
+        </section>
+        {{ENERGY}}
+        <section>
+          <h2>Zona</h2>
+          <p class="prose">{{ZONE}}, {{CITY}} ({{PROVINCE}}). Si quiere saber cómo es el barrio a distintas horas, qué colegios y transporte hay cerca y a cuánto se han cerrado ventas parecidas, llámenos: llevamos desde 1970 vendiendo en esta zona.</p>
+        </section>
+      </div>
+
+      <aside class="aside">
+        <div class="panel panel--ink">
+          <div class="agent">
+            <span class="agent__avatar" aria-hidden="true">JC</span>
+            <div>
+              <p class="agent__name">Javier Corpas</p>
+              <p class="agent__role">Agente · Inmobiliaria Grande</p>
+            </div>
+          </div>
+          <div class="actions" style="margin:0;">
+            <a class="btn btn--violet btn--sm" href="tel:+34664678249">664 678 249</a>
+            <a class="btn btn--ghost-light btn--sm" href="https://wa.me/34664678249?text=Hola%2C%20me%20interesa%20la%20referencia%20{{REF}}" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="panel" id="visita">
+          <h2>Reserve una visita</h2>
+          <p class="panel__sub">Elija día y franja; le confirmamos por teléfono en el mismo día laborable.</p>
+          <form class="form" method="POST" name="visita" data-netlify="true" data-netlify-honeypot="bot-field" action="{{ROOT}}gracias.html">
+            <input type="hidden" name="form-name" value="visita">
+            <input type="hidden" name="referencia" value="{{REF}}">
+            <p class="hp"><label>No rellene esto: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <div class="form-alert" role="alert" hidden></div>
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="v-fecha">Día <span class="req">(obligatorio)</span></label>
+                <input type="date" id="v-fecha" name="fecha" required data-error="Elija un día." aria-describedby="v-fecha-error">
+                <p class="field__error" id="v-fecha-error" hidden></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="v-franja">Franja</label>
+                <select id="v-franja" name="franja">
+                  <option value="Mañana (9:30–14:00)">Mañana (9:30–14:00)</option>
+                  <option value="Tarde (16:00–20:00)">Tarde (16:00–20:00)</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="v-nombre">Nombre <span class="req">(obligatorio)</span></label>
+              <input type="text" id="v-nombre" name="nombre" autocomplete="name" required data-error="Escriba su nombre." aria-describedby="v-nombre-error">
+              <p class="field__error" id="v-nombre-error" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="v-tel">Teléfono <span class="req">(obligatorio)</span></label>
+              <input type="tel" id="v-tel" name="telefono" autocomplete="tel" inputmode="tel" required data-error="Necesitamos un teléfono para confirmar." data-error-invalid="El teléfono debe tener 9 dígitos." aria-describedby="v-tel-error">
+              <p class="field__error" id="v-tel-error" hidden></p>
+            </div>
+            <div class="consent">
+              <input type="checkbox" id="v-consent" name="consentimiento" required data-error="Marque la casilla para que podamos tratar sus datos." aria-describedby="v-consent-error">
+              <label for="v-consent">He leído y acepto la <a href="{{ROOT}}privacidad.html">política de privacidad</a>.</label>
+            </div>
+            <p class="field__error" id="v-consent-error" hidden></p>
+            <button class="btn btn--violet btn--block" type="submit">Pedir visita</button>
+          </form>
+        </div>
+
+        <details class="panel" id="proponer">
+          <summary style="cursor:pointer;font-weight:600;">Proponer un precio</summary>
+          <form class="form" method="POST" name="propuesta" data-netlify="true" data-netlify-honeypot="bot-field" action="{{ROOT}}gracias.html" style="margin-top:16px;">
+            <input type="hidden" name="form-name" value="propuesta">
+            <input type="hidden" name="referencia" value="{{REF}}">
+            <p class="hp"><label>No rellene esto: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <div class="form-alert" role="alert" hidden></div>
+            <div class="field">
+              <label class="field__label" for="p-precio">Su oferta (€) <span class="req">(obligatorio)</span></label>
+              <input type="number" id="p-precio" name="oferta" inputmode="numeric" min="1000" step="500" required data-error="Indique una cifra." data-error-invalid="Solo números." aria-describedby="p-precio-error">
+              <p class="field__error" id="p-precio-error" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="p-tel">Teléfono <span class="req">(obligatorio)</span></label>
+              <input type="tel" id="p-tel" name="telefono" autocomplete="tel" inputmode="tel" required data-error="Necesitamos un teléfono para responder." data-error-invalid="El teléfono debe tener 9 dígitos." aria-describedby="p-tel-error">
+              <p class="field__error" id="p-tel-error" hidden></p>
+            </div>
+            <div class="consent">
+              <input type="checkbox" id="p-consent" name="consentimiento" required data-error="Marque la casilla para que podamos tratar sus datos." aria-describedby="p-consent-error">
+              <label for="p-consent">Acepto la <a href="{{ROOT}}privacidad.html">política de privacidad</a>.</label>
+            </div>
+            <p class="field__error" id="p-consent-error" hidden></p>
+            <button class="btn btn--ghost btn--block" type="submit">Enviar propuesta</button>
+          </form>
+        </details>
+
+        <div class="panel" id="hipoteca">
+          <h2>Simulador de hipoteca</h2>
+          <p class="panel__sub">Orientativo. Las condiciones reales las fija su banco.</p>
+          <form class="form" data-mortgage>
+            <div class="field">
+              <label class="field__label" for="h-precio">Precio (€)</label>
+              <input type="number" id="h-precio" name="precio" inputmode="numeric" min="1000" step="1000" value="{{PRICE_RAW}}">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="h-entrada">Entrada (%)</label>
+                <input type="number" id="h-entrada" name="entrada" inputmode="numeric" min="0" max="90" step="1" value="20">
+              </div>
+              <div class="field">
+                <label class="field__label" for="h-anios">Plazo (años)</label>
+                <input type="number" id="h-anios" name="anios" inputmode="numeric" min="1" max="40" step="1" value="30">
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="h-tipo">Interés anual (%)</label>
+              <input type="number" id="h-tipo" name="tipo" inputmode="decimal" min="0" max="15" step="0.05" value="3">
+            </div>
+            <div class="mortgage__out" aria-live="polite">
+              <span class="figures__label">Cuota mensual estimada</span>
+              <span class="mortgage__num" data-mortgage-out>—</span>
+              <p class="mortgage__note">Sin incluir seguros ni gastos de compra (ITP en Andalucía: 7 %). Cálculo local, no se envía ningún dato.</p>
+            </div>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>

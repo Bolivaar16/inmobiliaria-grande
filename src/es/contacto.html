@@ -1,0 +1,126 @@
+<!--@page {
+  "title": "Contacto · Calle Recogidas 13, Granada | Inmobiliaria Grande",
+  "desc": "Oficina en Calle Recogidas 13, 1.º A, Granada. Teléfono 958 25 24 61, WhatsApp 664 678 249, lunes a viernes de 9:30 a 20:00. Pida que le llamemos o escríbanos.",
+  "nav": "contacto",
+  "alt": "en/contact.html"
+}-->
+<main id="main">
+  <section class="page-head">
+    <div class="container">
+      <ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Contacto</li></ol>
+      <h1>Contacto</h1>
+      <p class="lead">Estamos en Recogidas 13, en pleno centro. Puede venir sin cita, llamarnos o escribirnos por aquí.</p>
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-top:40px;">
+    <div class="container contact-grid">
+      <div class="panel">
+        <h2>Escríbanos</h2>
+        <p class="panel__sub">Respondemos en el mismo día laborable.</p>
+        <form class="form" method="POST" name="contacto" data-netlify="true" data-netlify-honeypot="bot-field" action="gracias.html">
+          <input type="hidden" name="form-name" value="contacto">
+          <p class="hp"><label>No rellene esto: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <div class="form-alert" role="alert" hidden></div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field__label" for="c-nombre">Nombre y apellidos <span class="req">(obligatorio)</span></label>
+              <input type="text" id="c-nombre" name="nombre" autocomplete="name" required data-error="Escriba su nombre para saber con quién hablamos." aria-describedby="c-nombre-error">
+              <p class="field__error" id="c-nombre-error" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="c-tel">Teléfono <span class="req">(obligatorio)</span></label>
+              <input type="tel" id="c-tel" name="telefono" autocomplete="tel" inputmode="tel" required data-error="Necesitamos un teléfono para poder llamarle." data-error-invalid="El teléfono debe tener 9 dígitos. Ejemplo: 958 25 24 61." aria-describedby="c-tel-error">
+              <p class="field__error" id="c-tel-error" hidden></p>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="c-email">Correo electrónico</label>
+            <input type="email" id="c-email" name="email" autocomplete="email" inputmode="email" data-error-invalid="Ese correo no parece correcto. Revise que tenga la forma nombre@dominio.com." aria-describedby="c-email-error">
+            <p class="field__error" id="c-email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="c-asunto">¿En qué podemos ayudarle?</label>
+            <select id="c-asunto" name="asunto">
+              <option value="">Elija una opción</option>
+              <option value="Comprar una vivienda">Comprar una vivienda</option>
+              <option value="Vender mi vivienda">Vender mi vivienda</option>
+              <option value="Alquilar">Alquilar</option>
+              <option value="Local o traspaso">Local o traspaso</option>
+              <option value="Otra consulta">Otra consulta</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="c-mensaje">Mensaje <span class="req">(obligatorio)</span></label>
+            <textarea id="c-mensaje" name="mensaje" rows="5" required data-error="Cuéntenos brevemente qué necesita." aria-describedby="c-mensaje-error"></textarea>
+            <p class="field__error" id="c-mensaje-error" hidden></p>
+          </div>
+          <div class="consent">
+            <input type="checkbox" id="c-consent" name="consentimiento" required data-error="Marque la casilla para que podamos tratar sus datos y responderle." aria-describedby="c-consent-error">
+            <label for="c-consent">He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</label>
+          </div>
+          <p class="field__error" id="c-consent-error" hidden></p>
+          <button class="btn btn--violet" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <div class="contact-data">
+        <div class="panel">
+          <h2>Dónde estamos</h2>
+          <address>
+            <p style="margin:0;">Inmobiliaria Grande<br>Calle Recogidas 13, 1.º A<br>18005 Granada</p>
+          </address>
+          <p style="margin:12px 0 0;color:var(--text-muted);">Lunes a viernes, 9:30–20:00. Sábados y domingos cerrado.</p>
+        </div>
+        <div class="panel">
+          <h2>Teléfonos y correo</h2>
+          <p><a class="tel-big" href="tel:+34958252461">958 25 24 61</a> <span style="color:var(--text-muted);">oficina</span></p>
+          <p><a class="tel-big" href="tel:+34664678249">664 678 249</a> <span style="color:var(--text-muted);">Javier Corpas, agente</span></p>
+          <p><a class="tel-big" href="tel:+34622350918">622 350 918</a></p>
+          <p style="margin:0;"><a href="mailto:info@inmobiliariagrande.com">info@inmobiliariagrande.com</a> · <a href="https://wa.me/34664678249?text=Hola%2C%20os%20escribo%20desde%20la%20web" rel="noopener">WhatsApp</a></p>
+        </div>
+        <div class="map-box" data-map-src="https://www.google.com/maps?q=Calle+Recogidas+13,+18005+Granada&amp;output=embed&amp;hl=es" data-map-title="Mapa: Calle Recogidas 13, Granada">
+          <div class="map-box__placeholder">
+            <strong>Mapa de Google Maps</strong>
+            <p style="margin:0;font-size:0.9rem;">Se carga solo si acepta las cookies de mapas. También puede <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Recogidas+13,+18005+Granada" target="_blank" rel="noopener">abrirlo en Google Maps</a>.</p>
+            <button class="btn btn--ink btn--sm" type="button" data-map-accept>Mostrar mapa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" id="llamada">
+    <div class="container">
+      <div class="alert-box">
+        <div>
+          <h2>Nosotros le llamamos</h2>
+          <p>Déjenos su número y la hora que le viene bien. Le llama una persona de la oficina, no un centro de llamadas.</p>
+        </div>
+        <form method="POST" name="llamada" data-netlify="true" data-netlify-honeypot="bot-field" action="gracias.html">
+          <input type="hidden" name="form-name" value="llamada">
+          <p class="hp"><label>No rellene esto: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <div class="field">
+            <label class="field__label" for="l-tel">Teléfono <span class="req">(obligatorio)</span></label>
+            <input type="tel" id="l-tel" name="telefono" autocomplete="tel" inputmode="tel" required data-error="Necesitamos un teléfono para llamarle." data-error-invalid="El teléfono debe tener 9 dígitos." aria-describedby="l-tel-error">
+            <p class="field__error" id="l-tel-error" hidden style="color:#FFB4AE;"></p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="l-hora">Cuándo</label>
+            <select id="l-hora" name="hora">
+              <option value="Mañana (9:30–14:00)">Mañana (9:30–14:00)</option>
+              <option value="Tarde (16:00–20:00)">Tarde (16:00–20:00)</option>
+              <option value="Cualquier hora">Cualquier hora</option>
+            </select>
+          </div>
+          <button class="btn btn--violet" type="submit">Llamadme</button>
+          <div class="consent">
+            <input type="checkbox" id="l-consent" name="consentimiento" required data-error="Marque la casilla para que podamos llamarle." aria-describedby="l-consent-error">
+            <label for="l-consent">Acepto la <a href="privacidad.html" style="color:#fff;text-decoration:underline;">política de privacidad</a>.</label>
+          </div>
+          <p class="field__error" id="l-consent-error" hidden style="grid-column:1/-1;color:#FFB4AE;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>

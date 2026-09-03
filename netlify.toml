@@ -1,7 +1,14 @@
-# Static site, deploy the folder as-is (no build command).
+# Static site, deploy the folder as-is (no build command; pages are pre-generated
+# with `node scripts/build.mjs` and committed).
 [build]
   publish = "."
 
 # Keep .html extensions so inmuebles.html and the inmuebles/ directory do not collide.
 [build.processing.html]
   pretty_urls = false
+
+# Custom 404 (Netlify also picks up /404.html automatically; this keeps it explicit).
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

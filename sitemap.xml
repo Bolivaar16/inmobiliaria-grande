@@ -1,21 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.inmobiliariagrande.com/index.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/inmuebles.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/contacto.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/vende-tu-casa.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/sobre-nosotros.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/aviso-legal.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/privacidad.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/cookies.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/404.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/gracias.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/inmuebles/atico-duplex-centro-granada-rafael-original.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/inmuebles/piso-el-serrallo-granada-fh03130.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/inmuebles/pareado-calle-madrid-monachil-rgc-0093.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/inmuebles/piso-villarejo-granada-rpa-ronda202.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/inmuebles/piso-pulianillas-pulianas-gr26-09.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html</loc></url>
-  <url><loc>https://www.inmobiliariagrande.com/inmuebles/piso-alcampo-granada-rgc-0091.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.inmobiliariagrande.com/aviso-legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/contact.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/inmuebles.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/sobre-nosotros.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/sobre-nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/vende-tu-casa.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/vende-tu-casa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/sell-your-home.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/contact.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/properties.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/sell-your-home.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/vende-tu-casa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/sell-your-home.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/inmuebles/atico-duplex-centro-granada-rafael-original.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/atico-duplex-centro-granada-rafael-original.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/atico-duplex-centro-granada-rafael-original.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/properties/atico-duplex-centro-granada-rafael-original.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/atico-duplex-centro-granada-rafael-original.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/atico-duplex-centro-granada-rafael-original.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/inmuebles/piso-el-serrallo-granada-fh03130.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/piso-el-serrallo-granada-fh03130.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/piso-el-serrallo-granada-fh03130.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/properties/piso-el-serrallo-granada-fh03130.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/piso-el-serrallo-granada-fh03130.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/piso-el-serrallo-granada-fh03130.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/inmuebles/pareado-calle-madrid-monachil-rgc-0093.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/pareado-calle-madrid-monachil-rgc-0093.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/pareado-calle-madrid-monachil-rgc-0093.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/properties/pareado-calle-madrid-monachil-rgc-0093.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/pareado-calle-madrid-monachil-rgc-0093.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/pareado-calle-madrid-monachil-rgc-0093.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/inmuebles/piso-villarejo-granada-rpa-ronda202.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/piso-villarejo-granada-rpa-ronda202.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/piso-villarejo-granada-rpa-ronda202.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/properties/piso-villarejo-granada-rpa-ronda202.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/piso-villarejo-granada-rpa-ronda202.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/piso-villarejo-granada-rpa-ronda202.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/inmuebles/piso-pulianillas-pulianas-gr26-09.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/piso-pulianillas-pulianas-gr26-09.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/piso-pulianillas-pulianas-gr26-09.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/properties/piso-pulianillas-pulianas-gr26-09.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/piso-pulianillas-pulianas-gr26-09.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/piso-pulianillas-pulianas-gr26-09.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/properties/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/pareado-centro-la-malaha-rpa-lamalaha.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/properties/pareado-centro-la-malaha-rpa-lamalaha.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/pareado-centro-la-malaha-rpa-lamalaha.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/inmuebles/piso-alcampo-granada-rgc-0091.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/piso-alcampo-granada-rgc-0091.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/piso-alcampo-granada-rgc-0091.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/properties/piso-alcampo-granada-rgc-0091.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/inmuebles/piso-alcampo-granada-rgc-0091.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/properties/piso-alcampo-granada-rgc-0091.html"/>
+  </url>
 </urlset>

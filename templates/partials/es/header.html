@@ -1,0 +1,31 @@
+<header class="site-header {{HEADER_CLASS}}">
+  <div class="container header__inner">
+    <a class="brand" href="{{ROOT}}index.html">
+      <img class="brand__emblem" src="{{ROOT}}assets/brand/rosette.png" alt="" width="46" height="46">
+      <span class="brand__text">
+        <span class="brand__name">GRANDE</span>
+        <span class="brand__since">DESDE 1970</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="visually-hidden" data-nav-label data-open="Abrir menú" data-close="Cerrar menú">Abrir menú</span>
+      <span class="nav-toggle__icon" aria-hidden="true"></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Principal">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="{{ROOT}}index.html"{{NAV_home}}>Inicio</a></li>
+        <li><a class="nav__link" href="{{ROOT}}inmuebles.html?op=venta"{{NAV_comprar}}>Comprar</a></li>
+        <li><a class="nav__link" href="{{ROOT}}inmuebles.html?op=alquiler"{{NAV_alquilar}}>Alquilar</a></li>
+        <li><a class="nav__link" href="{{ROOT}}inmuebles.html?tipo=Local"{{NAV_locales}}>Locales</a></li>
+        <li><a class="nav__link" href="{{ROOT}}vende-tu-casa.html"{{NAV_vender}}>Vender</a></li>
+        <li><a class="nav__link" href="{{ROOT}}sobre-nosotros.html"{{NAV_casa}}>La casa</a></li>
+        <li><a class="nav__link" href="{{ROOT}}contacto.html"{{NAV_contacto}}>Contacto</a></li>
+      </ul>
+      <div class="lang" aria-label="Idioma">
+        <a class="lang__opt" href="{{SELF_URL}}" aria-current="true" lang="es" hreflang="es">ES</a>
+        <a class="lang__opt" href="{{ALT_URL}}" lang="en" hreflang="en">EN</a>
+      </div>
+      <a class="nav__phone" href="tel:+34958252461">958 25 24 61</a>
+    </nav>
+  </div>
+</header>

@@ -1,125 +1,99 @@
 # Inmobiliaria Grande — Website Prototype
 
-Commercial prototype of a new website for Inmobiliaria Grande, a real-estate agency in Granada, Spain, founded 1970. Includes a visual design mockup, fully functional property listings (HTML + CSS), and an audit report for the agency owner.
+Commercial prototype of a new website for Inmobiliaria Grande, a real-estate agency in Granada, Spain, founded 1970. Static bilingual (ES/EN) site, generated from data, with real property listings and an audit report for the agency owner.
 
 **Status**: prototype only, not yet approved by the client. Contains real property listings and brand materials belonging to a third party. This repository must remain private; nothing may be deployed or published publicly without explicit written approval from the owner.
 
-## Design canvas
+## Design
 
-Visual design (artboards for homepage, listings, property details, contact form, mobile variants) lives in a private Claude Design canvas:
-https://claude.ai/code/artifact/7077f4a1-cb5d-43d2-b0ac-b8e29bd5f0ec
+The site follows design direction **"1b Galería"** from the private Claude Design canvas (dark indigo/violet, pill components, floating search bar) combined with the **serif typography of direction "1a"** (Playfair Display headings). Canvas: https://claude.ai/design/p/5556b49e-e8b8-4993-b410-16f1bf3e09d4
 
-Artboard sources (exported as `.dc.html`) are in `design/artboards/`.
+The full system (palette, type, components) is documented in `docs/BRAND.md`. `docs/DESIGN-PLAN.md` is the original plan; its visual rules are superseded (see the note at its top) but its accessibility and testing sections still apply. Earlier artboards (a different, indigo/red direction) are in `design/artboards/` for history only.
 
 ## Repository layout
 
-- **index.html, inmuebles.html, contacto.html, sobre-nosotros.html, vende-tu-casa.html, aviso-legal.html, privacidad.html, cookies.html** — page templates
-- **inmuebles/** — generated property detail pages (one `.html` file per listing)
-- **sitemap.xml** — generated XML sitemap
-- **css/styles.css** — single CSS file (color tokens, typography, layout, responsive)
-- **js/main.js** — minimal JS: mobile menu, listing filters, cookie banner and form validation (forms still submit without JS)
-- **scripts/build-listings.mjs** — Node.js script that generates `inmuebles/*.html` and `sitemap.xml` from `data/listings.json` and `templates/listing.html`
-- **templates/listing.html** — plain HTML template with `{{TOKEN}}` placeholders for the property pages (no template engine)
-- **data/listings.json** — all property data, the single source for the generated pages
-- **assets/photos/<id>/N.jpg, N-s.jpg** — full-size and thumbnail photos for each listing
-- **assets/brand/logo.png** — brand logo (cleaned crop from photographed business card, not a vector)
-- **docs/BRAND.md** — color palette, typography system, contact data
-- **docs/informe/informe-inmobiliaria-grande.md/.pdf** — audit report (Spanish, client-facing)
-- **docs/audit/** — evidence: Lighthouse JSON, screenshots, audit notes
-- **design/** — design mockups and artboard sources
+- **src/es/\*.html, src/en/\*.html** — page sources. Each starts with a `<!--@page {...}-->` JSON header (title, description, active nav item, language-twin path) and is assembled by `scripts/build.mjs` into the final page at the repo root (`es`) or under `en/` (`en`).
+- **templates/partials/es/, templates/partials/en/** — shared `head.html` / `header.html` / `footer.html`, per language.
+- **templates/listing.es.html, templates/listing.en.html** — the property-detail page, filled per listing.
+- **scripts/build.mjs** — generates every page: `index.html`, `inmuebles.html`, …, `en/index.html`, `en/properties.html`, …, `inmuebles/<slug>.html` + `en/properties/<slug>.html` per listing, and `sitemap.xml` (with `hreflang` alternates). Run after editing anything in `src/`, `templates/`, or `data/`.
+- **scripts/check.sh** — static checks on the generated site (one `<h1>` per page, no `href="#"`, unique titles/descriptions, `alt` + dimensions on every image, lazy-loading, no external scripts, internal links resolve, no secrets, production files present). Run after `build.mjs`.
+- **data/listings.json** — all property data, the single source for the generated pages.
+- **data/i18n.json** — English UI strings, per-type translations, and per-listing English title/headline overrides (the long `description` stays Spanish, `lang="es"`, on English pages too).
+- **css/styles.css** — single CSS file (design tokens, fonts, layout, every component, responsive).
+- **js/main.js** — vanilla JS, no dependencies: mobile nav, favourites/dismissed/viewed (`localStorage`), listing filters + tabs + sort, cookie consent (necessary + optional Google Maps), form validation with visible per-field errors, gallery viewer, native share (clipboard fallback), mortgage simulator.
+- **assets/photos/<id>/N.jpg, N-s.jpg** — full-size (1400×933) and medium (640×426) photos per listing, scraped from the current site. Each also has `.webp` (same size, q78), `-m.webp` (1024w, q72, mid breakpoint) and `-s.jpg`'s `-t.webp` (240w, q68, gallery-thumbnail size). `<picture>` serves WebP first; the JPEGs are the fallback for the ~0% of browsers without WebP support — some of those fallbacks are still >200 KB (`scripts/check.sh`'s sibling in the `web-production` skill flags this; it does not know about `<picture>`).
+- **assets/fonts/** — self-hosted variable fonts (Playfair Display, Libre Franklin, JetBrains Mono), latin subset, woff2.
+- **assets/brand/** — emblem/rosette, favicons, `site.webmanifest`.
+- **docs/BRAND.md** — current design system (tokens, type, components, logo, contact data).
+- **docs/DESIGN-PLAN.md** — original plan; superseded on visuals, see the note at the top.
+- **docs/PENDIENTES.md** — every `[DATO A CONFIRMAR]` / `[FOTO A CONFIRMAR]` in the site, listed with why.
+- **docs/audit/redesign/** — Lighthouse JSON and full-page screenshots (1440 + 375 px, ES + EN) from the last verification pass.
+- **docs/informe/**, **docs/audit/evidence.md** — the original audit report and evidence on the *current* live site (not this prototype).
+- **docs/competidores/** — competitor study; its "opportunities" section drove the "Desde 1970" positioning and copy.
+- **_headers** — Netlify cache-control hints for fonts/photos/css/js.
+- **netlify.toml** — `pretty_urls = false` (so `inmuebles.html` and `inmuebles/` don't collide) and a catch-all redirect to `404.html` with a real 404 status.
 
 ## Run locally
 
-Start any static HTTP server in the project root:
-
 ```bash
+node scripts/build.mjs   # regenerate every page from src/, templates/, data/
+bash scripts/check.sh    # static checks (must print ALL CHECKS PASSED)
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000/ in your browser. All pages and listings are pre-generated and ready to serve.
+Then open http://localhost:8000/ (Spanish) or http://localhost:8000/en/index.html (English).
 
 ## Deploy
 
-The site is ready for static hosting:
+- **Netlify**: publish directory is `.` (project root); no build command (pages are pre-generated and committed). `netlify.toml` + `_headers` are already set up. Forms use Netlify Forms (`data-netlify="true"` + honeypot on every form).
+- **Vercel**: static site, no build command needed; deploy the folder as-is (the `_headers`/`netlify.toml` conventions won't apply — add Vercel's equivalents if deploying there).
 
-- **Netlify**: publish directory is `.` (project root); `netlify.toml` is configured with `pretty_urls = false` so `inmuebles.html` and the `inmuebles/` directory do not collide. Forms use Netlify Forms backend.
-- **Vercel**: static site, no build command needed; deploy the folder as-is.
-
-**Important**: deployment has not been done. It requires the client's explicit written approval and access to their domain. Do not deploy without authorization.
+**Important**: deployment has not been done. It requires the client's explicit written approval and access to their domain. Do not deploy without authorization. Before deploying, resolve every item in `docs/PENDIENTES.md`.
 
 ## Editing listings
 
 All property data lives in `data/listings.json`. To add or update a listing:
 
-1. Add or modify an entry in the JSON array with these fields:
-   - `id` (unique identifier), `ref` (internal reference code), `slug` (URL-safe slug)
-   - `title`, `headline` (short marketing text)
-   - `type` (e.g. "Piso", "Ático Dúplex", "Pareado")
-   - `operation` ("venta" or "alquiler")
-   - `zone`, `city`, `province`
-   - `price` (in EUR)
-   - `surface_built_m2`, `surface_useful_m2`, `plot_m2` (nullable)
-   - `rooms`, `baths`
-   - `condition` (e.g. "Seminuevo", "Entrar a vivir")
-   - `year_built`
-   - `status` ("disponible", "reservado", etc.)
-   - `features` (array of strings: "Balcón", "Terraza", "Ascensor", etc.)
-   - `description` (array of paragraphs for detailed text)
-   - `energy` (object with `consumption_kwh_m2_year` and `emissions_kg_co2_m2_year`, nullable)
-   - `photos` (array of objects: `src`, `thumb`, `alt`)
-   - `photo_count_on_source` (info only, for the audit)
-   - `source_url` (original listing URL)
-   - `source_fetched_at` (YYYY-MM-DD)
-
-2. Upload photos to `assets/photos/<id>/`:
-   - Full-size: `1.jpg`, `2.jpg`, etc.
-   - Thumbnails: `1-s.jpg`, `2-s.jpg`, etc. (e.g. ~300px width, JPEG 75% quality)
-
-3. Regenerate the listing pages and sitemap:
+1. Add or modify an entry in the JSON array — see the field list that was already documented here (id, ref, slug, title, headline, type, operation, zone/city/province, price, surfaces, rooms/baths, condition, year_built, status, features, description, energy, photos, photo_count_on_source, source_url, source_fetched_at).
+2. Add its English title/headline to `data/i18n.json` under `listings.<id>` (optional — falls back to `"<Type> in <Zone>, <City>"` if omitted).
+3. Upload photos to `assets/photos/<id>/`: full-size `N.jpg` (≈1400×933) and medium `N-s.jpg` (≈640×426). Generate the WebP siblings:
    ```bash
-   node scripts/build-listings.mjs
+   for f in assets/photos/<id>/*.jpg; do
+     convert "$f" -quality 78 "${f%.jpg}.webp"
+   done
+   for f in assets/photos/<id>/*.jpg; do  # skip the -s ones for this ffirst loop
+     [[ "$f" == *-s.jpg ]] || convert "$f" -resize 1024x -quality 72 "${f%.jpg}-m.webp"
+   done
+   for f in assets/photos/<id>/*-s.jpg; do
+     convert "$f" -resize 240x -quality 68 "${f%-s.jpg}-t.webp"
+   done
    ```
-
-4. Commit both the JSON and the generated HTML files.
+4. Regenerate and check:
+   ```bash
+   node scripts/build.mjs && bash scripts/check.sh
+   ```
+5. Commit the JSON, the photos (all four variants), and the generated HTML files.
 
 ## Brand
 
-The brand logo (`assets/brand/logo.png`) is a white-balanced crop of a photographed business card. It is not a vector; production use requires the original vector file from the client.
+`docs/BRAND.md` is the source of truth for palette, typography and components. The emblem (`assets/brand/rosette.png`) is a cleaned crop of a photographed business card, not a vector — production needs the client's vector file. The wordmark is set in text (no logo file), so it never blurs or needs re-export.
 
-Brand identity (color palette, typography, contact data) is documented in `docs/BRAND.md`.
+## Audit report (current live site, not this prototype)
 
-## Audit report
+A comprehensive audit report (Spanish: *informe-inmobiliaria-grande*) evaluates **the client's existing website**, not this redesign:
+- **docs/informe/informe-inmobiliaria-grande.md/.pdf** — report source and PDF (Pandoc + Typst, consulting-proposal template)
+- **docs/audit/evidence.md**, **docs/audit/\*.json, \*.png** — Lighthouse results and screenshots of the current site
 
-A comprehensive audit report (Spanish: *informe-inmobiliaria-grande*) is prepared for the client, including:
-- Visual design review and usability assessment
-- Performance metrics (Lighthouse scores on desktop and mobile)
-- Accessibility compliance (WCAG 2.1 AA)
-- SEO and technical recommendations
+Regenerate the PDF with `generar-pdf docs/informe/informe-inmobiliaria-grande.md` (requires the `generar-pdf` skill).
 
-Files:
-- **docs/informe/informe-inmobiliaria-grande.md** — report source (Markdown)
-- **docs/informe/informe-inmobiliaria-grande.pdf** — final report (PDF via Pandoc + Typst, template: consulting-proposal)
-- **docs/audit/evidence.md** — detailed audit notes and findings
-- **docs/audit/*.json, *.png** — Lighthouse results and screenshots
-
-To regenerate the PDF:
-```bash
-generar-pdf docs/informe/informe-inmobiliaria-grande.md
-```
-(requires the `generar-pdf` skill: Pandoc + Typst with consulting-proposal template)
+This prototype's own verification (Lighthouse on the redesign, screenshots of every page) is in `docs/audit/redesign/`.
 
 ## Data provenance and privacy
 
-All property listings were scraped (read-only) from https://www.inmobiliariagrande.com/ on 2026-09-03. Each entry includes its `source_url` for verification. The agent's name and contact details come from his business card.
+All property listings were scraped (read-only) from https://www.inmobiliariagrande.com/ on 2026-09-03. Each entry includes its `source_url` for verification. The agent's name and contact details come from his business card. This prototype ships only 8 of the ~276 listings on the live site; the rest is a data-entry task, not a design one.
 
 This data and the brand materials belong to Inmobiliaria Grande and are protected. Do not republish, redistribute, or deploy the site publicly without explicit authorization from the owner.
 
 ## Known placeholders
 
-The following pages contain `[DATO A CONFIRMAR]` markers for data that must be filled in by the owner before any public release:
-
-- **sobre-nosotros.html** — company history, founding facts
-- **aviso-legal.html** — CIF (tax ID), legal entity name, office hours
-- **contacto.html** — address confirmation, phone/email verification
-
-Verify all placeholders are completed before deployment approval.
+`docs/PENDIENTES.md` lists every `[DATO A CONFIRMAR]` / `[FOTO A CONFIRMAR]` marker in the site — invented figures from the design mockup (300 properties, 17 languages, 3 generations, 48-hour valuation), team photos, legal entity data, and the office hours (sourced from a directory, not the client). Verify all of them before deployment approval; `grep -rn "A CONFIRMAR" src/ templates/` finds every instance in the sources.
