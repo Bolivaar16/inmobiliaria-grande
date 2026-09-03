@@ -424,7 +424,7 @@ address { font-style: normal; }
 }
 .features li span { max-width: 60ch; }
 
-.figures {
+.figures { min-width: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--s-4) var(--s-5);
@@ -436,7 +436,7 @@ address { font-style: normal; }
   display: block; margin-bottom: var(--s-1);
   font-size: var(--fs-sm); color: var(--ink-muted); font-weight: 600;
 }
-.figures__value {
+.figures__value { min-width: 0; overflow-wrap: anywhere; hyphens: auto;
   font-family: var(--font-display); font-weight: 800;
   font-size: var(--fs-lg); line-height: var(--lh-snug); color: var(--indigo-900);
 }
