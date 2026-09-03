@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://www.inmobiliariagrande.com/index.html">
 <meta property="og:image" content="https://www.inmobiliariagrande.com/assets/photos/30002664/1.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script defer src="js/map.js"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Inmobiliaria Grande","url":"https://www.inmobiliariagrande.com/index.html","image":"https://www.inmobiliariagrande.com/assets/brand/icon-512.png","telephone":"+34958252461","email":"info@inmobiliariagrande.com","foundingDate":"1970","address":{"@type":"PostalAddress","streetAddress":"Calle Recogidas 13, 1.º A","addressLocality":"Granada","postalCode":"18005","addressCountry":"ES"},"openingHours":"Mo-Fr 09:30-20:00","areaServed":{"@type":"AdministrativeArea","name":"Granada"}}</script>
+<script defer src="js/map.js"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Inmobiliaria Grande","url":"https://www.inmobiliariagrande.com/index.html","image":"https://www.inmobiliariagrande.com/assets/brand/icon-512.png","telephone":"+34958252461","email":"info@inmobiliariagrande.com","foundingDate":"1970","address":{"@type":"PostalAddress","streetAddress":"Calle Recogidas 13, 1.º A","addressLocality":"Granada","postalCode":"18008","addressCountry":"ES"},"openingHours":["Mo-Fr 09:30-14:00","Mo-Fr 17:00-20:30"],"areaServed":{"@type":"AdministrativeArea","name":"Granada"}}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -46,9 +46,7 @@
     <nav class="nav" id="site-nav" aria-label="Principal">
       <ul class="nav__list">
         <li><a class="nav__link" href="index.html" aria-current="page">Inicio</a></li>
-        <li><a class="nav__link" href="inmuebles.html?op=venta">Comprar</a></li>
-        <li><a class="nav__link" href="inmuebles.html?op=alquiler">Alquilar</a></li>
-        <li><a class="nav__link" href="inmuebles.html?tipo=Local">Locales</a></li>
+        <li><a class="nav__link" href="inmuebles.html">Buscar inmueble</a></li>
         <li><a class="nav__link" href="vende-tu-casa.html">Vender</a></li>
         <li><a class="nav__link" href="sobre-nosotros.html">La casa</a></li>
         <li><a class="nav__link" href="contacto.html">Contacto</a></li>
@@ -57,7 +55,12 @@
         <a class="lang__opt" href="index.html" aria-current="true" lang="es" hreflang="es">ES</a>
         <a class="lang__opt" href="en/index.html" lang="en" hreflang="en">EN</a>
       </div>
-      <a class="nav__phone" href="tel:+34958252461">958 25 24 61</a>
+      <div class="nav__contact">
+        <a class="nav__phone" href="tel:+34958252461">958 25 24 61</a>
+        <a class="nav__wa" href="https://wa.me/34622350918?text=Hola%2C%20os%20escribo%20desde%20la%20web" rel="noopener" aria-label="Escribir por WhatsApp al 622 350 918">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.27z"></path></svg>
+        </a>
+      </div>
     </nav>
   </div>
 </header>
@@ -73,7 +76,7 @@
       <div class="hero__content">
         <p class="hero__kicker">Granada · Vega · Sierra · Costa</p>
         <h1>La casa que busca lleva aquí toda la vida</h1>
-        <p class="hero__lead">276 propiedades en cartera y cinco décadas conociendo cada calle de la provincia.</p>
+        <p class="hero__lead">Más de 250 propiedades en cartera y cinco décadas conociendo cada calle de la provincia.</p>
       </div>
     </div>
     <div class="container searchbar-wrap">
@@ -153,13 +156,8 @@
 
   <section class="section after-search" id="destacados">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head section-head--stack">
         <h2>Recién incorporadas</h2>
-        <div class="tabs" role="group" aria-label="Filtrar destacados">
-          <button class="pill" type="button" data-home-filter="" aria-pressed="true">Todas</button>
-          <button class="pill" type="button" data-home-filter="venta" aria-pressed="false">Venta</button>
-          <button class="pill" type="button" data-home-filter="alquiler" aria-pressed="false">Alquiler</button>
-        </div>
       </div>
       <div id="home-showcase">
       <div class="showcase">
@@ -176,7 +174,7 @@
             <h3>Ático Dúplex en Centro, Granada</h3>
             <ul class="feature-card__specs"><li>146 m²</li><li>2 dorm.</li><li>1 baño</li></ul>
           </span>
-          <strong class="feature-card__price">339.900 €</strong><span class="price-was"><s>360.000 €</s><span class="price-drop">−6%</span></span><span class="visually-hidden">Antes 360.000 €</span>
+          <strong class="feature-card__price">339.900 €</strong><span class="price-was"><s>360.000 €</s><span class="price-drop">−6%</span></span><span class="visually-hidden">Antes 360.000 €</span>
         </span>
       </a>
       <div class="showcase__side">
@@ -186,7 +184,7 @@
           <span class="card__place">Plaza Menorca · Granada</span>
           <h3>Piso en Plaza Menorca, Granada</h3>
           <ul class="card__specs"><li>95 m²</li><li>4 dorm.</li><li>1 baño</li></ul>
-          <strong class="side-card__price">330.000 €</strong>
+          <strong class="side-card__price">330.000 €</strong>
         </span>
       </a>
         <a class="side-card" href="inmuebles/piso-arabial-granada-v1029.html" data-id="29965708" data-type="Piso" data-zone="Arabial" data-city="Granada" data-op="venta" data-price="315000" data-rooms="4" data-baths="1" data-m2="100" data-date="2026-09-03" data-features="Vender|Piso|Arabial / Granada|De origen|Avenida|Libre| Balcón| Calefacción Central| Ascensor| Armarios Empotrados| Muebles| Agua| Luminoso| Hospitales| Metro| Autobuses| Centros Comerciales| Colegios">
@@ -195,7 +193,7 @@
           <span class="card__place">Arabial · Granada</span>
           <h3>Piso en Arabial, Granada</h3>
           <ul class="card__specs"><li>100 m²</li><li>4 dorm.</li><li>1 baño</li></ul>
-          <strong class="side-card__price">315.000 €</strong>
+          <strong class="side-card__price">315.000 €</strong>
         </span>
       </a>
       </div>
@@ -213,7 +211,7 @@
           <p class="card__place">San Miguel · Guadix</p>
           <h3 class="card__title">Casa en San Miguel, Guadix</h3>
           <ul class="card__specs"><li>477 m²</li><li>11 dorm.</li><li>4 baños</li></ul>
-          <p class="card__price">300.000 €</p>
+          <p class="card__price">300.000 €</p>
         </div>
       </a>
     </article>
@@ -229,7 +227,7 @@
           <p class="card__place">Villarejo · Granada</p>
           <h3 class="card__title">Piso en Villarejo, Granada</h3>
           <ul class="card__specs"><li>124 m²</li><li>3 dorm.</li><li>2 baños</li></ul>
-          <p class="card__price">294.900 €</p>
+          <p class="card__price">294.900 €</p>
         </div>
       </a>
     </article>
@@ -245,7 +243,7 @@
           <p class="card__place">Ambroz · Vegas Del Genil</p>
           <h3 class="card__title">Casa en Ambroz, Vegas Del Genil</h3>
           <ul class="card__specs"><li>245 m²</li><li>3 dorm.</li><li>3 baños</li></ul>
-          <p class="card__price">290.000 €</p>
+          <p class="card__price">290.000 €</p>
         </div>
       </a>
     </article>
@@ -261,13 +259,12 @@
           <p class="card__place">San Ildefonso · Granada</p>
           <h3 class="card__title">Casa en San Ildefonso, Granada</h3>
           <ul class="card__specs"><li>144 m²</li><li>4 dorm.</li><li>2 baños</li></ul>
-          <p class="card__price">290.000 €</p>
+          <p class="card__price">290.000 €</p>
         </div>
       </a>
     </article>
     </div>
       </div>
-      <p class="empty" id="home-empty" hidden>Ahora mismo no tenemos inmuebles de ese tipo publicados. <a href="inmuebles.html#alertas">Déjenos su correo</a> y le avisamos en cuanto entre uno.</p>
       <p style="margin:32px 0 0;text-align:center;"><a class="link-more" href="inmuebles.html">Ver las 23 propiedades publicadas</a></p>
     </div>
   </section>
@@ -279,9 +276,9 @@
         <p class="lead" style="margin:0;">Amplíe el mapa y pulse un precio para abrir la ficha. La posición es aproximada, por barrio o municipio.</p>
       </div>
       <div class="map" id="listing-map" data-map-json="listing-map-data" data-root="" role="region" aria-label="Dónde están">
-        <ul class="map__fallback" aria-label="Lista de inmuebles en el mapa"><li><a href="inmuebles/atico-duplex-centro-granada-rafael-original.html">Ático Dúplex en Centro, Granada · 339.900 €</a></li><li><a href="inmuebles/piso-el-serrallo-granada-fh03130.html">Piso en El Serrallo, Granada · 275.000 €</a></li><li><a href="inmuebles/pareado-calle-madrid-monachil-rgc-0093.html">Pareado en Calle Madrid, Monachil · 269.000 €</a></li><li><a href="inmuebles/piso-villarejo-granada-rpa-ronda202.html">Piso en Villarejo, Granada · 294.900 €</a></li><li><a href="inmuebles/piso-pulianillas-pulianas-gr26-09.html">Piso en Pulianillas, Pulianas · 155.000 €</a></li><li><a href="inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html">Casa de campo en Sierra de Huétor, Cogollos de la Vega · 190.000 €</a></li><li><a href="inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html">Pareado en Centro, La Malahá · 164.000 €</a></li><li><a href="inmuebles/piso-alcampo-granada-rgc-0091.html">Piso en Alcampo, Granada · 169.900 €</a></li><li><a href="inmuebles/casa-de-campo-melegis-el-valle-ecg68.html">Casa de campo en Melegís, El Valle · 83.000 €</a></li><li><a href="inmuebles/piso-zafarraya-zafarraya-ecg64.html">Piso en Zafarraya, Zafarraya · 102.000 €</a></li><li><a href="inmuebles/piso-joaquina-eguaras-granada-fh03047.html">Piso en Joaquina Eguaras, Granada · 119.900 €</a></li><li><a href="inmuebles/piso-carretera-mojonera-cortijos-de-marin-roquetas-de-mar-fh03088.html">Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar · 124.000 €</a></li><li><a href="inmuebles/piso-zaidin-granada-fh03040.html">Piso en Zaidín, Granada · 144.900 €</a></li><li><a href="inmuebles/piso-centro-atarfe-fh02982.html">Piso en Centro, Atarfe · 145.000 €</a></li><li><a href="inmuebles/piso-constitucion-granada-fh03148.html">Piso en Constitucion, Granada · 169.900 €</a></li><li><a href="inmuebles/casa-padul-padul-ecg76.html">Casa en Padul · 230.000 €</a></li><li><a href="inmuebles/pareado-jun-jun-app007.html">Pareado en Jun, Jun · 249.000 €</a></li><li><a href="inmuebles/casa-ambroz-vegas-del-genil-v970.html">Casa en Ambroz, Vegas Del Genil · 290.000 €</a></li><li><a href="inmuebles/casa-san-ildefonso-granada-fh02875.html">Casa en San Ildefonso, Granada · 290.000 €</a></li><li><a href="inmuebles/casa-san-miguel-guadix-202200936.html">Casa en San Miguel, Guadix · 300.000 €</a></li><li><a href="inmuebles/piso-plaza-menorca-granada-gr26-32.html">Piso en Plaza Menorca, Granada · 330.000 €</a></li><li><a href="inmuebles/piso-constitucion-granada-gral26-13.html">Piso en Constitucion, Granada · 1300 €/mes</a></li><li><a href="inmuebles/piso-arabial-granada-v1029.html">Piso en Arabial, Granada · 315.000 €</a></li></ul>
+        <ul class="map__fallback" aria-label="Lista de inmuebles en el mapa"><li><a href="inmuebles/atico-duplex-centro-granada-rafael-original.html">Ático Dúplex en Centro, Granada · 339.900 €</a></li><li><a href="inmuebles/piso-el-serrallo-granada-fh03130.html">Piso en El Serrallo, Granada · 275.000 €</a></li><li><a href="inmuebles/pareado-calle-madrid-monachil-rgc-0093.html">Pareado en Calle Madrid, Monachil · 269.000 €</a></li><li><a href="inmuebles/piso-villarejo-granada-rpa-ronda202.html">Piso en Villarejo, Granada · 294.900 €</a></li><li><a href="inmuebles/piso-pulianillas-pulianas-gr26-09.html">Piso en Pulianillas, Pulianas · 155.000 €</a></li><li><a href="inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html">Casa de campo en Sierra de Huétor, Cogollos de la Vega · 190.000 €</a></li><li><a href="inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html">Pareado en Centro, La Malahá · 164.000 €</a></li><li><a href="inmuebles/piso-alcampo-granada-rgc-0091.html">Piso en Alcampo, Granada · 169.900 €</a></li><li><a href="inmuebles/casa-de-campo-melegis-el-valle-ecg68.html">Casa de campo en Melegís, El Valle · 83.000 €</a></li><li><a href="inmuebles/piso-zafarraya-zafarraya-ecg64.html">Piso en Zafarraya, Zafarraya · 102.000 €</a></li><li><a href="inmuebles/piso-joaquina-eguaras-granada-fh03047.html">Piso en Joaquina Eguaras, Granada · 119.900 €</a></li><li><a href="inmuebles/piso-carretera-mojonera-cortijos-de-marin-roquetas-de-mar-fh03088.html">Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar · 124.000 €</a></li><li><a href="inmuebles/piso-zaidin-granada-fh03040.html">Piso en Zaidín, Granada · 144.900 €</a></li><li><a href="inmuebles/piso-centro-atarfe-fh02982.html">Piso en Centro, Atarfe · 145.000 €</a></li><li><a href="inmuebles/piso-constitucion-granada-fh03148.html">Piso en Constitucion, Granada · 169.900 €</a></li><li><a href="inmuebles/casa-padul-padul-ecg76.html">Casa en Padul · 230.000 €</a></li><li><a href="inmuebles/pareado-jun-jun-app007.html">Pareado en Jun, Jun · 249.000 €</a></li><li><a href="inmuebles/casa-ambroz-vegas-del-genil-v970.html">Casa en Ambroz, Vegas Del Genil · 290.000 €</a></li><li><a href="inmuebles/casa-san-ildefonso-granada-fh02875.html">Casa en San Ildefonso, Granada · 290.000 €</a></li><li><a href="inmuebles/casa-san-miguel-guadix-202200936.html">Casa en San Miguel, Guadix · 300.000 €</a></li><li><a href="inmuebles/piso-plaza-menorca-granada-gr26-32.html">Piso en Plaza Menorca, Granada · 330.000 €</a></li><li><a href="inmuebles/piso-constitucion-granada-gral26-13.html">Piso en Constitucion, Granada · 1300 €/mes</a></li><li><a href="inmuebles/piso-arabial-granada-v1029.html">Piso en Arabial, Granada · 315.000 €</a></li></ul>
       </div>
-      <script type="application/json" id="listing-map-data">[{"id":"30002664","title":"Ático Dúplex en Centro, Granada","price":"339.900 €","url":"inmuebles/atico-duplex-centro-granada-rafael-original.html","lat":37.1765,"lng":-3.5985,"reserved":false},{"id":"30020091","title":"Piso en El Serrallo, Granada","price":"275.000 €","url":"inmuebles/piso-el-serrallo-granada-fh03130.html","lat":37.159,"lng":-3.59,"reserved":false},{"id":"29865262","title":"Pareado en Calle Madrid, Monachil","price":"269.000 €","url":"inmuebles/pareado-calle-madrid-monachil-rgc-0093.html","lat":37.132,"lng":-3.54,"reserved":false},{"id":"29868382","title":"Piso en Villarejo, Granada","price":"294.900 €","url":"inmuebles/piso-villarejo-granada-rpa-ronda202.html","lat":37.169,"lng":-3.612,"reserved":false},{"id":"28722775","title":"Piso en Pulianillas, Pulianas","price":"155.000 €","url":"inmuebles/piso-pulianillas-pulianas-gr26-09.html","lat":37.215,"lng":-3.614,"reserved":false},{"id":"29965705","title":"Casa de campo en Sierra de Huétor, Cogollos de la Vega","price":"190.000 €","url":"inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html","lat":37.274,"lng":-3.566,"reserved":false},{"id":"29864049","title":"Pareado en Centro, La Malahá","price":"164.000 €","url":"inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html","lat":37.106,"lng":-3.724,"reserved":false},{"id":"29899079","title":"Piso en Alcampo, Granada","price":"169.900 €","url":"inmuebles/piso-alcampo-granada-rgc-0091.html","lat":37.158,"lng":-3.609,"reserved":true},{"id":"28001192","title":"Casa de campo en Melegís, El Valle","price":"83.000 €","url":"inmuebles/casa-de-campo-melegis-el-valle-ecg68.html","lat":36.916,"lng":-3.562,"reserved":false},{"id":"27775090","title":"Piso en Zafarraya, Zafarraya","price":"102.000 €","url":"inmuebles/piso-zafarraya-zafarraya-ecg64.html","lat":36.972,"lng":-4.133,"reserved":false},{"id":"28996902","title":"Piso en Joaquina Eguaras, Granada","price":"119.900 €","url":"inmuebles/piso-joaquina-eguaras-granada-fh03047.html","lat":37.198,"lng":-3.601,"reserved":false},{"id":"29363276","title":"Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar","price":"124.000 €","url":"inmuebles/piso-carretera-mojonera-cortijos-de-marin-roquetas-de-mar-fh03088.html","lat":36.79,"lng":-2.614,"reserved":false},{"id":"28894667","title":"Piso en Zaidín, Granada","price":"144.900 €","url":"inmuebles/piso-zaidin-granada-fh03040.html","lat":37.162,"lng":-3.604,"reserved":false},{"id":"28164588","title":"Piso en Centro, Atarfe","price":"145.000 €","url":"inmuebles/piso-centro-atarfe-fh02982.html","lat":37.226,"lng":-3.687,"reserved":false},{"id":"30051861","title":"Piso en Constitucion, Granada","price":"169.900 €","url":"inmuebles/piso-constitucion-granada-fh03148.html","lat":37.19,"lng":-3.606,"reserved":false},{"id":"28568360","title":"Casa en Padul","price":"230.000 €","url":"inmuebles/casa-padul-padul-ecg76.html","lat":37.014,"lng":-3.62,"reserved":false},{"id":"26630293","title":"Pareado en Jun, Jun","price":"249.000 €","url":"inmuebles/pareado-jun-jun-app007.html","lat":37.213,"lng":-3.581,"reserved":false},{"id":"27926961","title":"Casa en Ambroz, Vegas Del Genil","price":"290.000 €","url":"inmuebles/casa-ambroz-vegas-del-genil-v970.html","lat":37.167,"lng":-3.669,"reserved":false},{"id":"27157226","title":"Casa en San Ildefonso, Granada","price":"290.000 €","url":"inmuebles/casa-san-ildefonso-granada-fh02875.html","lat":37.188,"lng":-3.602,"reserved":false},{"id":"26670121","title":"Casa en San Miguel, Guadix","price":"300.000 €","url":"inmuebles/casa-san-miguel-guadix-202200936.html","lat":37.3,"lng":-3.135,"reserved":false},{"id":"29809345","title":"Piso en Plaza Menorca, Granada","price":"330.000 €","url":"inmuebles/piso-plaza-menorca-granada-gr26-32.html","lat":37.169,"lng":-3.618,"reserved":false},{"id":"29776364","title":"Piso en Constitucion, Granada","price":"1300 €/mes","url":"inmuebles/piso-constitucion-granada-gral26-13.html","lat":37.19,"lng":-3.606,"reserved":false},{"id":"29965708","title":"Piso en Arabial, Granada","price":"315.000 €","url":"inmuebles/piso-arabial-granada-v1029.html","lat":37.172,"lng":-3.613,"reserved":false}]</script>
+      <script type="application/json" id="listing-map-data">[{"id":"30002664","title":"Ático Dúplex en Centro, Granada","price":"339.900 €","url":"inmuebles/atico-duplex-centro-granada-rafael-original.html","lat":37.1765,"lng":-3.5985,"reserved":false},{"id":"30020091","title":"Piso en El Serrallo, Granada","price":"275.000 €","url":"inmuebles/piso-el-serrallo-granada-fh03130.html","lat":37.159,"lng":-3.59,"reserved":false},{"id":"29865262","title":"Pareado en Calle Madrid, Monachil","price":"269.000 €","url":"inmuebles/pareado-calle-madrid-monachil-rgc-0093.html","lat":37.132,"lng":-3.54,"reserved":false},{"id":"29868382","title":"Piso en Villarejo, Granada","price":"294.900 €","url":"inmuebles/piso-villarejo-granada-rpa-ronda202.html","lat":37.169,"lng":-3.612,"reserved":false},{"id":"28722775","title":"Piso en Pulianillas, Pulianas","price":"155.000 €","url":"inmuebles/piso-pulianillas-pulianas-gr26-09.html","lat":37.215,"lng":-3.614,"reserved":false},{"id":"29965705","title":"Casa de campo en Sierra de Huétor, Cogollos de la Vega","price":"190.000 €","url":"inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html","lat":37.274,"lng":-3.566,"reserved":false},{"id":"29864049","title":"Pareado en Centro, La Malahá","price":"164.000 €","url":"inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html","lat":37.106,"lng":-3.724,"reserved":false},{"id":"29899079","title":"Piso en Alcampo, Granada","price":"169.900 €","url":"inmuebles/piso-alcampo-granada-rgc-0091.html","lat":37.158,"lng":-3.609,"reserved":true},{"id":"28001192","title":"Casa de campo en Melegís, El Valle","price":"83.000 €","url":"inmuebles/casa-de-campo-melegis-el-valle-ecg68.html","lat":36.916,"lng":-3.562,"reserved":false},{"id":"27775090","title":"Piso en Zafarraya, Zafarraya","price":"102.000 €","url":"inmuebles/piso-zafarraya-zafarraya-ecg64.html","lat":36.972,"lng":-4.133,"reserved":false},{"id":"28996902","title":"Piso en Joaquina Eguaras, Granada","price":"119.900 €","url":"inmuebles/piso-joaquina-eguaras-granada-fh03047.html","lat":37.198,"lng":-3.601,"reserved":false},{"id":"29363276","title":"Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar","price":"124.000 €","url":"inmuebles/piso-carretera-mojonera-cortijos-de-marin-roquetas-de-mar-fh03088.html","lat":36.79,"lng":-2.614,"reserved":false},{"id":"28894667","title":"Piso en Zaidín, Granada","price":"144.900 €","url":"inmuebles/piso-zaidin-granada-fh03040.html","lat":37.162,"lng":-3.604,"reserved":false},{"id":"28164588","title":"Piso en Centro, Atarfe","price":"145.000 €","url":"inmuebles/piso-centro-atarfe-fh02982.html","lat":37.226,"lng":-3.687,"reserved":false},{"id":"30051861","title":"Piso en Constitucion, Granada","price":"169.900 €","url":"inmuebles/piso-constitucion-granada-fh03148.html","lat":37.19,"lng":-3.606,"reserved":false},{"id":"28568360","title":"Casa en Padul","price":"230.000 €","url":"inmuebles/casa-padul-padul-ecg76.html","lat":37.014,"lng":-3.62,"reserved":false},{"id":"26630293","title":"Pareado en Jun, Jun","price":"249.000 €","url":"inmuebles/pareado-jun-jun-app007.html","lat":37.213,"lng":-3.581,"reserved":false},{"id":"27926961","title":"Casa en Ambroz, Vegas Del Genil","price":"290.000 €","url":"inmuebles/casa-ambroz-vegas-del-genil-v970.html","lat":37.167,"lng":-3.669,"reserved":false},{"id":"27157226","title":"Casa en San Ildefonso, Granada","price":"290.000 €","url":"inmuebles/casa-san-ildefonso-granada-fh02875.html","lat":37.188,"lng":-3.602,"reserved":false},{"id":"26670121","title":"Casa en San Miguel, Guadix","price":"300.000 €","url":"inmuebles/casa-san-miguel-guadix-202200936.html","lat":37.3,"lng":-3.135,"reserved":false},{"id":"29809345","title":"Piso en Plaza Menorca, Granada","price":"330.000 €","url":"inmuebles/piso-plaza-menorca-granada-gr26-32.html","lat":37.169,"lng":-3.618,"reserved":false},{"id":"29776364","title":"Piso en Constitucion, Granada","price":"1300 €/mes","url":"inmuebles/piso-constitucion-granada-gral26-13.html","lat":37.19,"lng":-3.606,"reserved":false},{"id":"29965708","title":"Piso en Arabial, Granada","price":"315.000 €","url":"inmuebles/piso-arabial-granada-v1029.html","lat":37.172,"lng":-3.613,"reserved":false}]</script>
     </div>
   </section>
 
@@ -294,7 +291,7 @@
         </div>
         <div class="family__stats">
           <div class="stat"><span class="stat__num">55</span><span class="stat__label">años en Granada</span></div>
-          <div class="stat"><span class="stat__num">276</span><span class="stat__label">propiedades en cartera</span></div>
+          <div class="stat"><span class="stat__num">+250</span><span class="stat__label">propiedades en cartera</span></div>
           <div class="stat"><span class="stat__num">3</span><span class="stat__label">generaciones</span></div>
           <div class="stat"><span class="stat__num">ES · EN</span><span class="stat__label">atención en español e inglés</span></div>
         </div>
@@ -314,7 +311,7 @@
       </div>
       <div class="sell__stats">
         <div class="stat stat--light"><span class="stat__num">55</span><span class="stat__label">años en Recogidas, 13</span></div>
-        <div class="stat stat--light"><span class="stat__num">276</span><span class="stat__label">propiedades activas</span></div>
+        <div class="stat stat--light"><span class="stat__num">+250</span><span class="stat__label">propiedades activas</span></div>
         <div class="stat stat--light"><span class="stat__num">48 h</span><span class="stat__label">para la valoración</span></div>
         <div class="stat stat--ink"><span class="stat__num">3</span><span class="stat__label">generaciones de la familia</span></div>
         <!-- [DATO A CONFIRMAR] 48 h: compromiso de servicio propuesto, pendiente de aceptación por el cliente. -->
@@ -350,21 +347,59 @@
           <div class="person__photo"><picture><source srcset="assets/team/jose-antonio-grande.webp" type="image/webp"><img src="assets/team/jose-antonio-grande.jpg" alt="José Antonio Grande, gerente de Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">José Antonio Grande</p>
           <p class="person__role">Gerente</p>
+          <blockquote class="person__quote"><p>«Te regalamos tu tranquilidad.»</p></blockquote>
         </div>
         <div class="person">
           <div class="person__photo"><picture><source srcset="assets/team/jose-grande-jr.webp" type="image/webp"><img src="assets/team/jose-grande-jr.jpg" alt="José Grande Jr., agente inmobiliario de Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">José Grande Jr.</p>
           <p class="person__role">Agente inmobiliario</p>
+          <blockquote class="person__quote"><p>«De pequeño veía a mi padre vender pisos y casas; ahora las vendemos juntos.»</p></blockquote>
         </div>
         <div class="person">
           <div class="person__photo"><picture><source srcset="assets/team/monica.webp" type="image/webp"><img src="assets/team/monica.jpg" alt="Mónica, agente inmobiliaria de Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">Mónica</p>
           <p class="person__role">Agente inmobiliaria</p>
+          <blockquote class="person__quote"><p>«Trabajando juntos logramos los objetivos.»</p></blockquote>
         </div>
         <div class="person">
           <div class="person__photo"><picture><source srcset="assets/team/javier-corpas.webp" type="image/webp"><img src="assets/team/javier-corpas.jpg" alt="Javier Corpas, agente inmobiliario de Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">Javier Corpas</p>
           <p class="person__role">Agente inmobiliario</p>
+          <blockquote class="person__quote"><p>«Cada casa tiene su historia; mi misión es ayudarte a crear la tuya.»</p></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valoración y reseñas de la ficha de Google del negocio, leídas el 2026-09-03.
+       Citas literales, recortadas solo con elipsis. Se firma con nombre e inicial, nunca
+       con el apellido completo. El enlace va a la búsqueda de la ficha: sin el place_id
+       no se puede apuntar directamente a la pestaña de reseñas (ver docs/PENDIENTES.md). -->
+  <section class="section--tight" id="resenas">
+    <div class="container">
+      <div class="section-head section-head--stack">
+        <h2>Lo que dicen quienes ya han pasado por aquí</h2>
+      </div>
+      <div class="reviews">
+        <div class="reviews__score">
+          <p class="reviews__num">4,3</p>
+          <p class="reviews__of">sobre 5</p>
+          <svg class="reviews__stars" viewBox="0 0 112 24" role="img" aria-label="4,3 estrellas sobre 5"><defs><path id="star-g" d="M12 2.6l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.03l-5.66 2.98 1.08-6.3L2.85 9.25l6.32-.92z"/><clipPath id="stars-4-3"><rect width="94.6" height="24"/></clipPath></defs><g fill="#DED7EA"><use href="#star-g" x="0"/><use href="#star-g" x="22"/><use href="#star-g" x="44"/><use href="#star-g" x="66"/><use href="#star-g" x="88"/></g><g fill="#7B4FD1" clip-path="url(#stars-4-3)"><use href="#star-g" x="0"/><use href="#star-g" x="22"/><use href="#star-g" x="44"/><use href="#star-g" x="66"/><use href="#star-g" x="88"/></g></svg>
+          <a class="reviews__link" href="https://www.google.com/maps/search/?api=1&amp;query=Inmobiliaria+Grande+Calle+Recogidas+13,+18008+Granada" target="_blank" rel="noopener">Leer las 65 reseñas en Google</a>
+        </div>
+        <div class="reviews__quotes">
+          <figure class="review">
+            <blockquote cite="https://www.google.com/maps/search/?api=1&amp;query=Inmobiliaria+Grande+Calle+Recogidas+13,+18008+Granada">
+              <p>Una experiencia excelente de principio a fin. Fueron muy rápidos en todo el proceso y prácticamente no tuvimos que preocuparnos por nada. Destacar especialmente la atención de Mónica […] Totalmente recomendable.</p>
+            </blockquote>
+            <figcaption>Arantxa S., reseña en Google</figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote cite="https://www.google.com/maps/search/?api=1&amp;query=Inmobiliaria+Grande+Calle+Recogidas+13,+18008+Granada">
+              <p>Destacar la ayuda de Mónica, que ha sido súper atenta, profesional, competente… nos ha ayudado en todo lo posible.</p>
+            </blockquote>
+            <figcaption>María M., reseña en Google</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -375,7 +410,7 @@
       <div class="cta-band">
         <div>
           <h2>¿Hablamos?</h2>
-          <p>Cuéntenos qué busca o qué quiere vender y le contestamos con nombres, calles y precios, no con formularios automáticos. Lunes a viernes, 9:30–20:00.</p>
+          <p>Cuéntenos qué busca o qué quiere vender y le contestamos con nombres, calles y precios, no con formularios automáticos. Lunes a viernes, de 9:30 a 14:00 y de 17:00 a 20:30.</p>
         </div>
         <div class="actions">
           <a class="btn btn--violet" href="tel:+34958252461">Llamar al 958 25 24 61</a>
@@ -397,10 +432,10 @@
           </span>
         </a>
         <address style="margin-top:16px;">
-          <p>Recogidas, 13 · 1.º A · 18005 Granada<br>
+          <p>Recogidas, 13 · 1.º A · 18008 Granada<br>
           <a href="tel:+34958252461">958 25 24 61</a> · <a href="tel:+34622350918">622 350 918</a><br>
           <a href="mailto:info@inmobiliariagrande.com">info@inmobiliariagrande.com</a></p>
-          <p style="margin-top:8px;">Lunes a viernes, 9:30–20:00</p>
+          <p style="margin-top:8px;">Lunes a viernes, 9:30–14:00 y 17:00–20:30<br>Sábados y domingos, cerrado</p>
         </address>
       </div>
       <div>

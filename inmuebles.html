@@ -46,9 +46,7 @@
     <nav class="nav" id="site-nav" aria-label="Principal">
       <ul class="nav__list">
         <li><a class="nav__link" href="index.html">Inicio</a></li>
-        <li><a class="nav__link" href="inmuebles.html?op=venta" aria-current="page">Comprar</a></li>
-        <li><a class="nav__link" href="inmuebles.html?op=alquiler">Alquilar</a></li>
-        <li><a class="nav__link" href="inmuebles.html?tipo=Local">Locales</a></li>
+        <li><a class="nav__link" href="inmuebles.html" aria-current="page">Buscar inmueble</a></li>
         <li><a class="nav__link" href="vende-tu-casa.html">Vender</a></li>
         <li><a class="nav__link" href="sobre-nosotros.html">La casa</a></li>
         <li><a class="nav__link" href="contacto.html">Contacto</a></li>
@@ -57,7 +55,12 @@
         <a class="lang__opt" href="inmuebles.html" aria-current="true" lang="es" hreflang="es">ES</a>
         <a class="lang__opt" href="en/properties.html" lang="en" hreflang="en">EN</a>
       </div>
-      <a class="nav__phone" href="tel:+34958252461">958 25 24 61</a>
+      <div class="nav__contact">
+        <a class="nav__phone" href="tel:+34958252461">958 25 24 61</a>
+        <a class="nav__wa" href="https://wa.me/34622350918?text=Hola%2C%20os%20escribo%20desde%20la%20web" rel="noopener" aria-label="Escribir por WhatsApp al 622 350 918">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.27z"></path></svg>
+        </a>
+      </div>
     </nav>
   </div>
 </header>
@@ -78,7 +81,8 @@
           <div class="filters__group">
             <span class="filters__legend" id="lbl-op">Operación</span>
             <div class="radio-pills" role="radiogroup" aria-labelledby="lbl-op">
-              <label><input type="radio" name="op" value="venta" checked> Venta</label>
+              <label><input type="radio" name="op" value="" checked> Todas</label>
+              <label><input type="radio" name="op" value="venta"> Venta</label>
               <label><input type="radio" name="op" value="alquiler"> Alquiler</label>
               <label><input type="radio" name="op" value="traspaso"> Traspaso</label>
             </div>
@@ -212,7 +216,7 @@
           <p class="card__place">Centro · Granada</p>
           <h3 class="card__title">Ático Dúplex en Centro, Granada</h3>
           <ul class="card__specs"><li>146 m²</li><li>2 dorm.</li><li>1 baño</li></ul>
-          <p class="card__price">339.900 €<span class="price-was"><s>360.000 €</s><span class="price-drop">−6%</span></span><span class="visually-hidden">Antes 360.000 €</span></p>
+          <p class="card__price">339.900 €<span class="price-was"><s>360.000 €</s><span class="price-drop">−6%</span></span><span class="visually-hidden">Antes 360.000 €</span></p>
         </div>
       </a>
     </article>
@@ -228,7 +232,7 @@
           <p class="card__place">El Serrallo · Granada</p>
           <h3 class="card__title">Piso en El Serrallo, Granada</h3>
           <ul class="card__specs"><li>176 m²</li><li>3 dorm.</li><li>2 baños</li></ul>
-          <p class="card__price">275.000 €<span class="price-was"><s>295.000 €</s><span class="price-drop">−7%</span></span><span class="visually-hidden">Antes 295.000 €</span></p>
+          <p class="card__price">275.000 €<span class="price-was"><s>295.000 €</s><span class="price-drop">−7%</span></span><span class="visually-hidden">Antes 295.000 €</span></p>
         </div>
       </a>
     </article>
@@ -244,7 +248,7 @@
           <p class="card__place">Calle Madrid · Monachil</p>
           <h3 class="card__title">Pareado en Calle Madrid, Monachil</h3>
           <ul class="card__specs"><li>152 m²</li><li>3 dorm.</li><li>2 baños</li></ul>
-          <p class="card__price">269.000 €</p>
+          <p class="card__price">269.000 €</p>
         </div>
       </a>
     </article>
@@ -260,7 +264,7 @@
           <p class="card__place">Villarejo · Granada</p>
           <h3 class="card__title">Piso en Villarejo, Granada</h3>
           <ul class="card__specs"><li>124 m²</li><li>3 dorm.</li><li>2 baños</li></ul>
-          <p class="card__price">294.900 €</p>
+          <p class="card__price">294.900 €</p>
         </div>
       </a>
     </article>
@@ -276,7 +280,7 @@
           <p class="card__place">Pulianillas · Pulianas</p>
           <h3 class="card__title">Piso en Pulianillas, Pulianas</h3>
           <ul class="card__specs"><li>114 m²</li><li>3 dorm.</li><li>2 baños</li></ul>
-          <p class="card__price">155.000 €</p>
+          <p class="card__price">155.000 €</p>
         </div>
       </a>
     </article>
@@ -292,7 +296,7 @@
           <p class="card__place">Sierra de Huétor · Cogollos de la Vega</p>
           <h3 class="card__title">Casa de campo en Sierra de Huétor, Cogollos de la Vega</h3>
           <ul class="card__specs"><li>88 m²</li><li>4 dorm.</li><li>1 baño</li></ul>
-          <p class="card__price">190.000 €</p>
+          <p class="card__price">190.000 €</p>
         </div>
       </a>
     </article>
@@ -308,7 +312,7 @@
           <p class="card__place">Centro · La Malahá</p>
           <h3 class="card__title">Pareado en Centro, La Malahá</h3>
           <ul class="card__specs"><li>114 m²</li><li>4 dorm.</li><li>2 baños</li></ul>
-          <p class="card__price">164.000 €</p>
+          <p class="card__price">164.000 €</p>
         </div>
       </a>
     </article>
@@ -324,7 +328,7 @@
           <p class="card__place">Alcampo · Granada</p>
           <h3 class="card__title">Piso en Alcampo, Granada</h3>
           <ul class="card__specs"><li>110 m²</li><li>4 dorm.</li><li>2 baños</li></ul>
-          <p class="card__price">169.900 €</p>
+          <p class="card__price">169.900 €</p>
         </div>
       </a>
     </article>
@@ -340,7 +344,7 @@
           <p class="card__place">Melegís · El Valle</p>
           <h3 class="card__title">Casa de campo en Melegís, El Valle</h3>
           <ul class="card__specs"><li>105 m²</li><li>1 dorm.</li><li>1 baño</li></ul>
-          <p class="card__price">83.000 €</p>
+          <p class="card__price">83.000 €</p>
         </div>
       </a>
     </article>
@@ -356,7 +360,7 @@
           <p class="card__place">Zafarraya</p>
           <h3 class="card__title">Piso en Zafarraya, Zafarraya</h3>
           <ul class="card__specs"><li>93 m²</li><li>3 dorm.</li><li>1 baño</li></ul>
-          <p class="card__price">102.000 €</p>
+          <p class="card__price">102.000 €</p>
         </div>
       </a>
     </article>
@@ -372,7 +376,7 @@
           <p class="card__place">Joaquina Eguaras · Granada</p>
           <h3 class="card__title">Piso en Joaquina Eguaras, Granada</h3>
           <ul class="card__specs"><li>45 m²</li><li>1 dorm.</li><li>1 baño</li></ul>
-          <p class="card__price">119.900 €</p>
+          <p class="card__price">119.900 €</p>
         </div>
       </a>
     </article>
@@ -388,7 +392,7 @@
           <p class="card__place">Carretera Mojonera - Cortijos de Marín · Roquetas De Mar</p>
           <h3 class="card__title">Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar</h3>
           <ul class="card__specs"><li>86 m²</li><li>2 dorm.</li><li>1 baño</li></ul>
-          <p class="card__price">124.000 €</p>
+          <p class="card__price">124.000 €</p>
         </div>
       </a>
     </article>
@@ -404,7 +408,7 @@
           <p class="card__place">Zaidín · Granada</p>
           <h3 class="card__title">Piso en Zaidín, Granada</h3>
           <ul class="card__specs"><li>46 m²</li><li>1 dorm.</li><li>1 baño</li></ul>
-          <p class="card__price">144.900 €</p>
+          <p class="card__price">144.900 €</p>
         </div>
       </a>
     </article>
@@ -420,7 +424,7 @@
           <p class="card__place">Centro · Atarfe</p>
           <h3 class="card__title">Piso en Centro, Atarfe</h3>
           <ul class="card__specs"><li>87 m²</li><li>2 dorm.</li><li>1 baño</li></ul>
-          <p class="card__price">145.000 €</p>
+          <p class="card__price">145.000 €</p>
         </div>
       </a>
     </article>
@@ -436,7 +440,7 @@
           <p class="card__place">Constitucion · Granada</p>
           <h3 class="card__title">Piso en Constitucion, Granada</h3>
           <ul class="card__specs"><li>48 m²</li><li>1 dorm.</li><li>1 baño</li></ul>
-          <p class="card__price">169.900 €</p>
+          <p class="card__price">169.900 €</p>
         </div>
       </a>
     </article>
@@ -452,7 +456,7 @@
           <p class="card__place">Padul</p>
           <h3 class="card__title">Casa en Padul</h3>
           <ul class="card__specs"><li>221 m²</li><li>6 dorm.</li><li>4 baños</li></ul>
-          <p class="card__price">230.000 €</p>
+          <p class="card__price">230.000 €</p>
         </div>
       </a>
     </article>
@@ -468,7 +472,7 @@
           <p class="card__place">Jun</p>
           <h3 class="card__title">Pareado en Jun, Jun</h3>
           <ul class="card__specs"><li>319 m²</li><li>5 dorm.</li><li>3 baños</li></ul>
-          <p class="card__price">249.000 €</p>
+          <p class="card__price">249.000 €</p>
         </div>
       </a>
     </article>
@@ -484,7 +488,7 @@
           <p class="card__place">Ambroz · Vegas Del Genil</p>
           <h3 class="card__title">Casa en Ambroz, Vegas Del Genil</h3>
           <ul class="card__specs"><li>245 m²</li><li>3 dorm.</li><li>3 baños</li></ul>
-          <p class="card__price">290.000 €</p>
+          <p class="card__price">290.000 €</p>
         </div>
       </a>
     </article>
@@ -500,7 +504,7 @@
           <p class="card__place">San Ildefonso · Granada</p>
           <h3 class="card__title">Casa en San Ildefonso, Granada</h3>
           <ul class="card__specs"><li>144 m²</li><li>4 dorm.</li><li>2 baños</li></ul>
-          <p class="card__price">290.000 €</p>
+          <p class="card__price">290.000 €</p>
         </div>
       </a>
     </article>
@@ -516,7 +520,7 @@
           <p class="card__place">San Miguel · Guadix</p>
           <h3 class="card__title">Casa en San Miguel, Guadix</h3>
           <ul class="card__specs"><li>477 m²</li><li>11 dorm.</li><li>4 baños</li></ul>
-          <p class="card__price">300.000 €</p>
+          <p class="card__price">300.000 €</p>
         </div>
       </a>
     </article>
@@ -532,7 +536,7 @@
           <p class="card__place">Plaza Menorca · Granada</p>
           <h3 class="card__title">Piso en Plaza Menorca, Granada</h3>
           <ul class="card__specs"><li>95 m²</li><li>4 dorm.</li><li>1 baño</li></ul>
-          <p class="card__price">330.000 €</p>
+          <p class="card__price">330.000 €</p>
         </div>
       </a>
     </article>
@@ -548,7 +552,7 @@
           <p class="card__place">Constitucion · Granada</p>
           <h3 class="card__title">Piso en Constitucion, Granada</h3>
           <ul class="card__specs"><li>125 m²</li><li>3 dorm.</li><li>2 baños</li></ul>
-          <p class="card__price">1300 €/mes</p>
+          <p class="card__price">1300 €/mes</p>
         </div>
       </a>
     </article>
@@ -564,7 +568,7 @@
           <p class="card__place">Arabial · Granada</p>
           <h3 class="card__title">Piso en Arabial, Granada</h3>
           <ul class="card__specs"><li>100 m²</li><li>4 dorm.</li><li>1 baño</li></ul>
-          <p class="card__price">315.000 €</p>
+          <p class="card__price">315.000 €</p>
         </div>
       </a>
     </article>
@@ -576,7 +580,8 @@
           <button class="btn btn--ghost btn--sm" type="button" id="clear-filters">Quitar filtros</button>
         </div>
 
-        <ol class="pagination" aria-label="Paginación"><li><span aria-current="page">1</span></li></ol>
+        <ol class="pagination" id="pagination" aria-label="Paginación" data-per-page="9"
+            data-prev="Anterior" data-next="Siguiente" data-goto="Ir a la página"><li><span aria-current="page">1</span></li></ol>
 
         <div class="alert-box" id="alertas">
           <div>
@@ -649,10 +654,10 @@
           </span>
         </a>
         <address style="margin-top:16px;">
-          <p>Recogidas, 13 · 1.º A · 18005 Granada<br>
+          <p>Recogidas, 13 · 1.º A · 18008 Granada<br>
           <a href="tel:+34958252461">958 25 24 61</a> · <a href="tel:+34622350918">622 350 918</a><br>
           <a href="mailto:info@inmobiliariagrande.com">info@inmobiliariagrande.com</a></p>
-          <p style="margin-top:8px;">Lunes a viernes, 9:30–20:00</p>
+          <p style="margin-top:8px;">Lunes a viernes, 9:30–14:00 y 17:00–20:30<br>Sábados y domingos, cerrado</p>
         </address>
       </div>
       <div>

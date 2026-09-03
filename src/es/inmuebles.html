@@ -1,7 +1,7 @@
 <!--@page {
   "title": "Pisos y casas en venta en Granada | Inmobiliaria Grande, desde 1970",
   "desc": "Todos los inmuebles publicados por Inmobiliaria Grande: pisos, áticos, pareados y casas de campo en Granada capital, Monachil, Pulianas, La Malahá y Cogollos de la Vega. Filtre por zona, tipo y precio.",
-  "nav": "comprar",
+  "nav": "buscar",
   "alt": "en/properties.html"
 }-->
 <main id="main">
@@ -21,7 +21,8 @@
           <div class="filters__group">
             <span class="filters__legend" id="lbl-op">Operación</span>
             <div class="radio-pills" role="radiogroup" aria-labelledby="lbl-op">
-              <label><input type="radio" name="op" value="venta" checked> Venta</label>
+              <label><input type="radio" name="op" value="" checked> Todas</label>
+              <label><input type="radio" name="op" value="venta"> Venta</label>
               <label><input type="radio" name="op" value="alquiler"> Alquiler</label>
               <label><input type="radio" name="op" value="traspaso"> Traspaso</label>
             </div>
@@ -114,7 +115,8 @@
           <button class="btn btn--ghost btn--sm" type="button" id="clear-filters">Quitar filtros</button>
         </div>
 
-        <ol class="pagination" aria-label="Paginación"><li><span aria-current="page">1</span></li></ol>
+        <ol class="pagination" id="pagination" aria-label="Paginación" data-per-page="9"
+            data-prev="Anterior" data-next="Siguiente" data-goto="Ir a la página"><li><span aria-current="page">1</span></li></ol>
 
         <div class="alert-box" id="alertas">
           <div>

@@ -40,7 +40,7 @@
 
   --container: 1320px;
   --gutter: clamp(20px, 4.2vw, 60px);
-  --section: clamp(56px, 6vw, 88px);
+  --section: clamp(40px, 4vw, 64px);
   --header-h: 84px;
 }
 
@@ -126,9 +126,18 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
    them. .section--tight does not carry .section, hence every pair is listed. */
 .section + .section, .section + .section--tight,
 .section--tight + .section, .section--tight + .section--tight {
-  padding-top: calc(var(--section) * 0.45);
+  padding-top: calc(var(--section) * 0.35);
 }
 .section--tight { padding-block: calc(var(--section) * 0.6); }
+/* Trimming only the top of the second band still left the seam uneven: a full .section
+   above a .section--tight paid 78px while two tights paid 55px. The band that *has* a
+   band after it pays a reduced bottom too, so every seam lands on the same ~1.1×
+   --section regardless of which pair it is. Must stay after .section--tight, whose
+   padding-block shorthand would otherwise reset the bottom value. */
+.section:has(+ .section), .section:has(+ .section--tight),
+.section--tight:has(+ .section), .section--tight:has(+ .section--tight) {
+  padding-bottom: calc(var(--section) * 0.75);
+}
 .section--light { background: var(--white); }
 .section--dark { background: var(--ink-2); color: var(--lilac-light); }
 .section--dark h1, .section--dark h2, .section--dark h3 { color: var(--paper); }
@@ -232,6 +241,17 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
   font-weight: 600; font-size: 0.9rem; white-space: nowrap;
 }
 .nav__phone:hover { background: var(--violet-hover); color: #fff; }
+.nav__contact { display: flex; align-items: center; gap: 8px; }
+/* Desktop only: below 640px the two floating FABs already cover call and WhatsApp. */
+.nav__wa {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: var(--r-pill); color: #fff;
+  border: 1px solid rgba(255,255,255,0.24); background: rgba(255,255,255,0.08);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.nav__wa svg { width: 20px; height: 20px; fill: currentColor; }
+.nav__wa:hover { background: #25D366; border-color: #25D366; color: #fff; }
+@media (prefers-reduced-motion: reduce) { .nav__wa { transition: none; } }
 .nav-toggle {
   display: none; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #fff;
   width: 44px; height: 44px; border-radius: var(--r-sm); cursor: pointer; padding: 0;
@@ -322,7 +342,7 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .badge--rent { background: var(--ok); }
 /* Price reduction: the old price stays legible next to the current one, with the
    drop as a quiet chip. It never replaces the price the buyer actually pays. */
-.price-was { display: inline-flex; align-items: baseline; gap: 8px; margin-left: 10px; font-size: 0.82rem; }
+.price-was { display: inline-flex; align-items: baseline; gap: 8px; margin-left: 10px; font-size: 0.82rem; white-space: nowrap; }
 .price-was s { color: var(--text-soft); text-decoration-thickness: 1px; }
 .price-drop {
   background: var(--violet); color: #fff; border-radius: var(--r-pill);
@@ -450,9 +470,11 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .empty { background: #fff; border-radius: var(--r-md); padding: 40px; text-align: center; box-shadow: var(--shadow-card); }
 .pagination { display: flex; justify-content: center; gap: 6px; margin-top: 40px; list-style: none; padding: 0; }
-.pagination a, .pagination span { min-width: 40px; height: 40px; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--r-pill); border: 1px solid var(--line); font-size: 0.875rem; color: var(--text-muted); }
+.pagination a, .pagination span, .pagination button { min-width: 40px; height: 40px; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--r-pill); border: 1px solid var(--line); font-size: 0.875rem; color: var(--text-muted); }
+.pagination button { background: transparent; cursor: pointer; font-family: inherit; }
 .pagination [aria-current="page"] { background: var(--ink); border-color: var(--ink); color: #fff; }
-.pagination a:hover { border-color: var(--lilac); color: var(--ink); }
+.pagination a:hover, .pagination button:hover:not(:disabled) { border-color: var(--lilac); color: var(--ink); }
+.pagination button:disabled { opacity: 0.45; cursor: default; }
 .alert-box { background: var(--ink-2); color: var(--lilac-light); border-radius: var(--r-md); padding: 28px; margin-top: 40px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; align-items: center; }
 .alert-box h2 { color: var(--paper); font-size: 1.5rem; margin: 0 0 6px; }
 .alert-box p { margin: 0; font-size: 0.95rem; }
@@ -621,7 +643,7 @@ body.cookie-visible .fabs { bottom: 120px; }
 .side-card .badge { top: 10px; left: 10px; font-size: 0.62rem; padding: 5px 10px; }
 .range--stack { grid-template-columns: 1fr; }
 .range input { min-width: 0; width: 100%; border: 1px solid var(--line); border-radius: var(--r-sm); padding: 10px 12px; background: #fff; }
-.map { position: relative; height: 480px; border-radius: var(--r-md); overflow: hidden; background: var(--lilac-pale); box-shadow: var(--shadow-card); }
+.map { position: relative; z-index: 0; height: 480px; border-radius: var(--r-md); overflow: hidden; background: var(--lilac-pale); box-shadow: var(--shadow-card); }
 .map .leaflet-container { height: 100%; font-family: var(--font-body); }
 .map__fallback { list-style: none; margin: 0; padding: 20px; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); font-size: 0.9rem; }
 .map__fallback a { color: var(--ink); font-weight: 600; }
@@ -651,6 +673,29 @@ body.cookie-visible .fabs { bottom: 120px; }
 .agent__avatar--photo { overflow: hidden; padding: 0; background: var(--lilac-pale); }
 .agent__avatar--photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 
+/* ------------------------------------------------- google reviews */
+/* No card, no shadow: the score sits under a heavy rule and the quotes hang off a
+   violet hairline, reusing the 1px language of the family stats and .person__quote. */
+.reviews { display: grid; grid-template-columns: 250px 1fr; gap: clamp(28px, 4vw, 64px); align-items: start; }
+.reviews__score { border-top: 2px solid var(--ink); padding-top: 18px; }
+.reviews__num {
+  font-family: var(--font-display); font-size: clamp(3.5rem, 6vw, 5rem); font-weight: 600;
+  line-height: 0.9; letter-spacing: -0.03em; color: var(--ink); margin: 0 0 8px;
+}
+.reviews__of { margin: 0 0 14px; color: var(--text-muted); font-size: 0.95rem; }
+.reviews__stars { width: 128px; height: auto; }
+.reviews__link { display: inline-block; margin-top: 14px; font-weight: 600; color: var(--violet); border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+.reviews__link:hover { color: var(--ink); }
+.reviews__quotes { display: grid; gap: 30px; }
+.review { margin: 0; padding-left: 22px; border-left: 2px solid var(--violet); }
+.review blockquote { margin: 0; }
+.review blockquote p {
+  font-family: var(--font-display); font-style: italic; font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  line-height: 1.5; color: var(--text); margin: 0 0 10px; max-width: 60ch;
+}
+.review figcaption { font-size: 0.9rem; color: var(--text-muted); }
+.reviews__note { margin: 22px 0 0; font-size: 0.85rem; color: var(--text-soft); }
+
 /* ---------------------------------------------------------- responsive */
 @media (max-width: 1100px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
@@ -668,6 +713,7 @@ body.cookie-visible .fabs { bottom: 120px; }
   .hero__inner { padding-bottom: 28px; }
   .group-band { grid-template-columns: 1fr; }
   .group-band__img { min-height: 220px; max-height: 320px; }
+  .reviews { grid-template-columns: 1fr; gap: 30px; }
 }
 @media (max-width: 1100px) {
   .nav-toggle { display: inline-flex; }
@@ -680,7 +726,8 @@ body.cookie-visible .fabs { bottom: 120px; }
   .nav__link { display: block; padding: 12px 0; font-size: 1.05rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .nav__link[aria-current="page"] { border-bottom-color: var(--violet); }
   .lang { align-self: flex-start; margin-top: 16px; }
-  .nav__phone { margin-top: 16px; text-align: center; }
+  .nav__contact { margin-top: 16px; }
+  .nav__phone { flex: 1; text-align: center; }
   .site-header--overlay { background: var(--deep); margin-bottom: 0; }
   .hero__inner { padding-top: 48px; flex-direction: column; align-items: flex-start; }
   .hero__note { display: none; }
@@ -710,4 +757,5 @@ body.cookie-visible .fabs { bottom: 120px; }
   .btn { padding: 14px 22px; }
   .hero h1 { font-size: 2.3rem; }
   .map { height: 380px; }
+  .nav__wa { display: none; }
 }

@@ -66,27 +66,6 @@
     paintButtons();
   }
 
-  /* ---------- home: venta / alquiler pills ---------- */
-  function initHomeFilter() {
-    var pills = $$("[data-home-filter]");
-    if (!pills.length) return;
-    var wrap = document.getElementById("home-showcase");
-    var empty = document.getElementById("home-empty");
-    pills.forEach(function (p) {
-      p.addEventListener("click", function () {
-        var op = p.getAttribute("data-home-filter");
-        pills.forEach(function (q) { q.setAttribute("aria-pressed", q === p ? "true" : "false"); });
-        var shown = 0;
-        $$("[data-op]", wrap).forEach(function (c) {
-          var ok = !op || c.getAttribute("data-op") === op;
-          c.hidden = !ok;
-          if (ok) shown++;
-        });
-        if (empty) empty.hidden = shown > 0;
-      });
-    });
-  }
-
   /* ---------- listing page: filters, tabs, sort, query string ---------- */
   function initFilters() {
     var grid = document.getElementById("results");
@@ -98,6 +77,9 @@
     var sort = document.getElementById("f-sort");
     var tabs = $$("[data-tab]");
     var tab = "all";
+    var pager = document.getElementById("pagination");
+    var perPage = pager ? +pager.getAttribute("data-per-page") || 0 : 0;
+    var page = 1;
     var tpl = count ? count.textContent : "";
 
     function val(name) { var el = form.elements[name]; return el ? (el.value || "").trim() : ""; }
@@ -138,17 +120,64 @@
       return out;
     }
     function apply() {
-      var shown = 0;
+      var matches = [];
       ordered().forEach(function (c) {
-        var ok = visible(c);
-        c.hidden = !ok;
-        if (ok) shown++;
+        if (visible(c)) matches.push(c);
+        c.hidden = true;
         grid.appendChild(c);
       });
-      if (count) count.textContent = tpl.replace(/^(\D*)\d+/, "$1" + shown);
-      if (empty) empty.hidden = shown > 0;
-      grid.hidden = shown === 0;
+      /* Without a pager (or with one page's worth of results) everything stays on screen. */
+      var pages = perPage ? Math.max(1, Math.ceil(matches.length / perPage)) : 1;
+      if (page > pages) page = pages;
+      var slice = perPage ? matches.slice((page - 1) * perPage, page * perPage) : matches;
+      slice.forEach(function (c) { c.hidden = false; });
+      if (count) count.textContent = tpl.replace(/^(\D*)\d+/, "$1" + slice.length);
+      if (empty) empty.hidden = matches.length > 0;
+      grid.hidden = matches.length === 0;
+      renderPager(pages);
       writeQuery();
+    }
+    /* Filtering, sorting or switching tab changes the result set, so the reader is sent
+       back to its first page instead of one that may no longer exist. */
+    function applyFromStart() { page = 1; apply(); }
+    function goTo(n, pages) {
+      if (n < 1 || n > pages || n === page) return;
+      page = n;
+      apply();
+      grid.scrollIntoView();
+    }
+    function renderPager(pages) {
+      if (!pager) return;
+      pager.hidden = pages < 2;
+      if (pages < 2) { pager.innerHTML = ""; return; }
+      var frag = document.createDocumentFragment();
+      var button = function (label, target, opts) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.textContent = label;
+        if (opts.disabled) b.disabled = true;
+        if (opts.label) b.setAttribute("aria-label", opts.label);
+        b.addEventListener("click", function () { goTo(target, pages); });
+        var li = document.createElement("li");
+        li.appendChild(b);
+        return li;
+      };
+      frag.appendChild(button(pager.getAttribute("data-prev"), page - 1, { disabled: page === 1 }));
+      for (var n = 1; n <= pages; n++) {
+        if (n === page) {
+          var li = document.createElement("li");
+          var cur = document.createElement("span");
+          cur.setAttribute("aria-current", "page");
+          cur.textContent = String(n);
+          li.appendChild(cur);
+          frag.appendChild(li);
+        } else {
+          frag.appendChild(button(String(n), n, { label: pager.getAttribute("data-goto") + " " + n }));
+        }
+      }
+      frag.appendChild(button(pager.getAttribute("data-next"), page + 1, { disabled: page === pages }));
+      pager.innerHTML = "";
+      pager.appendChild(frag);
     }
     window.__applyFilters = apply;
     function writeQuery() {
@@ -157,6 +186,7 @@
       feats().forEach(function (f) { p.append("f", f); });
       if (sort && sort.value) p.set("sort", sort.value);
       if (tab !== "all") p.set("tab", tab);
+      if (page > 1) p.set("p", String(page));
       var q = p.toString();
       // Keep the hash: this runs on load, and dropping it broke deep links like #alertas.
       if (window.history.replaceState) window.history.replaceState(null, "", (q ? "?" + q : window.location.pathname) + window.location.hash);
@@ -170,6 +200,7 @@
       p.getAll("f").forEach(function (f) { var i = $("input[name=f][value=\"" + f + "\"]", form); if (i) i.checked = true; });
       if (sort && p.get("sort")) sort.value = p.get("sort");
       if (p.get("tab")) tab = p.get("tab");
+      if (+p.get("p") > 1) page = +p.get("p");
       tabs.forEach(function (t) { t.setAttribute("aria-selected", t.getAttribute("data-tab") === tab ? "true" : "false"); });
     }
     function syncDetails() {
@@ -177,18 +208,18 @@
       if (d && window.matchMedia("(min-width: 961px)").matches) d.open = true;
     }
     form.addEventListener("submit", function (e) { e.preventDefault(); apply(); });
-    form.addEventListener("reset", function () { window.setTimeout(apply, 0); });
-    form.addEventListener("change", apply);
-    if (sort) sort.addEventListener("change", apply);
+    form.addEventListener("reset", function () { window.setTimeout(applyFromStart, 0); });
+    form.addEventListener("change", applyFromStart);
+    if (sort) sort.addEventListener("change", applyFromStart);
     tabs.forEach(function (t) {
       t.addEventListener("click", function () {
         tab = t.getAttribute("data-tab");
         tabs.forEach(function (u) { u.setAttribute("aria-selected", u === t ? "true" : "false"); });
-        apply();
+        applyFromStart();
       });
     });
     var clear = document.getElementById("clear-filters");
-    if (clear) clear.addEventListener("click", function () { form.reset(); tab = "all"; tabs.forEach(function (u) { u.setAttribute("aria-selected", u.getAttribute("data-tab") === "all" ? "true" : "false"); }); window.setTimeout(apply, 0); });
+    if (clear) clear.addEventListener("click", function () { form.reset(); tab = "all"; tabs.forEach(function (u) { u.setAttribute("aria-selected", u.getAttribute("data-tab") === "all" ? "true" : "false"); }); window.setTimeout(applyFromStart, 0); });
     window.addEventListener("resize", syncDetails);
     syncDetails();
     readQuery();
@@ -374,7 +405,6 @@
   initNav();
   initStickyHeader();
   initLists();
-  initHomeFilter();
   initFilters();
   initCookies();
   initForms();

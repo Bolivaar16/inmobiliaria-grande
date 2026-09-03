@@ -8,19 +8,27 @@ HTML, bien visible o en un comentario junto a la cifra. Buscar en el código:
 
 | Cifra | Decisión |
 |---|---|
-| 300 propiedades | Cambiada a **276**, el dato real de la web actual (2026-09-03) |
+| 300 propiedades | Cambiada a **276**, el dato real de la web actual (2026-09-03), y de ahí a **«+250»** en el texto visible: una cifra exacta envejece en cuanto entra o sale un anuncio |
 | 17 idiomas | Sustituida por **«ES · EN, atención en español e inglés»**, lo único verificable |
 | 3 generaciones | **Se mantiene**; confirmado por Alex |
 | 48 h para la valoración | **Se mantiene** como compromiso de servicio propuesto (no es un dato histórico) |
 | Equipo | Fotos, cargos y frases **tomados de la web actual**: José Antonio Grande (Gerente), José Grande Jr., Mónica y Javier Corpas (agentes) |
 | Héroe de la home | **Imagen generada con IA** (Higgsfield, Nano Banana Pro, 2026-09-03): vista del Albaicín con la Alhambra al atardecer. Placeholder de prototipo, no es una foto real. La foto de la oficina sigue en `assets/hero-oficina.*` |
 | Banner Grupo Inmobiliario de Granada | Recuperado de la web actual, sin enlace (la web actual tampoco lo tiene) |
+| Horario | **Resuelto**: la ficha de Google del negocio da jornada partida, **lunes a viernes 9:30–14:00 y 17:00–20:30**, sábado y domingo cerrado. Sustituye al horario corrido que venía de oopiniones.com. Actualizados pie, contacto, `gracias`, `vende-tu-casa`, el `openingHours` del JSON-LD y la franja de tarde de los formularios de «nosotros le llamamos» (16:00–20:00 → 17:00–20:30) |
+| Código postal | **18008**, el que da la misma ficha de Google; el anterior venía del mismo directorio de terceros y era incorrecto. Corregido en pie, contacto, aviso legal, privacidad, cookies, `llms.txt`, el JSON-LD y las URLs del mapa |
+| Reseñas de Google | **4,3 sobre 5 con 65 reseñas** (ficha de Google, 2026-09-03). Publicadas dos citas literales en el index, firmadas con nombre + inicial. No se reproduce la reseña negativa ni la respuesta del propietario |
+| Menú principal | De 7 a **5 elementos**: «Comprar», «Alquilar» y «Locales» se funden en **«Buscar inmueble»** sin preset. Los filtros siguen en la página de inmuebles y el pie conserva los accesos directos con `?op=` |
+| Filtros del index | Retiradas las píldoras «Todas / Venta / Alquiler» de «Recién incorporadas»: la selección es curada, no una rejilla filtrable. Con ellas se fue el estado vacío que activaban y el `initHomeFilter()` de `js/main.js` |
+| Paginación | La página de inmuebles muestra **9 por página** (`data-per-page` en el `<ol class="pagination">`); el número de página viaja en la query como `p` y cualquier cambio de filtro vuelve a la primera |
 
 ## Sigue pendiente
 
 - **Apellidos de Mónica** y confirmación de los cargos exactos.
 - **Año del traslado a Recogidas 13** (timeline de sobre-nosotros / about-us).
-- **Horario L–V 9:30–20:00**: tomado de un directorio (oopiniones.com), no del cliente.
+- **Enlace directo a las reseñas de Google**: el bloque del index enlaza a la búsqueda de la
+  ficha (`maps/search/?api=1&query=…`) porque no tenemos el `place_id`. Con él, el enlace puede
+  apuntar directamente a la pestaña de reseñas.
 - **Foto del héroe definitiva** (2400×1350). La actual (`assets/hero-granada.*`) está **generada con IA**
   y es un placeholder: no puede publicarse como si fuera una fotografía de la agencia. Antes de
   desplegar hay que sustituirla por una foto real (fachada, vistas u oficina) o, si el cliente acepta

@@ -22,7 +22,7 @@ The full system (palette, type, components) is documented in `docs/BRAND.md`. `d
 - **data/listings.json** — all property data, the single source for the generated pages.
 - **data/i18n.json** — English UI strings, per-type translations, and per-listing English title/headline overrides (the long `description` stays Spanish, `lang="es"`, on English pages too).
 - **css/styles.css** — single CSS file (design tokens, fonts, layout, every component, responsive).
-- **js/main.js** — vanilla JS, no dependencies: mobile nav, favourites/dismissed/viewed (`localStorage`), listing filters + tabs + sort, cookie consent (necessary + optional Google Maps), form validation with visible per-field errors, gallery viewer, native share (clipboard fallback), mortgage simulator.
+- **js/main.js** — vanilla JS, no dependencies: mobile nav, favourites/dismissed/viewed (`localStorage`), listing filters + tabs + sort + pagination (9 per page), cookie consent (necessary + optional Google Maps), form validation with visible per-field errors, gallery viewer, native share (clipboard fallback), mortgage simulator.
 - **assets/photos/<id>/N.jpg, N-s.jpg** — full-size (1400×933) and medium (640×426) photos per listing, scraped from the current site. Each also has `.webp` (same size, q78), `-m.webp` (1024w, q72, mid breakpoint) and `-s.jpg`'s `-t.webp` (240w, q68, gallery-thumbnail size). `<picture>` serves WebP first; the JPEGs are the fallback for the ~0% of browsers without WebP support — some of those fallbacks are still >200 KB (`scripts/check.sh`'s sibling in the `web-production` skill flags this; it does not know about `<picture>`).
 - **assets/fonts/** — self-hosted variable fonts (Playfair Display, Libre Franklin, JetBrains Mono), latin subset, woff2.
 - **assets/team/**, **assets/hero-oficina.\***, **assets/grupo-inmobiliario-granada.\*** — team portraits (cropped 3:4), the office photo, and the "Grupo Inmobiliario de Granada" banner, all taken from the client's current website.
@@ -97,7 +97,7 @@ This prototype's own verification (Lighthouse on the redesign, screenshots of ev
 
 ## Data provenance and privacy
 
-All property listings were scraped (read-only) from https://www.inmobiliariagrande.com/ on 2026-09-03 with `scripts/scrape-listings.py`, and their photos with `scripts/fetch-photos.py`. Each entry includes its `source_url` for verification. This prototype ships 23 of the ~276 listings on the live site, with 10 photos each; the rest is a re-run of those two scripts, not a design task. Phone numbers on the site are the office landline and 622 350 918 only — no personal staff mobiles (see docs/PENDIENTES.md).
+All property listings were scraped (read-only) from https://www.inmobiliariagrande.com/ on 2026-09-03 with `scripts/scrape-listings.py`, and their photos with `scripts/fetch-photos.py`. Each entry includes its `source_url` for verification. This prototype ships 23 of the listings on the live site (which had ~276 on that date; the site copy says "+250" so the claim does not go stale), with 10 photos each; the rest is a re-run of those two scripts, not a design task. Phone numbers on the site are the office landline and 622 350 918 only — no personal staff mobiles (see docs/PENDIENTES.md).
 
 This data and the brand materials belong to Inmobiliaria Grande and are protected. Do not republish, redistribute, or deploy the site publicly without explicit authorization from the owner.
 

@@ -93,7 +93,8 @@ function listingUrl(listing, lang) {
   return `${LISTING_DIR[lang]}/${listing.slug}.html`;
 }
 function priceText(listing, lang) {
-  const base = `${fmtInt(listing.price, lang)} €`;
+  /* NBSP: the amount and its symbol must never break across lines. */
+  const base = `${fmtInt(listing.price, lang)}\u00A0€`;
   return listing.operation === "alquiler" ? `${base}${i18n.ui[lang].per_month.replace("€", "")}` : base;
 }
 /* Price reductions come from the agency's own listings, which show the previous
@@ -110,9 +111,9 @@ function reducedPct(listing) {
 function priceWas(listing, lang) {
   if (!isReduced(listing)) return "";
   const ui = i18n.ui[lang];
-  return `<span class="price-was"><s>${fmtInt(listing.previous_price, lang)} €</s>` +
+  return `<span class="price-was"><s>${fmtInt(listing.previous_price, lang)}\u00A0€</s>` +
     `<span class="price-drop">−${reducedPct(listing)}%</span></span>` +
-    `<span class="visually-hidden">${esc(ui.was_price)} ${fmtInt(listing.previous_price, lang)} €</span>`;
+    `<span class="visually-hidden">${esc(ui.was_price)} ${fmtInt(listing.previous_price, lang)}\u00A0€</span>`;
 }
 function opLabel(listing, lang) {
   const o = i18n.operations[listing.operation];
@@ -291,7 +292,7 @@ function parsePage(src, file) {
   for (const k of ["title", "desc", "nav", "alt"]) if (meta[k] == null) fail(`${file}: page header lacks "${k}"`);
   return { meta, body: src.slice(m[0].length) };
 }
-const NAV_KEYS = ["home", "comprar", "alquilar", "locales", "vender", "casa", "contacto"];
+const NAV_KEYS = ["home", "buscar", "vender", "casa", "contacto"];
 function navTokens(active) {
   const t = {};
   for (const k of NAV_KEYS) t[`NAV_${k}`] = k === active ? ' aria-current="page"' : "";
@@ -447,7 +448,7 @@ function buildListing(listing, lang) {
   const desc = lang === "es"
     ? `${listing.type} en ${zoneOf(listing)}, ${listing.city}: ${sp.join(", ")} por ${fmtInt(listing.price, "es")} €. Ref. ${listing.ref}. Concierta tu visita con Inmobiliaria Grande, desde 1970.`
     : `${typeName(listing, "en")} in ${zoneOf(listing)}, ${listing.city}: ${sp.join(", ")} for €${fmtInt(listing.price, "en")}. Ref. ${listing.ref}. Book a viewing with Inmobiliaria Grande, since 1970.`;
-  const meta = { title, desc, nav: "comprar", alt: listingUrl(listing, lang === "es" ? "en" : "es"), og: listing.photos[0].src, extraHead: jsonLd(listing, cleanText(first), pageUrl) };
+  const meta = { title, desc, nav: "buscar", alt: listingUrl(listing, lang === "es" ? "en" : "es"), og: listing.photos[0].src, extraHead: jsonLd(listing, cleanText(first), pageUrl) };
   const tpl = read(`templates/listing.${lang}.html`);
   const tokens = {
     H1: esc(listingTitle(listing, lang)),

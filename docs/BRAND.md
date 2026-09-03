@@ -69,10 +69,14 @@ vector file.
 
 ## Contact data (business card + current website)
 
-- Inmobiliaria Grande, Calle Recogidas 13, 1.º A, 18005 Granada
+- Inmobiliaria Grande, Calle Recogidas 13, 1.º A, 18008 Granada
 - Tel. 958 25 24 61 (office landline) · 622 350 918 (mobile and WhatsApp, the number the
   agency's live site already publishes). No personal staff mobiles on the site: the client
   asked for the landline and this one only.
-- info@inmobiliariagrande.com · Mon–Fri 9:30–20:00 (source: oopiniones.com listing, unverified)
+- info@inmobiliariagrande.com · Mon–Fri 9:30–14:00 and 17:00–20:30, closed Sat and Sun
+  (source: the business's own Google Business Profile, read 2026-09-03). The same profile
+  gives the postcode as 18008; the earlier one came from a third-party directory and was wrong.
+- Google rating: 4.3 out of 5 from 65 reviews (Google Business Profile, 2026-09-03). Quoted
+  reviewers are credited as first name + initial only, never the full surname.
 - Founder José Antonio Grande, 1970. Team on the current site: José Antonio Grande, José Grande
   Jr., Mónica, Javier Corpas.

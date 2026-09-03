@@ -1,7 +1,7 @@
 <!--@page {
   "title": "Flats and houses for sale in Granada | Inmobiliaria Grande, since 1970",
   "desc": "All the properties published by Inmobiliaria Grande: flats, penthouses, semi-detached and country houses in Granada city, Monachil, Pulianas, La Malahá and Cogollos de la Vega. Filter by area, type and price.",
-  "nav": "comprar",
+  "nav": "buscar",
   "alt": "inmuebles.html"
 }-->
 <main id="main">
@@ -21,7 +21,8 @@
           <div class="filters__group">
             <span class="filters__legend" id="lbl-op">Operation</span>
             <div class="radio-pills" role="radiogroup" aria-labelledby="lbl-op">
-              <label><input type="radio" name="op" value="venta" checked> Sale</label>
+              <label><input type="radio" name="op" value="" checked> All</label>
+              <label><input type="radio" name="op" value="venta"> Sale</label>
               <label><input type="radio" name="op" value="alquiler"> Rent</label>
               <label><input type="radio" name="op" value="traspaso"> Transfer</label>
             </div>
@@ -114,7 +115,8 @@
           <button class="btn btn--ghost btn--sm" type="button" id="clear-filters">Clear filters</button>
         </div>
 
-        <ol class="pagination" aria-label="Pagination"><li><span aria-current="page">1</span></li></ol>
+        <ol class="pagination" id="pagination" aria-label="Pagination" data-per-page="9"
+            data-prev="Previous" data-next="Next" data-goto="Go to page"><li><span aria-current="page">1</span></li></ol>
 
         <div class="alert-box" id="alertas">
           <div>

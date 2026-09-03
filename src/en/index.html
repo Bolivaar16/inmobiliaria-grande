@@ -4,7 +4,7 @@
   "nav": "home",
   "alt": "index.html",
   "og": "assets/photos/30002664/1.jpg",
-  "extraHead": "<script defer src=\"{{ROOT}}js/map.js\"></script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"RealEstateAgent\",\"name\":\"Inmobiliaria Grande\",\"url\":\"https://www.inmobiliariagrande.com/index.html\",\"image\":\"https://www.inmobiliariagrande.com/assets/brand/icon-512.png\",\"telephone\":\"+34958252461\",\"email\":\"info@inmobiliariagrande.com\",\"foundingDate\":\"1970\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Calle Recogidas 13, 1.º A\",\"addressLocality\":\"Granada\",\"postalCode\":\"18005\",\"addressCountry\":\"ES\"},\"openingHours\":\"Mo-Fr 09:30-20:00\",\"areaServed\":{\"@type\":\"AdministrativeArea\",\"name\":\"Granada\"}}</script>"
+  "extraHead": "<script defer src=\"{{ROOT}}js/map.js\"></script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"RealEstateAgent\",\"name\":\"Inmobiliaria Grande\",\"url\":\"https://www.inmobiliariagrande.com/index.html\",\"image\":\"https://www.inmobiliariagrande.com/assets/brand/icon-512.png\",\"telephone\":\"+34958252461\",\"email\":\"info@inmobiliariagrande.com\",\"foundingDate\":\"1970\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Calle Recogidas 13, 1.º A\",\"addressLocality\":\"Granada\",\"postalCode\":\"18008\",\"addressCountry\":\"ES\"},\"openingHours\":[\"Mo-Fr 09:30-14:00\",\"Mo-Fr 17:00-20:30\"],\"areaServed\":{\"@type\":\"AdministrativeArea\",\"name\":\"Granada\"}}</script>"
 }-->
 <main id="main">
   <section class="hero">
@@ -18,7 +18,7 @@
       <div class="hero__content">
         <p class="hero__kicker">Granada · Vega · Sierra · Costa</p>
         <h1>The home you are looking for has been here all along</h1>
-        <p class="hero__lead">276 properties on our books and five decades knowing every street in the province.</p>
+        <p class="hero__lead">More than 250 properties on our books and five decades knowing every street in the province.</p>
       </div>
     </div>
     <div class="container searchbar-wrap">
@@ -60,18 +60,12 @@
 
   <section class="section after-search" id="destacados">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head section-head--stack">
         <h2>Just listed</h2>
-        <div class="tabs" role="group" aria-label="Filter featured properties">
-          <button class="pill" type="button" data-home-filter="" aria-pressed="true">All</button>
-          <button class="pill" type="button" data-home-filter="venta" aria-pressed="false">For sale</button>
-          <button class="pill" type="button" data-home-filter="alquiler" aria-pressed="false">To rent</button>
-        </div>
       </div>
       <div id="home-showcase">
       {{FEATURED_SHOWCASE}}
       </div>
-      <p class="empty" id="home-empty" hidden>We do not currently have any properties of that type published. <a href="properties.html#alertas">Leave us your email</a> and we will let you know as soon as one comes up.</p>
       <p style="margin:32px 0 0;text-align:center;"><a class="link-more" href="properties.html">See all {{LISTING_COUNT}} properties</a></p>
     </div>
   </section>
@@ -98,7 +92,7 @@
         </div>
         <div class="family__stats">
           <div class="stat"><span class="stat__num">55</span><span class="stat__label">years in Granada</span></div>
-          <div class="stat"><span class="stat__num">276</span><span class="stat__label">properties on our books</span></div>
+          <div class="stat"><span class="stat__num">+250</span><span class="stat__label">properties on our books</span></div>
           <div class="stat"><span class="stat__num">3</span><span class="stat__label">generations</span></div>
           <div class="stat"><span class="stat__num">ES · EN</span><span class="stat__label">we work in Spanish and English</span></div>
         </div>
@@ -118,7 +112,7 @@
       </div>
       <div class="sell__stats">
         <div class="stat stat--light"><span class="stat__num">55</span><span class="stat__label">years on Recogidas, 13</span></div>
-        <div class="stat stat--light"><span class="stat__num">276</span><span class="stat__label">active properties</span></div>
+        <div class="stat stat--light"><span class="stat__num">+250</span><span class="stat__label">active properties</span></div>
         <div class="stat stat--light"><span class="stat__num">48 h</span><span class="stat__label">for the valuation</span></div>
         <div class="stat stat--ink"><span class="stat__num">3</span><span class="stat__label">generations of the family</span></div>
         <!-- [DATO A CONFIRMAR] 48 h: compromiso de servicio propuesto, pendiente de aceptación por el cliente. -->
@@ -154,21 +148,59 @@
           <div class="person__photo"><picture><source srcset="../assets/team/jose-antonio-grande.webp" type="image/webp"><img src="../assets/team/jose-antonio-grande.jpg" alt="José Antonio Grande, manager at Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">José Antonio Grande</p>
           <p class="person__role">Manager</p>
+          <blockquote class="person__quote"><p>«We give you peace of mind.»</p></blockquote>
         </div>
         <div class="person">
           <div class="person__photo"><picture><source srcset="../assets/team/jose-grande-jr.webp" type="image/webp"><img src="../assets/team/jose-grande-jr.jpg" alt="José Grande Jr., estate agent at Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">José Grande Jr.</p>
           <p class="person__role">Estate agent</p>
+          <blockquote class="person__quote"><p>«As a boy I watched my father sell flats and houses; now we sell them together.»</p></blockquote>
         </div>
         <div class="person">
           <div class="person__photo"><picture><source srcset="../assets/team/monica.webp" type="image/webp"><img src="../assets/team/monica.jpg" alt="Mónica, estate agent at Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">Mónica</p>
           <p class="person__role">Estate agent</p>
+          <blockquote class="person__quote"><p>«Working together, we reach the goals.»</p></blockquote>
         </div>
         <div class="person">
           <div class="person__photo"><picture><source srcset="../assets/team/javier-corpas.webp" type="image/webp"><img src="../assets/team/javier-corpas.jpg" alt="Javier Corpas, estate agent at Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">Javier Corpas</p>
           <p class="person__role">Estate agent</p>
+          <blockquote class="person__quote"><p>«Every home has its story; my job is to help you write yours.»</p></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rating and reviews from the business's Google profile, read on 2026-09-03. The
+       quotes are verbatim in Spanish and translated here; reviewers are credited with
+       their first name and initial only. -->
+  <section class="section--tight" id="resenas">
+    <div class="container">
+      <div class="section-head section-head--stack">
+        <h2>What the people who came before you say</h2>
+      </div>
+      <div class="reviews">
+        <div class="reviews__score">
+          <p class="reviews__num">4.3</p>
+          <p class="reviews__of">out of 5</p>
+          <svg class="reviews__stars" viewBox="0 0 112 24" role="img" aria-label="4.3 stars out of 5"><defs><path id="star-g" d="M12 2.6l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.03l-5.66 2.98 1.08-6.3L2.85 9.25l6.32-.92z"/><clipPath id="stars-4-3"><rect width="94.6" height="24"/></clipPath></defs><g fill="#DED7EA"><use href="#star-g" x="0"/><use href="#star-g" x="22"/><use href="#star-g" x="44"/><use href="#star-g" x="66"/><use href="#star-g" x="88"/></g><g fill="#7B4FD1" clip-path="url(#stars-4-3)"><use href="#star-g" x="0"/><use href="#star-g" x="22"/><use href="#star-g" x="44"/><use href="#star-g" x="66"/><use href="#star-g" x="88"/></g></svg>
+          <a class="reviews__link" href="https://www.google.com/maps/search/?api=1&amp;query=Inmobiliaria+Grande+Calle+Recogidas+13,+18008+Granada" target="_blank" rel="noopener">Read the 65 reviews on Google</a>
+        </div>
+        <div class="reviews__quotes">
+          <figure class="review">
+            <blockquote cite="https://www.google.com/maps/search/?api=1&amp;query=Inmobiliaria+Grande+Calle+Recogidas+13,+18008+Granada">
+              <p>An excellent experience from beginning to end. They were very quick throughout the process and we hardly had to worry about a thing. Mónica's care deserves a special mention […] Thoroughly recommended.</p>
+            </blockquote>
+            <figcaption>Arantxa S., review on Google</figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote cite="https://www.google.com/maps/search/?api=1&amp;query=Inmobiliaria+Grande+Calle+Recogidas+13,+18008+Granada">
+              <p>A special mention for Mónica's help: she has been extremely attentive, professional, competent… she has helped us in every way she could.</p>
+            </blockquote>
+            <figcaption>María M., review on Google</figcaption>
+          </figure>
+          <p class="reviews__note">Both reviews were written in Spanish on Google and are translated here.</p>
         </div>
       </div>
     </div>
@@ -179,7 +211,7 @@
       <div class="cta-band">
         <div>
           <h2>Shall we talk?</h2>
-          <p>Tell us what you are looking for or what you want to sell, and we will reply with names, streets and prices, not automated forms. Monday to Friday, 9:30 am–8:00 pm.</p>
+          <p>Tell us what you are looking for or what you want to sell, and we will reply with names, streets and prices, not automated forms. Monday to Friday, 9:30–14:00 and 17:00–20:30.</p>
         </div>
         <div class="actions">
           <a class="btn btn--violet" href="tel:+34958252461">Call +34 958 25 24 61</a>
