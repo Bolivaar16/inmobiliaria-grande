@@ -1,54 +1,91 @@
 {
-  "types": {
-    "Piso": "Flat",
-    "Ático Dúplex": "Duplex penthouse",
-    "Pareado": "Semi-detached house",
-    "Casa de campo": "Country house",
-    "Local": "Commercial premises",
-    "Garaje": "Garage",
-    "Terreno": "Plot"
+ "types": {
+  "Piso": "Flat",
+  "Ático Dúplex": "Duplex penthouse",
+  "Pareado": "Semi-detached house",
+  "Casa de campo": "Country house",
+  "Local": "Commercial premises",
+  "Garaje": "Garage",
+  "Terreno": "Plot"
+ },
+ "operations": {
+  "venta": {
+   "es": "En venta",
+   "en": "For sale"
   },
-  "operations": {
-    "venta": { "es": "En venta", "en": "For sale" },
-    "alquiler": { "es": "Alquiler", "en": "To rent" },
-    "traspaso": { "es": "Traspaso", "en": "Business transfer" }
+  "alquiler": {
+   "es": "Alquiler",
+   "en": "To rent"
   },
-  "ui": {
-    "es": {
-      "rooms": "dorm.",
-      "baths_1": "baño",
-      "baths_n": "baños",
-      "reserved": "Reservado",
-      "save": "Guardar en favoritos",
-      "dismiss": "Descartar",
-      "in": "en",
-      "photo": "fotografía",
-      "view": "Ver ficha",
-      "exclusive": "Exclusiva",
-      "per_month": "€/mes"
-    },
-    "en": {
-      "rooms": "bed.",
-      "baths_1": "bath",
-      "baths_n": "baths",
-      "reserved": "Reserved",
-      "save": "Save to favourites",
-      "dismiss": "Dismiss",
-      "in": "in",
-      "photo": "photo",
-      "view": "View property",
-      "exclusive": "Exclusive",
-      "per_month": "€/month"
-    }
-  },
-  "listings": {
-    "30002664": { "title": "Duplex penthouse in the Centre, Granada", "headline": "Original duplex penthouse in the heart of Granada" },
-    "30020091": { "title": "Flat in El Serrallo, Granada", "headline": "Large furnished flat with garage, storage room and terrace" },
-    "29865262": { "title": "Semi-detached house on Calle Madrid, Monachil", "headline": "Semi-detached house at the foot of the Sierra, with garage and terrace" },
-    "29868382": { "title": "Flat in Villarejo, Granada", "headline": "Bright exterior flat next to the metro and Camino de Ronda" },
-    "28722775": { "title": "Flat in Pulianillas, Pulianas", "headline": "Exterior flat with garage and storage room" },
-    "29965705": { "title": "Country house in Sierra de Huétor, Cogollos de la Vega", "headline": "Country house with private pool and views" },
-    "29864049": { "title": "Semi-detached house in the centre of La Malahá", "headline": "Semi-detached house with patio, terrace and garage" },
-    "29899079": { "title": "Flat in Alcampo, Granada", "headline": "Four-bedroom flat with garage and lift, next to Alcampo" }
+  "traspaso": {
+   "es": "Traspaso",
+   "en": "Business transfer"
   }
+ },
+ "ui": {
+  "es": {
+   "rooms": "dorm.",
+   "baths_1": "baño",
+   "baths_n": "baños",
+   "reserved": "Reservado",
+   "save": "Guardar en favoritos",
+   "dismiss": "Descartar",
+   "in": "en",
+   "photo": "fotografía",
+   "view": "Ver ficha",
+   "exclusive": "Exclusiva",
+   "per_month": "€/mes",
+   "reduced": "Rebajado",
+   "was_price": "Antes"
+  },
+  "en": {
+   "rooms": "bed.",
+   "baths_1": "bath",
+   "baths_n": "baths",
+   "reserved": "Reserved",
+   "save": "Save to favourites",
+   "dismiss": "Dismiss",
+   "in": "in",
+   "photo": "photo",
+   "view": "View property",
+   "exclusive": "Exclusive",
+   "per_month": "€/month",
+   "reduced": "Reduced",
+   "was_price": "Was"
+  }
+ },
+ "listings": {
+  "30002664": {
+   "title": "Duplex penthouse in the Centre, Granada",
+   "headline": "Original duplex penthouse in the heart of Granada"
+  },
+  "30020091": {
+   "title": "Flat in El Serrallo, Granada",
+   "headline": "Large furnished flat with garage, storage room and terrace"
+  },
+  "29865262": {
+   "title": "Semi-detached house on Calle Madrid, Monachil",
+   "headline": "Semi-detached house at the foot of the Sierra, with garage and terrace"
+  },
+  "29868382": {
+   "title": "Flat in Villarejo, Granada",
+   "headline": "Bright exterior flat next to the metro and Camino de Ronda"
+  },
+  "28722775": {
+   "title": "Flat in Pulianillas, Pulianas",
+   "headline": "Exterior flat with garage and storage room"
+  },
+  "29965705": {
+   "title": "Country house in Sierra de Huétor, Cogollos de la Vega",
+   "headline": "Country house with private pool and views"
+  },
+  "29864049": {
+   "title": "Semi-detached house in the centre of La Malahá",
+   "headline": "Semi-detached house with patio, terrace and garage"
+  },
+  "29899079": {
+   "title": "Flat in Alcampo, Granada",
+   "headline": "Four-bedroom flat with garage and lift, next to Alcampo"
+  }
+ }
 }

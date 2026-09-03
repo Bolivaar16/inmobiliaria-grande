@@ -1,677 +1,2247 @@
 [
-  {
-    "id": "30002664",
-    "ref": "RAFAEL-ORIGINAL",
-    "slug": "atico-duplex-centro-granada-rafael-original",
-    "title": "Ático Dúplex en Centro, Granada",
-    "headline": "Ático duplex en el centro de Granada, haciendo esquina. Un lujo a tu alcance",
-    "type": "Ático Dúplex",
-    "operation": "venta",
-    "zone": "Centro",
-    "city": "Granada",
-    "province": "Granada",
-    "price": 339900,
-    "surface_built_m2": 146,
-    "surface_useful_m2": null,
-    "plot_m2": null,
-    "rooms": 2,
-    "baths": 1,
-    "condition": "Seminuevo",
-    "year_built": 1920,
-    "status": "disponible",
-    "features": [
-      "Balcón",
-      "Aire Acondicionado",
-      "Terraza",
-      "Ascensor",
-      "Armarios Empotrados",
-      "Trastero",
-      "Puerta Blindada",
-      "Exterior",
-      "Luminoso",
-      "Autobuses",
-      "Centros Comerciales",
-      "Colegios",
-      "Supermercados"
-    ],
-    "description": [
-      "Singular y precioso ático dúplex en el centro de Granada, junto a San Matías.",
-      "Tiene licencia turística y máximas valoraciones en Airbnb y Booking.",
-      "Los barrios de San Matías y El Realejo, a los que pertenece esta vivienda, son tesoros históricos que fusionan la esencia andaluza con la vitalidad urbana. Al recorrer sus calles empedradas, este barrio revela una riqueza cultural que invita a sumergirse en la historia y la autenticidad granadina.",
-      "En el centro del barrio se encuentra la Iglesia de San Matías, del siglo XVI, situado junto a esta maravillosa vivienda. Desde la terraza de esta vivienda se ven los tejados de la iglesia.",
-      "Y vamos a lo importante, pues ya sabemos que la zona es inmejorable... Y la vivienda también.",
-      "Es un ático dúplex, con entrada de ascensor privada, con calefacción por gas ciudad (calentador nuevo), preinstalación de aire acondicionado central y, además bomba de frio/calor recientemente instalados en todas las habitaciones; baño completo, 2 dormitorios amplios, 2 terrazas, la superior con vistas a la colina de la Alhambra, salón con cocina americana... Todas las habitaciones exteriores, toda la vivienda con suelo de parqué y toda la carpintería de madera.",
-      "Mejor verlo o te arrepentirás. Llámanos sin compromiso y te atenderemos gustosamente.",
-      "AVISO IMPORTANTE:  Las superficies expresadas en esta página son aproximadas y tienen carácter descriptivo.",
-      "De conformidad con lo dispuesto en el art 20.1 del TRLDCU, el precio del inmueble se incrementará en los siguientes importes:",
-      "IMPUESTOS A CARGO DEL COMPRADOR: En el caso de IVA al tipo vigente del 10% (Ley 37/1992 de 28 de diciembre, del impuesto sobre el Valor Añadido)",
-      "En el caso de ITP sobre el mayor de los valores entre el precio de venta o el de referencia catastral oscilando entre el 7% y el 2% en función de las condiciones del comprador, todo ello de acuerdo con (Real Decreto Legislativo 1/1993, de 24 de septiembre, por el que se aprueba el Texto refundido la Ley del Impuesto sobre Transmisiones Patrimoniales y Actos Jurídicos Documentados)",
-      "NOTARIA Y REGISTRO: Son gastos sometidos a arancel, si bien su coste estimado puede oscilar para la notaría en un precio de entre 600€ o 300€ y en el caso del registro en un precio de entre 200€ y 450€ (Real Decreto 1426/1989 de 17 de noviembre, por el que se aprueba el Arancel de los Notarios y Real Decreto 1427/1989 de 17 de noviembre, por el que se aprueba el Arancel de los Registradores de la Propiedad respectivamente)",
-      "HONORARIOS PROFESIONALES DE LA AGENCIA INMOBILIARIA: No incluidos en el precio de compra y su importe a cargo del comprador será de un 2,5% más IVA sobre el precio final de venta.  Dichos honorarios pueden tener excepción según la vivienda.",
-      "EN EL CASO DE PRECISAR FINANCIACIÓN BANCARIA: El importe de los gastos adicionales deberán ser consensuados con la entidad financiera",
-      "PARA EL CÁLCULO DEL PRECIO FINAL DEFINITIVO ROGAMOS CONTACTEN CON NOSOTROS, DÓNDE EMITIREMOS UNA OFERTA PERSONALIZADA EN FUNCIÓN DE LAS CIRCUNSTANCIAS PERSONALES DEL COMPRADOR"
-    ],
-    "energy": {
-      "consumption_kwh_m2_year": 195.7,
-      "emissions_kg_co2_m2_year": 38.6
-    },
-    "photos": [
-      {
-        "src": "assets/photos/30002664/1.jpg",
-        "thumb": "assets/photos/30002664/1-s.jpg",
-        "alt": "Ático Dúplex en Centro, Granada: fotografía 1"
-      },
-      {
-        "src": "assets/photos/30002664/2.jpg",
-        "thumb": "assets/photos/30002664/2-s.jpg",
-        "alt": "Ático Dúplex en Centro, Granada: fotografía 2"
-      },
-      {
-        "src": "assets/photos/30002664/3.jpg",
-        "thumb": "assets/photos/30002664/3-s.jpg",
-        "alt": "Ático Dúplex en Centro, Granada: fotografía 3"
-      },
-      {
-        "src": "assets/photos/30002664/4.jpg",
-        "thumb": "assets/photos/30002664/4-s.jpg",
-        "alt": "Ático Dúplex en Centro, Granada: fotografía 4"
-      },
-      {
-        "src": "assets/photos/30002664/5.jpg",
-        "thumb": "assets/photos/30002664/5-s.jpg",
-        "alt": "Ático Dúplex en Centro, Granada: fotografía 5"
-      },
-      {
-        "src": "assets/photos/30002664/6.jpg",
-        "thumb": "assets/photos/30002664/6-s.jpg",
-        "alt": "Ático Dúplex en Centro, Granada: fotografía 6"
-      }
-    ],
-    "photo_count_on_source": 41,
-    "source_url": "https://www.inmobiliariagrande.com/ficha/atico-duplex/granada/centro/8081/30002664/es/",
-    "source_fetched_at": "2026-09-03"
+ {
+  "id": "30002664",
+  "ref": "RAFAEL-ORIGINAL",
+  "slug": "atico-duplex-centro-granada-rafael-original",
+  "title": "Ático Dúplex en Centro, Granada",
+  "headline": "Ático duplex en el centro de Granada, haciendo esquina. Un lujo a tu alcance",
+  "type": "Ático Dúplex",
+  "operation": "venta",
+  "zone": "Centro",
+  "city": "Granada",
+  "province": "Granada",
+  "price": 339900,
+  "surface_built_m2": 146,
+  "surface_useful_m2": null,
+  "plot_m2": null,
+  "rooms": 2,
+  "baths": 1,
+  "condition": "Seminuevo",
+  "year_built": 1920,
+  "status": "disponible",
+  "features": [
+   "Balcón",
+   "Aire Acondicionado",
+   "Terraza",
+   "Ascensor",
+   "Armarios Empotrados",
+   "Trastero",
+   "Puerta Blindada",
+   "Exterior",
+   "Luminoso",
+   "Autobuses",
+   "Centros Comerciales",
+   "Colegios",
+   "Supermercados"
+  ],
+  "description": [
+   "Singular y precioso ático dúplex en el centro de Granada, junto a San Matías.",
+   "Tiene licencia turística y máximas valoraciones en Airbnb y Booking.",
+   "Los barrios de San Matías y El Realejo, a los que pertenece esta vivienda, son tesoros históricos que fusionan la esencia andaluza con la vitalidad urbana. Al recorrer sus calles empedradas, este barrio revela una riqueza cultural que invita a sumergirse en la historia y la autenticidad granadina.",
+   "En el centro del barrio se encuentra la Iglesia de San Matías, del siglo XVI, situado junto a esta maravillosa vivienda. Desde la terraza de esta vivienda se ven los tejados de la iglesia.",
+   "Y vamos a lo importante, pues ya sabemos que la zona es inmejorable... Y la vivienda también.",
+   "Es un ático dúplex, con entrada de ascensor privada, con calefacción por gas ciudad (calentador nuevo), preinstalación de aire acondicionado central y, además bomba de frio/calor recientemente instalados en todas las habitaciones; baño completo, 2 dormitorios amplios, 2 terrazas, la superior con vistas a la colina de la Alhambra, salón con cocina americana... Todas las habitaciones exteriores, toda la vivienda con suelo de parqué y toda la carpintería de madera.",
+   "Mejor verlo o te arrepentirás. Llámanos sin compromiso y te atenderemos gustosamente.",
+   "AVISO IMPORTANTE:  Las superficies expresadas en esta página son aproximadas y tienen carácter descriptivo.",
+   "De conformidad con lo dispuesto en el art 20.1 del TRLDCU, el precio del inmueble se incrementará en los siguientes importes:",
+   "IMPUESTOS A CARGO DEL COMPRADOR: En el caso de IVA al tipo vigente del 10% (Ley 37/1992 de 28 de diciembre, del impuesto sobre el Valor Añadido)",
+   "En el caso de ITP sobre el mayor de los valores entre el precio de venta o el de referencia catastral oscilando entre el 7% y el 2% en función de las condiciones del comprador, todo ello de acuerdo con (Real Decreto Legislativo 1/1993, de 24 de septiembre, por el que se aprueba el Texto refundido la Ley del Impuesto sobre Transmisiones Patrimoniales y Actos Jurídicos Documentados)",
+   "NOTARIA Y REGISTRO: Son gastos sometidos a arancel, si bien su coste estimado puede oscilar para la notaría en un precio de entre 600€ o 300€ y en el caso del registro en un precio de entre 200€ y 450€ (Real Decreto 1426/1989 de 17 de noviembre, por el que se aprueba el Arancel de los Notarios y Real Decreto 1427/1989 de 17 de noviembre, por el que se aprueba el Arancel de los Registradores de la Propiedad respectivamente)",
+   "HONORARIOS PROFESIONALES DE LA AGENCIA INMOBILIARIA: No incluidos en el precio de compra y su importe a cargo del comprador será de un 2,5% más IVA sobre el precio final de venta.  Dichos honorarios pueden tener excepción según la vivienda.",
+   "EN EL CASO DE PRECISAR FINANCIACIÓN BANCARIA: El importe de los gastos adicionales deberán ser consensuados con la entidad financiera",
+   "PARA EL CÁLCULO DEL PRECIO FINAL DEFINITIVO ROGAMOS CONTACTEN CON NOSOTROS, DÓNDE EMITIREMOS UNA OFERTA PERSONALIZADA EN FUNCIÓN DE LAS CIRCUNSTANCIAS PERSONALES DEL COMPRADOR"
+  ],
+  "energy": {
+   "consumption_kwh_m2_year": 195.7,
+   "emissions_kg_co2_m2_year": 38.6
   },
-  {
-    "id": "30020091",
-    "ref": "FH03130",
-    "slug": "piso-el-serrallo-granada-fh03130",
-    "title": "Piso en El Serrallo, Granada",
-    "headline": "en la localidad de",
-    "type": "Piso",
-    "operation": "venta",
-    "zone": "El Serrallo",
-    "city": "Granada",
-    "province": "Granada",
-    "price": 275000,
-    "surface_built_m2": 176,
-    "surface_useful_m2": 101,
-    "plot_m2": null,
-    "rooms": 3,
-    "baths": 2,
-    "condition": "Entrar a vivir",
-    "year_built": 2008,
-    "status": "disponible",
-    "features": [
-      "Balcón",
-      "Alarma Robo",
-      "Garaje Incluido",
-      "Patio",
-      "Terraza",
-      "Ascensor",
-      "Armarios Empotrados",
-      "Trastero",
-      "Puerta Blindada",
-      "Amueblado",
-      "Lavandería",
-      "Luminoso",
-      "Hospitales",
-      "Autobuses",
-      "Centros Comerciales",
-      "Colegios",
-      "Supermercados"
-    ],
-    "description": [
-      "Descubre esta impresionante propiedad ubicada en la codiciada zona de El Serrallo, Granada. Este espacioso piso cuenta con una superficie construida de 176 m² y útil de 101 m², ideal para familias que buscan confort y calidad de vida. La vivienda se encuentra en perfecto estado, lista para ser habitada sin necesidad de reformas. Dispone de tres amplias habitaciones dobles que proporcionan un ambiente acogedor y luminoso gracias a su orientación exterior. Además, ofrece dos baños completos bien distribuidos que garantizan privacidad e comodidad, uno de ellos en suite.",
-      "Entre las características adicionales destacan el parking privado incluido así como un práctico y amplio trastero; perfectos aliados del espacio adicional requerido por cualquier hogar contemporáneo. Esta urbanización está rodeada por zonas ajardinadas llenas de árboles, ofreciendo vistas agradables desde la terraza privada donde disfrutar momentos al aire libre.",
-      "La ubicación es inmejorable: contarás con fácil acceso a transporte público incluyendo autobuses cercanos; también estarás próximo a centros comerciales destacados ideales tanto para compras cotidianas como entretenimiento familiar, colegios, hospitales...",
-      "Esta propiedad representa no solo una inversión patrimonial sólida sino principalmente un nuevo estilo de vida.",
-      "!No lo dude y venga a visitarlo!"
-    ],
-    "energy": {
-      "consumption_kwh_m2_year": null,
-      "emissions_kg_co2_m2_year": null
-    },
-    "photos": [
-      {
-        "src": "assets/photos/30020091/1.jpg",
-        "thumb": "assets/photos/30020091/1-s.jpg",
-        "alt": "Piso en El Serrallo, Granada: fotografía 1"
-      },
-      {
-        "src": "assets/photos/30020091/2.jpg",
-        "thumb": "assets/photos/30020091/2-s.jpg",
-        "alt": "Piso en El Serrallo, Granada: fotografía 2"
-      },
-      {
-        "src": "assets/photos/30020091/3.jpg",
-        "thumb": "assets/photos/30020091/3-s.jpg",
-        "alt": "Piso en El Serrallo, Granada: fotografía 3"
-      },
-      {
-        "src": "assets/photos/30020091/4.jpg",
-        "thumb": "assets/photos/30020091/4-s.jpg",
-        "alt": "Piso en El Serrallo, Granada: fotografía 4"
-      },
-      {
-        "src": "assets/photos/30020091/5.jpg",
-        "thumb": "assets/photos/30020091/5-s.jpg",
-        "alt": "Piso en El Serrallo, Granada: fotografía 5"
-      },
-      {
-        "src": "assets/photos/30020091/6.jpg",
-        "thumb": "assets/photos/30020091/6-s.jpg",
-        "alt": "Piso en El Serrallo, Granada: fotografía 6"
-      }
-    ],
-    "photo_count_on_source": 35,
-    "source_url": "https://www.inmobiliariagrande.com/ficha/piso/granada/el-serrallo/8081/30020091/es/",
-    "source_fetched_at": "2026-09-03"
+  "photos": [
+   {
+    "src": "assets/photos/30002664/1.jpg",
+    "thumb": "assets/photos/30002664/1-s.jpg",
+    "alt": "Ático Dúplex en Centro, Granada: fotografía 1"
+   },
+   {
+    "src": "assets/photos/30002664/2.jpg",
+    "thumb": "assets/photos/30002664/2-s.jpg",
+    "alt": "Ático Dúplex en Centro, Granada: fotografía 2"
+   },
+   {
+    "src": "assets/photos/30002664/3.jpg",
+    "thumb": "assets/photos/30002664/3-s.jpg",
+    "alt": "Ático Dúplex en Centro, Granada: fotografía 3"
+   },
+   {
+    "src": "assets/photos/30002664/4.jpg",
+    "thumb": "assets/photos/30002664/4-s.jpg",
+    "alt": "Ático Dúplex en Centro, Granada: fotografía 4"
+   },
+   {
+    "src": "assets/photos/30002664/5.jpg",
+    "thumb": "assets/photos/30002664/5-s.jpg",
+    "alt": "Ático Dúplex en Centro, Granada: fotografía 5"
+   },
+   {
+    "src": "assets/photos/30002664/6.jpg",
+    "thumb": "assets/photos/30002664/6-s.jpg",
+    "alt": "Ático Dúplex en Centro, Granada: fotografía 6"
+   }
+  ],
+  "photo_count_on_source": 41,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/atico-duplex/granada/centro/8081/30002664/es/",
+  "source_fetched_at": "2026-09-03",
+  "previous_price": 360000,
+  "discount_pct": 6
+ },
+ {
+  "id": "30020091",
+  "ref": "FH03130",
+  "slug": "piso-el-serrallo-granada-fh03130",
+  "title": "Piso en El Serrallo, Granada",
+  "headline": "en la localidad de",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "El Serrallo",
+  "city": "Granada",
+  "province": "Granada",
+  "price": 275000,
+  "surface_built_m2": 176,
+  "surface_useful_m2": 101,
+  "plot_m2": null,
+  "rooms": 3,
+  "baths": 2,
+  "condition": "Entrar a vivir",
+  "year_built": 2008,
+  "status": "disponible",
+  "features": [
+   "Balcón",
+   "Alarma Robo",
+   "Garaje Incluido",
+   "Patio",
+   "Terraza",
+   "Ascensor",
+   "Armarios Empotrados",
+   "Trastero",
+   "Puerta Blindada",
+   "Amueblado",
+   "Lavandería",
+   "Luminoso",
+   "Hospitales",
+   "Autobuses",
+   "Centros Comerciales",
+   "Colegios",
+   "Supermercados"
+  ],
+  "description": [
+   "Descubre esta impresionante propiedad ubicada en la codiciada zona de El Serrallo, Granada. Este espacioso piso cuenta con una superficie construida de 176 m² y útil de 101 m², ideal para familias que buscan confort y calidad de vida. La vivienda se encuentra en perfecto estado, lista para ser habitada sin necesidad de reformas. Dispone de tres amplias habitaciones dobles que proporcionan un ambiente acogedor y luminoso gracias a su orientación exterior. Además, ofrece dos baños completos bien distribuidos que garantizan privacidad e comodidad, uno de ellos en suite.",
+   "Entre las características adicionales destacan el parking privado incluido así como un práctico y amplio trastero; perfectos aliados del espacio adicional requerido por cualquier hogar contemporáneo. Esta urbanización está rodeada por zonas ajardinadas llenas de árboles, ofreciendo vistas agradables desde la terraza privada donde disfrutar momentos al aire libre.",
+   "La ubicación es inmejorable: contarás con fácil acceso a transporte público incluyendo autobuses cercanos; también estarás próximo a centros comerciales destacados ideales tanto para compras cotidianas como entretenimiento familiar, colegios, hospitales...",
+   "Esta propiedad representa no solo una inversión patrimonial sólida sino principalmente un nuevo estilo de vida.",
+   "!No lo dude y venga a visitarlo!"
+  ],
+  "energy": {
+   "consumption_kwh_m2_year": null,
+   "emissions_kg_co2_m2_year": null
   },
-  {
-    "id": "29865262",
-    "ref": "RGC-0093",
-    "slug": "pareado-calle-madrid-monachil-rgc-0093",
-    "title": "Pareado en Calle Madrid, Monachil",
-    "headline": "Espectacular triplex con garaje y trastero en monachil",
-    "type": "Pareado",
-    "operation": "venta",
-    "zone": "Calle Madrid",
-    "city": "Monachil",
-    "province": "Granada",
-    "price": 269000,
-    "surface_built_m2": 152,
-    "surface_useful_m2": null,
-    "plot_m2": null,
-    "rooms": 3,
-    "baths": 2,
-    "condition": "Buen estado",
-    "year_built": 2004,
-    "status": "disponible",
-    "features": [
-      "Garaje Incluido",
-      "Patio",
-      "Terraza",
-      "Trastero",
-      "Exterior",
-      "Luminoso",
-      "Autobuses",
-      "Colegios",
-      "Supermercados"
-    ],
-    "description": [
-      "¡OPORTUNIDAD!",
-      "¡Espectacular vivienda con garaje y trastero en Monachil!",
-      "Descubre este magnífico tríplex de 152 m² construidos, situado en una de las zonas más céntricas y cómodas de Monachil, en plena zona comercial del barrio y a tan solo 10 minutos de Granada, la autovía y el PTS.",
-      "La vivienda, construida en 2004, y en excelente estado de conservación, destaca por sus amplias estancias y su magnífica distribución en tres plantas.",
-      "Cuenta con 3 dormitorios excepcionalmente amplios, 2 baños completos y 1 aseo, ofreciendo el espacio y la comodidad que toda familia necesita.",
-      "Además, dispone de una fantástica terraza y patio privado, perfectos para disfrutar del aire libre, organizar reuniones o crear tu propio rincón de relax.",
-      "La propiedad incluye también plaza de garaje y trastero, aportando un extra de comodidad y almacenamiento.",
-      "Entre sus características destacan la calefacción individual, su excelente luminosidad y su ubicación estratégica, rodeada de todos los servicios necesarios: comercios, colegios, transporte y zonas de ocio.Una oportunidad única para vivir en un hogar amplio, confortable y perfectamente comunicado, ideal tanto para familias como para quienes buscan calidad de vida cerca de Granada.",
-      "¡NO DUDES EN CONTACTAR CON NOSOTROS PARA COORDINAR UNA VISITA!"
-    ],
-    "energy": {
-      "consumption_kwh_m2_year": null,
-      "emissions_kg_co2_m2_year": null
-    },
-    "photos": [
-      {
-        "src": "assets/photos/29865262/1.jpg",
-        "thumb": "assets/photos/29865262/1-s.jpg",
-        "alt": "Pareado en Calle Madrid, Monachil: fotografía 1"
-      },
-      {
-        "src": "assets/photos/29865262/2.jpg",
-        "thumb": "assets/photos/29865262/2-s.jpg",
-        "alt": "Pareado en Calle Madrid, Monachil: fotografía 2"
-      },
-      {
-        "src": "assets/photos/29865262/3.jpg",
-        "thumb": "assets/photos/29865262/3-s.jpg",
-        "alt": "Pareado en Calle Madrid, Monachil: fotografía 3"
-      },
-      {
-        "src": "assets/photos/29865262/4.jpg",
-        "thumb": "assets/photos/29865262/4-s.jpg",
-        "alt": "Pareado en Calle Madrid, Monachil: fotografía 4"
-      },
-      {
-        "src": "assets/photos/29865262/5.jpg",
-        "thumb": "assets/photos/29865262/5-s.jpg",
-        "alt": "Pareado en Calle Madrid, Monachil: fotografía 5"
-      },
-      {
-        "src": "assets/photos/29865262/6.jpg",
-        "thumb": "assets/photos/29865262/6-s.jpg",
-        "alt": "Pareado en Calle Madrid, Monachil: fotografía 6"
-      }
-    ],
-    "photo_count_on_source": 54,
-    "source_url": "https://www.inmobiliariagrande.com/ficha/pareado/monachil/calle-madrid/8081/29865262/es/",
-    "source_fetched_at": "2026-09-03"
+  "photos": [
+   {
+    "src": "assets/photos/30020091/1.jpg",
+    "thumb": "assets/photos/30020091/1-s.jpg",
+    "alt": "Piso en El Serrallo, Granada: fotografía 1"
+   },
+   {
+    "src": "assets/photos/30020091/2.jpg",
+    "thumb": "assets/photos/30020091/2-s.jpg",
+    "alt": "Piso en El Serrallo, Granada: fotografía 2"
+   },
+   {
+    "src": "assets/photos/30020091/3.jpg",
+    "thumb": "assets/photos/30020091/3-s.jpg",
+    "alt": "Piso en El Serrallo, Granada: fotografía 3"
+   },
+   {
+    "src": "assets/photos/30020091/4.jpg",
+    "thumb": "assets/photos/30020091/4-s.jpg",
+    "alt": "Piso en El Serrallo, Granada: fotografía 4"
+   },
+   {
+    "src": "assets/photos/30020091/5.jpg",
+    "thumb": "assets/photos/30020091/5-s.jpg",
+    "alt": "Piso en El Serrallo, Granada: fotografía 5"
+   },
+   {
+    "src": "assets/photos/30020091/6.jpg",
+    "thumb": "assets/photos/30020091/6-s.jpg",
+    "alt": "Piso en El Serrallo, Granada: fotografía 6"
+   }
+  ],
+  "photo_count_on_source": 35,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/piso/granada/el-serrallo/8081/30020091/es/",
+  "source_fetched_at": "2026-09-03",
+  "previous_price": 295000,
+  "discount_pct": 7
+ },
+ {
+  "id": "29865262",
+  "ref": "RGC-0093",
+  "slug": "pareado-calle-madrid-monachil-rgc-0093",
+  "title": "Pareado en Calle Madrid, Monachil",
+  "headline": "Espectacular triplex con garaje y trastero en monachil",
+  "type": "Pareado",
+  "operation": "venta",
+  "zone": "Calle Madrid",
+  "city": "Monachil",
+  "province": "Granada",
+  "price": 269000,
+  "surface_built_m2": 152,
+  "surface_useful_m2": null,
+  "plot_m2": null,
+  "rooms": 3,
+  "baths": 2,
+  "condition": "Buen estado",
+  "year_built": 2004,
+  "status": "disponible",
+  "features": [
+   "Garaje Incluido",
+   "Patio",
+   "Terraza",
+   "Trastero",
+   "Exterior",
+   "Luminoso",
+   "Autobuses",
+   "Colegios",
+   "Supermercados"
+  ],
+  "description": [
+   "¡OPORTUNIDAD!",
+   "¡Espectacular vivienda con garaje y trastero en Monachil!",
+   "Descubre este magnífico tríplex de 152 m² construidos, situado en una de las zonas más céntricas y cómodas de Monachil, en plena zona comercial del barrio y a tan solo 10 minutos de Granada, la autovía y el PTS.",
+   "La vivienda, construida en 2004, y en excelente estado de conservación, destaca por sus amplias estancias y su magnífica distribución en tres plantas.",
+   "Cuenta con 3 dormitorios excepcionalmente amplios, 2 baños completos y 1 aseo, ofreciendo el espacio y la comodidad que toda familia necesita.",
+   "Además, dispone de una fantástica terraza y patio privado, perfectos para disfrutar del aire libre, organizar reuniones o crear tu propio rincón de relax.",
+   "La propiedad incluye también plaza de garaje y trastero, aportando un extra de comodidad y almacenamiento.",
+   "Entre sus características destacan la calefacción individual, su excelente luminosidad y su ubicación estratégica, rodeada de todos los servicios necesarios: comercios, colegios, transporte y zonas de ocio.Una oportunidad única para vivir en un hogar amplio, confortable y perfectamente comunicado, ideal tanto para familias como para quienes buscan calidad de vida cerca de Granada.",
+   "¡NO DUDES EN CONTACTAR CON NOSOTROS PARA COORDINAR UNA VISITA!"
+  ],
+  "energy": {
+   "consumption_kwh_m2_year": null,
+   "emissions_kg_co2_m2_year": null
   },
-  {
-    "id": "29868382",
-    "ref": "RPA-RONDA202",
-    "slug": "piso-villarejo-granada-rpa-ronda202",
-    "title": "Piso en Villarejo, Granada",
-    "headline": "en",
-    "type": "Piso",
-    "operation": "venta",
-    "zone": "Villarejo",
-    "city": "Granada",
-    "province": "Granada",
-    "price": 294900,
-    "surface_built_m2": 124,
-    "surface_useful_m2": null,
-    "plot_m2": null,
-    "rooms": 3,
-    "baths": 2,
-    "condition": "Buen estado",
-    "year_built": 1987,
-    "status": "disponible",
-    "features": [
-      "Balcón",
-      "Terraza",
-      "Ascensor",
-      "Armarios Empotrados",
-      "Aire Acondicionado",
-      "Exterior",
-      "Luminoso",
-      "Hospitales",
-      "Metro",
-      "Autobuses",
-      "Centros Comerciales",
-      "Colegios",
-      "Supermercados"
-    ],
-    "description": [
-      "Si buscas una vivienda con amplitud, una excelente ubicación y la posibilidad de reformarla a tu gusto, esta es una gran oportunidad.",
-      "La vivienda cuenta con 3 amplios y luminosos dormitorios, 2 baños completos, cocina amueblada y equipada, salón-comedor, lavadero independiente y un espacioso recibidor, además de contar con prácticos espacios de almacenaje que aportan un extra de comodidad en el día a día.",
-      "Ubicada en una de las zonas más demandadas de Villarejo, se encuentra a escasos metros de la parada de metro, lo que garantiza una excelente conexión con el resto de la ciudad. En su entorno encontrarás zonas verdes, parques infantiles, comercios, hospitales, juzgados y todo tipo de servicios, haciendo de esta vivienda una opción ideal tanto para familias como para quienes buscan una inversión.",
-      "Además, existe posibilidad de adquirir plaza de garaje, un valor añadido en la zona.",
-      "No dejes pasar la oportunidad de visitar esta vivienda con un gran potencial. ¡Ven a descubrir todas las posibilidades que ofrece!",
-      "📲 !NO DUDES EN CONTACTAR CON NOSOTROS PARA COORDINAR UNA VISITA!"
-    ],
-    "energy": {
-      "consumption_kwh_m2_year": 82.4,
-      "emissions_kg_co2_m2_year": 16.9
-    },
-    "photos": [
-      {
-        "src": "assets/photos/29868382/1.jpg",
-        "thumb": "assets/photos/29868382/1-s.jpg",
-        "alt": "Piso en Villarejo, Granada: fotografía 1"
-      },
-      {
-        "src": "assets/photos/29868382/2.jpg",
-        "thumb": "assets/photos/29868382/2-s.jpg",
-        "alt": "Piso en Villarejo, Granada: fotografía 2"
-      },
-      {
-        "src": "assets/photos/29868382/3.jpg",
-        "thumb": "assets/photos/29868382/3-s.jpg",
-        "alt": "Piso en Villarejo, Granada: fotografía 3"
-      },
-      {
-        "src": "assets/photos/29868382/4.jpg",
-        "thumb": "assets/photos/29868382/4-s.jpg",
-        "alt": "Piso en Villarejo, Granada: fotografía 4"
-      },
-      {
-        "src": "assets/photos/29868382/5.jpg",
-        "thumb": "assets/photos/29868382/5-s.jpg",
-        "alt": "Piso en Villarejo, Granada: fotografía 5"
-      },
-      {
-        "src": "assets/photos/29868382/6.jpg",
-        "thumb": "assets/photos/29868382/6-s.jpg",
-        "alt": "Piso en Villarejo, Granada: fotografía 6"
-      }
-    ],
-    "photo_count_on_source": 47,
-    "source_url": "https://www.inmobiliariagrande.com/ficha/piso/granada/villarejo/8081/29868382/es/",
-    "source_fetched_at": "2026-09-03"
+  "photos": [
+   {
+    "src": "assets/photos/29865262/1.jpg",
+    "thumb": "assets/photos/29865262/1-s.jpg",
+    "alt": "Pareado en Calle Madrid, Monachil: fotografía 1"
+   },
+   {
+    "src": "assets/photos/29865262/2.jpg",
+    "thumb": "assets/photos/29865262/2-s.jpg",
+    "alt": "Pareado en Calle Madrid, Monachil: fotografía 2"
+   },
+   {
+    "src": "assets/photos/29865262/3.jpg",
+    "thumb": "assets/photos/29865262/3-s.jpg",
+    "alt": "Pareado en Calle Madrid, Monachil: fotografía 3"
+   },
+   {
+    "src": "assets/photos/29865262/4.jpg",
+    "thumb": "assets/photos/29865262/4-s.jpg",
+    "alt": "Pareado en Calle Madrid, Monachil: fotografía 4"
+   },
+   {
+    "src": "assets/photos/29865262/5.jpg",
+    "thumb": "assets/photos/29865262/5-s.jpg",
+    "alt": "Pareado en Calle Madrid, Monachil: fotografía 5"
+   },
+   {
+    "src": "assets/photos/29865262/6.jpg",
+    "thumb": "assets/photos/29865262/6-s.jpg",
+    "alt": "Pareado en Calle Madrid, Monachil: fotografía 6"
+   }
+  ],
+  "photo_count_on_source": 54,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/pareado/monachil/calle-madrid/8081/29865262/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "29868382",
+  "ref": "RPA-RONDA202",
+  "slug": "piso-villarejo-granada-rpa-ronda202",
+  "title": "Piso en Villarejo, Granada",
+  "headline": "en",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "Villarejo",
+  "city": "Granada",
+  "province": "Granada",
+  "price": 294900,
+  "surface_built_m2": 124,
+  "surface_useful_m2": null,
+  "plot_m2": null,
+  "rooms": 3,
+  "baths": 2,
+  "condition": "Buen estado",
+  "year_built": 1987,
+  "status": "disponible",
+  "features": [
+   "Balcón",
+   "Terraza",
+   "Ascensor",
+   "Armarios Empotrados",
+   "Aire Acondicionado",
+   "Exterior",
+   "Luminoso",
+   "Hospitales",
+   "Metro",
+   "Autobuses",
+   "Centros Comerciales",
+   "Colegios",
+   "Supermercados"
+  ],
+  "description": [
+   "Si buscas una vivienda con amplitud, una excelente ubicación y la posibilidad de reformarla a tu gusto, esta es una gran oportunidad.",
+   "La vivienda cuenta con 3 amplios y luminosos dormitorios, 2 baños completos, cocina amueblada y equipada, salón-comedor, lavadero independiente y un espacioso recibidor, además de contar con prácticos espacios de almacenaje que aportan un extra de comodidad en el día a día.",
+   "Ubicada en una de las zonas más demandadas de Villarejo, se encuentra a escasos metros de la parada de metro, lo que garantiza una excelente conexión con el resto de la ciudad. En su entorno encontrarás zonas verdes, parques infantiles, comercios, hospitales, juzgados y todo tipo de servicios, haciendo de esta vivienda una opción ideal tanto para familias como para quienes buscan una inversión.",
+   "Además, existe posibilidad de adquirir plaza de garaje, un valor añadido en la zona.",
+   "No dejes pasar la oportunidad de visitar esta vivienda con un gran potencial. ¡Ven a descubrir todas las posibilidades que ofrece!",
+   "📲 !NO DUDES EN CONTACTAR CON NOSOTROS PARA COORDINAR UNA VISITA!"
+  ],
+  "energy": {
+   "consumption_kwh_m2_year": 82.4,
+   "emissions_kg_co2_m2_year": 16.9
   },
-  {
-    "id": "28722775",
-    "ref": "GR26-09",
-    "slug": "piso-pulianillas-pulianas-gr26-09",
-    "title": "Piso en Pulianillas, Pulianas",
-    "headline": "en la localidad de",
-    "type": "Piso",
-    "operation": "venta",
-    "zone": "Pulianillas",
-    "city": "Pulianas",
-    "province": "Granada",
-    "price": 155000,
-    "surface_built_m2": 114,
-    "surface_useful_m2": 108,
-    "plot_m2": null,
-    "rooms": 3,
-    "baths": 2,
-    "condition": "Entrar a vivir",
-    "year_built": 2007,
-    "status": "disponible",
-    "features": [
-      "Garaje Incluido",
-      "Ascensor",
-      "Armarios Empotrados",
-      "Trastero",
-      "Puerta Blindada",
-      "Luminoso",
-      "Autobuses"
-    ],
-    "description": [
-      "Llevaba tiempo con la idea en la cabeza de encontrar algo que tuviera espacio de verdad, bien ubicado y listo para entrar a vivir… y sinceramente, pensaba que iba a ser complicado. Pero este piso en Pulianillas me hizo cambiar un poco el chip.",
-      "Está en una zona bastante agradable, tranquila, con árboles 🌳 y ese ambiente de barrio donde se vive bien. Pero lo que más me llamó la atención es lo bien comunicado que está: tienes la autovía prácticamente al lado, y en menos de 10 minutos te plantas en el centro de Granada 🚗💨. Para el día a día es una comodidad brutal, tanto si trabajas allí como si te gusta moverte sin perder tiempo.",
-      "El piso en sí tiene muy buen tamaño, se nota en cuanto entras. Son más de 100 m² útiles, y eso hoy en día se agradece muchísimo. Todo está bien distribuido y, sobre todo, listo para usar desde el primer momento 🏠✨. Nada de reformas ni complicaciones.",
-      "Tiene tres dormitorios, y aquí hay juego de sobra: una habitación principal amplia, otras dos que puedes adaptar a lo que necesites… y además uno de los dormitorios se aprovecha como vestidor que le da ese punto extra que no todos tienen 👗. Es de esos detalles que, cuando los ves, empiezas a imaginarte viviendo ahí.",
-      "Cuenta también con dos baños, algo que al final marca mucho la diferencia en el día a día 😅, sobre todo si sois varios en casa o simplemente quieres comodidad. Y luego están los extras que suman sin hacer ruido: cochera 🚘 para olvidarte del estrés de aparcar, trastero 📦 para ganar espacio, y una puerta blindada que siempre aporta tranquilidad. Además de aire acondicionado por splits y calefacción por luz azul, para tener una buena temperatura en cualquier época del año.",
-      "En general, es un piso que se siente cómodo, práctico y con espacio para adaptarse a distintas etapas de vida. Tanto si es tu primera vivienda, como si buscas algo más amplio o incluso como inversión, encaja bastante bien.",
-      "Y te digo una cosa… por lo que ofrece y el precio que tiene, no me parece el típico piso que se queda mucho tiempo anunciado 💸",
-      "⚠️ Si estás mirando opciones, este es de los que merece la pena ver en persona. Luego ya decides… pero igual te llevas la misma sorpresa que yo 😉"
-    ],
-    "energy": {
-      "consumption_kwh_m2_year": null,
-      "emissions_kg_co2_m2_year": null
-    },
-    "photos": [
-      {
-        "src": "assets/photos/28722775/1.jpg",
-        "thumb": "assets/photos/28722775/1-s.jpg",
-        "alt": "Piso en Pulianillas, Pulianas: fotografía 1"
-      },
-      {
-        "src": "assets/photos/28722775/2.jpg",
-        "thumb": "assets/photos/28722775/2-s.jpg",
-        "alt": "Piso en Pulianillas, Pulianas: fotografía 2"
-      },
-      {
-        "src": "assets/photos/28722775/3.jpg",
-        "thumb": "assets/photos/28722775/3-s.jpg",
-        "alt": "Piso en Pulianillas, Pulianas: fotografía 3"
-      },
-      {
-        "src": "assets/photos/28722775/4.jpg",
-        "thumb": "assets/photos/28722775/4-s.jpg",
-        "alt": "Piso en Pulianillas, Pulianas: fotografía 4"
-      },
-      {
-        "src": "assets/photos/28722775/5.jpg",
-        "thumb": "assets/photos/28722775/5-s.jpg",
-        "alt": "Piso en Pulianillas, Pulianas: fotografía 5"
-      },
-      {
-        "src": "assets/photos/28722775/6.jpg",
-        "thumb": "assets/photos/28722775/6-s.jpg",
-        "alt": "Piso en Pulianillas, Pulianas: fotografía 6"
-      }
-    ],
-    "photo_count_on_source": 41,
-    "source_url": "https://www.inmobiliariagrande.com/ficha/piso/pulianas/pulianillas/8081/28722775/es/",
-    "source_fetched_at": "2026-09-03"
+  "photos": [
+   {
+    "src": "assets/photos/29868382/1.jpg",
+    "thumb": "assets/photos/29868382/1-s.jpg",
+    "alt": "Piso en Villarejo, Granada: fotografía 1"
+   },
+   {
+    "src": "assets/photos/29868382/2.jpg",
+    "thumb": "assets/photos/29868382/2-s.jpg",
+    "alt": "Piso en Villarejo, Granada: fotografía 2"
+   },
+   {
+    "src": "assets/photos/29868382/3.jpg",
+    "thumb": "assets/photos/29868382/3-s.jpg",
+    "alt": "Piso en Villarejo, Granada: fotografía 3"
+   },
+   {
+    "src": "assets/photos/29868382/4.jpg",
+    "thumb": "assets/photos/29868382/4-s.jpg",
+    "alt": "Piso en Villarejo, Granada: fotografía 4"
+   },
+   {
+    "src": "assets/photos/29868382/5.jpg",
+    "thumb": "assets/photos/29868382/5-s.jpg",
+    "alt": "Piso en Villarejo, Granada: fotografía 5"
+   },
+   {
+    "src": "assets/photos/29868382/6.jpg",
+    "thumb": "assets/photos/29868382/6-s.jpg",
+    "alt": "Piso en Villarejo, Granada: fotografía 6"
+   }
+  ],
+  "photo_count_on_source": 47,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/piso/granada/villarejo/8081/29868382/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "28722775",
+  "ref": "GR26-09",
+  "slug": "piso-pulianillas-pulianas-gr26-09",
+  "title": "Piso en Pulianillas, Pulianas",
+  "headline": "en la localidad de",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "Pulianillas",
+  "city": "Pulianas",
+  "province": "Granada",
+  "price": 155000,
+  "surface_built_m2": 114,
+  "surface_useful_m2": 108,
+  "plot_m2": null,
+  "rooms": 3,
+  "baths": 2,
+  "condition": "Entrar a vivir",
+  "year_built": 2007,
+  "status": "disponible",
+  "features": [
+   "Garaje Incluido",
+   "Ascensor",
+   "Armarios Empotrados",
+   "Trastero",
+   "Puerta Blindada",
+   "Luminoso",
+   "Autobuses"
+  ],
+  "description": [
+   "Llevaba tiempo con la idea en la cabeza de encontrar algo que tuviera espacio de verdad, bien ubicado y listo para entrar a vivir… y sinceramente, pensaba que iba a ser complicado. Pero este piso en Pulianillas me hizo cambiar un poco el chip.",
+   "Está en una zona bastante agradable, tranquila, con árboles 🌳 y ese ambiente de barrio donde se vive bien. Pero lo que más me llamó la atención es lo bien comunicado que está: tienes la autovía prácticamente al lado, y en menos de 10 minutos te plantas en el centro de Granada 🚗💨. Para el día a día es una comodidad brutal, tanto si trabajas allí como si te gusta moverte sin perder tiempo.",
+   "El piso en sí tiene muy buen tamaño, se nota en cuanto entras. Son más de 100 m² útiles, y eso hoy en día se agradece muchísimo. Todo está bien distribuido y, sobre todo, listo para usar desde el primer momento 🏠✨. Nada de reformas ni complicaciones.",
+   "Tiene tres dormitorios, y aquí hay juego de sobra: una habitación principal amplia, otras dos que puedes adaptar a lo que necesites… y además uno de los dormitorios se aprovecha como vestidor que le da ese punto extra que no todos tienen 👗. Es de esos detalles que, cuando los ves, empiezas a imaginarte viviendo ahí.",
+   "Cuenta también con dos baños, algo que al final marca mucho la diferencia en el día a día 😅, sobre todo si sois varios en casa o simplemente quieres comodidad. Y luego están los extras que suman sin hacer ruido: cochera 🚘 para olvidarte del estrés de aparcar, trastero 📦 para ganar espacio, y una puerta blindada que siempre aporta tranquilidad. Además de aire acondicionado por splits y calefacción por luz azul, para tener una buena temperatura en cualquier época del año.",
+   "En general, es un piso que se siente cómodo, práctico y con espacio para adaptarse a distintas etapas de vida. Tanto si es tu primera vivienda, como si buscas algo más amplio o incluso como inversión, encaja bastante bien.",
+   "Y te digo una cosa… por lo que ofrece y el precio que tiene, no me parece el típico piso que se queda mucho tiempo anunciado 💸",
+   "⚠️ Si estás mirando opciones, este es de los que merece la pena ver en persona. Luego ya decides… pero igual te llevas la misma sorpresa que yo 😉"
+  ],
+  "energy": {
+   "consumption_kwh_m2_year": null,
+   "emissions_kg_co2_m2_year": null
   },
-  {
-    "id": "29965705",
-    "ref": "V1028",
-    "slug": "casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028",
-    "title": "Casa de campo en Sierra de Huétor, Cogollos de la Vega",
-    "headline": "Finca rústica de 9.766 m² con vivienda legalizada, AFO y piscina en Cogollos Vega",
-    "type": "Casa de campo",
-    "operation": "venta",
-    "zone": "Sierra de Huétor",
-    "city": "Cogollos de la Vega",
-    "province": "Granada",
-    "price": 190000,
-    "surface_built_m2": 88,
-    "surface_useful_m2": 81,
-    "plot_m2": 9766,
-    "rooms": 4,
-    "baths": 1,
-    "condition": "Buen estado",
-    "year_built": 1995,
-    "status": "disponible",
-    "features": [
-      "Piscina Propia",
-      "Garaje Incluido",
-      "Exterior"
-    ],
-    "description": [
-      "Ponemos a la venta esta magnífica finca rústica situada a las afueras de Cogollos Vega, en un entorno natural y tranquilo, con buen acceso hasta la propiedad.",
-      "La finca cuenta con una superficie gráfica de 9.766 m² y dispone de una vivienda de aproximadamente 90 m², totalmente regularizada y con el AFO realizado, aportando seguridad jurídica a la compraventa.",
-      "La vivienda cuenta con un gran patio exterior desde el que se accede directamente a una piscina privada de 36 m², conformando una amplia zona de ocio ideal para disfrutar con familiares y amigos.",
-      "La propiedad dispone de pozo de agua propio y suministro eléctrico, ofreciendo las comodidades necesarias para su uso como vivienda habitual, segunda residencia o finca de recreo.",
-      "Alrededor de la vivienda encontramos una extensa plantación de olivos y almendros, con posibilidades de aprovechamiento y explotación agrícola.",
-      "Características principales:",
-      "• Superficie gráfica de 9.766 m²",
-      "• Vivienda de aproximadamente 90 m²",
-      "• Vivienda totalmente regularizada",
-      "• AFO realizado",
-      "• Piscina privada de 36 m²",
-      "• Amplio patio exterior",
-      "• Pozo de agua propio",
-      "• Suministro eléctrico",
-      "• Olivos y almendros",
-      "• Buen acceso",
-      "• Entorno natural y tranquilo",
-      "Una propiedad con gran potencial para quienes buscan vivir rodeados de naturaleza, disfrutar de una finca privada o desarrollar una actividad agrícola a pocos minutos de Cogollos Vega.",
-      "Contacte con nosotros para ampliar información o concertar una visita.",
-      "El precio indicado no incluye impuestos, gastos derivados de la compraventa ni honorarios de la agencia inmobiliaria."
-    ],
-    "energy": {
-      "consumption_kwh_m2_year": null,
-      "emissions_kg_co2_m2_year": null
-    },
-    "photos": [
-      {
-        "src": "assets/photos/29965705/1.jpg",
-        "thumb": "assets/photos/29965705/1-s.jpg",
-        "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 1"
-      },
-      {
-        "src": "assets/photos/29965705/2.jpg",
-        "thumb": "assets/photos/29965705/2-s.jpg",
-        "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 2"
-      },
-      {
-        "src": "assets/photos/29965705/3.jpg",
-        "thumb": "assets/photos/29965705/3-s.jpg",
-        "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 3"
-      },
-      {
-        "src": "assets/photos/29965705/4.jpg",
-        "thumb": "assets/photos/29965705/4-s.jpg",
-        "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 4"
-      },
-      {
-        "src": "assets/photos/29965705/5.jpg",
-        "thumb": "assets/photos/29965705/5-s.jpg",
-        "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 5"
-      },
-      {
-        "src": "assets/photos/29965705/6.jpg",
-        "thumb": "assets/photos/29965705/6-s.jpg",
-        "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 6"
-      }
-    ],
-    "photo_count_on_source": 60,
-    "source_url": "https://www.inmobiliariagrande.com/ficha/casa-de-campo/cogollos-de-la-vega/sierra-de-huetor-y-la-alfaguara/8081/29965705/es/",
-    "source_fetched_at": "2026-09-03"
+  "photos": [
+   {
+    "src": "assets/photos/28722775/1.jpg",
+    "thumb": "assets/photos/28722775/1-s.jpg",
+    "alt": "Piso en Pulianillas, Pulianas: fotografía 1"
+   },
+   {
+    "src": "assets/photos/28722775/2.jpg",
+    "thumb": "assets/photos/28722775/2-s.jpg",
+    "alt": "Piso en Pulianillas, Pulianas: fotografía 2"
+   },
+   {
+    "src": "assets/photos/28722775/3.jpg",
+    "thumb": "assets/photos/28722775/3-s.jpg",
+    "alt": "Piso en Pulianillas, Pulianas: fotografía 3"
+   },
+   {
+    "src": "assets/photos/28722775/4.jpg",
+    "thumb": "assets/photos/28722775/4-s.jpg",
+    "alt": "Piso en Pulianillas, Pulianas: fotografía 4"
+   },
+   {
+    "src": "assets/photos/28722775/5.jpg",
+    "thumb": "assets/photos/28722775/5-s.jpg",
+    "alt": "Piso en Pulianillas, Pulianas: fotografía 5"
+   },
+   {
+    "src": "assets/photos/28722775/6.jpg",
+    "thumb": "assets/photos/28722775/6-s.jpg",
+    "alt": "Piso en Pulianillas, Pulianas: fotografía 6"
+   }
+  ],
+  "photo_count_on_source": 41,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/piso/pulianas/pulianillas/8081/28722775/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "29965705",
+  "ref": "V1028",
+  "slug": "casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028",
+  "title": "Casa de campo en Sierra de Huétor, Cogollos de la Vega",
+  "headline": "Finca rústica de 9.766 m² con vivienda legalizada, AFO y piscina en Cogollos Vega",
+  "type": "Casa de campo",
+  "operation": "venta",
+  "zone": "Sierra de Huétor",
+  "city": "Cogollos de la Vega",
+  "province": "Granada",
+  "price": 190000,
+  "surface_built_m2": 88,
+  "surface_useful_m2": 81,
+  "plot_m2": 9766,
+  "rooms": 4,
+  "baths": 1,
+  "condition": "Buen estado",
+  "year_built": 1995,
+  "status": "disponible",
+  "features": [
+   "Piscina Propia",
+   "Garaje Incluido",
+   "Exterior"
+  ],
+  "description": [
+   "Ponemos a la venta esta magnífica finca rústica situada a las afueras de Cogollos Vega, en un entorno natural y tranquilo, con buen acceso hasta la propiedad.",
+   "La finca cuenta con una superficie gráfica de 9.766 m² y dispone de una vivienda de aproximadamente 90 m², totalmente regularizada y con el AFO realizado, aportando seguridad jurídica a la compraventa.",
+   "La vivienda cuenta con un gran patio exterior desde el que se accede directamente a una piscina privada de 36 m², conformando una amplia zona de ocio ideal para disfrutar con familiares y amigos.",
+   "La propiedad dispone de pozo de agua propio y suministro eléctrico, ofreciendo las comodidades necesarias para su uso como vivienda habitual, segunda residencia o finca de recreo.",
+   "Alrededor de la vivienda encontramos una extensa plantación de olivos y almendros, con posibilidades de aprovechamiento y explotación agrícola.",
+   "Características principales:",
+   "• Superficie gráfica de 9.766 m²",
+   "• Vivienda de aproximadamente 90 m²",
+   "• Vivienda totalmente regularizada",
+   "• AFO realizado",
+   "• Piscina privada de 36 m²",
+   "• Amplio patio exterior",
+   "• Pozo de agua propio",
+   "• Suministro eléctrico",
+   "• Olivos y almendros",
+   "• Buen acceso",
+   "• Entorno natural y tranquilo",
+   "Una propiedad con gran potencial para quienes buscan vivir rodeados de naturaleza, disfrutar de una finca privada o desarrollar una actividad agrícola a pocos minutos de Cogollos Vega.",
+   "Contacte con nosotros para ampliar información o concertar una visita.",
+   "El precio indicado no incluye impuestos, gastos derivados de la compraventa ni honorarios de la agencia inmobiliaria."
+  ],
+  "energy": {
+   "consumption_kwh_m2_year": null,
+   "emissions_kg_co2_m2_year": null
   },
-  {
-    "id": "29864049",
-    "ref": "RPA-LAMALAHA",
-    "slug": "pareado-centro-la-malaha-rpa-lamalaha",
-    "title": "Pareado en Centro, La Malahá",
-    "headline": "Gran pareado en la malaha",
-    "type": "Pareado",
-    "operation": "venta",
-    "zone": "Centro",
-    "city": "La Malahá",
-    "province": "Granada",
-    "price": 164000,
-    "surface_built_m2": 114,
-    "surface_useful_m2": null,
-    "plot_m2": null,
-    "rooms": 4,
-    "baths": 2,
-    "condition": "Semireformado",
-    "year_built": null,
-    "status": "disponible",
-    "features": [
-      "Garaje Incluido",
-      "Patio",
-      "Terraza",
-      "Exterior",
-      "Luminoso",
-      "Autobuses",
-      "Centros Comerciales",
-      "Colegios",
-      "Supermercados"
-    ],
-    "description": [
-      "¿Buscas una vivienda donde tu familia pueda disfrutar tanto del interior como del exterior? Esta casa situada en Las Salinas (La Malahá) reúne amplitud, luminosidad, mejoras recientes y un espacio exterior con múltiples posibilidades, todo ello en una ubicación tranquila y perfectamente comunicada con Granada capital.",
-      "Con 114 m² construidos, la vivienda se distribuye en dos plantas y ofrece una distribución cómoda y funcional para el día a día.",
-      "Nada más llegar encontramos un agradable porche de entrada que da paso a la vivienda. En el lateral y la parte trasera dispone de una amplia zona exterior que podrás adaptar a tus necesidades: garaje, zona de lavandería, un segundo porche, espacio de juegos para los niños o un acogedor rincón para disfrutar del buen tiempo.",
-      "La planta baja, recientemente reformada, destaca por su moderno concepto abierto, con un amplio salón-cocina que conecta directamente con el exterior, creando un espacio muy cómodo para la vida familiar y las reuniones con amigos. En esta planta también encontramos un cuarto de baño completo y un termo eléctrico de 75 litros. La reforma está prácticamente finalizada, quedando únicamente algunos remates estéticos.",
-      "En la planta superior se ubica la zona de descanso, compuesta por cuatro dormitorios, dos individuales y dos dobles, todos ellos muy luminosos gracias a su excelente orientación. El dormitorio principal dispone de un balcón privado, que aporta una agradable sensación de amplitud y ventilación natural. Completa esta planta un segundo cuarto de baño completo.",
-      "Entre sus mejoras destacan:",
-      "- Ventanas de doble acristalamiento en la planta baja, recientemente instaladas.",
-      "- Fontanería y saneamientos renovados hace pocos meses.",
-      "- Punto de recarga para vehículo eléctrico en la zona destinada a garaje.",
-      "- Vivienda muy luminosa.",
-      "- Espacios exteriores con gran potencial de aprovechamiento.",
-      "Una vivienda con mucho potencial, espacios amplios y una excelente relación entre interior y exterior, ideal para familias que buscan comodidad, tranquilidad y la posibilidad de seguir personalizando su hogar.",
-      "📲 !NO DUDES EN CONTACTAR CON NOSOTROS PARA COORDINAR UNA VISITA!"
-    ],
-    "energy": {
-      "consumption_kwh_m2_year": null,
-      "emissions_kg_co2_m2_year": null
-    },
-    "photos": [
-      {
-        "src": "assets/photos/29864049/1.jpg",
-        "thumb": "assets/photos/29864049/1-s.jpg",
-        "alt": "Pareado en Centro, La Malahá: fotografía 1"
-      },
-      {
-        "src": "assets/photos/29864049/2.jpg",
-        "thumb": "assets/photos/29864049/2-s.jpg",
-        "alt": "Pareado en Centro, La Malahá: fotografía 2"
-      },
-      {
-        "src": "assets/photos/29864049/3.jpg",
-        "thumb": "assets/photos/29864049/3-s.jpg",
-        "alt": "Pareado en Centro, La Malahá: fotografía 3"
-      },
-      {
-        "src": "assets/photos/29864049/4.jpg",
-        "thumb": "assets/photos/29864049/4-s.jpg",
-        "alt": "Pareado en Centro, La Malahá: fotografía 4"
-      },
-      {
-        "src": "assets/photos/29864049/5.jpg",
-        "thumb": "assets/photos/29864049/5-s.jpg",
-        "alt": "Pareado en Centro, La Malahá: fotografía 5"
-      },
-      {
-        "src": "assets/photos/29864049/6.jpg",
-        "thumb": "assets/photos/29864049/6-s.jpg",
-        "alt": "Pareado en Centro, La Malahá: fotografía 6"
-      }
-    ],
-    "photo_count_on_source": 35,
-    "source_url": "https://www.inmobiliariagrande.com/ficha/pareado/la-malaha/centro/8081/29864049/es/",
-    "source_fetched_at": "2026-09-03"
+  "photos": [
+   {
+    "src": "assets/photos/29965705/1.jpg",
+    "thumb": "assets/photos/29965705/1-s.jpg",
+    "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 1"
+   },
+   {
+    "src": "assets/photos/29965705/2.jpg",
+    "thumb": "assets/photos/29965705/2-s.jpg",
+    "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 2"
+   },
+   {
+    "src": "assets/photos/29965705/3.jpg",
+    "thumb": "assets/photos/29965705/3-s.jpg",
+    "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 3"
+   },
+   {
+    "src": "assets/photos/29965705/4.jpg",
+    "thumb": "assets/photos/29965705/4-s.jpg",
+    "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 4"
+   },
+   {
+    "src": "assets/photos/29965705/5.jpg",
+    "thumb": "assets/photos/29965705/5-s.jpg",
+    "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 5"
+   },
+   {
+    "src": "assets/photos/29965705/6.jpg",
+    "thumb": "assets/photos/29965705/6-s.jpg",
+    "alt": "Casa de campo en Sierra de Huétor, Cogollos de la Vega: fotografía 6"
+   }
+  ],
+  "photo_count_on_source": 60,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/casa-de-campo/cogollos-de-la-vega/sierra-de-huetor-y-la-alfaguara/8081/29965705/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "29864049",
+  "ref": "RPA-LAMALAHA",
+  "slug": "pareado-centro-la-malaha-rpa-lamalaha",
+  "title": "Pareado en Centro, La Malahá",
+  "headline": "Gran pareado en la malaha",
+  "type": "Pareado",
+  "operation": "venta",
+  "zone": "Centro",
+  "city": "La Malahá",
+  "province": "Granada",
+  "price": 164000,
+  "surface_built_m2": 114,
+  "surface_useful_m2": null,
+  "plot_m2": null,
+  "rooms": 4,
+  "baths": 2,
+  "condition": "Semireformado",
+  "year_built": null,
+  "status": "disponible",
+  "features": [
+   "Garaje Incluido",
+   "Patio",
+   "Terraza",
+   "Exterior",
+   "Luminoso",
+   "Autobuses",
+   "Centros Comerciales",
+   "Colegios",
+   "Supermercados"
+  ],
+  "description": [
+   "¿Buscas una vivienda donde tu familia pueda disfrutar tanto del interior como del exterior? Esta casa situada en Las Salinas (La Malahá) reúne amplitud, luminosidad, mejoras recientes y un espacio exterior con múltiples posibilidades, todo ello en una ubicación tranquila y perfectamente comunicada con Granada capital.",
+   "Con 114 m² construidos, la vivienda se distribuye en dos plantas y ofrece una distribución cómoda y funcional para el día a día.",
+   "Nada más llegar encontramos un agradable porche de entrada que da paso a la vivienda. En el lateral y la parte trasera dispone de una amplia zona exterior que podrás adaptar a tus necesidades: garaje, zona de lavandería, un segundo porche, espacio de juegos para los niños o un acogedor rincón para disfrutar del buen tiempo.",
+   "La planta baja, recientemente reformada, destaca por su moderno concepto abierto, con un amplio salón-cocina que conecta directamente con el exterior, creando un espacio muy cómodo para la vida familiar y las reuniones con amigos. En esta planta también encontramos un cuarto de baño completo y un termo eléctrico de 75 litros. La reforma está prácticamente finalizada, quedando únicamente algunos remates estéticos.",
+   "En la planta superior se ubica la zona de descanso, compuesta por cuatro dormitorios, dos individuales y dos dobles, todos ellos muy luminosos gracias a su excelente orientación. El dormitorio principal dispone de un balcón privado, que aporta una agradable sensación de amplitud y ventilación natural. Completa esta planta un segundo cuarto de baño completo.",
+   "Entre sus mejoras destacan:",
+   "- Ventanas de doble acristalamiento en la planta baja, recientemente instaladas.",
+   "- Fontanería y saneamientos renovados hace pocos meses.",
+   "- Punto de recarga para vehículo eléctrico en la zona destinada a garaje.",
+   "- Vivienda muy luminosa.",
+   "- Espacios exteriores con gran potencial de aprovechamiento.",
+   "Una vivienda con mucho potencial, espacios amplios y una excelente relación entre interior y exterior, ideal para familias que buscan comodidad, tranquilidad y la posibilidad de seguir personalizando su hogar.",
+   "📲 !NO DUDES EN CONTACTAR CON NOSOTROS PARA COORDINAR UNA VISITA!"
+  ],
+  "energy": {
+   "consumption_kwh_m2_year": null,
+   "emissions_kg_co2_m2_year": null
   },
-  {
-    "id": "29899079",
-    "ref": "RGC-0091",
-    "slug": "piso-alcampo-granada-rgc-0091",
-    "title": "Piso en Alcampo, Granada",
-    "headline": "Fantástico piso reformado, todo exterior",
-    "type": "Piso",
-    "operation": "venta",
-    "zone": "Alcampo",
-    "city": "Granada",
-    "province": "Granada",
-    "price": 169900,
-    "surface_built_m2": 110,
-    "surface_useful_m2": null,
-    "plot_m2": null,
-    "rooms": 4,
-    "baths": 2,
-    "condition": "Reformado",
-    "year_built": 1970,
-    "status": "reservado",
-    "features": [
-      "Garaje Incluido",
-      "Ascensor",
-      "Lavandería",
-      "Exterior",
-      "Luminoso",
-      "Autobuses",
-      "Supermercados"
-    ],
-    "description": [
-      "¡OPORTUNIDAD!",
-      "Si buscas una vivienda amplia, luminosa y lista para entrar a vivir, esta es una excelente oportunidad.",
-      "La vivienda dispone de 4 amplios dormitorios, 2 baños completos con plato de ducha, cocina independiente con lavadero y un gran salón-comedor con salida directa a una agradable terraza. Su orientación este proporciona una excelente luz natural durante toda la mañana.",
-      "Aunque registralmente es una planta baja, por su altura tiene el carácter de una primera planta, lo que aporta mayor privacidad y luminosidad.",
-      "El piso ha sido reformado y cuenta con toda la carpintería interior renovada, además de carpintería exterior de PVC con doble acristalamiento, ofreciendo un excelente aislamiento térmico y acústico.",
-      "Se encuentra en un residencial privado y cerrado, con amplias zonas ajardinadas, cámaras de videovigilancia y zona de aparcamiento comunitaria.",
-      "El edificio está adaptado para personas con movilidad reducida, dispone de rampa de acceso y dos ascensores, garantizando comodidad y accesibilidad.",
-      "Una vivienda ideal para familias que buscan amplitud, comodidad, tranquilidad y una excelente calidad de vida, con todos los servicios al alcance de la mano.",
-      "¡NO DUDES EN CONTACTAR CON NOSOTROS PARA COORDINAR UNA VISITA!"
-    ],
-    "energy": {
-      "consumption_kwh_m2_year": 180.68,
-      "emissions_kg_co2_m2_year": 37.87
-    },
-    "photos": [
-      {
-        "src": "assets/photos/29899079/1.jpg",
-        "thumb": "assets/photos/29899079/1-s.jpg",
-        "alt": "Piso en Alcampo, Granada: fotografía 1"
-      },
-      {
-        "src": "assets/photos/29899079/2.jpg",
-        "thumb": "assets/photos/29899079/2-s.jpg",
-        "alt": "Piso en Alcampo, Granada: fotografía 2"
-      },
-      {
-        "src": "assets/photos/29899079/3.jpg",
-        "thumb": "assets/photos/29899079/3-s.jpg",
-        "alt": "Piso en Alcampo, Granada: fotografía 3"
-      },
-      {
-        "src": "assets/photos/29899079/4.jpg",
-        "thumb": "assets/photos/29899079/4-s.jpg",
-        "alt": "Piso en Alcampo, Granada: fotografía 4"
-      },
-      {
-        "src": "assets/photos/29899079/5.jpg",
-        "thumb": "assets/photos/29899079/5-s.jpg",
-        "alt": "Piso en Alcampo, Granada: fotografía 5"
-      },
-      {
-        "src": "assets/photos/29899079/6.jpg",
-        "thumb": "assets/photos/29899079/6-s.jpg",
-        "alt": "Piso en Alcampo, Granada: fotografía 6"
-      }
-    ],
-    "photo_count_on_source": 42,
-    "source_url": "https://www.inmobiliariagrande.com/ficha/piso/granada/alcampo/8081/29899079/es/",
-    "source_fetched_at": "2026-09-03"
-  }
+  "photos": [
+   {
+    "src": "assets/photos/29864049/1.jpg",
+    "thumb": "assets/photos/29864049/1-s.jpg",
+    "alt": "Pareado en Centro, La Malahá: fotografía 1"
+   },
+   {
+    "src": "assets/photos/29864049/2.jpg",
+    "thumb": "assets/photos/29864049/2-s.jpg",
+    "alt": "Pareado en Centro, La Malahá: fotografía 2"
+   },
+   {
+    "src": "assets/photos/29864049/3.jpg",
+    "thumb": "assets/photos/29864049/3-s.jpg",
+    "alt": "Pareado en Centro, La Malahá: fotografía 3"
+   },
+   {
+    "src": "assets/photos/29864049/4.jpg",
+    "thumb": "assets/photos/29864049/4-s.jpg",
+    "alt": "Pareado en Centro, La Malahá: fotografía 4"
+   },
+   {
+    "src": "assets/photos/29864049/5.jpg",
+    "thumb": "assets/photos/29864049/5-s.jpg",
+    "alt": "Pareado en Centro, La Malahá: fotografía 5"
+   },
+   {
+    "src": "assets/photos/29864049/6.jpg",
+    "thumb": "assets/photos/29864049/6-s.jpg",
+    "alt": "Pareado en Centro, La Malahá: fotografía 6"
+   }
+  ],
+  "photo_count_on_source": 35,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/pareado/la-malaha/centro/8081/29864049/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "29899079",
+  "ref": "RGC-0091",
+  "slug": "piso-alcampo-granada-rgc-0091",
+  "title": "Piso en Alcampo, Granada",
+  "headline": "Fantástico piso reformado, todo exterior",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "Alcampo",
+  "city": "Granada",
+  "province": "Granada",
+  "price": 169900,
+  "surface_built_m2": 110,
+  "surface_useful_m2": null,
+  "plot_m2": null,
+  "rooms": 4,
+  "baths": 2,
+  "condition": "Reformado",
+  "year_built": 1970,
+  "status": "reservado",
+  "features": [
+   "Garaje Incluido",
+   "Ascensor",
+   "Lavandería",
+   "Exterior",
+   "Luminoso",
+   "Autobuses",
+   "Supermercados"
+  ],
+  "description": [
+   "¡OPORTUNIDAD!",
+   "Si buscas una vivienda amplia, luminosa y lista para entrar a vivir, esta es una excelente oportunidad.",
+   "La vivienda dispone de 4 amplios dormitorios, 2 baños completos con plato de ducha, cocina independiente con lavadero y un gran salón-comedor con salida directa a una agradable terraza. Su orientación este proporciona una excelente luz natural durante toda la mañana.",
+   "Aunque registralmente es una planta baja, por su altura tiene el carácter de una primera planta, lo que aporta mayor privacidad y luminosidad.",
+   "El piso ha sido reformado y cuenta con toda la carpintería interior renovada, además de carpintería exterior de PVC con doble acristalamiento, ofreciendo un excelente aislamiento térmico y acústico.",
+   "Se encuentra en un residencial privado y cerrado, con amplias zonas ajardinadas, cámaras de videovigilancia y zona de aparcamiento comunitaria.",
+   "El edificio está adaptado para personas con movilidad reducida, dispone de rampa de acceso y dos ascensores, garantizando comodidad y accesibilidad.",
+   "Una vivienda ideal para familias que buscan amplitud, comodidad, tranquilidad y una excelente calidad de vida, con todos los servicios al alcance de la mano.",
+   "¡NO DUDES EN CONTACTAR CON NOSOTROS PARA COORDINAR UNA VISITA!"
+  ],
+  "energy": {
+   "consumption_kwh_m2_year": 180.68,
+   "emissions_kg_co2_m2_year": 37.87
+  },
+  "photos": [
+   {
+    "src": "assets/photos/29899079/1.jpg",
+    "thumb": "assets/photos/29899079/1-s.jpg",
+    "alt": "Piso en Alcampo, Granada: fotografía 1"
+   },
+   {
+    "src": "assets/photos/29899079/2.jpg",
+    "thumb": "assets/photos/29899079/2-s.jpg",
+    "alt": "Piso en Alcampo, Granada: fotografía 2"
+   },
+   {
+    "src": "assets/photos/29899079/3.jpg",
+    "thumb": "assets/photos/29899079/3-s.jpg",
+    "alt": "Piso en Alcampo, Granada: fotografía 3"
+   },
+   {
+    "src": "assets/photos/29899079/4.jpg",
+    "thumb": "assets/photos/29899079/4-s.jpg",
+    "alt": "Piso en Alcampo, Granada: fotografía 4"
+   },
+   {
+    "src": "assets/photos/29899079/5.jpg",
+    "thumb": "assets/photos/29899079/5-s.jpg",
+    "alt": "Piso en Alcampo, Granada: fotografía 5"
+   },
+   {
+    "src": "assets/photos/29899079/6.jpg",
+    "thumb": "assets/photos/29899079/6-s.jpg",
+    "alt": "Piso en Alcampo, Granada: fotografía 6"
+   }
+  ],
+  "photo_count_on_source": 42,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/piso/granada/alcampo/8081/29899079/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "28001192",
+  "ref": "ECG68",
+  "slug": "casa-de-campo-melegis-el-valle-ecg68",
+  "title": "Casa de campo en Melegís, El Valle",
+  "headline": "Casa cueva en Melegís, El-Valle",
+  "type": "Casa de campo",
+  "operation": "venta",
+  "zone": "Melegís",
+  "city": "El Valle",
+  "province": "Granada",
+  "price": 83000,
+  "surface_built_m2": 105,
+  "surface_useful_m2": 100,
+  "plot_m2": null,
+  "rooms": 1,
+  "baths": 1,
+  "condition": "Buen estado",
+  "year_built": 2020,
+  "status": "disponible",
+  "features": [
+   "ECG68",
+   "Vender",
+   "Casa de campo",
+   "Melegís / El Valle",
+   "Buen estado",
+   "Superficie parcela",
+   "Interior",
+   "Libre",
+   " Garaje Incluido",
+   " Parking Incluido",
+   "Certificación Energética",
+   "En Tramites",
+   "Consumo de Energía",
+   "kWh/m",
+   "Año",
+   "Consumo Kg CO2/m2 Año",
+   "Situación",
+   "Contáctanos"
+  ],
+  "description": [
+   "bloquedescripcion\"> Ponemos a la venta esta magnífica y única casa cueva en Melegís, en pleno Valle de Lecrín.",
+   "Se trata de una amplia propiedad que ofrece infinitas posibilidades, tanto como vivienda habitual como para proyecto de hotel rural, ubicada en una zona verdaderamente privilegiada, rodeada de naturaleza y con unas vistas que quitan el aliento. Una auténtica joya lista para convertirse en el hogar o la inversión de tus sueños.",
+   "La finca dispone de pozo propio y cuenta con suministro eléctrico pendiente de enganche, con fácil acceso. Además, existe la posibilidad de construir una espectacular piscina, mitad en el interior de la montaña y mitad al aire libre: un elemento único, lleno de encanto y personalidad.",
+   "La cueva permite diseñar y adaptar el espacio según las necesidades: múltiples habitaciones, amplios salones, cocinas, zonas comunes… Un proyecto de vida con un potencial extraordinario.",
+   "Si deseas más información o concertar una visita, no dudes en llamarnos. ¡Te encantará!"
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/28001192/1.jpg",
+    "thumb": "assets/photos/28001192/1-s.jpg",
+    "alt": "Casa de campo en Melegís, El Valle: fotografía 1"
+   },
+   {
+    "src": "assets/photos/28001192/2.jpg",
+    "thumb": "assets/photos/28001192/2-s.jpg",
+    "alt": "Casa de campo en Melegís, El Valle: fotografía 2"
+   },
+   {
+    "src": "assets/photos/28001192/3.jpg",
+    "thumb": "assets/photos/28001192/3-s.jpg",
+    "alt": "Casa de campo en Melegís, El Valle: fotografía 3"
+   },
+   {
+    "src": "assets/photos/28001192/4.jpg",
+    "thumb": "assets/photos/28001192/4-s.jpg",
+    "alt": "Casa de campo en Melegís, El Valle: fotografía 4"
+   },
+   {
+    "src": "assets/photos/28001192/5.jpg",
+    "thumb": "assets/photos/28001192/5-s.jpg",
+    "alt": "Casa de campo en Melegís, El Valle: fotografía 5"
+   },
+   {
+    "src": "assets/photos/28001192/6.jpg",
+    "thumb": "assets/photos/28001192/6-s.jpg",
+    "alt": "Casa de campo en Melegís, El Valle: fotografía 6"
+   },
+   {
+    "src": "assets/photos/28001192/7.jpg",
+    "thumb": "assets/photos/28001192/7-s.jpg",
+    "alt": "Casa de campo en Melegís, El Valle: fotografía 7"
+   },
+   {
+    "src": "assets/photos/28001192/8.jpg",
+    "thumb": "assets/photos/28001192/8-s.jpg",
+    "alt": "Casa de campo en Melegís, El Valle: fotografía 8"
+   },
+   {
+    "src": "assets/photos/28001192/9.jpg",
+    "thumb": "assets/photos/28001192/9-s.jpg",
+    "alt": "Casa de campo en Melegís, El Valle: fotografía 9"
+   },
+   {
+    "src": "assets/photos/28001192/10.jpg",
+    "thumb": "assets/photos/28001192/10-s.jpg",
+    "alt": "Casa de campo en Melegís, El Valle: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 23,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/country-house/el-valle/melegis/8081/28001192/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "27775090",
+  "ref": "ECG64",
+  "slug": "piso-zafarraya-zafarraya-ecg64",
+  "title": "Piso en Zafarraya, Zafarraya",
+  "headline": "Magnífica oportunidad en Ventas de Zafarraya",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "Zafarraya",
+  "city": "Zafarraya",
+  "province": "Granada",
+  "price": 102000,
+  "surface_built_m2": 93,
+  "surface_useful_m2": 90,
+  "plot_m2": null,
+  "rooms": 3,
+  "baths": 1,
+  "condition": "Buen estado",
+  "year_built": null,
+  "status": "disponible",
+  "features": [
+   "ECG64",
+   "Vender",
+   "Piso",
+   "Zafarraya / Zafarraya",
+   "90 m",
+   "93 m",
+   "Buen estado",
+   "Exterior",
+   "Libre",
+   " Exterior",
+   "Certificación Energética",
+   "En Tramites",
+   "Consumo de Energía",
+   "kWh/m",
+   "Año",
+   "Consumo Kg CO2/m2 Año",
+   "Situación",
+   "Contáctanos"
+  ],
+  "description": [
+   "Te presentamos este magnífico piso de 3 habitaciones, situado en una de las mejores zonas de Ventas de Zafarraya. La vivienda se encuentra muy bien cuidada, es acogedora, luminosa y espaciosa, ideal para quienes buscan comodidad y calidad de vida.",
+   "Se vende totalmente amueblado, listo para entrar a vivir sin necesidad de realizar ninguna reforma. Gracias a su distribución y ubicación, es una opción perfecta tanto como vivienda habitual como para inversión, con una alta demanda en la zona.",
+   "No dejes pasar esta oportunidad. Ven a visitarlo y descubre el que puede ser tu nuevo hogar."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/27775090/1.jpg",
+    "thumb": "assets/photos/27775090/1-s.jpg",
+    "alt": "Piso en Zafarraya, Zafarraya: fotografía 1"
+   },
+   {
+    "src": "assets/photos/27775090/2.jpg",
+    "thumb": "assets/photos/27775090/2-s.jpg",
+    "alt": "Piso en Zafarraya, Zafarraya: fotografía 2"
+   },
+   {
+    "src": "assets/photos/27775090/3.jpg",
+    "thumb": "assets/photos/27775090/3-s.jpg",
+    "alt": "Piso en Zafarraya, Zafarraya: fotografía 3"
+   },
+   {
+    "src": "assets/photos/27775090/4.jpg",
+    "thumb": "assets/photos/27775090/4-s.jpg",
+    "alt": "Piso en Zafarraya, Zafarraya: fotografía 4"
+   },
+   {
+    "src": "assets/photos/27775090/5.jpg",
+    "thumb": "assets/photos/27775090/5-s.jpg",
+    "alt": "Piso en Zafarraya, Zafarraya: fotografía 5"
+   },
+   {
+    "src": "assets/photos/27775090/6.jpg",
+    "thumb": "assets/photos/27775090/6-s.jpg",
+    "alt": "Piso en Zafarraya, Zafarraya: fotografía 6"
+   },
+   {
+    "src": "assets/photos/27775090/7.jpg",
+    "thumb": "assets/photos/27775090/7-s.jpg",
+    "alt": "Piso en Zafarraya, Zafarraya: fotografía 7"
+   },
+   {
+    "src": "assets/photos/27775090/8.jpg",
+    "thumb": "assets/photos/27775090/8-s.jpg",
+    "alt": "Piso en Zafarraya, Zafarraya: fotografía 8"
+   },
+   {
+    "src": "assets/photos/27775090/9.jpg",
+    "thumb": "assets/photos/27775090/9-s.jpg",
+    "alt": "Piso en Zafarraya, Zafarraya: fotografía 9"
+   },
+   {
+    "src": "assets/photos/27775090/10.jpg",
+    "thumb": "assets/photos/27775090/10-s.jpg",
+    "alt": "Piso en Zafarraya, Zafarraya: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 32,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/flat/zafarraya/zafarraya/8081/27775090/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "28996902",
+  "ref": "FH03047",
+  "slug": "piso-joaquina-eguaras-granada-fh03047",
+  "title": "Piso en Joaquina Eguaras, Granada",
+  "headline": "ESPECTACULAR VIVIENDA A ESTRENAR",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "Joaquina Eguaras",
+  "city": "Granada",
+  "province": "Granada",
+  "price": 119900,
+  "surface_built_m2": 45,
+  "surface_useful_m2": 40,
+  "plot_m2": null,
+  "rooms": 1,
+  "baths": 1,
+  "condition": "Nuevo",
+  "year_built": 2026,
+  "status": "disponible",
+  "features": [
+   "Vender",
+   "Piso",
+   "Joaquina Eguaras / Granada",
+   "40 m",
+   "45 m",
+   "Nuevo",
+   "Todo exterior",
+   "Cemento",
+   "Tipo Cocina",
+   "Salón Cocina - Equipada",
+   "Tipo Calefacción",
+   "Split en pared",
+   "Agua Caliente",
+   "Termo Eléctrico",
+   "Carpintería Interior",
+   "PVC",
+   "Carpintería Exterior",
+   "PVC / Climalit"
+  ],
+  "description": [
+   "bloquedescripcion\"> ¿Busca una vivienda para entrar a vivir? Aquí le presentamos esta auténtica maravilla, para entrar a vivir, todo completamente nuevo a estrenar. Con un gusto exquisito, en una zona muy demandada por sus conexiones de autobús, grandes viales, servicios y comercios..",
+   "La vivienda cuenta con muchísima luz, una de sus principales características es esa luminosidad que nos proporciona su gran ventanal y su orientación.",
+   "Entrando a la vivienda nos encontramos su preciosa cocina, completamente equipada e integrada en la acogedora vivienda, frente a su amplio salón con su barra donde disfrutar de la gastronomía. Disfrutando de la armonía que nos da las luces indirectas de la vivienda.",
+   "Disfrutamos de un amplio dormitorio con su baño en suite, muy amplio y coqueto."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/28996902/1.jpg",
+    "thumb": "assets/photos/28996902/1-s.jpg",
+    "alt": "Piso en Joaquina Eguaras, Granada: fotografía 1"
+   },
+   {
+    "src": "assets/photos/28996902/2.jpg",
+    "thumb": "assets/photos/28996902/2-s.jpg",
+    "alt": "Piso en Joaquina Eguaras, Granada: fotografía 2"
+   },
+   {
+    "src": "assets/photos/28996902/3.jpg",
+    "thumb": "assets/photos/28996902/3-s.jpg",
+    "alt": "Piso en Joaquina Eguaras, Granada: fotografía 3"
+   },
+   {
+    "src": "assets/photos/28996902/4.jpg",
+    "thumb": "assets/photos/28996902/4-s.jpg",
+    "alt": "Piso en Joaquina Eguaras, Granada: fotografía 4"
+   },
+   {
+    "src": "assets/photos/28996902/5.jpg",
+    "thumb": "assets/photos/28996902/5-s.jpg",
+    "alt": "Piso en Joaquina Eguaras, Granada: fotografía 5"
+   },
+   {
+    "src": "assets/photos/28996902/6.jpg",
+    "thumb": "assets/photos/28996902/6-s.jpg",
+    "alt": "Piso en Joaquina Eguaras, Granada: fotografía 6"
+   },
+   {
+    "src": "assets/photos/28996902/7.jpg",
+    "thumb": "assets/photos/28996902/7-s.jpg",
+    "alt": "Piso en Joaquina Eguaras, Granada: fotografía 7"
+   },
+   {
+    "src": "assets/photos/28996902/8.jpg",
+    "thumb": "assets/photos/28996902/8-s.jpg",
+    "alt": "Piso en Joaquina Eguaras, Granada: fotografía 8"
+   },
+   {
+    "src": "assets/photos/28996902/9.jpg",
+    "thumb": "assets/photos/28996902/9-s.jpg",
+    "alt": "Piso en Joaquina Eguaras, Granada: fotografía 9"
+   },
+   {
+    "src": "assets/photos/28996902/10.jpg",
+    "thumb": "assets/photos/28996902/10-s.jpg",
+    "alt": "Piso en Joaquina Eguaras, Granada: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 22,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/flat/granada/joaquina-eguaras/8081/28996902/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "29363276",
+  "ref": "FH03088",
+  "slug": "piso-carretera-mojonera-cortijos-de-marin-roquetas-de-mar-fh03088",
+  "title": "Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar",
+  "headline": "Espectacular vivienda en Roquetas de Mar",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "Carretera Mojonera - Cortijos de Marín",
+  "city": "Roquetas De Mar",
+  "province": "Granada",
+  "price": 124000,
+  "surface_built_m2": 86,
+  "surface_useful_m2": 85,
+  "plot_m2": null,
+  "rooms": 2,
+  "baths": 1,
+  "condition": "Nuevo",
+  "year_built": 2008,
+  "status": "disponible",
+  "features": [
+   "Vender",
+   "Piso",
+   "85 m",
+   "86 m",
+   "Nuevo",
+   "Número de plazas de parkings",
+   "Orientación",
+   "Sur",
+   "Todo exterior",
+   "Ladrillo",
+   "Tipo Cocina",
+   "Independiente - Vacía",
+   "Tipo Calefacción",
+   "Bomba de calor",
+   "Agua Caliente",
+   "Termo Eléctrico",
+   "Carpintería Exterior",
+   "PVC / Climalit"
+  ],
+  "description": [
+   "bloquedescripcion\"> ¿Busca una vivienda amplia y nueva a estrenar a un precio imbatible?",
+   "Aquí le presentamos esta auténtica maravilla, se trata de una vivienda con 2 amplias habitaciones, bañado en luz por su orientación, la vivienda es nueva a estrenar, ya que nunca se ha estrenado.",
+   "En un residencial nuevo, con acceso a escasos metros a la autovía, muy cerca del nuevo Hospital, campo de fútbol, futura comisaría de Policía..",
+   "El edificio cuenta con ascensor, y además dispone de garaje incluido."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/29363276/1.jpg",
+    "thumb": "assets/photos/29363276/1-s.jpg",
+    "alt": "Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar: fotografía 1"
+   },
+   {
+    "src": "assets/photos/29363276/2.jpg",
+    "thumb": "assets/photos/29363276/2-s.jpg",
+    "alt": "Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar: fotografía 2"
+   },
+   {
+    "src": "assets/photos/29363276/3.jpg",
+    "thumb": "assets/photos/29363276/3-s.jpg",
+    "alt": "Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar: fotografía 3"
+   },
+   {
+    "src": "assets/photos/29363276/4.jpg",
+    "thumb": "assets/photos/29363276/4-s.jpg",
+    "alt": "Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar: fotografía 4"
+   },
+   {
+    "src": "assets/photos/29363276/5.jpg",
+    "thumb": "assets/photos/29363276/5-s.jpg",
+    "alt": "Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar: fotografía 5"
+   },
+   {
+    "src": "assets/photos/29363276/6.jpg",
+    "thumb": "assets/photos/29363276/6-s.jpg",
+    "alt": "Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar: fotografía 6"
+   },
+   {
+    "src": "assets/photos/29363276/7.jpg",
+    "thumb": "assets/photos/29363276/7-s.jpg",
+    "alt": "Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar: fotografía 7"
+   },
+   {
+    "src": "assets/photos/29363276/8.jpg",
+    "thumb": "assets/photos/29363276/8-s.jpg",
+    "alt": "Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar: fotografía 8"
+   },
+   {
+    "src": "assets/photos/29363276/9.jpg",
+    "thumb": "assets/photos/29363276/9-s.jpg",
+    "alt": "Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar: fotografía 9"
+   },
+   {
+    "src": "assets/photos/29363276/10.jpg",
+    "thumb": "assets/photos/29363276/10-s.jpg",
+    "alt": "Piso en Carretera Mojonera - Cortijos de Marín, Roquetas De Mar: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 22,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/flat/roquetas-de-mar/carretera-mojonera-cortijos-de-marin/8081/29363276/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "28894667",
+  "ref": "FH03040",
+  "slug": "piso-zaidin-granada-fh03040",
+  "title": "Piso en Zaidín, Granada",
+  "headline": "ESPECTACIULAR VIVIENDA A ESTRENAR",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "Zaidín",
+  "city": "Granada",
+  "province": "Granada",
+  "price": 144900,
+  "surface_built_m2": 46,
+  "surface_useful_m2": 42,
+  "plot_m2": null,
+  "rooms": 1,
+  "baths": 1,
+  "condition": "Entrar a vivir",
+  "year_built": 2026,
+  "status": "disponible",
+  "features": [
+   "Vender",
+   "Piso",
+   "Zaidín / Granada",
+   "42 m",
+   "46 m",
+   "Entrar a vivir",
+   "Todo exterior",
+   "Ladrillo",
+   "Tipo Cocina",
+   "Salón Cocina - Equipada",
+   "Tipo Calefacción",
+   "Split en pared",
+   "Agua Caliente",
+   "Termo Eléctrico",
+   "Carpintería Interior",
+   "PVC",
+   "Carpintería Exterior",
+   "PVC / Climalit"
+  ],
+  "description": [
+   "bloquedescripcion\"> ¿Busca una vivienda para entrar a vivir?",
+   "Aquí le presentamos esta auténtica maravilla, una vivienda para entrar a vivir, recién reformada, con un gusto y una exquisitez absoluta.",
+   "La vivienda se encuentra en la zona de moda de la ciudad, rodeada y conocida por todos los servicios, comercios, colegios, con las mejores conexiones.. a escasos metros del centro de la ciudad.",
+   "Se encuentra a estrenar, cuenta con un salón cocina amplio, y muy luminoso , con cocina completamente equipada.",
+   "Cuenta con un amplio dormitorio que da acceso a su baño en suite, con un diseño precioso y espectacular. Muy amplio."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/28894667/1.jpg",
+    "thumb": "assets/photos/28894667/1-s.jpg",
+    "alt": "Piso en Zaidín, Granada: fotografía 1"
+   },
+   {
+    "src": "assets/photos/28894667/2.jpg",
+    "thumb": "assets/photos/28894667/2-s.jpg",
+    "alt": "Piso en Zaidín, Granada: fotografía 2"
+   },
+   {
+    "src": "assets/photos/28894667/3.jpg",
+    "thumb": "assets/photos/28894667/3-s.jpg",
+    "alt": "Piso en Zaidín, Granada: fotografía 3"
+   },
+   {
+    "src": "assets/photos/28894667/4.jpg",
+    "thumb": "assets/photos/28894667/4-s.jpg",
+    "alt": "Piso en Zaidín, Granada: fotografía 4"
+   },
+   {
+    "src": "assets/photos/28894667/5.jpg",
+    "thumb": "assets/photos/28894667/5-s.jpg",
+    "alt": "Piso en Zaidín, Granada: fotografía 5"
+   },
+   {
+    "src": "assets/photos/28894667/6.jpg",
+    "thumb": "assets/photos/28894667/6-s.jpg",
+    "alt": "Piso en Zaidín, Granada: fotografía 6"
+   },
+   {
+    "src": "assets/photos/28894667/7.jpg",
+    "thumb": "assets/photos/28894667/7-s.jpg",
+    "alt": "Piso en Zaidín, Granada: fotografía 7"
+   },
+   {
+    "src": "assets/photos/28894667/8.jpg",
+    "thumb": "assets/photos/28894667/8-s.jpg",
+    "alt": "Piso en Zaidín, Granada: fotografía 8"
+   },
+   {
+    "src": "assets/photos/28894667/9.jpg",
+    "thumb": "assets/photos/28894667/9-s.jpg",
+    "alt": "Piso en Zaidín, Granada: fotografía 9"
+   },
+   {
+    "src": "assets/photos/28894667/10.jpg",
+    "thumb": "assets/photos/28894667/10-s.jpg",
+    "alt": "Piso en Zaidín, Granada: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 18,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/flat/granada/zaidin/8081/28894667/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "28164588",
+  "ref": "FH02982",
+  "slug": "piso-centro-atarfe-fh02982",
+  "title": "Piso en Centro, Atarfe",
+  "headline": "FANTÁSTICA VIVIENDA EN ATARFE CON GARAJE Y TRASTERO",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "Centro",
+  "city": "Atarfe",
+  "province": "Granada",
+  "price": 145000,
+  "surface_built_m2": 87,
+  "surface_useful_m2": 55,
+  "plot_m2": null,
+  "rooms": 2,
+  "baths": 1,
+  "condition": "Entrar a vivir",
+  "year_built": 2007,
+  "status": "disponible",
+  "features": [
+   "Vender",
+   "Piso",
+   "Centro / Atarfe",
+   "55 m",
+   "87 m",
+   "Entrar a vivir",
+   "Todo exterior",
+   "Ladrillo",
+   "Gastos Comunidad",
+   "43€",
+   "Tipo Cocina",
+   "Americana - Equipada",
+   "Agua Caliente",
+   "Termo Eléctrico",
+   "A la calle",
+   "Libre",
+   " Balcón",
+   " Alarma Robo"
+  ],
+  "description": [
+   "bloquedescripcion\"> ¿Busca una vivienda con garaje y trastero para entrar a vivir y estrenarla?",
+   "Aquí le presentamos esta auténtica maravilla, se trata de una vivienda en una de las mejores zonas de Atarfe, para entrar a vivir, ya que acaba de ser recientemente reformada, con lo que significa estrenar una vivienda.",
+   "Además cuenta con un amplio garaje y un trastero en el mismo edificio.",
+   "Está situado en una zona rodeada de todo tipo de servicios y comercios, con las mejores conexiones de autobús, a escasos metros del centro .",
+   "Cuanta con 2 habitaciones con muchísima luz, un precioso salón con cocina integrada, en una preciosa y tranquila urbanización.",
+   "!No lo ude y solicite su visita a esta vivienda!"
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/28164588/1.jpg",
+    "thumb": "assets/photos/28164588/1-s.jpg",
+    "alt": "Piso en Centro, Atarfe: fotografía 1"
+   },
+   {
+    "src": "assets/photos/28164588/2.jpg",
+    "thumb": "assets/photos/28164588/2-s.jpg",
+    "alt": "Piso en Centro, Atarfe: fotografía 2"
+   },
+   {
+    "src": "assets/photos/28164588/3.jpg",
+    "thumb": "assets/photos/28164588/3-s.jpg",
+    "alt": "Piso en Centro, Atarfe: fotografía 3"
+   },
+   {
+    "src": "assets/photos/28164588/4.jpg",
+    "thumb": "assets/photos/28164588/4-s.jpg",
+    "alt": "Piso en Centro, Atarfe: fotografía 4"
+   },
+   {
+    "src": "assets/photos/28164588/5.jpg",
+    "thumb": "assets/photos/28164588/5-s.jpg",
+    "alt": "Piso en Centro, Atarfe: fotografía 5"
+   },
+   {
+    "src": "assets/photos/28164588/6.jpg",
+    "thumb": "assets/photos/28164588/6-s.jpg",
+    "alt": "Piso en Centro, Atarfe: fotografía 6"
+   },
+   {
+    "src": "assets/photos/28164588/7.jpg",
+    "thumb": "assets/photos/28164588/7-s.jpg",
+    "alt": "Piso en Centro, Atarfe: fotografía 7"
+   },
+   {
+    "src": "assets/photos/28164588/8.jpg",
+    "thumb": "assets/photos/28164588/8-s.jpg",
+    "alt": "Piso en Centro, Atarfe: fotografía 8"
+   },
+   {
+    "src": "assets/photos/28164588/9.jpg",
+    "thumb": "assets/photos/28164588/9-s.jpg",
+    "alt": "Piso en Centro, Atarfe: fotografía 9"
+   },
+   {
+    "src": "assets/photos/28164588/10.jpg",
+    "thumb": "assets/photos/28164588/10-s.jpg",
+    "alt": "Piso en Centro, Atarfe: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 30,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/flat/atarfe/centro/8081/28164588/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "30051861",
+  "ref": "FH03148",
+  "slug": "piso-constitucion-granada-fh03148",
+  "title": "Piso en Constitucion, Granada",
+  "headline": "Espectacular vivienda en Plaza San Lázaro a estrenar",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "Constitucion",
+  "city": "Granada",
+  "province": "Granada",
+  "price": 169900,
+  "surface_built_m2": 48,
+  "surface_useful_m2": 42,
+  "plot_m2": null,
+  "rooms": 1,
+  "baths": 1,
+  "condition": "Entrar a vivir",
+  "year_built": 2026,
+  "status": "disponible",
+  "features": [
+   "Vender",
+   "Piso",
+   "Constitucion / Granada",
+   "42 m",
+   "48 m",
+   "Entrar a vivir",
+   "Mixto",
+   "Cemento",
+   "Tipo Cocina",
+   "Salón Cocina - Equipada",
+   "Tipo Calefacción",
+   "Split en pared",
+   "Agua Caliente",
+   "Termo Eléctrico",
+   "Carpintería Exterior",
+   "PVC / Climalit",
+   "Tipo Suelo",
+   "Tarima Flotante"
+  ],
+  "description": [
+   "bloquedescripcion\"> ¿Está buscando el hogar ideal para mudarse sin preocupaciones? ¡No busque más! Le presentamos esta espectacular propiedad situada en la codiciada Plaza de San Lázaro, un lugar emblemático y lleno de vida. Este inmueble es una auténtica joya donde cada rincón ha sido cuidadosamente diseñado con gusto y elegancia. Al entrar, se encontrará con un amplio salón-cocina que destaca por su luminosidad gracias a sus grandes ventanales equipados con persianas domotizadas; aquí podrá disfrutar tanto del día a día como momentos especiales. La cocina está completamente equipada para satisfacer todas sus necesidades.",
+   "La vivienda también cuenta con un dormitorio espacioso que incluye acceso directo a un hermoso baño en suite, complementado por una encantadora zona de vestidor que hará las delicias de los amantes de la moda y el orden.",
+   "Ubicada estratégicamente cerca de comercios locales de moda, colegios e inmejorables conexiones al transporte público, todo lo necesario para vivir cómodamente se encuentra al alcance. Esta es su oportunidad única: ¡no dude en venir a visitarla y enamorarse!"
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/30051861/1.jpg",
+    "thumb": "assets/photos/30051861/1-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 1"
+   },
+   {
+    "src": "assets/photos/30051861/2.jpg",
+    "thumb": "assets/photos/30051861/2-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 2"
+   },
+   {
+    "src": "assets/photos/30051861/3.jpg",
+    "thumb": "assets/photos/30051861/3-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 3"
+   },
+   {
+    "src": "assets/photos/30051861/4.jpg",
+    "thumb": "assets/photos/30051861/4-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 4"
+   },
+   {
+    "src": "assets/photos/30051861/5.jpg",
+    "thumb": "assets/photos/30051861/5-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 5"
+   },
+   {
+    "src": "assets/photos/30051861/6.jpg",
+    "thumb": "assets/photos/30051861/6-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 6"
+   },
+   {
+    "src": "assets/photos/30051861/7.jpg",
+    "thumb": "assets/photos/30051861/7-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 7"
+   },
+   {
+    "src": "assets/photos/30051861/8.jpg",
+    "thumb": "assets/photos/30051861/8-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 8"
+   },
+   {
+    "src": "assets/photos/30051861/9.jpg",
+    "thumb": "assets/photos/30051861/9-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 9"
+   },
+   {
+    "src": "assets/photos/30051861/10.jpg",
+    "thumb": "assets/photos/30051861/10-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 24,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/flat/granada/constitucion/8081/30051861/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "28568360",
+  "ref": "ECG76",
+  "slug": "casa-padul-padul-ecg76",
+  "title": "Casa en Padul",
+  "headline": "Tu nueva casa en Padul",
+  "type": "Casa",
+  "operation": "venta",
+  "zone": null,
+  "city": "Padul",
+  "province": "Granada",
+  "price": 230000,
+  "surface_built_m2": 221,
+  "surface_useful_m2": null,
+  "plot_m2": null,
+  "rooms": 6,
+  "baths": 4,
+  "condition": "Buen estado",
+  "year_built": 2003,
+  "status": "disponible",
+  "features": [
+   "ECG76",
+   "Vender",
+   "Casa",
+   "South of spain / Padul",
+   "Buen estado",
+   "Exterior",
+   "Libre",
+   " Garaje Incluido",
+   " Parking Incluido",
+   " Exterior",
+   "Certificación Energética",
+   "En Tramites",
+   "Consumo de Energía",
+   "kWh/m",
+   "Año",
+   "Consumo Kg CO2/m2 Año",
+   "Situación",
+   "Contáctanos"
+  ],
+  "description": [
+   "bloquedescripcion\"> Ponemos a la venta esta magnífica vivienda en Padul, ideal para familias numerosas o para quienes buscan amplitud, comodidad y una excelente ubicación. La casa dispone de 6 amplias habitaciones, 4 cuartos de baño, un luminoso salón, cocina totalmente funcional, terraza y garaje, además de otros espacios que aportan comodidad y versatilidad al día a día.",
+   "La vivienda se encuentra ubicada en una zona privilegiada de Padul, junto al conocido SPAR Las 3 M, rodeada de todo tipo de servicios que facilitan la vida diaria. A tan solo un minuto de la parada de autobús, un minuto de la gasolinera, 30 segundos de una cafetería, y muy cerca de supermercados, comercios, colegios y otros servicios esenciales.",
+   "Gracias a su excelente localización, esta casa ofrece una combinación perfecta entre tranquilidad y comodidad, con todo lo necesario a pocos pasos. Es una oportunidad única para quienes buscan una vivienda amplia, bien situada y lista para disfrutar.",
+   "No dude en visitarla: una casa así hay que verla para apreciarla. Le encantará.",
+   "El precio de venta no incluye los gastos asociados a la operación, tales como notaría, registro de la propiedad, Impuesto de Transmisiones Patrimoniales (ITP) ni los honorarios de la agencia inmobiliaria. Estos costes correrán a cargo del comprador según la normativa vigente. A modo orientativo, dichos gastos suelen situarse en torno al 10% del precio de compra, pudiendo variar en función de cada caso."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/28568360/1.jpg",
+    "thumb": "assets/photos/28568360/1-s.jpg",
+    "alt": "Casa en Padul: fotografía 1"
+   },
+   {
+    "src": "assets/photos/28568360/2.jpg",
+    "thumb": "assets/photos/28568360/2-s.jpg",
+    "alt": "Casa en Padul: fotografía 2"
+   },
+   {
+    "src": "assets/photos/28568360/3.jpg",
+    "thumb": "assets/photos/28568360/3-s.jpg",
+    "alt": "Casa en Padul: fotografía 3"
+   },
+   {
+    "src": "assets/photos/28568360/4.jpg",
+    "thumb": "assets/photos/28568360/4-s.jpg",
+    "alt": "Casa en Padul: fotografía 4"
+   },
+   {
+    "src": "assets/photos/28568360/5.jpg",
+    "thumb": "assets/photos/28568360/5-s.jpg",
+    "alt": "Casa en Padul: fotografía 5"
+   },
+   {
+    "src": "assets/photos/28568360/6.jpg",
+    "thumb": "assets/photos/28568360/6-s.jpg",
+    "alt": "Casa en Padul: fotografía 6"
+   },
+   {
+    "src": "assets/photos/28568360/7.jpg",
+    "thumb": "assets/photos/28568360/7-s.jpg",
+    "alt": "Casa en Padul: fotografía 7"
+   },
+   {
+    "src": "assets/photos/28568360/8.jpg",
+    "thumb": "assets/photos/28568360/8-s.jpg",
+    "alt": "Casa en Padul: fotografía 8"
+   },
+   {
+    "src": "assets/photos/28568360/9.jpg",
+    "thumb": "assets/photos/28568360/9-s.jpg",
+    "alt": "Casa en Padul: fotografía 9"
+   },
+   {
+    "src": "assets/photos/28568360/10.jpg",
+    "thumb": "assets/photos/28568360/10-s.jpg",
+    "alt": "Casa en Padul: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 38,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/house/padul/south-of-spain/8081/28568360/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "26630293",
+  "ref": "APP007",
+  "slug": "pareado-jun-jun-app007",
+  "title": "Pareado en Jun, Jun",
+  "headline": "AMPLIO PAREADO EN JUN PARA ENTRAR A VIVIR",
+  "type": "Pareado",
+  "operation": "venta",
+  "zone": "Jun",
+  "city": "Jun",
+  "province": "Granada",
+  "price": 249000,
+  "surface_built_m2": 319,
+  "surface_useful_m2": 280,
+  "plot_m2": null,
+  "rooms": 5,
+  "baths": 3,
+  "condition": "Entrar a vivir",
+  "year_built": 1975,
+  "status": "disponible",
+  "features": [
+   "Vender",
+   "Pareado",
+   "Jun / Jun",
+   "Entrar a vivir",
+   "Exterior",
+   "Tipo Cocina",
+   "Independiente",
+   "Agua Caliente",
+   "Termo Eléctrico",
+   "Carpintería Interior",
+   "Sapeli",
+   "Carpintería Exterior",
+   "Aluminio",
+   "Tipo Suelo",
+   "Mármol",
+   "Despejadas",
+   "I.B.I.",
+   "Libre"
+  ],
+  "description": [
+   "bloquedescripcion\"> Casa pareada muy amplia con vistas panorámicas en zona muy tranquila y bien comunicada.",
+   "Ven a visitar esta gran casa de tres plantas a unos minutos de Granada.",
+   "Espacios abiertos y luminosos ,toda la vivienda es exterior con amplios ventanales y mucha luz natural.",
+   "Despacho en la planta superior con salida a una terraza con vistas impresionantes a Sierra Nevada, Sierra Elvira y Moclín.",
+   "3 dormitorios muy amplios y 2 baños completos.",
+   "Patio comunitario de 180 m2, con baño y con posibilidad de recuperar piscina original que ahora esta cubierta.",
+   "Ubicación privilegiada: Centro de Granada 15 minutos ,Autovía A-44 a 5 minutos .",
+   "Una casa lista para poder vivir en ella ,bonita y muy luminosa ."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/26630293/1.jpg",
+    "thumb": "assets/photos/26630293/1-s.jpg",
+    "alt": "Pareado en Jun, Jun: fotografía 1"
+   },
+   {
+    "src": "assets/photos/26630293/2.jpg",
+    "thumb": "assets/photos/26630293/2-s.jpg",
+    "alt": "Pareado en Jun, Jun: fotografía 2"
+   },
+   {
+    "src": "assets/photos/26630293/3.jpg",
+    "thumb": "assets/photos/26630293/3-s.jpg",
+    "alt": "Pareado en Jun, Jun: fotografía 3"
+   },
+   {
+    "src": "assets/photos/26630293/4.jpg",
+    "thumb": "assets/photos/26630293/4-s.jpg",
+    "alt": "Pareado en Jun, Jun: fotografía 4"
+   },
+   {
+    "src": "assets/photos/26630293/5.jpg",
+    "thumb": "assets/photos/26630293/5-s.jpg",
+    "alt": "Pareado en Jun, Jun: fotografía 5"
+   },
+   {
+    "src": "assets/photos/26630293/6.jpg",
+    "thumb": "assets/photos/26630293/6-s.jpg",
+    "alt": "Pareado en Jun, Jun: fotografía 6"
+   },
+   {
+    "src": "assets/photos/26630293/7.jpg",
+    "thumb": "assets/photos/26630293/7-s.jpg",
+    "alt": "Pareado en Jun, Jun: fotografía 7"
+   },
+   {
+    "src": "assets/photos/26630293/8.jpg",
+    "thumb": "assets/photos/26630293/8-s.jpg",
+    "alt": "Pareado en Jun, Jun: fotografía 8"
+   },
+   {
+    "src": "assets/photos/26630293/9.jpg",
+    "thumb": "assets/photos/26630293/9-s.jpg",
+    "alt": "Pareado en Jun, Jun: fotografía 9"
+   },
+   {
+    "src": "assets/photos/26630293/10.jpg",
+    "thumb": "assets/photos/26630293/10-s.jpg",
+    "alt": "Pareado en Jun, Jun: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 68,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/semi-detached-house/jun/jun/8081/26630293/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "27926961",
+  "ref": "V970",
+  "slug": "casa-ambroz-vegas-del-genil-v970",
+  "title": "Casa en Ambroz, Vegas Del Genil",
+  "headline": "🏡 Se vende chalet en Ambroz – Centro del pueblo ☀️ (Vegas del Genil)",
+  "type": "Casa",
+  "operation": "venta",
+  "zone": "Ambroz",
+  "city": "Vegas Del Genil",
+  "province": "Granada",
+  "price": 290000,
+  "surface_built_m2": 245,
+  "surface_useful_m2": null,
+  "plot_m2": null,
+  "rooms": 3,
+  "baths": 3,
+  "condition": "Entrar a vivir",
+  "year_built": 2003,
+  "status": "disponible",
+  "features": [
+   "Vender",
+   "Casa",
+   "Ambroz / Vegas del Genil",
+   "Entrar a vivir",
+   "Superficie parcela",
+   "Exterior",
+   "Enfoscada",
+   "Carpintería Interior",
+   "Madera",
+   "Carpintería Exterior",
+   "Aluminio Lacado",
+   "Tipo Suelo",
+   "Granito",
+   "A la calle",
+   "Libre",
+   " Garaje Incluido",
+   " Exterior",
+   "Certificación Energética"
+  ],
+  "description": [
+   "bloquedescripcion\"> Magnífica vivienda tipo chalet situada en pleno centro de Ambroz, con todos los servicios al lado: comercios, transporte, colegios y servicios básicos, ofreciendo máxima comodidad para el día a día.",
+   "La vivienda cuenta con 245 m² construidos, distribuidos en 3 plantas, sobre una parcela de 313 m², y destaca por su jardín privado de 200 m², con espacio suficiente para construir una piscina, zona de ocio o área chill-out.",
+   "Dispone de dos salones, uno de ellos un segundo salón con chimenea, ideal como zona de estar independiente, sala de reuniones familiares o espacio de ocio acogedor para el invierno.",
+   "🔋 La vivienda incorpora placas solares con una potencia de 5.600 W, ampliables hasta 8.000 W, lo que garantiza eficiencia y ahorro energético.",
+   "🌳 Jardín de 200 m² con posibilidad de piscina",
+   "Una vivienda amplia, bien ubicada y con grandes posibilidades, ideal como residencia habitual o inversión.",
+   "📞 Para más información o concertar una visita, no dude en contactarnos."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/27926961/1.jpg",
+    "thumb": "assets/photos/27926961/1-s.jpg",
+    "alt": "Casa en Ambroz, Vegas Del Genil: fotografía 1"
+   },
+   {
+    "src": "assets/photos/27926961/2.jpg",
+    "thumb": "assets/photos/27926961/2-s.jpg",
+    "alt": "Casa en Ambroz, Vegas Del Genil: fotografía 2"
+   },
+   {
+    "src": "assets/photos/27926961/3.jpg",
+    "thumb": "assets/photos/27926961/3-s.jpg",
+    "alt": "Casa en Ambroz, Vegas Del Genil: fotografía 3"
+   },
+   {
+    "src": "assets/photos/27926961/4.jpg",
+    "thumb": "assets/photos/27926961/4-s.jpg",
+    "alt": "Casa en Ambroz, Vegas Del Genil: fotografía 4"
+   },
+   {
+    "src": "assets/photos/27926961/5.jpg",
+    "thumb": "assets/photos/27926961/5-s.jpg",
+    "alt": "Casa en Ambroz, Vegas Del Genil: fotografía 5"
+   },
+   {
+    "src": "assets/photos/27926961/6.jpg",
+    "thumb": "assets/photos/27926961/6-s.jpg",
+    "alt": "Casa en Ambroz, Vegas Del Genil: fotografía 6"
+   },
+   {
+    "src": "assets/photos/27926961/7.jpg",
+    "thumb": "assets/photos/27926961/7-s.jpg",
+    "alt": "Casa en Ambroz, Vegas Del Genil: fotografía 7"
+   },
+   {
+    "src": "assets/photos/27926961/8.jpg",
+    "thumb": "assets/photos/27926961/8-s.jpg",
+    "alt": "Casa en Ambroz, Vegas Del Genil: fotografía 8"
+   },
+   {
+    "src": "assets/photos/27926961/9.jpg",
+    "thumb": "assets/photos/27926961/9-s.jpg",
+    "alt": "Casa en Ambroz, Vegas Del Genil: fotografía 9"
+   },
+   {
+    "src": "assets/photos/27926961/10.jpg",
+    "thumb": "assets/photos/27926961/10-s.jpg",
+    "alt": "Casa en Ambroz, Vegas Del Genil: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 66,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/house/vegas-del-genil/ambroz/8081/27926961/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "27157226",
+  "ref": "FH02875",
+  "slug": "casa-san-ildefonso-granada-fh02875",
+  "title": "Casa en San Ildefonso, Granada",
+  "headline": "Fantástica Casa junto Campus de la Universidad",
+  "type": "Casa",
+  "operation": "venta",
+  "zone": "San Ildefonso",
+  "city": "Granada",
+  "province": "Granada",
+  "price": 290000,
+  "surface_built_m2": 144,
+  "surface_useful_m2": 134,
+  "plot_m2": null,
+  "rooms": 4,
+  "baths": 2,
+  "condition": "De origen",
+  "year_built": 1960,
+  "status": "disponible",
+  "features": [
+   "Vender",
+   "Casa",
+   "San Ildefonso / Granada",
+   "De origen",
+   "Orientación",
+   "Sureste",
+   "Superficie parcela",
+   "56 m",
+   "Cemento",
+   "Tipo Cocina",
+   "Independiente - Equipada",
+   "Agua Caliente",
+   "Termo Eléctrico",
+   "A la calle",
+   "Libre",
+   " Balcón",
+   " Alarma Robo",
+   " Garaje Incluido"
+  ],
+  "description": [
+   "bloquedescripcion\"> ¿Busca una vivienda junto campus Universitario de Cartuja?",
+   "Junto la Avenida de Murcia (Cuesta de Cervezas Alhambra), se sitúa esta auténtica maravilla donde poder encontrar esta casa con un increíble potencial, por su ubicación, metros, rodead de todos los comercios y servicios...",
+   "Se encuentra en estado de origen, estando dividido actualmente en plantas con distintas habitaciones en cada una de ellas.",
+   "En la planta baja, donde se accede a la vivienda, se encuentra el garaje y una zona de salón y cocina,",
+   "A medida que subimos plantas, encontramos habitaciones, hasta un total de 5 estancias y 2 baños.",
+   "En la última planta, disponemos una preciosa terraza de 55 metros con unas vistas despejadas."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/27157226/1.jpg",
+    "thumb": "assets/photos/27157226/1-s.jpg",
+    "alt": "Casa en San Ildefonso, Granada: fotografía 1"
+   },
+   {
+    "src": "assets/photos/27157226/2.jpg",
+    "thumb": "assets/photos/27157226/2-s.jpg",
+    "alt": "Casa en San Ildefonso, Granada: fotografía 2"
+   },
+   {
+    "src": "assets/photos/27157226/3.jpg",
+    "thumb": "assets/photos/27157226/3-s.jpg",
+    "alt": "Casa en San Ildefonso, Granada: fotografía 3"
+   },
+   {
+    "src": "assets/photos/27157226/4.jpg",
+    "thumb": "assets/photos/27157226/4-s.jpg",
+    "alt": "Casa en San Ildefonso, Granada: fotografía 4"
+   },
+   {
+    "src": "assets/photos/27157226/5.jpg",
+    "thumb": "assets/photos/27157226/5-s.jpg",
+    "alt": "Casa en San Ildefonso, Granada: fotografía 5"
+   },
+   {
+    "src": "assets/photos/27157226/6.jpg",
+    "thumb": "assets/photos/27157226/6-s.jpg",
+    "alt": "Casa en San Ildefonso, Granada: fotografía 6"
+   },
+   {
+    "src": "assets/photos/27157226/7.jpg",
+    "thumb": "assets/photos/27157226/7-s.jpg",
+    "alt": "Casa en San Ildefonso, Granada: fotografía 7"
+   },
+   {
+    "src": "assets/photos/27157226/8.jpg",
+    "thumb": "assets/photos/27157226/8-s.jpg",
+    "alt": "Casa en San Ildefonso, Granada: fotografía 8"
+   },
+   {
+    "src": "assets/photos/27157226/9.jpg",
+    "thumb": "assets/photos/27157226/9-s.jpg",
+    "alt": "Casa en San Ildefonso, Granada: fotografía 9"
+   },
+   {
+    "src": "assets/photos/27157226/10.jpg",
+    "thumb": "assets/photos/27157226/10-s.jpg",
+    "alt": "Casa en San Ildefonso, Granada: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 41,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/house/granada/san-ildefonso/8081/27157226/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "26670121",
+  "ref": "202200936",
+  "slug": "casa-san-miguel-guadix-202200936",
+  "title": "Casa en San Miguel, Guadix",
+  "headline": "Amplia Casa en Venta en Guadix - Oportunidad de Inversión",
+  "type": "Casa",
+  "operation": "venta",
+  "zone": "San Miguel",
+  "city": "Guadix",
+  "province": "Granada",
+  "price": 300000,
+  "surface_built_m2": 477,
+  "surface_useful_m2": 39998,
+  "plot_m2": null,
+  "rooms": 11,
+  "baths": 4,
+  "condition": "Reformar Parcialmente",
+  "year_built": 1925,
+  "status": "disponible",
+  "features": [
+   "Vender",
+   "Casa",
+   "SAN MIGUEL / Guadix",
+   "Reformar Parcialmente",
+   "Número de plazas de parkings",
+   "Orientación",
+   "Sur",
+   "Superficie parcela",
+   "Todo exterior",
+   "Pintada",
+   "Carpintería Interior",
+   "Madera",
+   "Carpintería Exterior",
+   "Aluminio",
+   "Tipo Suelo",
+   "Baldosa",
+   "Panorámicas",
+   "Libre"
+  ],
+  "description": [
+   "bloquedescripcion\"> Descubre esta impresionante casa ubicada en el corazón del casco histórico de Guadix, específicamente en el barrio de San Miguel. Con una generosa superficie construida de 477 m² y útil de casi 400 m², este inmueble ofrece un gran potencial para inversores o familias que buscan espacio y comodidad. La propiedad cuenta con tres fachadas y una cuarta parcial, asegurando abundante luz natural durante todo el día gracias a su orientación. Con la fachada y cubiertas restauradas en 2009, dispone de cuatro baños distribuidos entre sus diferentes unidades habitacionales: dos pisos independientes cuentan cada uno con dos dormitorios; otro piso tiene tres dormitorios más acceso a terraza privada; además se incluye un dúplex espacioso con cuatro habitaciones perfectas para acomodar grandes familias o grupos turísticos. Aparte, el lote comprende dos cocheras cerradas e independientes. Aunque necesita algo de reformas, las vistas hacia la alcazaba añaden un valor invaluable a la finca.",
+   "AVISO IMPORTANTE: El PVP indicado no incluye impuestos ni gastos de Escritura. Honorarios de agencia no incluidos. Las superficies expresadas en esta página son aproximadas y tienen carácter descriptivo."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/26670121/1.jpg",
+    "thumb": "assets/photos/26670121/1-s.jpg",
+    "alt": "Casa en San Miguel, Guadix: fotografía 1"
+   },
+   {
+    "src": "assets/photos/26670121/2.jpg",
+    "thumb": "assets/photos/26670121/2-s.jpg",
+    "alt": "Casa en San Miguel, Guadix: fotografía 2"
+   },
+   {
+    "src": "assets/photos/26670121/3.jpg",
+    "thumb": "assets/photos/26670121/3-s.jpg",
+    "alt": "Casa en San Miguel, Guadix: fotografía 3"
+   },
+   {
+    "src": "assets/photos/26670121/4.jpg",
+    "thumb": "assets/photos/26670121/4-s.jpg",
+    "alt": "Casa en San Miguel, Guadix: fotografía 4"
+   },
+   {
+    "src": "assets/photos/26670121/5.jpg",
+    "thumb": "assets/photos/26670121/5-s.jpg",
+    "alt": "Casa en San Miguel, Guadix: fotografía 5"
+   },
+   {
+    "src": "assets/photos/26670121/6.jpg",
+    "thumb": "assets/photos/26670121/6-s.jpg",
+    "alt": "Casa en San Miguel, Guadix: fotografía 6"
+   },
+   {
+    "src": "assets/photos/26670121/7.jpg",
+    "thumb": "assets/photos/26670121/7-s.jpg",
+    "alt": "Casa en San Miguel, Guadix: fotografía 7"
+   },
+   {
+    "src": "assets/photos/26670121/8.jpg",
+    "thumb": "assets/photos/26670121/8-s.jpg",
+    "alt": "Casa en San Miguel, Guadix: fotografía 8"
+   },
+   {
+    "src": "assets/photos/26670121/9.jpg",
+    "thumb": "assets/photos/26670121/9-s.jpg",
+    "alt": "Casa en San Miguel, Guadix: fotografía 9"
+   },
+   {
+    "src": "assets/photos/26670121/10.jpg",
+    "thumb": "assets/photos/26670121/10-s.jpg",
+    "alt": "Casa en San Miguel, Guadix: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 86,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/house/guadix/san-miguel/8081/26670121/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "29809345",
+  "ref": "GR26-32",
+  "slug": "piso-plaza-menorca-granada-gr26-32",
+  "title": "Piso en Plaza Menorca, Granada",
+  "headline": "4D junto a Camino de Ronda",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "Plaza Menorca",
+  "city": "Granada",
+  "province": "Granada",
+  "price": 330000,
+  "surface_built_m2": 95,
+  "surface_useful_m2": 90,
+  "plot_m2": null,
+  "rooms": 4,
+  "baths": 1,
+  "condition": "Entrar a vivir",
+  "year_built": 1973,
+  "status": "disponible",
+  "features": [
+   "GR26-32",
+   "Vender",
+   "Piso",
+   "Plaza Menorca / Granada",
+   "90 m",
+   "95 m",
+   "Entrar a vivir",
+   "Aseos",
+   "Orientación",
+   "Este",
+   "Exterior",
+   "Ladrillo",
+   "Gastos Comunidad",
+   "50€ / Mensual",
+   "Tipo Cocina",
+   "Independiente - Equipada",
+   "Agua Caliente",
+   "Calentador Butano"
+  ],
+  "description": [
+   "bloquedescripcion\"> 👀 ¿Y si el piso que llevas tiempo buscando estuviera mucho más cerca de lo que imaginas?",
+   "Hay viviendas que se visitan y se olvidan al salir. Y luego están esas que, desde el primer paso, empiezas a imaginar como tu próximo hogar. Este piso tiene ese efecto.",
+   "📍 Junto a Plaza Menorca y Camino de Ronda, disfrutarás de una de las zonas más demandadas de Granada. Tener el Metro, varias líneas de autobús, colegios, centros comerciales, universidades relativamente próximas y todo tipo de servicios a pocos minutos significa ganar tiempo cada día y vivir con la comodidad de tenerlo todo al alcance de la mano.",
+   "Con 95 m² muy bien distribuidos, esta vivienda ofrece algo que cada vez resulta más difícil encontrar: cuatro dormitorios. Espacio para una familia, para crear un despacho donde teletrabajar, para recibir visitas o, simplemente, para disfrutar de la amplitud que tanto se valora con el paso del tiempo.",
+   "☀️ Su orientación Este permite que la luz natural acompañe las mañanas, mientras que el balcón se convierte en ese rincón perfecto para empezar el día con un café, leer un libro o desconectar cuando todo se calma.",
+   "Además, la vivienda se encuentra lista para entrar a vivir, cuenta con un baño completo y un aseo, y el edificio dispone de ascensor, un detalle que aporta comodidad en el día a día y aumenta aún más el atractivo de la vivienda.",
+   "Pero este piso no solo es una excelente opción para quienes buscan su próximo hogar. También representa una magnífica oportunidad de inversión. Su ubicación, en una de las zonas con mayor movimiento de Granada, hace que exista una elevada demanda de viviendas en alquiler durante todo el año, tanto por parte de estudiantes que buscan vivir bien comunicados con facultades y transporte público, como de familias, trabajadores y residentes de larga estancia que desean establecerse en un barrio consolidado y con todos los servicios.",
+   "En otras palabras, hablamos de una vivienda que reúne dos cualidades muy difíciles de encontrar al mismo tiempo: un lugar perfecto para vivir y un inmueble con un gran atractivo para el mercado del alquiler."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/29809345/1.jpg",
+    "thumb": "assets/photos/29809345/1-s.jpg",
+    "alt": "Piso en Plaza Menorca, Granada: fotografía 1"
+   },
+   {
+    "src": "assets/photos/29809345/2.jpg",
+    "thumb": "assets/photos/29809345/2-s.jpg",
+    "alt": "Piso en Plaza Menorca, Granada: fotografía 2"
+   },
+   {
+    "src": "assets/photos/29809345/3.jpg",
+    "thumb": "assets/photos/29809345/3-s.jpg",
+    "alt": "Piso en Plaza Menorca, Granada: fotografía 3"
+   },
+   {
+    "src": "assets/photos/29809345/4.jpg",
+    "thumb": "assets/photos/29809345/4-s.jpg",
+    "alt": "Piso en Plaza Menorca, Granada: fotografía 4"
+   },
+   {
+    "src": "assets/photos/29809345/5.jpg",
+    "thumb": "assets/photos/29809345/5-s.jpg",
+    "alt": "Piso en Plaza Menorca, Granada: fotografía 5"
+   },
+   {
+    "src": "assets/photos/29809345/6.jpg",
+    "thumb": "assets/photos/29809345/6-s.jpg",
+    "alt": "Piso en Plaza Menorca, Granada: fotografía 6"
+   },
+   {
+    "src": "assets/photos/29809345/7.jpg",
+    "thumb": "assets/photos/29809345/7-s.jpg",
+    "alt": "Piso en Plaza Menorca, Granada: fotografía 7"
+   },
+   {
+    "src": "assets/photos/29809345/8.jpg",
+    "thumb": "assets/photos/29809345/8-s.jpg",
+    "alt": "Piso en Plaza Menorca, Granada: fotografía 8"
+   },
+   {
+    "src": "assets/photos/29809345/9.jpg",
+    "thumb": "assets/photos/29809345/9-s.jpg",
+    "alt": "Piso en Plaza Menorca, Granada: fotografía 9"
+   },
+   {
+    "src": "assets/photos/29809345/10.jpg",
+    "thumb": "assets/photos/29809345/10-s.jpg",
+    "alt": "Piso en Plaza Menorca, Granada: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 40,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/flat/granada/plaza-menorca/8081/29809345/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "29776364",
+  "ref": "GRAL26-13",
+  "slug": "piso-constitucion-granada-gral26-13",
+  "title": "Piso en Constitucion, Granada",
+  "headline": "Piso en Granada - Zona Constitucion",
+  "type": "Piso",
+  "operation": "alquiler",
+  "zone": "Constitucion",
+  "city": "Granada",
+  "province": "Granada",
+  "price": 1300,
+  "surface_built_m2": 125,
+  "surface_useful_m2": 100,
+  "plot_m2": null,
+  "rooms": 3,
+  "baths": 2,
+  "condition": "Entrar a vivir",
+  "year_built": null,
+  "status": "disponible",
+  "features": [
+   "GRAL26-13",
+   "Alquilar",
+   "Piso",
+   "Constitucion / Granada",
+   "Entrar a vivir",
+   "Orientación",
+   "Sur",
+   "Mixto",
+   "Tipo Cocina",
+   "Independiente",
+   "Agua Caliente",
+   "Central",
+   "Carpintería Exterior",
+   "Aluminio / Climalit",
+   "Tipo Suelo",
+   "Mármol",
+   "Despejadas",
+   "Libre"
+  ],
+  "description": [
+   "bloquedescripcion\"> 🌟 Hay pisos… y luego está ESTE. ¿Sabes esa sensación de entrar y pensar aquí podría vivir? 🏡",
+   "Pocas veces sale al mercado un piso que reúna **ubicación, amplitud y comodidad** en una de las zonas más cotizadas de Granada. Y cuando lo hace... dura muy poco. 👀",
+   "Ubicado en plena **Avenida de la Constitución**, este espectacular piso de **125 m² construidos (100 m² útiles)** te hará olvidar que estás buscando casa desde el momento en que cruces la puerta.",
+   "☀️ Su **orientación sur** llena cada estancia de luz natural, creando un ambiente cálido y acogedor durante todo el día. Porque una casa luminosa no solo se ve mejor… también se vive mejor.",
+   "🛏️ Dispone de **3 amplios dormitorios** y **2 baños**, el espacio perfecto tanto para familias como para quienes necesitan una habitación extra para teletrabajar o recibir visitas.",
+   "❄️ ¿Verano? Tranquilo. Cuenta con **dos aparatos de aire acondicionado**. 🥶 ¿Invierno? También está resuelto gracias a la **calefacción central**. Aquí solo tendrás que preocuparte de disfrutar.",
+   "✨ Los detalles marcan la diferencia: **armarios empotrados**, elegantes **suelos de mármol y parquet**, **ventanas Climalit** para un excelente aislamiento y una **agradable terraza** donde empezar el día con un café o terminarlo desconectando del mundo.",
+   "🛗 Además, se encuentra en una **tercera planta con dos ascensores**, porque la comodidad también está en los pequeños detalles."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/29776364/1.jpg",
+    "thumb": "assets/photos/29776364/1-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 1"
+   },
+   {
+    "src": "assets/photos/29776364/2.jpg",
+    "thumb": "assets/photos/29776364/2-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 2"
+   },
+   {
+    "src": "assets/photos/29776364/3.jpg",
+    "thumb": "assets/photos/29776364/3-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 3"
+   },
+   {
+    "src": "assets/photos/29776364/4.jpg",
+    "thumb": "assets/photos/29776364/4-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 4"
+   },
+   {
+    "src": "assets/photos/29776364/5.jpg",
+    "thumb": "assets/photos/29776364/5-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 5"
+   },
+   {
+    "src": "assets/photos/29776364/6.jpg",
+    "thumb": "assets/photos/29776364/6-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 6"
+   },
+   {
+    "src": "assets/photos/29776364/7.jpg",
+    "thumb": "assets/photos/29776364/7-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 7"
+   },
+   {
+    "src": "assets/photos/29776364/8.jpg",
+    "thumb": "assets/photos/29776364/8-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 8"
+   },
+   {
+    "src": "assets/photos/29776364/9.jpg",
+    "thumb": "assets/photos/29776364/9-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 9"
+   },
+   {
+    "src": "assets/photos/29776364/10.jpg",
+    "thumb": "assets/photos/29776364/10-s.jpg",
+    "alt": "Piso en Constitucion, Granada: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 42,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/flat/granada/constitucion/8081/29776364/es/",
+  "source_fetched_at": "2026-09-03"
+ },
+ {
+  "id": "29965708",
+  "ref": "V1029",
+  "slug": "piso-arabial-granada-v1029",
+  "title": "Piso en Arabial, Granada",
+  "headline": "BONITO Y AMPLIO PISO EN FRENTE DE LA FACULTAD DE CIENCIAS",
+  "type": "Piso",
+  "operation": "venta",
+  "zone": "Arabial",
+  "city": "Granada",
+  "province": "Granada",
+  "price": 315000,
+  "surface_built_m2": 100,
+  "surface_useful_m2": null,
+  "plot_m2": null,
+  "rooms": 4,
+  "baths": 1,
+  "condition": "De origen",
+  "year_built": 1970,
+  "status": "disponible",
+  "features": [
+   "Vender",
+   "Piso",
+   "Arabial / Granada",
+   "De origen",
+   "Avenida",
+   "Libre",
+   " Balcón",
+   " Calefacción Central",
+   " Ascensor",
+   " Armarios Empotrados",
+   " Muebles",
+   " Agua",
+   " Luminoso",
+   " Hospitales",
+   " Metro",
+   " Autobuses",
+   " Centros Comerciales",
+   " Colegios"
+  ],
+  "description": [
+   "bloquedescripcion\"> ¡Bienvenido a su nuevo hogar! 🏡 Este espectacular piso de 99 metros cuadrados se encuentra en una ubicación privilegiada, justo enfrente de la Facultad de Ciencias. Con impresionantes vistas y luminosidad natural, cuenta con cuatro amplios dormitorios que ofrecen el espacio perfecto para familias o estudiantes. 🌟 Además, dispone de dos baños completos y una cocina funcional ideal para preparar sus comidas favoritas 🍳. Disfrute también del pequeño balcón donde podrá relajarse al aire libre ☀️.",
+   "La propiedad está rodeada por los mejores colegios públicos y privados 🎓 así como supermercados 🛒, parques 🌳 médicos 👨‍⚕️ e incluso hospitales 🚑; todo lo necesario a un paso desde casa. El acceso al transporte público es excelente gracias a las paradas cercanas de metro y autobús 🚍. ¡No pierda esta oportunidad única! A solo €315000.",
+   "Con el fin de agilizar el proceso de compra, se recomienda disponer de un estudio de viabilidad o una preaprobación hipotecaria antes de concertar una visita.",
+   "El precio anunciado no incluye los gastos inherentes a la compraventa, que serán asumidos por la parte compradora conforme a la normativa vigente, entre ellos:",
+   "ITP (Impuesto de Transmisiones Patrimoniales): 7% (salvo bonificaciones o tipos reducidos aplicables).",
+   "Honorarios profesionales: 2,5% + IVA (mínimo 3.000 € + IVA).",
+   "Los importes indicados son orientativos y podrán variar en función de las circunstancias de cada operación."
+  ],
+  "energy": null,
+  "photos": [
+   {
+    "src": "assets/photos/29965708/1.jpg",
+    "thumb": "assets/photos/29965708/1-s.jpg",
+    "alt": "Piso en Arabial, Granada: fotografía 1"
+   },
+   {
+    "src": "assets/photos/29965708/2.jpg",
+    "thumb": "assets/photos/29965708/2-s.jpg",
+    "alt": "Piso en Arabial, Granada: fotografía 2"
+   },
+   {
+    "src": "assets/photos/29965708/3.jpg",
+    "thumb": "assets/photos/29965708/3-s.jpg",
+    "alt": "Piso en Arabial, Granada: fotografía 3"
+   },
+   {
+    "src": "assets/photos/29965708/4.jpg",
+    "thumb": "assets/photos/29965708/4-s.jpg",
+    "alt": "Piso en Arabial, Granada: fotografía 4"
+   },
+   {
+    "src": "assets/photos/29965708/5.jpg",
+    "thumb": "assets/photos/29965708/5-s.jpg",
+    "alt": "Piso en Arabial, Granada: fotografía 5"
+   },
+   {
+    "src": "assets/photos/29965708/6.jpg",
+    "thumb": "assets/photos/29965708/6-s.jpg",
+    "alt": "Piso en Arabial, Granada: fotografía 6"
+   },
+   {
+    "src": "assets/photos/29965708/7.jpg",
+    "thumb": "assets/photos/29965708/7-s.jpg",
+    "alt": "Piso en Arabial, Granada: fotografía 7"
+   },
+   {
+    "src": "assets/photos/29965708/8.jpg",
+    "thumb": "assets/photos/29965708/8-s.jpg",
+    "alt": "Piso en Arabial, Granada: fotografía 8"
+   },
+   {
+    "src": "assets/photos/29965708/9.jpg",
+    "thumb": "assets/photos/29965708/9-s.jpg",
+    "alt": "Piso en Arabial, Granada: fotografía 9"
+   },
+   {
+    "src": "assets/photos/29965708/10.jpg",
+    "thumb": "assets/photos/29965708/10-s.jpg",
+    "alt": "Piso en Arabial, Granada: fotografía 10"
+   }
+  ],
+  "photo_count_on_source": 39,
+  "source_url": "https://www.inmobiliariagrande.com/ficha/flat/granada/arabial/8081/29965708/es/",
+  "source_fetched_at": "2026-09-03"
+ }
 ]

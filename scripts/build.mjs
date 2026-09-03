@@ -73,7 +73,7 @@ function typeName(listing, lang) {
 function listingTitle(listing, lang) {
   if (lang === "es") return listing.title;
   const t = i18n.listings[listing.id];
-  return (t && t.title) || `${typeName(listing, "en")} in ${listing.zone}, ${listing.city}`;
+  return (t && t.title) || `${typeName(listing, "en")} in ${zoneOf(listing)}, ${listing.city}`;
 }
 /* Some scraped headlines are CRM leftovers ("en la localidad de"); drop anything that short. */
 function listingHeadline(listing, lang) {
@@ -95,6 +95,24 @@ function listingUrl(listing, lang) {
 function priceText(listing, lang) {
   const base = `${fmtInt(listing.price, lang)} €`;
   return listing.operation === "alquiler" ? `${base}${i18n.ui[lang].per_month.replace("€", "")}` : base;
+}
+/* Price reductions come from the agency's own listings, which show the previous
+   price and the drop. Rendered next to the current price, never instead of it. */
+function isReduced(listing) {
+  return Number.isFinite(listing.previous_price) && listing.previous_price > listing.price;
+}
+function reducedPct(listing) {
+  if (!isReduced(listing)) return null;
+  return Number.isFinite(listing.discount_pct)
+    ? listing.discount_pct
+    : Math.round((1 - listing.price / listing.previous_price) * 100);
+}
+function priceWas(listing, lang) {
+  if (!isReduced(listing)) return "";
+  const ui = i18n.ui[lang];
+  return `<span class="price-was"><s>${fmtInt(listing.previous_price, lang)} €</s>` +
+    `<span class="price-drop">−${reducedPct(listing)}%</span></span>` +
+    `<span class="visually-hidden">${esc(ui.was_price)} ${fmtInt(listing.previous_price, lang)} €</span>`;
 }
 function opLabel(listing, lang) {
   const o = i18n.operations[listing.operation];
@@ -134,7 +152,7 @@ function badge(listing, lang) {
 }
 function dataAttrs(listing) {
   const feats = (listing.features || []).join("|");
-  return `data-id="${escAttr(listing.id)}" data-type="${escAttr(listing.type)}" data-zone="${escAttr(listing.zone)}" data-city="${escAttr(listing.city)}" data-op="${escAttr(listing.operation)}" data-price="${listing.price}" data-rooms="${listing.rooms}" data-baths="${listing.baths}" data-m2="${listing.surface_built_m2}" data-date="${escAttr(listing.source_fetched_at || "")}" data-features="${escAttr(feats)}"`;
+  return `data-id="${escAttr(listing.id)}" data-type="${escAttr(listing.type)}" data-zone="${escAttr(zoneOf(listing))}" data-city="${escAttr(listing.city)}" data-op="${escAttr(listing.operation)}" data-price="${listing.price}" data-rooms="${listing.rooms}" data-baths="${listing.baths}" data-m2="${listing.surface_built_m2}" data-date="${escAttr(listing.source_fetched_at || "")}" data-features="${escAttr(feats)}"`;
 }
 
 /* Standard listing card (grid of 4 on the home, results on the listing page). */
@@ -150,10 +168,10 @@ function card(listing, lang, root, opts = {}) {
       <a class="card__link" href="${escAttr(url)}">
         <div class="card__media"><picture><source srcset="${root}${escAttr(webpOf(p.thumb))}" type="image/webp"><img src="${root}${escAttr(p.thumb)}" alt="${escAttr(p.alt)}" width="640" height="426"${eager}></picture></div>
         <div class="card__body">
-          <p class="card__place">${esc(listing.zone)} · ${esc(listing.city)}</p>
+          <p class="card__place">${placeOf(listing)}</p>
           <h3 class="card__title">${esc(listingTitle(listing, lang))}</h3>
           <ul class="card__specs">${sp}</ul>
-          <p class="card__price">${priceText(listing, lang)}</p>
+          <p class="card__price">${priceText(listing, lang)}${priceWas(listing, lang)}</p>
         </div>
       </a>
     </article>`;
@@ -171,11 +189,11 @@ function featureCard(listing, lang, root) {
         ${badge(listing, lang)}
         <span class="feature-card__body">
           <span>
-            <span class="feature-card__place">${esc(listing.zone)} · ${esc(listing.city)}</span>
+            <span class="feature-card__place">${placeOf(listing)}</span>
             <h3>${esc(listingTitle(listing, lang))}</h3>
             <ul class="feature-card__specs">${sp}</ul>
           </span>
-          <strong class="feature-card__price">${priceText(listing, lang)}</strong>
+          <strong class="feature-card__price">${priceText(listing, lang)}</strong>${priceWas(listing, lang)}
         </span>
       </a>`;
 }
@@ -186,10 +204,10 @@ function sideCard(listing, lang, root) {
   return `<a class="side-card" href="${escAttr(url)}" ${dataAttrs(listing)}>
         <span class="side-card__media">${badge(listing, lang)}<picture><source srcset="${root}${escAttr(webpOf(p.thumb))}" type="image/webp"><img src="${root}${escAttr(p.thumb)}" alt="${escAttr(p.alt)}" width="640" height="426" loading="lazy" decoding="async"></picture></span>
         <span class="side-card__body">
-          <span class="card__place">${esc(listing.zone)} · ${esc(listing.city)}</span>
+          <span class="card__place">${placeOf(listing)}</span>
           <h3>${esc(listingTitle(listing, lang))}</h3>
           <ul class="card__specs">${sp}</ul>
-          <strong class="side-card__price">${priceText(listing, lang)}</strong>
+          <strong class="side-card__price">${priceText(listing, lang)}</strong>${priceWas(listing, lang)}
         </span>
       </a>`;
 }
@@ -215,11 +233,19 @@ function showcase(lang, root) {
 function listingCards(lang, root) {
   return listings.map((l) => card(l, lang, root)).join("\n");
 }
+/* The source leaves the zone empty or fills it with junk ("South of spain") on some
+   listings, so fall back to the municipality instead of rendering "null". */
+function zoneOf(listing) { return listing.zone || listing.city; }
+function placeOf(listing) {
+  return listing.zone && listing.zone !== listing.city
+    ? `${esc(listing.zone)} · ${esc(listing.city)}`
+    : esc(listing.city);
+}
 function zoneOptions(lang) {
   const all = lang === "es" ? "Toda la provincia" : "Whole province";
   const capital = lang === "es" ? "Granada capital" : "Granada city";
   const zones = new Set();
-  for (const l of listings) for (const z of [l.zone, l.city]) if (z !== "Granada") zones.add(z);
+  for (const l of listings) for (const z of [l.zone, l.city]) if (z && z !== "Granada") zones.add(z);
   const sorted = [...zones].sort((a, b) => a.localeCompare(b, "es"));
   return [`<option value="">${all}</option>`, `<option value="Granada capital">${capital}</option>`]
     .concat(sorted.map((z) => `<option value="${escAttr(z)}">${esc(z)}</option>`))
@@ -416,11 +442,11 @@ function buildListing(listing, lang) {
   const { body, note, first } = descriptionHtml(listing, lang);
   const sp = specs(listing, lang);
   const title = lang === "es"
-    ? `${listing.type} en ${listing.zone}, ${listing.city} · ${fmtInt(listing.price, "es")} € | Inmobiliaria Grande, Granada`
-    : `${typeName(listing, "en")} in ${listing.zone}, ${listing.city} · €${fmtInt(listing.price, "en")} | Inmobiliaria Grande, Granada`;
+    ? `${listing.type} en ${zoneOf(listing)}, ${listing.city} · ${fmtInt(listing.price, "es")} € | Inmobiliaria Grande, Granada`
+    : `${typeName(listing, "en")} in ${zoneOf(listing)}, ${listing.city} · €${fmtInt(listing.price, "en")} | Inmobiliaria Grande, Granada`;
   const desc = lang === "es"
-    ? `${listing.type} en ${listing.zone}, ${listing.city}: ${sp.join(", ")} por ${fmtInt(listing.price, "es")} €. Ref. ${listing.ref}. Concierta tu visita con Inmobiliaria Grande, desde 1970.`
-    : `${typeName(listing, "en")} in ${listing.zone}, ${listing.city}: ${sp.join(", ")} for €${fmtInt(listing.price, "en")}. Ref. ${listing.ref}. Book a viewing with Inmobiliaria Grande, since 1970.`;
+    ? `${listing.type} en ${zoneOf(listing)}, ${listing.city}: ${sp.join(", ")} por ${fmtInt(listing.price, "es")} €. Ref. ${listing.ref}. Concierta tu visita con Inmobiliaria Grande, desde 1970.`
+    : `${typeName(listing, "en")} in ${zoneOf(listing)}, ${listing.city}: ${sp.join(", ")} for €${fmtInt(listing.price, "en")}. Ref. ${listing.ref}. Book a viewing with Inmobiliaria Grande, since 1970.`;
   const meta = { title, desc, nav: "comprar", alt: listingUrl(listing, lang === "es" ? "en" : "es"), og: listing.photos[0].src, extraHead: jsonLd(listing, cleanText(first), pageUrl) };
   const tpl = read(`templates/listing.${lang}.html`);
   const tokens = {
@@ -428,8 +454,9 @@ function buildListing(listing, lang) {
     HEADLINE: esc(listingHeadline(listing, lang)),
     HEADLINE_P: headlineP(listing, lang),
     TYPE: esc(typeName(listing, lang)),
-    ZONE: esc(listing.zone), CITY: esc(listing.city), PROVINCE: esc(listing.province),
+    ZONE: esc(zoneOf(listing)), CITY: esc(listing.city), PROVINCE: esc(listing.province),
     PRICE_FMT: priceText(listing, lang), PRICE_RAW: String(listing.price),
+    PRICE_WAS: priceWas(listing, lang),
     REF: escAttr(listing.ref), ID: escAttr(listing.id), OP: esc(opLabel(listing, lang)),
     BADGE: listing.status === "reservado" ? `<span class="badge badge--reserved">${esc(i18n.ui[lang].reserved)}</span>` : "",
     GALLERY: galleryHtml(listing, lang, root),
