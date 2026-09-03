@@ -396,13 +396,14 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .stat { background: var(--ink-2); padding: 26px 22px; display: flex; flex-direction: column; gap: 6px; }
 .stat__num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 600; color: var(--paper); line-height: 1; }
 .stat__label { font-size: 0.85rem; color: var(--lilac-light); }
-.stat--light { background: #fff; border-radius: var(--r-md); box-shadow: var(--shadow-card); }
-.stat--light .stat__num { color: var(--ink); letter-spacing: -0.03em; }
-.stat--light .stat__label { color: var(--text-muted); }
-.stat--ink { background: var(--ink); border-radius: var(--r-md); }
-.sell { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.sell h2 { font-size: clamp(2rem, 3.4vw, 2.9rem); line-height: 1.05; }
-.sell__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+/* The stats column moved out: its 55 / +250 / 3 repeated the family band one section
+   above. A single column now, with the heading held to a readable measure so it keeps
+   breaking over two lines instead of running the full 1320px container. */
+.sell { display: grid; gap: 20px; }
+.sell h2 { font-size: clamp(2rem, 3.4vw, 2.9rem); line-height: 1.05; max-width: 26ch; }
+/* .lead's own 62ch measures the digit width, which lands near 84 characters per line in
+   the English copy once the block spans the full container. Tighter here only. */
+.sell .lead { max-width: 54ch; }
 .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
 .cta-band { background: var(--ink-2); color: var(--lilac-light); border-radius: var(--r-md); padding: clamp(32px, 4vw, 52px); display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; }
 .cta-band h2 { color: var(--paper); margin: 0 0 10px; }
@@ -733,7 +734,7 @@ body.cookie-visible .fabs { bottom: 120px; }
   .hero__note { display: none; }
   .showcase { grid-template-columns: 1fr; }
   .feature-card { min-height: 360px; }
-  .family, .sell, .cta-band, .contact-grid, .detail-layout, .alert-box { grid-template-columns: 1fr; }
+  .family, .cta-band, .contact-grid, .detail-layout, .alert-box { grid-template-columns: 1fr; }
   .cta-band .actions { justify-content: flex-start; }
   .listing-layout { grid-template-columns: 1fr; }
   .filters { position: static; }
@@ -744,7 +745,7 @@ body.cookie-visible .fabs { bottom: 120px; }
 @media (max-width: 640px) {
   :root { --header-h: 68px; }
   .brand__emblem { width: 38px; height: 38px; }
-  .grid-4, .results, .team, .grid-2, .site-footer__grid, .family__stats, .sell__stats, .energy__grid, .field-row { grid-template-columns: 1fr; }
+  .grid-4, .results, .team, .grid-2, .site-footer__grid, .family__stats, .energy__grid, .field-row { grid-template-columns: 1fr; }
   .searchbar { grid-template-columns: 1fr; padding: 10px; }
   .side-card { flex-direction: column; align-items: stretch; }
   .side-card__media { width: 100%; flex-basis: auto; aspect-ratio: 3 / 2; }
