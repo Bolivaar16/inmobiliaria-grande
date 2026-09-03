@@ -33,12 +33,17 @@
   <url>
     <loc>https://www.inmobiliariagrande.com/sobre-nosotros.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/sobre-nosotros.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/about-us.html"/>
   </url>
   <url>
     <loc>https://www.inmobiliariagrande.com/vende-tu-casa.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/vende-tu-casa.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/sell-your-home.html"/>
+  </url>
+  <url>
+    <loc>https://www.inmobiliariagrande.com/en/about-us.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/sobre-nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/about-us.html"/>
   </url>
   <url>
     <loc>https://www.inmobiliariagrande.com/en/contact.html</loc>

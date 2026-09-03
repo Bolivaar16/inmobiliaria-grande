@@ -23,6 +23,10 @@ The full system (palette, type, components) is documented in `docs/BRAND.md`. `d
 - **js/main.js** — vanilla JS, no dependencies: mobile nav, favourites/dismissed/viewed (`localStorage`), listing filters + tabs + sort, cookie consent (necessary + optional Google Maps), form validation with visible per-field errors, gallery viewer, native share (clipboard fallback), mortgage simulator.
 - **assets/photos/<id>/N.jpg, N-s.jpg** — full-size (1400×933) and medium (640×426) photos per listing, scraped from the current site. Each also has `.webp` (same size, q78), `-m.webp` (1024w, q72, mid breakpoint) and `-s.jpg`'s `-t.webp` (240w, q68, gallery-thumbnail size). `<picture>` serves WebP first; the JPEGs are the fallback for the ~0% of browsers without WebP support — some of those fallbacks are still >200 KB (`scripts/check.sh`'s sibling in the `web-production` skill flags this; it does not know about `<picture>`).
 - **assets/fonts/** — self-hosted variable fonts (Playfair Display, Libre Franklin, JetBrains Mono), latin subset, woff2.
+- **assets/team/**, **assets/hero-oficina.\***, **assets/grupo-inmobiliario-granada.\*** — team portraits (cropped 3:4), the office photo used behind the home hero, and the "Grupo Inmobiliario de Granada" banner, all taken from the client's current website.
+- **assets/vendor/leaflet/** — Leaflet 1.9.4, self-hosted, loaded by `js/map.js` only when the home-page map scrolls into view. Tiles come from tile.openstreetmap.org (the only external request on the site besides the consent-gated Google Maps embed on the contact page).
+- **data/geo.json** — approximate coordinates per listing (neighbourhood/municipality centre) for the home map; the source site publishes no exact positions.
+- **.github/workflows/pages.yml** — publishes the generated site (without sources, docs or design files) to GitHub Pages for prototype previews.
 - **assets/brand/** — emblem/rosette, favicons, `site.webmanifest`.
 - **docs/BRAND.md** — current design system (tokens, type, components, logo, contact data).
 - **docs/DESIGN-PLAN.md** — original plan; superseded on visuals, see the note at the top.

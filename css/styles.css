@@ -146,6 +146,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
   margin-bottom: 30px; flex-wrap: wrap;
 }
 .section-head h2 { margin: 0; }
+.section-head--stack { flex-direction: column; align-items: flex-start; gap: 8px; }
 .link-more {
   font-weight: 600; color: var(--violet); border-bottom: 1px solid currentColor; padding-bottom: 2px;
 }
@@ -378,6 +379,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .person__photo .to-confirm { position: relative; font-size: 0.7rem; }
 .person__name { font-size: 1.1rem; font-weight: 700; margin: 0; font-family: var(--font-body); color: var(--ink); }
 .person__role { font-size: 0.875rem; color: var(--text-muted); margin: 0; }
+.person__role a { text-decoration: underline; text-underline-offset: 2px; }
 
 /* ------------------------------------------------------------ footer */
 .site-footer { background: var(--deep); color: var(--lilac-light); padding: 56px 0 30px; margin-top: auto; }
@@ -560,6 +562,43 @@ body.cookie-visible .whatsapp-fab { bottom: 120px; }
 .notfound__code { font-family: var(--font-display); font-size: clamp(5rem, 14vw, 10rem); line-height: 1; color: var(--lilac-pale); font-weight: 700; }
 .hero-photo-note { position: absolute; right: var(--gutter); top: calc(var(--header-h) + 12px); font-family: var(--font-mono); font-size: 0.68rem; color: rgba(255,255,255,0.4); }
 
+/* ------------------------------------------------ hero photo, map, group band, team quotes */
+.hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 35% center; filter: blur(6px) saturate(0.35) brightness(0.55); transform: scale(1.06); }
+.hero__veil--strong { background: linear-gradient(180deg, rgba(15,11,30,0.9) 0%, rgba(35,26,69,0.72) 45%, rgba(15,11,30,0.95) 100%); }
+.side-card__media { position: relative; }
+.side-card .badge { top: 10px; left: 10px; font-size: 0.62rem; padding: 5px 10px; }
+.range--stack { grid-template-columns: 1fr; }
+.range input { min-width: 0; width: 100%; border: 1px solid var(--line); border-radius: var(--r-sm); padding: 10px 12px; background: #fff; }
+.map { position: relative; height: 480px; border-radius: var(--r-md); overflow: hidden; background: var(--lilac-pale); box-shadow: var(--shadow-card); }
+.map .leaflet-container { height: 100%; font-family: var(--font-body); }
+.map__fallback { list-style: none; margin: 0; padding: 20px; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); font-size: 0.9rem; }
+.map__fallback a { color: var(--ink); font-weight: 600; }
+.map-price { background: transparent; border: 0; }
+.map-price a {
+  display: inline-block; transform: translate(-50%, -100%); white-space: nowrap;
+  background: var(--ink); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem;
+  padding: 6px 11px; border-radius: var(--r-pill); box-shadow: 0 6px 16px rgba(15,11,30,0.35); border: 2px solid #fff;
+}
+.map-price a::after { content: ""; position: absolute; left: 50%; bottom: -7px; width: 10px; height: 10px; background: var(--ink); transform: translateX(-50%) rotate(45deg); border-right: 2px solid #fff; border-bottom: 2px solid #fff; }
+.map-price a:hover { background: var(--violet); color: #fff; }
+.map-price a:hover::after { background: var(--violet); }
+.map-price--reserved a { background: var(--text-muted); }
+.map-price--reserved a::after { background: var(--text-muted); }
+/* Zoomed out: a dot per listing; the price label appears from zoom 12 (js/map.js). */
+.map:not(.map--labels) .map-price a { font-size: 0; width: 20px; height: 20px; padding: 0; border-radius: 50%; transform: translate(-50%, -50%); }
+.map:not(.map--labels) .map-price a::after { display: none; }
+.leaflet-container a.leaflet-attribution-flag { display: none !important; }
+.group-band { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; border-radius: var(--r-md); overflow: hidden; background: var(--ink-2); color: var(--lilac-light); box-shadow: var(--shadow-card); }
+.group-band__img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; }
+.group-band__body { padding: clamp(28px, 4vw, 52px); display: flex; flex-direction: column; justify-content: center; }
+.group-band__body h2 { color: var(--paper); font-size: clamp(1.6rem, 2.6vw, 2.2rem); margin-bottom: 12px; }
+.group-band__body p { margin: 0; font-size: 1.02rem; line-height: 1.6; }
+.group-band .eyebrow { color: var(--lilac); }
+.person__quote { margin: 4px 0 0; padding: 0 0 0 14px; border-left: 2px solid var(--violet); }
+.person__quote p { margin: 0; font-family: var(--font-display); font-style: italic; font-size: 1rem; line-height: 1.45; color: var(--text-muted); }
+.agent__avatar--photo { overflow: hidden; padding: 0; background: var(--lilac-pale); }
+.agent__avatar--photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
 /* ---------------------------------------------------------- responsive */
 @media (max-width: 1100px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
@@ -569,12 +608,16 @@ body.cookie-visible .whatsapp-fab { bottom: 120px; }
   .searchbar { grid-template-columns: repeat(2, 1fr); }
   .searchbar__field { border-right: 0; border-bottom: 1px solid var(--line-soft); }
   .searchbar .btn { grid-column: 1 / -1; }
-  .searchbar-wrap { transform: none; padding-top: 24px; padding-bottom: 8px; background: var(--deep); }
+  /* Below 1100px the search bar sits inside the hero instead of overlapping the
+     next section; the hero's own background continues behind it (no extra box). */
+  .searchbar-wrap { transform: none; padding-top: 8px; padding-bottom: 40px; background: transparent; }
   .after-search { padding-top: var(--section); }
   .hero { min-height: 0; }
-  .hero__inner { padding-bottom: 40px; }
+  .hero__inner { padding-bottom: 28px; }
+  .group-band { grid-template-columns: 1fr; }
+  .group-band__img { min-height: 220px; max-height: 320px; }
 }
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   .nav-toggle { display: inline-flex; }
   .nav {
     display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--deep);
@@ -614,4 +657,5 @@ body.cookie-visible .whatsapp-fab { bottom: 120px; }
   .gallery__thumbs { grid-template-columns: repeat(3, 1fr); }
   .btn { padding: 14px 22px; }
   .hero h1 { font-size: 2.3rem; }
+  .map { height: 380px; }
 }

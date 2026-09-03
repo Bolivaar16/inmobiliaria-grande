@@ -1,0 +1,41 @@
+# Publishes the pre-generated static site to GitHub Pages (prototype preview only).
+# Only the site files are uploaded; sources, docs, design artboards and audit
+# evidence stay out of the artifact.
+name: Deploy prototype to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble site directory
+        run: |
+          mkdir -p _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'docs' --exclude 'design' \
+            --exclude 'src' --exclude 'templates' --exclude 'scripts' --exclude 'data' \
+            --exclude '.foreman' --exclude '.worktrees' --exclude '_site' --exclude 'README.md' \
+            --exclude 'netlify.toml' --exclude '_headers' ./ _site/
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

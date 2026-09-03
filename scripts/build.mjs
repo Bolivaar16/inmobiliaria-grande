@@ -79,7 +79,8 @@ function listingTitle(listing, lang) {
 function listingHeadline(listing, lang) {
   if (lang === "es") {
     const h = cleanText(listing.headline || "");
-    return h.length < 15 ? "" : h.charAt(0).toUpperCase() + h.slice(1);
+    if (h.length < 15 || /\b(de|en|la|el)$/i.test(h)) return "";
+    return h.charAt(0).toUpperCase() + h.slice(1);
   }
   const t = i18n.listings[listing.id];
   return (t && t.headline) || "";
@@ -183,7 +184,7 @@ function sideCard(listing, lang, root) {
   const url = root + listingUrl(listing, lang);
   const sp = specs(listing, lang).map((s) => `<li>${s}</li>`).join("");
   return `<a class="side-card" href="${escAttr(url)}" ${dataAttrs(listing)}>
-        <span class="side-card__media"><picture><source srcset="${root}${escAttr(webpOf(p.thumb))}" type="image/webp"><img src="${root}${escAttr(p.thumb)}" alt="${escAttr(p.alt)}" width="640" height="426" loading="lazy" decoding="async"></picture></span>
+        <span class="side-card__media">${badge(listing, lang)}<picture><source srcset="${root}${escAttr(webpOf(p.thumb))}" type="image/webp"><img src="${root}${escAttr(p.thumb)}" alt="${escAttr(p.alt)}" width="640" height="426" loading="lazy" decoding="async"></picture></span>
         <span class="side-card__body">
           <span class="card__place">${esc(listing.zone)} · ${esc(listing.city)}</span>
           <h3>${esc(listingTitle(listing, lang))}</h3>
@@ -217,16 +218,34 @@ function listingCards(lang, root) {
 function zoneOptions(lang) {
   const all = lang === "es" ? "Toda la provincia" : "Whole province";
   const capital = lang === "es" ? "Granada capital" : "Granada city";
-  const seen = new Set();
-  const opts = [`<option value="">${all}</option>`, `<option value="Granada capital">${capital}</option>`];
-  for (const l of listings) {
-    for (const z of [l.zone, l.city]) {
-      if (z === "Granada" || seen.has(z)) continue;
-      seen.add(z);
-      opts.push(`<option value="${escAttr(z)}">${esc(z)}</option>`);
-    }
-  }
-  return opts.join("\n");
+  const zones = new Set();
+  for (const l of listings) for (const z of [l.zone, l.city]) if (z !== "Granada") zones.add(z);
+  const sorted = [...zones].sort((a, b) => a.localeCompare(b, "es"));
+  return [`<option value="">${all}</option>`, `<option value="Granada capital">${capital}</option>`]
+    .concat(sorted.map((z) => `<option value="${escAttr(z)}">${esc(z)}</option>`))
+    .join("\n");
+}
+/* Home map: one label per listing, positioned by data/geo.json (approximate). */
+const geo = JSON.parse(read("data/geo.json"));
+function mapData(lang, root) {
+  const rows = listings
+    .filter((l) => geo[l.id])
+    .map((l) => ({
+      id: l.id,
+      title: listingTitle(l, lang),
+      price: priceText(l, lang),
+      url: root + listingUrl(l, lang),
+      lat: geo[l.id].lat,
+      lng: geo[l.id].lng,
+      reserved: l.status === "reservado",
+    }));
+  return JSON.stringify(rows).replace(/</g, "\\u003c");
+}
+function mapList(lang, root) {
+  return listings
+    .filter((l) => geo[l.id])
+    .map((l) => `<li><a href="${root}${escAttr(listingUrl(l, lang))}">${esc(listingTitle(l, lang))} · ${priceText(l, lang)}</a></li>`)
+    .join("");
 }
 function typeOptions(lang) {
   const all = lang === "es" ? "Todos los tipos" : "All types";
@@ -265,7 +284,7 @@ function wrap(lang, outRel, meta, body, extra = {}) {
     HREFLANG_ES: `${SITE}/${es}`,
     HREFLANG_EN: `${SITE}/${en}`,
     OG_IMAGE: meta.og ? `${SITE}/${meta.og}` : `${SITE}/assets/brand/icon-512.png`,
-    EXTRA_HEAD: meta.extraHead || "",
+    EXTRA_HEAD: (meta.extraHead || "").split("{{ROOT}}").join(root),
     HEADER_CLASS: meta.nav === "home" ? "site-header--overlay" : "",
     SELF_URL: root + outRel,
     ALT_URL: root + altRel,
@@ -292,6 +311,8 @@ function buildPages(lang) {
       ZONE_OPTIONS: zoneOptions(lang),
       TYPE_OPTIONS: typeOptions(lang),
       LISTING_COUNT: String(listings.length),
+      MAP_DATA: mapData(lang, root),
+      MAP_LIST: mapList(lang, root),
     });
     write(outRel, html);
     if (!meta.noindex) out.push({ es: lang === "es" ? outRel : meta.alt, en: lang === "en" ? outRel : meta.alt, self: outRel });

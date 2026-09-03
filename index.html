@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://www.inmobiliariagrande.com/index.html">
 <meta property="og:image" content="https://www.inmobiliariagrande.com/assets/photos/30002664/1.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Inmobiliaria Grande","url":"https://www.inmobiliariagrande.com/index.html","image":"https://www.inmobiliariagrande.com/assets/brand/icon-512.png","telephone":"+34958252461","email":"info@inmobiliariagrande.com","foundingDate":"1970","address":{"@type":"PostalAddress","streetAddress":"Calle Recogidas 13, 1.º A","addressLocality":"Granada","postalCode":"18005","addressCountry":"ES"},"openingHours":"Mo-Fr 09:30-20:00","areaServed":{"@type":"AdministrativeArea","name":"Granada"}}</script>
+<script defer src="js/map.js"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Inmobiliaria Grande","url":"https://www.inmobiliariagrande.com/index.html","image":"https://www.inmobiliariagrande.com/assets/brand/icon-512.png","telephone":"+34958252461","email":"info@inmobiliariagrande.com","foundingDate":"1970","address":{"@type":"PostalAddress","streetAddress":"Calle Recogidas 13, 1.º A","addressLocality":"Granada","postalCode":"18005","addressCountry":"ES"},"openingHours":"Mo-Fr 09:30-20:00","areaServed":{"@type":"AdministrativeArea","name":"Granada"}}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -63,17 +63,18 @@
 </header>
 <main id="main">
   <section class="hero">
-    <!-- FOTO A PEDIR AL CLIENTE: fachada del Albaicín o vistas a Sierra Nevada, 2400×1350, JPEG < 250 KB.
-         Sustituir el patrón de fondo por <img class="hero__photo" src="assets/hero.jpg" alt="" width="2400" height="1350" fetchpriority="high"> -->
-    <div class="hero__veil" aria-hidden="true"></div>
+    <picture>
+      <source srcset="assets/hero-oficina.webp" type="image/webp">
+      <img class="hero__photo" src="assets/hero-oficina.jpg" alt="" width="1280" height="854" fetchpriority="high">
+    </picture>
+    <!-- Foto de la oficina tomada de la web actual (media/valoramostupiso). Cuando el cliente aporte una foto nueva (2400×1350), sustituir aquí. -->
+    <div class="hero__veil hero__veil--strong" aria-hidden="true"></div>
     <div class="container hero__inner">
       <div class="hero__content">
-        <p class="hero__kicker">Granada · Vega · Sierra</p>
+        <p class="hero__kicker">Granada · Vega · Sierra · Costa</p>
         <h1>La casa que busca lleva aquí toda la vida</h1>
-        <p class="hero__lead">300 propiedades en cartera y cinco décadas conociendo cada calle de la provincia.</p>
-        <!-- [DATO A CONFIRMAR] "300 propiedades": la web actual publica 276 anuncios (2026-09-03). -->
+        <p class="hero__lead">276 propiedades en cartera y cinco décadas conociendo cada calle de la provincia.</p>
       </div>
-      <p class="hero__note">[ foto a sangre: fachada Albaicín ]</p>
     </div>
     <div class="container searchbar-wrap">
       <form class="searchbar" method="get" action="inmuebles.html" role="search" aria-label="Buscar inmuebles">
@@ -90,17 +91,17 @@
           <select id="s-zona" name="zona">
             <option value="">Toda la provincia</option>
 <option value="Granada capital">Granada capital</option>
-<option value="Centro">Centro</option>
-<option value="El Serrallo">El Serrallo</option>
-<option value="Calle Madrid">Calle Madrid</option>
-<option value="Monachil">Monachil</option>
-<option value="Villarejo">Villarejo</option>
-<option value="Pulianillas">Pulianillas</option>
-<option value="Pulianas">Pulianas</option>
-<option value="Sierra de Huétor">Sierra de Huétor</option>
-<option value="Cogollos de la Vega">Cogollos de la Vega</option>
-<option value="La Malahá">La Malahá</option>
 <option value="Alcampo">Alcampo</option>
+<option value="Calle Madrid">Calle Madrid</option>
+<option value="Centro">Centro</option>
+<option value="Cogollos de la Vega">Cogollos de la Vega</option>
+<option value="El Serrallo">El Serrallo</option>
+<option value="La Malahá">La Malahá</option>
+<option value="Monachil">Monachil</option>
+<option value="Pulianas">Pulianas</option>
+<option value="Pulianillas">Pulianillas</option>
+<option value="Sierra de Huétor">Sierra de Huétor</option>
+<option value="Villarejo">Villarejo</option>
           </select>
         </div>
         <div class="searchbar__field">
@@ -161,7 +162,7 @@
       </a>
       <div class="showcase__side">
         <a class="side-card" href="inmuebles/piso-villarejo-granada-rpa-ronda202.html" data-id="29868382" data-type="Piso" data-zone="Villarejo" data-city="Granada" data-op="venta" data-price="294900" data-rooms="3" data-baths="2" data-m2="124" data-date="2026-09-03" data-features="Balcón|Terraza|Ascensor|Armarios Empotrados|Aire Acondicionado|Exterior|Luminoso|Hospitales|Metro|Autobuses|Centros Comerciales|Colegios|Supermercados">
-        <span class="side-card__media"><picture><source srcset="assets/photos/29868382/1-s.webp" type="image/webp"><img src="assets/photos/29868382/1-s.jpg" alt="Piso en Villarejo, Granada: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></span>
+        <span class="side-card__media"><span class="badge">En venta</span><picture><source srcset="assets/photos/29868382/1-s.webp" type="image/webp"><img src="assets/photos/29868382/1-s.jpg" alt="Piso en Villarejo, Granada: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></span>
         <span class="side-card__body">
           <span class="card__place">Villarejo · Granada</span>
           <h3>Piso en Villarejo, Granada</h3>
@@ -170,7 +171,7 @@
         </span>
       </a>
         <a class="side-card" href="inmuebles/piso-el-serrallo-granada-fh03130.html" data-id="30020091" data-type="Piso" data-zone="El Serrallo" data-city="Granada" data-op="venta" data-price="275000" data-rooms="3" data-baths="2" data-m2="176" data-date="2026-09-03" data-features="Balcón|Alarma Robo|Garaje Incluido|Patio|Terraza|Ascensor|Armarios Empotrados|Trastero|Puerta Blindada|Amueblado|Lavandería|Luminoso|Hospitales|Autobuses|Centros Comerciales|Colegios|Supermercados">
-        <span class="side-card__media"><picture><source srcset="assets/photos/30020091/1-s.webp" type="image/webp"><img src="assets/photos/30020091/1-s.jpg" alt="Piso en El Serrallo, Granada: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></span>
+        <span class="side-card__media"><span class="badge">En venta</span><picture><source srcset="assets/photos/30020091/1-s.webp" type="image/webp"><img src="assets/photos/30020091/1-s.jpg" alt="Piso en El Serrallo, Granada: fotografía 1" width="640" height="426" loading="lazy" decoding="async"></picture></span>
         <span class="side-card__body">
           <span class="card__place">El Serrallo · Granada</span>
           <h3>Piso en El Serrallo, Granada</h3>
@@ -252,6 +253,19 @@
     </div>
   </section>
 
+  <section class="section--tight" id="mapa">
+    <div class="container">
+      <div class="section-head section-head--stack">
+        <h2>Dónde están</h2>
+        <p class="lead" style="margin:0;">Amplíe el mapa y pulse un precio para abrir la ficha. La posición es aproximada, por barrio o municipio.</p>
+      </div>
+      <div class="map" id="listing-map" data-map-json="listing-map-data" data-root="" role="region" aria-label="Dónde están">
+        <ul class="map__fallback" aria-label="Lista de inmuebles en el mapa"><li><a href="inmuebles/atico-duplex-centro-granada-rafael-original.html">Ático Dúplex en Centro, Granada · 339.900 €</a></li><li><a href="inmuebles/piso-el-serrallo-granada-fh03130.html">Piso en El Serrallo, Granada · 275.000 €</a></li><li><a href="inmuebles/pareado-calle-madrid-monachil-rgc-0093.html">Pareado en Calle Madrid, Monachil · 269.000 €</a></li><li><a href="inmuebles/piso-villarejo-granada-rpa-ronda202.html">Piso en Villarejo, Granada · 294.900 €</a></li><li><a href="inmuebles/piso-pulianillas-pulianas-gr26-09.html">Piso en Pulianillas, Pulianas · 155.000 €</a></li><li><a href="inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html">Casa de campo en Sierra de Huétor, Cogollos de la Vega · 190.000 €</a></li><li><a href="inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html">Pareado en Centro, La Malahá · 164.000 €</a></li><li><a href="inmuebles/piso-alcampo-granada-rgc-0091.html">Piso en Alcampo, Granada · 169.900 €</a></li></ul>
+      </div>
+      <script type="application/json" id="listing-map-data">[{"id":"30002664","title":"Ático Dúplex en Centro, Granada","price":"339.900 €","url":"inmuebles/atico-duplex-centro-granada-rafael-original.html","lat":37.1765,"lng":-3.5985,"reserved":false},{"id":"30020091","title":"Piso en El Serrallo, Granada","price":"275.000 €","url":"inmuebles/piso-el-serrallo-granada-fh03130.html","lat":37.159,"lng":-3.59,"reserved":false},{"id":"29865262","title":"Pareado en Calle Madrid, Monachil","price":"269.000 €","url":"inmuebles/pareado-calle-madrid-monachil-rgc-0093.html","lat":37.132,"lng":-3.54,"reserved":false},{"id":"29868382","title":"Piso en Villarejo, Granada","price":"294.900 €","url":"inmuebles/piso-villarejo-granada-rpa-ronda202.html","lat":37.169,"lng":-3.612,"reserved":false},{"id":"28722775","title":"Piso en Pulianillas, Pulianas","price":"155.000 €","url":"inmuebles/piso-pulianillas-pulianas-gr26-09.html","lat":37.215,"lng":-3.614,"reserved":false},{"id":"29965705","title":"Casa de campo en Sierra de Huétor, Cogollos de la Vega","price":"190.000 €","url":"inmuebles/casa-de-campo-sierra-de-huetor-cogollos-de-la-vega-v1028.html","lat":37.274,"lng":-3.566,"reserved":false},{"id":"29864049","title":"Pareado en Centro, La Malahá","price":"164.000 €","url":"inmuebles/pareado-centro-la-malaha-rpa-lamalaha.html","lat":37.106,"lng":-3.724,"reserved":false},{"id":"29899079","title":"Piso en Alcampo, Granada","price":"169.900 €","url":"inmuebles/piso-alcampo-granada-rgc-0091.html","lat":37.158,"lng":-3.609,"reserved":true}]</script>
+    </div>
+  </section>
+
   <section class="section--tight" id="la-casa">
     <div class="container">
       <div class="family">
@@ -262,10 +276,9 @@
         </div>
         <div class="family__stats">
           <div class="stat"><span class="stat__num">55</span><span class="stat__label">años en Granada</span></div>
-          <div class="stat"><span class="stat__num">300</span><span class="stat__label">propiedades en cartera</span></div>
+          <div class="stat"><span class="stat__num">276</span><span class="stat__label">propiedades en cartera</span></div>
           <div class="stat"><span class="stat__num">3</span><span class="stat__label">generaciones</span></div>
-          <div class="stat"><span class="stat__num">17</span><span class="stat__label">idiomas atendidos</span></div>
-          <!-- [DATO A CONFIRMAR] 300 propiedades, 3 generaciones y 17 idiomas: cifras del mockup, pendientes de confirmar con el cliente. -->
+          <div class="stat"><span class="stat__num">ES · EN</span><span class="stat__label">atención en español e inglés</span></div>
         </div>
       </div>
     </div>
@@ -284,10 +297,27 @@
       </div>
       <div class="sell__stats">
         <div class="stat stat--light"><span class="stat__num">55</span><span class="stat__label">años en Recogidas, 13</span></div>
-        <div class="stat stat--light"><span class="stat__num">300</span><span class="stat__label">propiedades activas</span></div>
+        <div class="stat stat--light"><span class="stat__num">276</span><span class="stat__label">propiedades activas</span></div>
         <div class="stat stat--light"><span class="stat__num">48 h</span><span class="stat__label">para la valoración</span></div>
         <div class="stat stat--ink"><span class="stat__num">3</span><span class="stat__label">generaciones de la familia</span></div>
-        <!-- [DATO A CONFIRMAR] 48 h y 3 generaciones: compromiso propuesto, validar con el cliente. -->
+        <!-- [DATO A CONFIRMAR] 48 h: compromiso de servicio propuesto, pendiente de aceptación por el cliente. -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" id="grupo">
+    <div class="container">
+      <div class="group-band">
+        <picture>
+          <source srcset="assets/grupo-inmobiliario-granada.webp" type="image/webp">
+          <img class="group-band__img" src="assets/grupo-inmobiliario-granada.jpg" alt="Logo de Grupo Inmobiliario de Granada sobre una vista nocturna del Albaicín" width="1280" height="858" loading="lazy" decoding="async">
+        </picture>
+        <div class="group-band__body">
+          <p class="eyebrow">Formamos parte de</p>
+          <h2>Grupo Inmobiliario de Granada</h2>
+          <p>Con nosotros nunca trabajarás solo: compartimos cartera y compradores con las agencias asociadas de la ciudad, así su casa la enseña toda la red, no una sola oficina.</p>
+          <!-- Banner recuperado de la web actual (personalizadobanner-1). Sin enlace: la web actual tampoco lo tiene. -->
+        </div>
       </div>
     </div>
   </section>
@@ -300,24 +330,24 @@
       </div>
       <div class="team">
         <div class="person">
-          <div class="person__photo"><span class="to-confirm">[FOTO A CONFIRMAR]</span></div>
+          <div class="person__photo"><picture><source srcset="assets/team/jose-antonio-grande.webp" type="image/webp"><img src="assets/team/jose-antonio-grande.jpg" alt="José Antonio Grande, gerente de Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">José Antonio Grande</p>
-          <p class="person__role">Fundador</p>
+          <p class="person__role">Gerente</p>
         </div>
         <div class="person">
-          <div class="person__photo"><span class="to-confirm">[FOTO A CONFIRMAR]</span></div>
+          <div class="person__photo"><picture><source srcset="assets/team/jose-grande-jr.webp" type="image/webp"><img src="assets/team/jose-grande-jr.jpg" alt="José Grande Jr., agente inmobiliario de Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">José Grande Jr.</p>
-          <p class="person__role">Dirección</p>
+          <p class="person__role">Agente inmobiliario</p>
         </div>
         <div class="person">
-          <div class="person__photo"><span class="to-confirm">[FOTO A CONFIRMAR]</span></div>
+          <div class="person__photo"><picture><source srcset="assets/team/monica.webp" type="image/webp"><img src="assets/team/monica.jpg" alt="Mónica, agente inmobiliaria de Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">Mónica</p>
-          <p class="person__role">Administración</p>
+          <p class="person__role">Agente inmobiliaria</p>
         </div>
         <div class="person">
-          <div class="person__photo"><span class="to-confirm">[FOTO A CONFIRMAR]</span></div>
+          <div class="person__photo"><picture><source srcset="assets/team/javier-corpas.webp" type="image/webp"><img src="assets/team/javier-corpas.jpg" alt="Javier Corpas, agente inmobiliario de Inmobiliaria Grande" width="600" height="800" loading="lazy" decoding="async"></picture></div>
           <p class="person__name">Javier Corpas</p>
-          <p class="person__role">Agente · <a href="tel:+34664678249">664 678 249</a></p>
+          <p class="person__role">Agente inmobiliario · <a href="tel:+34664678249">664 678 249</a></p>
         </div>
       </div>
     </div>

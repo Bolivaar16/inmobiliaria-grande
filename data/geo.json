@@ -1,0 +1,11 @@
+{
+  "_note": "Approximate coordinates (centre of the neighbourhood or municipality). The source site does not publish exact positions; do not present these as the property's address.",
+  "30002664": { "lat": 37.1765, "lng": -3.5985 },
+  "30020091": { "lat": 37.1590, "lng": -3.5900 },
+  "29865262": { "lat": 37.1320, "lng": -3.5400 },
+  "29868382": { "lat": 37.1690, "lng": -3.6120 },
+  "28722775": { "lat": 37.2150, "lng": -3.6140 },
+  "29965705": { "lat": 37.2740, "lng": -3.5660 },
+  "29864049": { "lat": 37.1060, "lng": -3.7240 },
+  "29899079": { "lat": 37.1580, "lng": -3.6090 }
+}
