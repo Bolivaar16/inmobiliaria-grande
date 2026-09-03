@@ -193,13 +193,13 @@ Netlify Forms (sin backend, funciona sin JS): en cada `<form>` → `name="contac
 El JS de validación solo bloquea el envío si hay errores; si todo es válido, deja que el navegador envíe (nada de `fetch`).
 
 ### 2.8 `.whatsapp-fab`
-Enlace fijo abajo a la derecha (`bottom: 20px; right: 20px`, 56×56, `--r-md` no círculo, fondo `--rooster-red`, glifo de WhatsApp en SVG inline blanco de 26 px), `aria-label="Escribir por WhatsApp al 664 678 249"`, `href="https://wa.me/34664678249?text=Hola%2C%20os%20escribo%20desde%20la%20web"`, `rel="noopener"`. Sin burbuja falsa de chat ni PNG de fondo (el actual pesa 107 KB). Se aparta 76 px hacia arriba mientras el banner de cookies esté visible.
+Enlace fijo abajo a la derecha (`bottom: 20px; right: 20px`, 56×56, `--r-md` no círculo, fondo `--rooster-red`, glifo de WhatsApp en SVG inline blanco de 26 px), `aria-label="Escribir por WhatsApp al 622 350 918"`, `href="https://wa.me/34622350918?text=Hola%2C%20os%20escribo%20desde%20la%20web"`, `rel="noopener"`. Sin burbuja falsa de chat ni PNG de fondo (el actual pesa 107 KB). Se aparta 76 px hacia arriba mientras el banner de cookies esté visible.
 
 ### 2.9 `.site-footer`
 Fondo `--indigo-900`, texto blanco / `--violet-100` para secundario, 4 columnas ≥960 y 1 columna apilada en móvil:
 1. Logo en versión clara (`assets/brand/logo.png` sobre chip blanco de 8 px de padding, `--r-sm`) + `p.since` "Desde 1970" en Courgette `--fs-lg` con la guirnalda: dos ramas SVG inline en `--violet-400` a izquierda y derecha del texto.
 2. Dirección: "Inmobiliaria Grande" / "Calle Recogidas 13, 1.º A" / "18005 Granada".
-3. Contacto: `tel:+34958252461` "958 25 24 61 (oficina)", `tel:+34664678249` "664 678 249 (Javier Corpas)", `mailto:info@inmobiliariagrande.com`.
+3. Contacto: `tel:+34958252461` "958 25 24 61 (oficina)", `tel:+34622350918` "622 350 918", `mailto:info@inmobiliariagrande.com`.
 4. Enlaces: Inmuebles · Vende tu casa · Sobre nosotros · Contacto · Aviso legal · Política de privacidad · Política de cookies.
 Franja inferior separada por `1px solid rgba(255,255,255,.16)`: "© 2026 Inmobiliaria Grande. Todos los derechos reservados." Enlaces del footer con subrayado permanente (contraste AA sobre índigo).
 
@@ -284,7 +284,7 @@ Orden:
 8. **Certificado energético**: `h2` "Certificado energético". Con datos: dos cifras, "Consumo {consumption} kWh/m² año" y "Emisiones {emissions} kg CO₂/m² año", en cajas `--violet-100`. Sin datos (`null`): texto "Certificado energético en trámite. Consúltanos el estado antes de la visita." Nunca inventar la letra de calificación.
 9. **Aside de contacto** (columna derecha sticky ≥960, tras las cifras clave en móvil):
    - `h2` "¿Quieres verlo?"
-   - "Javier Corpas, agente inmobiliario" + `a` `tel:+34664678249` "664 678 249" + `a.btn--red` "Escribir por WhatsApp".
+   - "Javier Corpas, agente inmobiliario" + `a` `tel:+34622350918` "622 350 918" + `a.btn--red` "Escribir por WhatsApp".
    - Formulario `contacto-ficha`: Nombre, Teléfono, Email, Mensaje (prellenado: "Me interesa la referencia {ref}. ¿Cuándo podría visitarla?"), checkbox de consentimiento, `button.btn--indigo` "Solicitar visita". Campo oculto `referencia`.
 10. **Volver**: `a.btn--link` "← Volver a todos los inmuebles".
 11. Footer + FAB + cookies.
@@ -323,7 +323,7 @@ Móvil: los tres pasos apilados; el formulario a una columna con campos de 48 px
    - **2026** — "Renovamos la marca: la roseta nazarí, el gallo y la firma 'Desde 1970' recogen lo que somos."
    - `[DATO A CONFIRMAR: relevo generacional, número de operaciones cerradas, tamaño del equipo, premios o colegiación]` — un bloque visible en la maqueta, con estilo de nota, para que el cliente lo rellene.
 5. **La marca** (`h2` "Qué significa nuestro logo"): roseta SVG grande + texto "La roseta es un guiño a la tracería nazarí de la Alhambra: cuatro rombos alrededor de un centro, como cuatro paredes alrededor de una casa. El gallo es el carácter, y el laurel acompaña a 'Desde 1970'."
-6. **Equipo**: ficha de Javier Corpas (agente inmobiliario, 664 678 249) y José Antonio Grande (propietario). `[DATO A CONFIRMAR: cargos, fotografías y resto del equipo]`. Sin fotos inventadas: hueco con roseta al 12 %.
+6. **Equipo**: ficha de Javier Corpas (agente inmobiliario, 622 350 918) y José Antonio Grande (propietario). `[DATO A CONFIRMAR: cargos, fotografías y resto del equipo]`. Sin fotos inventadas: hueco con roseta al 12 %.
 7. Franja CTA: "¿Quieres que valoremos tu casa?" + `a.btn--red`.
 8. Footer + FAB + cookies.
 
@@ -488,7 +488,7 @@ En cada ficha, `RealEstateListing` con `name`, `url`, `description` (primer pár
 
 ## 9. Preguntas abiertas (bloquean solo lo indicado)
 
-1. **Teléfono principal**: BRAND.md lista 958 25 24 61 (oficina), 664 678 249 (Javier Corpas) y 622 350 918 (web actual). *Recomendación: 958 25 24 61 en header y footer, 664 678 249 en fichas y WhatsApp, y descartar el 622 hasta que el cliente lo confirme.*
+1. **Teléfono principal**: BRAND.md lista 958 25 24 61 (oficina), 622 350 918 y 622 350 918 (web actual). *Recomendación: 958 25 24 61 en header y footer, 622 350 918 en fichas y WhatsApp, y descartar el 622 hasta que el cliente lo confirme.*
 2. **Datos societarios** (razón social, CIF, datos registrales, DPO) para aviso legal y privacidad. *Recomendación: publicar con `[DATO A CONFIRMAR]` visible y pedirlos antes de apuntar el dominio.*
 3. **`gracias.html`** no estaba en la lista de páginas, pero Netlify Forms necesita un destino propio para que el envío funcione sin JS. *Recomendación: incluirla (ya está en el plan).*
 4. **Horario de oficina** para la home, contacto y el JSON-LD `openingHours`. *Recomendación: omitir el campo hasta tenerlo; nunca inventarlo.*

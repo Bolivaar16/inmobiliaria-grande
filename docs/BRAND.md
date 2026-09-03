@@ -70,7 +70,9 @@ vector file.
 ## Contact data (business card + current website)
 
 - Inmobiliaria Grande, Calle Recogidas 13, 1.º A, 18005 Granada
-- Tel. 958 25 24 61 · 622 350 918 · Javier Corpas (agent) 664 678 249
+- Tel. 958 25 24 61 (office landline) · 622 350 918 (mobile and WhatsApp, the number the
+  agency's live site already publishes). No personal staff mobiles on the site: the client
+  asked for the landline and this one only.
 - info@inmobiliariagrande.com · Mon–Fri 9:30–20:00 (source: oopiniones.com listing, unverified)
 - Founder José Antonio Grande, 1970. Team on the current site: José Antonio Grande, José Grande
   Jr., Mónica, Javier Corpas.

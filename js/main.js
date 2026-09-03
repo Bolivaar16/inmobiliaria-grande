@@ -158,7 +158,8 @@
       if (sort && sort.value) p.set("sort", sort.value);
       if (tab !== "all") p.set("tab", tab);
       var q = p.toString();
-      if (window.history.replaceState) window.history.replaceState(null, "", q ? "?" + q : window.location.pathname);
+      // Keep the hash: this runs on load, and dropping it broke deep links like #alertas.
+      if (window.history.replaceState) window.history.replaceState(null, "", (q ? "?" + q : window.location.pathname) + window.location.hash);
     }
     function readQuery() {
       var p = new URLSearchParams(window.location.search);
@@ -192,6 +193,12 @@
     syncDetails();
     readQuery();
     apply();
+    // apply() reorders and shows/hides cards, so the browser's initial jump to a hash
+    // lands on the pre-filter layout. Re-scroll once the final layout exists.
+    if (window.location.hash) {
+      var target = document.getElementById(window.location.hash.slice(1));
+      if (target) window.requestAnimationFrame(function () { target.scrollIntoView(); });
+    }
   }
 
   /* ---------- cookie consent + map loader ---------- */
