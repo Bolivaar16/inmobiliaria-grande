@@ -25,6 +25,15 @@ HTML, bien visible o en un comentario junto a la cifra. Buscar en el código:
   y es un placeholder: no puede publicarse como si fuera una fotografía de la agencia. Antes de
   desplegar hay que sustituirla por una foto real (fachada, vistas u oficina) o, si el cliente acepta
   una imagen generada, dejarlo por escrito y etiquetarla como ilustración.
+- **Coordenadas de los 15 inmuebles nuevos**: aproximadas al centro del barrio o del municipio,
+  igual que las anteriores (`data/geo.json`). Cuatro llevan la del municipio porque la web original
+  no da zona o la da inservible («South of spain»).
+- **Rebajas**: solo dos inmuebles las tienen, y son las que marca la web original (ático dúplex
+  360.000 → 339.900, El Serrallo 295.000 → 275.000). No se ha inventado ninguna otra. Si el cliente
+  quiere más, tiene que darlas él.
+- **Peso de las fotos**: 23 inmuebles × 10 fotos = ~88 MB en `assets/photos/`. El fallback JPEG a
+  1400 px (150 KB de media) es la mayor parte y casi ningún navegador lo usa, porque `<picture>`
+  sirve WebP primero. Se puede bajar mucho si el peso del repo molesta.
 - **Logo vectorial** (emblema y wordmark). El PNG actual es un recorte de la tarjeta fotografiada.
 - **Textos legales**: razón social, CIF y datos registrales; acuerdo de encargado de tratamiento con
   Netlify si se despliega allí; política de honorarios («pactados por escrito y con factura»).

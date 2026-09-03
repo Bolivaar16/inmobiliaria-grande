@@ -15,6 +15,8 @@ The full system (palette, type, components) is documented in `docs/BRAND.md`. `d
 - **src/es/\*.html, src/en/\*.html** — page sources. Each starts with a `<!--@page {...}-->` JSON header (title, description, active nav item, language-twin path) and is assembled by `scripts/build.mjs` into the final page at the repo root (`es`) or under `en/` (`en`).
 - **templates/partials/es/, templates/partials/en/** — shared `head.html` / `header.html` / `footer.html`, per language.
 - **templates/listing.es.html, templates/listing.en.html** — the property-detail page, filled per listing.
+- **scripts/scrape-listings.py** — reads listing pages from the live site and prints the prototype's JSON. Parses only the page's own `<section id="modulo-fichapropiedad">`; the surrounding carousels advertise other properties and page-wide matching returns their prices.
+- **scripts/fetch-photos.py** — takes that JSON, downloads up to `MAX_PHOTOS` images per listing and writes the six derivatives per photo into `assets/photos/<id>/`.
 - **scripts/build.mjs** — generates every page: `index.html`, `inmuebles.html`, …, `en/index.html`, `en/properties.html`, …, `inmuebles/<slug>.html` + `en/properties/<slug>.html` per listing, and `sitemap.xml` (with `hreflang` alternates). Run after editing anything in `src/`, `templates/`, or `data/`.
 - **scripts/check.sh** — static checks on the generated site (one `<h1>` per page, no `href="#"`, unique titles/descriptions, `alt` + dimensions on every image, lazy-loading, no external scripts, internal links resolve, no secrets, production files present). Run after `build.mjs`.
 - **data/listings.json** — all property data, the single source for the generated pages.
@@ -95,7 +97,7 @@ This prototype's own verification (Lighthouse on the redesign, screenshots of ev
 
 ## Data provenance and privacy
 
-All property listings were scraped (read-only) from https://www.inmobiliariagrande.com/ on 2026-09-03. Each entry includes its `source_url` for verification. The agent's name and contact details come from his business card. This prototype ships only 8 of the ~276 listings on the live site; the rest is a data-entry task, not a design one.
+All property listings were scraped (read-only) from https://www.inmobiliariagrande.com/ on 2026-09-03 with `scripts/scrape-listings.py`, and their photos with `scripts/fetch-photos.py`. Each entry includes its `source_url` for verification. This prototype ships 23 of the ~276 listings on the live site, with 10 photos each; the rest is a re-run of those two scripts, not a design task. Phone numbers on the site are the office landline and 622 350 918 only — no personal staff mobiles (see docs/PENDIENTES.md).
 
 This data and the brand materials belong to Inmobiliaria Grande and are protected. Do not republish, redistribute, or deploy the site publicly without explicit authorization from the owner.
 
