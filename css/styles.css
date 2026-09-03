@@ -40,7 +40,7 @@
 
   --container: 1320px;
   --gutter: clamp(20px, 4.2vw, 60px);
-  --section: clamp(64px, 8vw, 112px);
+  --section: clamp(56px, 6vw, 88px);
   --header-h: 84px;
 }
 
@@ -122,18 +122,23 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .container { width: min(100% - 2 * var(--gutter), var(--container)); margin-inline: auto; }
 .container--narrow { max-width: 780px; }
 .section { padding-block: var(--section); }
+/* Two bands in a row each paid full padding, stacking ~180px of dead space between
+   them. .section--tight does not carry .section, hence every pair is listed. */
+.section + .section, .section + .section--tight,
+.section--tight + .section, .section--tight + .section--tight {
+  padding-top: calc(var(--section) * 0.45);
+}
 .section--tight { padding-block: calc(var(--section) * 0.6); }
 .section--light { background: var(--white); }
 .section--dark { background: var(--ink-2); color: var(--lilac-light); }
 .section--dark h1, .section--dark h2, .section--dark h3 { color: var(--paper); }
 .stack > * + * { margin-top: 1rem; }
+/* Only survives where it is a real lead-in sentence into the heading, not a label
+   restating it. Set in the body face, sentence case, so it reads as prose. */
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--violet);
-  margin: 0 0 0.9rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0 0 0.35rem;
 }
 .section--dark .eyebrow { color: var(--violet-soft); }
 /* --violet fails AA on the dark ink tones (2.9:1); every dark box below is not
@@ -261,8 +266,7 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 }
 .hero__content { max-width: 820px; }
 .hero__kicker {
-  font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.24em; text-transform: uppercase;
-  color: var(--lilac); margin-bottom: 20px;
+  font-size: 0.95rem; color: var(--lilac-light); margin-bottom: 18px;
 }
 .hero h1 { color: #fff; margin-bottom: 20px; font-size: clamp(2.4rem, 5.6vw, 4.75rem); line-height: 1.02; }
 .hero__lead { font-size: 1.15rem; line-height: 1.55; color: var(--lilac-light); max-width: 600px; margin: 0; }
@@ -424,7 +428,7 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .filters[open] summary::after { content: "–"; }
 .filters__body { display: flex; flex-direction: column; gap: 16px; margin-top: 18px; }
 .filters__group { display: flex; flex-direction: column; gap: 8px; }
-.filters__legend, .field__label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-soft); }
+.filters__legend, .field__label { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); }
 .check { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text-muted); }
 .check input { width: 18px; height: 18px; accent-color: var(--violet); margin: 0; }
 .range { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
@@ -471,13 +475,13 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .detail-main h2 { font-size: 1.6rem; margin-bottom: 16px; }
 .figures { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
 .figures__item { background: #fff; border-radius: var(--r-md); padding: 16px; box-shadow: var(--shadow-card); display: flex; flex-direction: column; gap: 4px; }
-.figures__label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-soft); }
+.figures__label { font-size: 0.82rem; color: var(--text-soft); }
 .figures__value { font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; color: var(--ink); overflow-wrap: anywhere; }
 .features { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .features li { border: 1px solid var(--line); border-radius: var(--r-pill); padding: 7px 14px; font-size: 0.85rem; color: var(--text-muted); background: #fff; }
 .energy__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .energy__box { background: #fff; border-radius: var(--r-md); padding: 18px; box-shadow: var(--shadow-card); }
-.energy__label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-soft); margin: 0 0 4px; }
+.energy__label { font-size: 0.82rem; color: var(--text-soft); margin: 0 0 4px; }
 .energy__value { font-weight: 600; margin: 0; }
 .legal-note { margin-top: 16px; font-size: 0.9rem; color: var(--text-muted); }
 .legal-note summary { cursor: pointer; font-weight: 600; color: var(--ink); }
@@ -536,17 +540,26 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .timeline li { display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding: 20px 0; border-top: 1px solid var(--line); }
 .timeline__year { font-family: var(--font-display); font-weight: 600; font-size: 1.6rem; color: var(--ink); }
 .timeline p { margin: 0; color: var(--text-muted); }
-.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; counter-reset: step; }
-.steps li { background: #fff; border-radius: var(--r-md); padding: 24px; box-shadow: var(--shadow-card); counter-increment: step; }
-.steps li::before { content: counter(step, decimal-leading-zero); font-family: var(--font-mono); color: var(--violet); font-size: 0.8rem; letter-spacing: 0.1em; display: block; margin-bottom: 10px; }
-.steps h3 { font-size: 1.2rem; margin-bottom: 6px; }
-.steps p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; counter-reset: step; }
+.steps li {
+  counter-increment: step; padding: 6px 32px 0 0; position: relative;
+  display: grid; grid-template-columns: auto 1fr; column-gap: 18px; align-items: baseline;
+}
+.steps li + li { padding-left: 32px; border-left: 1px solid var(--line); }
+/* The numeral is the typography, not a label above it. */
+.steps li::before {
+  content: counter(step); grid-row: 1 / span 2;
+  font-family: var(--font-display); font-weight: 600; font-size: 3.4rem; line-height: 0.8;
+  color: var(--violet-soft);
+}
+.steps h3 { font-size: 1.2rem; margin: 0 0 6px; }
+.steps p { margin: 0; grid-column: 2; color: var(--text-muted); font-size: 0.95rem; }
 .legal { max-width: 78ch; }
 .legal h2 { font-size: 1.5rem; margin-top: 2.2em; }
 .legal h3 { font-size: 1.15rem; margin-top: 1.6em; }
 .legal table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1em 0; }
 .legal th, .legal td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
-.legal th { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-soft); }
+.legal th { font-size: 0.85rem; font-weight: 600; color: var(--text-soft); }
 .table-wrap { overflow-x: auto; }
 .fabs { position: fixed; right: 20px; bottom: 20px; z-index: 30; display: flex; flex-direction: column; gap: 12px; }
 .whatsapp-fab, .call-fab {
