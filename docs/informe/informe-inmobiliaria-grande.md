@@ -1,6 +1,12 @@
-# Inmobiliaria Grande: auditoría de la web actual y propuesta de web nueva
+---
+title: "Inmobiliaria Grande: auditoría de la web actual y propuesta de web nueva"
+subtitle: "Preparado para José Antonio Grande, Inmobiliaria Grande (Granada)"
+author: "Alejandro Bolívar"
+date: "3 de septiembre de 2026"
+---
 
-Preparado para: José Antonio Grande · Preparado por: Alejandro Bolívar · Fecha: 3 de septiembre de 2026 · Validez de la propuesta: 30 días
+
+Validez de la propuesta: 30 días desde la fecha de entrega.
 
 ## Resumen para el dueño
 
