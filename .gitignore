@@ -15,3 +15,6 @@ node_modules/
 
 # Foreman worker scratch
 .foreman/
+
+# Foreman worktrees
+.worktrees/
