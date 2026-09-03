@@ -1,0 +1,17 @@
+# Secrets and local config
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+
+# Node (only used for local tooling, never shipped)
+node_modules/
+
+# Foreman worker scratch
+.foreman/
