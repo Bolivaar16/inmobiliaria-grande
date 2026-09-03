@@ -184,11 +184,19 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .pill[aria-pressed="true"], .pill.is-active { background: var(--ink); border-color: var(--ink); color: #fff; }
 .pill__count { font-family: var(--font-mono); font-size: 0.75rem; opacity: 0.75; }
 
+/* Anchor scrolling must clear the sticky header instead of hiding under it. */
+html { scroll-padding-top: calc(var(--header-h) + 16px); }
+
 /* ------------------------------------------------------------ header */
 .site-header {
-  position: relative; z-index: 20; background: var(--deep); color: #fff;
+  position: sticky; top: 0; z-index: 20; background: var(--deep); color: #fff;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
-.site-header--overlay { position: absolute; inset: 0 0 auto 0; background: transparent; }
+/* Over the home hero the header is transparent and pulled back onto the photo with a
+   negative margin, so it still overlaps while staying in flow and therefore sticky. */
+.site-header--overlay { background: transparent; margin-bottom: calc(-1 * var(--header-h)); }
+.site-header--stuck { background: var(--deep); box-shadow: 0 6px 24px rgba(15,11,30,0.32); }
+@media (prefers-reduced-motion: reduce) { .site-header { transition: none; } }
 .header__inner {
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
   min-height: var(--header-h);
@@ -371,7 +379,9 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .team { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 .person { display: flex; flex-direction: column; gap: 14px; }
 .person__photo {
-  height: 260px; border-radius: var(--r-md); overflow: hidden; position: relative;
+  /* The portraits are 600x800; matching the box to that ratio shows them whole
+     instead of cropping heads and shoulders out of a fixed 260px band. */
+  aspect-ratio: 3 / 4; border-radius: var(--r-md); overflow: hidden; position: relative;
   background: repeating-linear-gradient(115deg, #E3DCF0 0 12px, #DAD2EA 12px 24px);
   display: flex; align-items: flex-end; padding: 12px;
 }
@@ -538,13 +548,20 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .legal th, .legal td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
 .legal th { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-soft); }
 .table-wrap { overflow-x: auto; }
-.whatsapp-fab {
-  position: fixed; right: 20px; bottom: 20px; z-index: 30; width: 56px; height: 56px; border-radius: 50%;
-  background: #25D366; color: #fff; display: inline-flex; align-items: center; justify-content: center;
+.fabs { position: fixed; right: 20px; bottom: 20px; z-index: 30; display: flex; flex-direction: column; gap: 12px; }
+.whatsapp-fab, .call-fab {
+  width: 56px; height: 56px; border-radius: 50%; color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
   box-shadow: 0 10px 24px rgba(0,0,0,0.25);
 }
+.whatsapp-fab { background: #25D366; }
 .whatsapp-fab:hover { color: #fff; background: #1EB85A; }
-.whatsapp-fab svg { width: 30px; height: 30px; fill: currentColor; }
+.call-fab { background: var(--violet); }
+.call-fab:hover { color: #fff; background: var(--violet-hover); }
+.whatsapp-fab svg, .call-fab svg { width: 30px; height: 30px; fill: currentColor; }
+/* The call button is for phones: on desktop the number is already in the header. */
+.call-fab { display: none; }
+@media (max-width: 640px) { .call-fab { display: inline-flex; } }
 .cookie-banner {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--ink); color: var(--lilac-light);
   padding: 20px 0; box-shadow: 0 -10px 30px rgba(0,0,0,0.25);
@@ -557,7 +574,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .cookie-prefs { margin-top: 12px; display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.9rem; }
 .cookie-prefs label { display: flex; gap: 8px; align-items: center; }
 .cookie-prefs input { accent-color: var(--violet); }
-body.cookie-visible .whatsapp-fab { bottom: 120px; }
+body.cookie-visible .fabs { bottom: 120px; }
 .notfound { text-align: center; padding: var(--section) 0; }
 .notfound__code { font-family: var(--font-display); font-size: clamp(5rem, 14vw, 10rem); line-height: 1; color: var(--lilac-pale); font-weight: 700; }
 .hero-photo-note { position: absolute; right: var(--gutter); top: calc(var(--header-h) + 12px); font-family: var(--font-mono); font-size: 0.68rem; color: rgba(255,255,255,0.4); }
@@ -641,7 +658,7 @@ body.cookie-visible .whatsapp-fab { bottom: 120px; }
   .nav__link[aria-current="page"] { border-bottom-color: var(--violet); }
   .lang { align-self: flex-start; margin-top: 16px; }
   .nav__phone { margin-top: 16px; text-align: center; }
-  .site-header--overlay { position: relative; background: var(--deep); }
+  .site-header--overlay { background: var(--deep); margin-bottom: 0; }
   .hero__inner { padding-top: 48px; flex-direction: column; align-items: flex-start; }
   .hero__note { display: none; }
   .showcase { grid-template-columns: 1fr; }

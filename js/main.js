@@ -201,6 +201,20 @@
     }
   }
 
+  /* ---------- sticky header ---------- */
+  function initStickyHeader() {
+    var header = document.querySelector(".site-header");
+    if (!header) return;
+    // Only the transparent overlay header needs the swap; the solid one already has it.
+    var overlay = header.classList.contains("site-header--overlay");
+    function update() {
+      var solid = window.scrollY > 8;
+      header.classList.toggle("site-header--stuck", overlay ? solid : false);
+    }
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+  }
+
   /* ---------- cookie consent + map loader ---------- */
   function initCookies() {
     var banner = document.getElementById("cookie-banner");
@@ -358,6 +372,7 @@
   }
 
   initNav();
+  initStickyHeader();
   initLists();
   initHomeFilter();
   initFilters();
