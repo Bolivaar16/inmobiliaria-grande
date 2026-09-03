@@ -46,8 +46,14 @@ Files: `playfair-display-var.woff2` (38 KB), `libre-franklin-var.woff2` (29 KB),
   language toggle, phone and badges: pills (999 px).
 - Header: dark (`--deep`), transparent over the home hero (`site-header--overlay`), emblem +
   "GRANDE / DESDE 1970" text wordmark, nav, ES/EN pill toggle, phone pill in `--violet`.
-- Hero: 720 px, full-bleed photo (placeholder pattern until the client supplies one), vertical
-  veil, serif h1 up to 4.75 rem, floating white search bar overlapping the next section by 50 %.
+- Hero: 720 px, full-bleed photo (`assets/hero-granada.*`, an AI-generated placeholder until the
+  client supplies one), serif h1 up to 4.75 rem, floating white search bar overlapping the next
+  section by 50 %. Photo treatment: `saturate(0.9) brightness(0.78)`, `object-position: 58% center`
+  (keeps the Alhambra clear of the text column). Veil: vertical only below 900 px; from 900 px a
+  second 100deg gradient darkens the left column. Both were measured against the worst-case
+  (brightest) background pixel under each text band and pass WCAG AA: kicker 6.6:1 desktop /
+  6.8:1 mobile, lead 9.2:1 / 6.3:1, h1 11:1+. Re-measure if the photo is replaced — the earlier
+  `blur(6px) brightness(0.55)` treatment existed only to flatten the old office-wall photo.
 - Showcase: 1.6fr feature card with gradient veil + two horizontal side cards, then a row of four.
 - Family block (from direction 1a): dark `--ink-2` band, serif heading "Una inmobiliaria de
   familia, no una franquicia", 2×2 stats separated by 1 px lines.
