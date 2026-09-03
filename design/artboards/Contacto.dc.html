@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Source+Sans+3:wght@400;600&family=Courgette&display=swap">
+  <style>
+:root{
+  --indigo-900:#2B2350; --indigo-700:#34305C; --violet-600:#593A83; --violet-400:#8F76B8;
+  --violet-100:#EEE9F5; --rooster-red:#C8102E; --gold-400:#E8B84A; --paper:#FAF8F5;
+  --ink:#1F1B2E; --ink-muted:#5C5870; --line:#E3DEE9; --white:#FFFFFF;
+  --font-display:"Montserrat",system-ui,sans-serif; --font-body:"Source Sans 3",system-ui,sans-serif;
+  --font-script:"Courgette",cursive;
+}
+*{box-sizing:border-box}
+body{margin:0}
+a{color:#34305C; text-decoration:none}
+a:hover{color:#593A83}
+h1,h2,h3{font-family:var(--font-display); color:var(--indigo-900); margin:0}
+h1,h2{text-transform:uppercase; letter-spacing:.04em; font-weight:800}
+h3{font-weight:600}
+p,label,span,li,button,input,select,textarea,td,th,a,small,address,div{font-family:var(--font-body)}
+button,input,select,textarea{font-size:16px}
+.btn{font-family:var(--font-display); font-weight:600; font-size:16px; text-transform:uppercase; letter-spacing:.04em; height:48px; padding:0 24px; border-radius:4px; display:inline-flex; align-items:center; justify-content:center; border:none; cursor:pointer;}
+.btn--red{background:#C8102E; color:#fff;}
+.btn--indigo{background:#34305C; color:#fff;}
+.btn--ghost{background:transparent; color:#34305C; border:1px solid #34305C;}
+.chip{display:inline-flex; align-items:center; height:28px; padding:0 10px; border-radius:4px; background:#EEE9F5; color:#2B2350; font-size:14px; font-weight:600;}
+.card{border:1px solid #E3DEE9; border-radius:6px; background:#fff; overflow:hidden; display:flex; flex-direction:column;}
+.card__media{position:relative; aspect-ratio:4/3; overflow:hidden;}
+.card__media img{width:100%; height:100%; object-fit:cover; display:block;}
+.card__body{padding:16px; display:flex; flex-direction:column; gap:6px;}
+.card__price{font-family:var(--font-display); font-weight:800; font-size:22px; color:#C8102E; margin:0;}
+.card__title{font-size:18px; margin:0;}
+.card__place{font-size:14px; color:#5C5870; margin:0; display:flex; align-items:center; gap:6px;}
+.chips{list-style:none; padding:0; margin:4px 0 0; display:flex; gap:8px; flex-wrap:wrap;}
+.badge--reserved{position:absolute; top:10px; left:10px; background:#2B2350; color:#fff; font-size:13px; font-weight:600; text-transform:uppercase; border-radius:4px; padding:6px 10px; z-index:2;}
+.diamond{width:8px; height:8px; background:#593A83; transform:rotate(45deg); flex:none;}
+.since{font-family:var(--font-script); font-size:22px; color:#fff;}
+.site-header{height:76px; background:#FAF8F5; border-bottom:1px solid #E3DEE9; display:flex; align-items:center;}
+.header__inner{width:1200px; margin:0 auto; display:flex; align-items:center; gap:24px;}
+.nav ul{list-style:none; display:flex; gap:24px; margin:0; padding:0;}
+.nav a{font-family:var(--font-display); font-weight:600; font-size:14px; text-transform:uppercase; letter-spacing:.04em; color:#2B2350;}
+.header__phone{display:flex; align-items:center; gap:8px; font-weight:600; color:#34305C;}
+.site-footer{background:#2B2350; color:#fff; padding:64px 0 0;}
+.footer__inner{width:1200px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; padding-bottom:48px;}
+.site-footer a{color:#EEE9F5; text-decoration:underline;}
+.footer__bottom{border-top:1px solid rgba(255,255,255,.16); padding:20px 0; text-align:center; font-size:13px; color:#EEE9F5;}
+.field{display:flex; flex-direction:column; gap:6px;}
+.field label{font-size:14px; font-weight:600; color:#2B2350;}
+.field input, .field select, .field textarea{height:48px; border:1px solid #E3DEE9; border-radius:4px; background:#fff; padding:0 12px; font-size:16px; font-family:var(--font-body);}
+.field textarea{height:96px; padding:12px;}
+.field__error{color:#C8102E; font-size:13px; margin:0; display:flex; align-items:center; gap:6px;}
+.field--error input{border:2px solid #C8102E;}
+.section-label{font-size:14px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:#5C5870;}
+
+
+.breadcrumb{font-size:14px; color:#5C5870; display:flex; gap:8px; align-items:center;}
+.map-box{aspect-ratio:4/3; border:1px solid #E3DEE9; background:#EEE9F5; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; position:relative; padding:24px; text-align:center;}
+
+  </style>
+</helmet>
+<div style="width:1440px; background:#FAF8F5; display:flex; flex-direction:column;">
+<header class="site-header" style="width:1440px;">
+  <div class="header__inner" style="width:1200px;">
+    <a href="#" style="display:flex; align-items:center;"><img src="logo.png" alt="Inmobiliaria Grande, desde 1970" width="132" height="52"></a>
+    <nav class="nav" style="flex:1;">
+      <ul>
+        <li><a href="#" aria-current="page" style="border-bottom:3px solid #593A83; padding-bottom:4px;">Inicio</a></li>
+        <li><a href="#">Comprar</a></li>
+        <li><a href="#">Vende tu casa</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="header__phone" href="tel:+34958252461"><span class="diamond"></span>958 25 24 61</a>
+    <a class="btn btn--red" href="#">Vende tu casa</a>
+  </div>
+</header>
+
+<nav class="breadcrumb" style="width:1200px; margin:16px auto 0;">
+  <a href="#">Inicio</a><span style="color:#8F76B8;">◆</span><span>Contacto</span>
+</nav>
+
+<div style="width:1200px; margin:16px auto 0; display:flex; flex-direction:column; gap:8px;">
+  <h1>Contacto</h1>
+  <p style="color:#5C5870; font-size:18px; margin:0; max-width:640px;">Estamos en Recogidas 13, en pleno centro. Puedes venir sin cita, llamarnos o escribirnos por aquí.</p>
+</div>
+
+<div style="width:1200px; margin:32px auto 64px; display:grid; grid-template-columns:1.5fr 1fr; gap:48px;">
+  <form style="display:flex; flex-direction:column; gap:16px;">
+    <div class="field"><label>Nombre y apellidos (obligatorio)</label><input type="text"></div>
+    <div class="field"><label>Teléfono (obligatorio)</label><input type="tel"></div>
+    <div class="field field--error">
+      <label>Correo electrónico</label>
+      <input type="email" value="hola@" aria-invalid="true" aria-describedby="email-error">
+      <p class="field__error" id="email-error"><span class="diamond" style="background:#C8102E;"></span>Escribe un correo valido</p>
+    </div>
+    <div class="field"><label>¿En que podemos ayudarte?</label>
+      <select><option>Comprar una vivienda</option><option>Vender mi vivienda</option><option>Alquilar</option><option>Otra consulta</option></select>
+    </div>
+    <div class="field"><label>Mensaje</label><textarea></textarea></div>
+    <label style="display:flex; align-items:center; gap:8px; font-size:14px; color:#5C5870;"><input type="checkbox" style="width:24px; height:24px;">He leido y acepto la politica de privacidad.</label>
+    <button class="btn btn--indigo" style="align-self:start;" type="button">Enviar mensaje</button>
+  </form>
+
+  <div style="display:flex; flex-direction:column; gap:24px;">
+    <div>
+      <h2 style="font-size:20px;">Dirección</h2>
+      <p style="margin:8px 0 0; font-size:16px;">Inmobiliaria Grande<br>Calle Recogidas 13, 1.º A<br>18005 Granada</p>
+    </div>
+    <div>
+      <h2 style="font-size:20px;">Telefonos y correo</h2>
+      <p style="margin:8px 0 0; font-size:16px;"><a href="tel:+34958252461">958 25 24 61</a> (oficina)<br><a href="tel:+34664678249">664 678 249</a> (Javier Corpas)<br><a href="mailto:info@inmobiliariagrande.com">info@inmobiliariagrande.com</a></p>
+    </div>
+    <div>
+      <h2 style="font-size:20px;">Horario</h2>
+      <p style="margin:8px 0 0; font-size:16px; color:#5C5870;">[DATO A CONFIRMAR: horario de atencion]</p>
+    </div>
+    <div class="map-box">
+      <div style="position:absolute; opacity:.12;"><svg width="160" height="160" viewBox="0 0 100 100" aria-hidden="true" focusable="false" style="opacity:1">
+  <rect x="35" y="5" width="30" height="30" fill="#593A83" transform="rotate(45 50 20)"/>
+  <rect x="65" y="35" width="30" height="30" fill="#593A83" transform="rotate(45 80 50)"/>
+  <rect x="35" y="65" width="30" height="30" fill="#593A83" transform="rotate(45 50 80)"/>
+  <rect x="5" y="35" width="30" height="30" fill="#593A83" transform="rotate(45 20 50)"/>
+  <rect x="30" y="30" width="40" height="40" fill="#34305C" transform="rotate(45 50 50)"/>
+  <rect x="42" y="42" width="16" height="16" fill="#FAF8F5" transform="rotate(45 50 50)"/>
+</svg></div>
+      <p style="position:relative; font-family:var(--font-display); font-weight:600; margin:0;">Calle Recogidas 13<br>18005 Granada</p>
+      <a class="btn btn--ghost" style="position:relative;" href="#" target="_blank" rel="noopener">Abrir en Google Maps</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer" style="width:1440px;">
+  <div class="footer__inner" style="width:1200px; grid-template-columns:1.4fr 1fr 1fr 1fr;">
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div style="background:#fff; padding:8px; border-radius:4px; width:132px;"><img src="logo.png" alt="Inmobiliaria Grande" width="116" height="46"></div>
+      <p class="since" style="margin:0; display:flex; align-items:center; gap:10px;">
+        <svg width="40" height="14" viewBox="0 0 40 14" aria-hidden="true"><path d="M0 7 Q10 -2 20 7" stroke="#8F76B8" fill="none" stroke-width="2"/></svg>
+        Desde 1970
+        <svg width="40" height="14" viewBox="0 0 40 14" aria-hidden="true"><path d="M0 7 Q10 16 20 7" stroke="#8F76B8" fill="none" stroke-width="2"/></svg>
+      </p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:6px; font-size:14px;">
+      <p style="margin:0 0 8px; font-weight:700;">Inmobiliaria Grande</p>
+      <p style="margin:0;">Calle Recogidas 13, 1.º A</p>
+      <p style="margin:0;">18005 Granada</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; font-size:14px;">
+      <a href="tel:+34958252461">958 25 24 61 (oficina)</a>
+      <a href="tel:+34664678249">664 678 249 (Javier Corpas)</a>
+      <a href="mailto:info@inmobiliariagrande.com">info@inmobiliariagrande.com</a>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; font-size:14px;">
+      <a href="#">Inmuebles</a>
+      <a href="#">Vende tu casa</a>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Contacto</a>
+      <a href="#">Aviso legal</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Política de cookies</a>
+    </div>
+  </div>
+  <div class="footer__bottom">© 2026 Inmobiliaria Grande. Todos los derechos reservados.</div>
+</footer>
+
+<a href="#" aria-label="Escribir por WhatsApp al 664 678 249" style="position:fixed; bottom:20px; right:20px; z-index:60; width:56px; height:56px; border-radius:6px; background:#C8102E; display:flex; align-items:center; justify-content:center;">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M20.5 3.5A10.5 10.5 0 0 0 3.9 16.4L3 21l4.7-1.2A10.5 10.5 0 0 0 20.5 3.5Z"/><path d="M8.5 8.5c0 4 3 7 7 7 .8 0 1.2-.6 1.2-1.2l-.2-1.2-2.4-.8-1 1.2a5.5 5.5 0 0 1-3-3l1.2-1-.8-2.4-1.2-.2c-.6 0-1.2.4-1.2 1.2Z"/></svg>
+</a>
+</div>
+</x-dc>
+</body>
+</html>

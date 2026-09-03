@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Source+Sans+3:wght@400;600&family=Courgette&display=swap">
+  <style>
+:root{
+  --indigo-900:#2B2350; --indigo-700:#34305C; --violet-600:#593A83; --violet-400:#8F76B8;
+  --violet-100:#EEE9F5; --rooster-red:#C8102E; --gold-400:#E8B84A; --paper:#FAF8F5;
+  --ink:#1F1B2E; --ink-muted:#5C5870; --line:#E3DEE9; --white:#FFFFFF;
+  --font-display:"Montserrat",system-ui,sans-serif; --font-body:"Source Sans 3",system-ui,sans-serif;
+  --font-script:"Courgette",cursive;
+}
+*{box-sizing:border-box}
+body{margin:0}
+a{color:#34305C; text-decoration:none}
+a:hover{color:#593A83}
+h1,h2,h3{font-family:var(--font-display); color:var(--indigo-900); margin:0}
+h1,h2{text-transform:uppercase; letter-spacing:.04em; font-weight:800}
+h3{font-weight:600}
+p,label,span,li,button,input,select,textarea,td,th,a,small,address,div{font-family:var(--font-body)}
+button,input,select,textarea{font-size:16px}
+.btn{font-family:var(--font-display); font-weight:600; font-size:16px; text-transform:uppercase; letter-spacing:.04em; height:48px; padding:0 24px; border-radius:4px; display:inline-flex; align-items:center; justify-content:center; border:none; cursor:pointer;}
+.btn--red{background:#C8102E; color:#fff;}
+.btn--indigo{background:#34305C; color:#fff;}
+.btn--ghost{background:transparent; color:#34305C; border:1px solid #34305C;}
+.chip{display:inline-flex; align-items:center; height:28px; padding:0 10px; border-radius:4px; background:#EEE9F5; color:#2B2350; font-size:14px; font-weight:600;}
+.card{border:1px solid #E3DEE9; border-radius:6px; background:#fff; overflow:hidden; display:flex; flex-direction:column;}
+.card__media{position:relative; aspect-ratio:4/3; overflow:hidden;}
+.card__media img{width:100%; height:100%; object-fit:cover; display:block;}
+.card__body{padding:16px; display:flex; flex-direction:column; gap:6px;}
+.card__price{font-family:var(--font-display); font-weight:800; font-size:22px; color:#C8102E; margin:0;}
+.card__title{font-size:18px; margin:0;}
+.card__place{font-size:14px; color:#5C5870; margin:0; display:flex; align-items:center; gap:6px;}
+.chips{list-style:none; padding:0; margin:4px 0 0; display:flex; gap:8px; flex-wrap:wrap;}
+.badge--reserved{position:absolute; top:10px; left:10px; background:#2B2350; color:#fff; font-size:13px; font-weight:600; text-transform:uppercase; border-radius:4px; padding:6px 10px; z-index:2;}
+.diamond{width:8px; height:8px; background:#593A83; transform:rotate(45deg); flex:none;}
+.since{font-family:var(--font-script); font-size:22px; color:#fff;}
+.site-header{height:76px; background:#FAF8F5; border-bottom:1px solid #E3DEE9; display:flex; align-items:center;}
+.header__inner{width:1200px; margin:0 auto; display:flex; align-items:center; gap:24px;}
+.nav ul{list-style:none; display:flex; gap:24px; margin:0; padding:0;}
+.nav a{font-family:var(--font-display); font-weight:600; font-size:14px; text-transform:uppercase; letter-spacing:.04em; color:#2B2350;}
+.header__phone{display:flex; align-items:center; gap:8px; font-weight:600; color:#34305C;}
+.site-footer{background:#2B2350; color:#fff; padding:64px 0 0;}
+.footer__inner{width:1200px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; padding-bottom:48px;}
+.site-footer a{color:#EEE9F5; text-decoration:underline;}
+.footer__bottom{border-top:1px solid rgba(255,255,255,.16); padding:20px 0; text-align:center; font-size:13px; color:#EEE9F5;}
+.field{display:flex; flex-direction:column; gap:6px;}
+.field label{font-size:14px; font-weight:600; color:#2B2350;}
+.field input, .field select, .field textarea{height:48px; border:1px solid #E3DEE9; border-radius:4px; background:#fff; padding:0 12px; font-size:16px; font-family:var(--font-body);}
+.field textarea{height:96px; padding:12px;}
+.field__error{color:#C8102E; font-size:13px; margin:0; display:flex; align-items:center; gap:6px;}
+.field--error input{border:2px solid #C8102E;}
+.section-label{font-size:14px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:#5C5870;}
+
+
+.hero{position:relative; height:560px; width:100%; overflow:hidden;}
+.hero__bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+.hero__veil{position:absolute; inset:0; background:linear-gradient(90deg, rgba(43,35,80,.92) 0%, rgba(43,35,80,.78) 46%, rgba(43,35,80,.35) 100%);}
+.hero__content{position:relative; z-index:2; width:1200px; margin:0 auto; height:100%; display:flex; flex-direction:column; justify-content:center; gap:16px;}
+.eyebrow{color:#EEE9F5; font-family:var(--font-display); font-size:14px; text-transform:uppercase; letter-spacing:.04em; margin:0;}
+.hero h1{color:#fff; font-size:52px; line-height:1.15; max-width:680px;}
+.hero__lead{color:#EEE9F5; font-size:18px; max-width:560px; margin:0;}
+form.search{background:#FAF8F5; border-radius:6px; box-shadow:0 1px 2px rgba(31,27,46,.06), 0 10px 24px -14px rgba(43,35,80,.30); padding:24px; display:flex; gap:16px; align-items:end; margin-top:8px;}
+form.search .field label{font-size:13px; text-transform:uppercase; letter-spacing:.04em;}
+
+  </style>
+</helmet>
+<div style="width:1440px; background:#FAF8F5; display:flex; flex-direction:column;">
+<header class="site-header" style="width:1440px;">
+  <div class="header__inner" style="width:1200px;">
+    <a href="#" style="display:flex; align-items:center;"><img src="logo.png" alt="Inmobiliaria Grande, desde 1970" width="132" height="52"></a>
+    <nav class="nav" style="flex:1;">
+      <ul>
+        <li><a href="#" aria-current="page" style="border-bottom:3px solid #593A83; padding-bottom:4px;">Inicio</a></li>
+        <li><a href="#">Comprar</a></li>
+        <li><a href="#">Vende tu casa</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="header__phone" href="tel:+34958252461"><span class="diamond"></span>958 25 24 61</a>
+    <a class="btn btn--red" href="#">Vende tu casa</a>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="hero__bg" src="p30002664-1.jpg" alt="">
+  <div class="hero__veil"></div>
+  <div class="hero__content">
+    <p class="eyebrow">Granada y provincia</p>
+    <h1>Tu próxima casa en Granada, con quien lleva aquí desde 1970</h1>
+    <p class="hero__lead">Pisos, áticos y casas en el centro, en la vega y en la sierra. Te enseñamos solo lo que encaja contigo.</p>
+    <form class="search" style="width:900px;">
+      <div class="field" style="flex:1;">
+        <label>Operación</label>
+        <select><option>Comprar</option><option disabled>Alquilar (proximamente)</option></select>
+      </div>
+      <div class="field" style="flex:1;">
+        <label>Tipo</label>
+        <select><option>Todos los tipos</option><option>Piso</option><option>Ático Dúplex</option><option>Pareado</option><option>Casa de campo</option></select>
+      </div>
+      <div class="field" style="flex:1;">
+        <label>Zona</label>
+        <select><option>Toda la provincia</option><option>Centro</option><option>El Serrallo</option><option>Villarejo</option><option>Alcampo</option><option>Monachil</option><option>Pulianas</option><option>La Malahá</option><option>Cogollos de la Vega</option></select>
+      </div>
+      <div class="field" style="flex:1;">
+        <label>Precio máximo</label>
+        <select><option>Sin límite</option><option>Hasta 175.000 €</option><option>Hasta 250.000 €</option><option>Hasta 300.000 €</option><option>Hasta 350.000 €</option></select>
+      </div>
+      <button class="btn btn--indigo" type="button">Ver inmuebles</button>
+    </form>
+  </div>
+</section>
+
+<section style="width:1200px; margin:0 auto; padding:64px 0; display:flex; flex-direction:column; gap:24px;">
+  <h2>Una seleccion de lo que tenemos ahora mismo</h2>
+  <p style="color:#5C5870; font-size:18px; max-width:640px; margin:0;">Cuatro viviendas de nuestra cartera en venta. Puedes ver todas en la página de inmuebles.</p>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
+
+<article class="card">
+  <a href="#" style="color:inherit; display:flex; flex-direction:column; height:100%;">
+    <div class="card__media">
+      
+      <img src="p30002664-1.jpg" alt="Ático Dúplex en Centro, Granada" style="">
+    </div>
+    <div class="card__body">
+      <p class="card__price">339.900 €</p>
+      <h3 class="card__title">Ático Dúplex en Centro, Granada</h3>
+      <p class="card__place">Centro <span style="color:#8F76B8;">◆</span> Granada</p>
+      <ul class="chips"><li class="chip">146 m²</li><li class="chip">2 dorm.</li><li class="chip">1 baño</li></ul>
+    </div>
+  </a>
+</article>
+
+<article class="card">
+  <a href="#" style="color:inherit; display:flex; flex-direction:column; height:100%;">
+    <div class="card__media">
+      
+      <img src="p30020091-1.jpg" alt="Piso en El Serrallo, Granada" style="">
+    </div>
+    <div class="card__body">
+      <p class="card__price">275.000 €</p>
+      <h3 class="card__title">Piso en El Serrallo, Granada</h3>
+      <p class="card__place">El Serrallo <span style="color:#8F76B8;">◆</span> Granada</p>
+      <ul class="chips"><li class="chip">176 m²</li><li class="chip">3 dorm.</li><li class="chip">2 baños</li></ul>
+    </div>
+  </a>
+</article>
+
+<article class="card">
+  <a href="#" style="color:inherit; display:flex; flex-direction:column; height:100%;">
+    <div class="card__media">
+      
+      <img src="p29868382-1.jpg" alt="Piso en Villarejo, Granada" style="">
+    </div>
+    <div class="card__body">
+      <p class="card__price">294.900 €</p>
+      <h3 class="card__title">Piso en Villarejo, Granada</h3>
+      <p class="card__place">Villarejo <span style="color:#8F76B8;">◆</span> Granada</p>
+      <ul class="chips"><li class="chip">124 m²</li><li class="chip">3 dorm.</li><li class="chip">2 baños</li></ul>
+    </div>
+  </a>
+</article>
+
+<article class="card">
+  <a href="#" style="color:inherit; display:flex; flex-direction:column; height:100%;">
+    <div class="card__media">
+      
+      <img src="p29965705-1.jpg" alt="Casa de campo en Sierra de Huétor, Cogollos de la Vega" style="">
+    </div>
+    <div class="card__body">
+      <p class="card__price">190.000 €</p>
+      <h3 class="card__title">Casa de campo en Sierra de Huétor, Cogollos de la Vega</h3>
+      <p class="card__place">Sierra de Huétor <span style="color:#8F76B8;">◆</span> Cogollos de la Vega</p>
+      <ul class="chips"><li class="chip">88 m²</li><li class="chip">4 dorm.</li><li class="chip">1 baño</li></ul>
+    </div>
+  </a>
+</article>
+
+  </div>
+  <a class="btn btn--ghost" style="align-self:center;" href="#">Ver los 8 inmuebles</a>
+</section>
+
+<section style="width:1440px; background:#2B2350; position:relative; overflow:hidden; padding:96px 0;">
+  <div style="position:absolute; right:-60px; bottom:-60px; opacity:.10;"><svg width="420" height="420" viewBox="0 0 100 100" aria-hidden="true" focusable="false" style="opacity:1">
+  <rect x="35" y="5" width="30" height="30" fill="#fff" transform="rotate(45 50 20)"/>
+  <rect x="65" y="35" width="30" height="30" fill="#fff" transform="rotate(45 80 50)"/>
+  <rect x="35" y="65" width="30" height="30" fill="#fff" transform="rotate(45 50 80)"/>
+  <rect x="5" y="35" width="30" height="30" fill="#fff" transform="rotate(45 20 50)"/>
+  <rect x="30" y="30" width="40" height="40" fill="#fff" transform="rotate(45 50 50)"/>
+  <rect x="42" y="42" width="16" height="16" fill="#2B2350" transform="rotate(45 50 50)"/>
+</svg></div>
+  <div style="width:1200px; margin:0 auto; position:relative; z-index:2; display:flex; flex-direction:column; gap:16px; max-width:640px;">
+    <h2 style="color:#fff;">¿Vas a vender? Primero, sepamos cuánto vale</h2>
+    <p style="color:#EEE9F5; font-size:18px; margin:0;">Valoramos tu vivienda con precios reales de cierre en tu zona, no con estimaciones de portal. Sin coste y sin compromiso de exclusiva.</p>
+    <a class="btn btn--red" style="align-self:start;" href="#">Solicitar valoracion gratuita</a>
+  </div>
+</section>
+
+<section style="width:1440px; background:#EEE9F5; padding:64px 0;">
+  <div style="width:1200px; margin:0 auto; display:flex; flex-direction:column; gap:24px;">
+    <h2>55 años en Granada</h2>
+    <div style="display:flex;">
+      <div style="flex:1; padding-right:32px; display:flex; flex-direction:column; gap:8px;">
+        <p style="font-family:var(--font-display); font-weight:800; font-size:40px; color:#2B2350; margin:0;">1970</p>
+        <p style="margin:0; color:#5C5870;">El año en que abrimos. Seguimos siendo la misma casa.</p>
+      </div>
+      <div style="flex:1; padding:0 32px; border-left:1px solid #E3DEE9; display:flex; flex-direction:column; gap:8px;">
+        <p style="font-family:var(--font-display); font-weight:800; font-size:40px; color:#2B2350; margin:0;">Recogidas 13</p>
+        <p style="margin:0; color:#5C5870;">Oficina a pie de calle en el centro de Granada, con la puerta abierta.</p>
+      </div>
+      <div style="flex:1; padding-left:32px; border-left:1px solid #E3DEE9; display:flex; flex-direction:column; gap:8px;">
+        <p style="font-family:var(--font-display); font-weight:800; font-size:40px; color:#2B2350; margin:0;">Capital y vega</p>
+        <p style="margin:0; color:#5C5870;">Vendemos en Granada capital, Monachil, Pulianas, La Malahá y Cogollos de la Vega.</p>
+      </div>
+    </div>
+    <a href="#" style="font-weight:600;">Nuestra historia →</a>
+  </div>
+</section>
+
+<section style="width:1440px; background:#FAF8F5; padding:64px 0;">
+  <div style="width:1200px; margin:0 auto; display:flex; gap:48px;">
+    <div style="flex:0 0 60%; display:flex; flex-direction:column; gap:16px;">
+      <h2>¿Hablamos?</h2>
+      <p style="color:#5C5870; font-size:18px; margin:0;">Cuéntanos que buscas o que quieres vender y te contestamos con nombres, calles y precios, no con formularios automáticos.</p>
+    </div>
+    <div style="flex:0 0 40%; display:flex; flex-direction:column; gap:12px; justify-content:center;">
+      <a class="btn btn--indigo" href="tel:+34958252461">Llamar al 958 25 24 61</a>
+      <a class="btn btn--ghost" href="#">Escribir por WhatsApp</a>
+      <p style="color:#5C5870; font-size:14px; margin:8px 0 0;">Calle Recogidas 13, 1.º A, 18005 Granada · [DATO A CONFIRMAR: horario de oficina]</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" style="width:1440px;">
+  <div class="footer__inner" style="width:1200px; grid-template-columns:1.4fr 1fr 1fr 1fr;">
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div style="background:#fff; padding:8px; border-radius:4px; width:132px;"><img src="logo.png" alt="Inmobiliaria Grande" width="116" height="46"></div>
+      <p class="since" style="margin:0; display:flex; align-items:center; gap:10px;">
+        <svg width="40" height="14" viewBox="0 0 40 14" aria-hidden="true"><path d="M0 7 Q10 -2 20 7" stroke="#8F76B8" fill="none" stroke-width="2"/></svg>
+        Desde 1970
+        <svg width="40" height="14" viewBox="0 0 40 14" aria-hidden="true"><path d="M0 7 Q10 16 20 7" stroke="#8F76B8" fill="none" stroke-width="2"/></svg>
+      </p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:6px; font-size:14px;">
+      <p style="margin:0 0 8px; font-weight:700;">Inmobiliaria Grande</p>
+      <p style="margin:0;">Calle Recogidas 13, 1.º A</p>
+      <p style="margin:0;">18005 Granada</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; font-size:14px;">
+      <a href="tel:+34958252461">958 25 24 61 (oficina)</a>
+      <a href="tel:+34664678249">664 678 249 (Javier Corpas)</a>
+      <a href="mailto:info@inmobiliariagrande.com">info@inmobiliariagrande.com</a>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; font-size:14px;">
+      <a href="#">Inmuebles</a>
+      <a href="#">Vende tu casa</a>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Contacto</a>
+      <a href="#">Aviso legal</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Política de cookies</a>
+    </div>
+  </div>
+  <div class="footer__bottom">© 2026 Inmobiliaria Grande. Todos los derechos reservados.</div>
+</footer>
+
+<a href="#" aria-label="Escribir por WhatsApp al 664 678 249" style="position:fixed; bottom:20px; right:20px; z-index:60; width:56px; height:56px; border-radius:6px; background:#C8102E; display:flex; align-items:center; justify-content:center;">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M20.5 3.5A10.5 10.5 0 0 0 3.9 16.4L3 21l4.7-1.2A10.5 10.5 0 0 0 20.5 3.5Z"/><path d="M8.5 8.5c0 4 3 7 7 7 .8 0 1.2-.6 1.2-1.2l-.2-1.2-2.4-.8-1 1.2a5.5 5.5 0 0 1-3-3l1.2-1-.8-2.4-1.2-.2c-.6 0-1.2.4-1.2 1.2Z"/></svg>
+</a>
+</div>
+</x-dc>
+</body>
+</html>

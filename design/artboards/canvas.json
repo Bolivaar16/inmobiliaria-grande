@@ -1,0 +1,63 @@
+{
+ "artboards": [
+  {
+   "file": "Main.dc.html",
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 2839,
+   "title": "Inicio"
+  },
+  {
+   "file": "MainMovil.dc.html",
+   "x": 1660,
+   "y": 0,
+   "w": 390,
+   "h": 5154,
+   "title": "Inicio (móvil 390)"
+  },
+  {
+   "file": "Inmuebles.dc.html",
+   "x": 0,
+   "y": 2999,
+   "w": 1440,
+   "h": 1962,
+   "title": "Comprar: listado"
+  },
+  {
+   "file": "Ficha.dc.html",
+   "x": 1660,
+   "y": 5314,
+   "w": 1440,
+   "h": 2201,
+   "title": "Ficha de inmueble"
+  },
+  {
+   "file": "Contacto.dc.html",
+   "x": 0,
+   "y": 5121,
+   "w": 1440,
+   "h": 1397,
+   "title": "Contacto"
+  },
+  {
+   "file": "VendeTuCasa.dc.html",
+   "x": 1660,
+   "y": 7675,
+   "w": 1440,
+   "h": 2245,
+   "title": "Vende tu casa"
+  },
+  {
+   "file": "SobreNosotros.dc.html",
+   "x": 0,
+   "y": 6678,
+   "w": 1440,
+   "h": 2081,
+   "title": "Sobre nosotros"
+  }
+ ],
+ "launch": {
+  "view": "canvas"
+ }
+}
