@@ -18,3 +18,6 @@ node_modules/
 
 # Foreman worktrees
 .worktrees/
+
+# Internal docs, never public (pricing, sales scripts)
+docs/interno/
