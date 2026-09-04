@@ -177,6 +177,8 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .btn--ghost:hover { border-color: var(--ink); color: var(--ink); }
 .btn--ghost-light { background: transparent; border-color: rgba(255,255,255,0.35); color: #fff; }
 .btn--ghost-light:hover { border-color: #fff; color: #fff; }
+.btn--wa { background: #25D366; color: #fff; }
+.btn--wa:hover { background: #1EB85A; color: #fff; }
 .btn--sm { padding: 10px 18px; font-size: 0.875rem; }
 .btn--block { width: 100%; }
 .pill {
@@ -491,6 +493,8 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .detail-actions .pill { border-color: rgba(255,255,255,0.3); color: #fff; }
 .detail-actions .pill:hover { border-color: #fff; }
 .detail-actions .pill[aria-pressed="true"] { background: var(--violet); border-color: var(--violet); }
+/* The viewing request is the page's one action; the pills beside it are secondary. */
+.detail-actions__visit { padding: 11px 22px; }
 .gallery { margin: 0; }
 .gallery__main { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r-md); background: var(--lilac-pale); }
 .gallery__thumbs { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
@@ -600,6 +604,23 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 /* The call button is for phones: on desktop the number is already in the header. */
 .call-fab { display: none; }
 @media (max-width: 640px) { .call-fab { display: inline-flex; } }
+/* Mobile contact bar (listing detail, results, sell): call, WhatsApp and the page's
+   main action as labelled buttons, fixed to the bottom. On these pages it replaces the
+   floating buttons, which were covering the card controls on phones. */
+.contact-bar { display: none; }
+@media (max-width: 640px) {
+  .contact-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 8px;
+    padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
+    background: var(--deep); box-shadow: 0 -10px 30px rgba(15,11,30,0.3);
+  }
+  .contact-bar .btn { padding: 13px 8px; font-size: 0.875rem; white-space: nowrap; }
+  .contact-bar .btn--ghost-light { border-color: rgba(255,255,255,0.35); }
+  body:has(.contact-bar) { padding-bottom: 74px; }
+  body:has(.contact-bar) .fabs { display: none; }
+  body.cookie-visible .contact-bar { display: none; }
+}
 .cookie-banner {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--ink); color: var(--lilac-light);
   padding: 20px 0; box-shadow: 0 -10px 30px rgba(0,0,0,0.25);

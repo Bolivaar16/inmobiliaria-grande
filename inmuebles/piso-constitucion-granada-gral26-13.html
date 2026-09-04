@@ -249,6 +249,7 @@
         <div>
           <p class="detail-head__price">1.300 €/mes</p>
           <div class="detail-actions">
+            <a class="btn btn--violet btn--sm detail-actions__visit" href="#visita">Solicitar visita</a>
             <button class="pill" type="button" data-fav="29776364" aria-pressed="false">♡ Guardar</button>
             <button class="pill" type="button" data-dismiss="29776364" aria-pressed="false">Descartar</button>
             <button class="pill" type="button" data-share="https://www.inmobiliariagrande.com/inmuebles/piso-constitucion-granada-gral26-13.html" data-share-title="Piso en Constitucion, Granada">Compartir</button>
@@ -357,7 +358,7 @@
         </div>
 
         <div class="panel" id="visita">
-          <h2>Reserve una visita</h2>
+          <h2>Solicite una visita</h2>
           <p class="panel__sub">Elija día y franja; le confirmamos por teléfono en el mismo día laborable.</p>
           <form class="form" method="POST" name="visita" data-netlify="true" data-netlify-honeypot="bot-field" action="../gracias.html">
             <input type="hidden" name="form-name" value="visita">
@@ -393,7 +394,7 @@
               <label for="v-consent">He leído y acepto la <a href="../privacidad.html">política de privacidad</a>.</label>
             </div>
             <p class="field__error" id="v-consent-error" hidden></p>
-            <button class="btn btn--violet btn--block" type="submit">Pedir visita</button>
+            <button class="btn btn--violet btn--block" type="submit">Solicitar visita</button>
           </form>
         </div>
 
@@ -455,6 +456,12 @@
       </aside>
     </div>
   </section>
+
+  <nav class="contact-bar" aria-label="Contacto rápido">
+    <a class="btn btn--ghost-light" href="tel:+34958252461">Llamar</a>
+    <a class="btn btn--wa" href="https://wa.me/34622350918?text=Hola%2C%20me%20interesa%20la%20referencia%20GRAL26-13" rel="noopener">WhatsApp</a>
+    <a class="btn btn--violet" href="#visita">Solicitar visita</a>
+  </nav>
 </main>
 <footer class="site-footer">
   <div class="container">

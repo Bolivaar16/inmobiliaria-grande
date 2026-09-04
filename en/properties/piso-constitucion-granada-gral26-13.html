@@ -249,6 +249,7 @@
         <div>
           <p class="detail-head__price">1,300 €/month</p>
           <div class="detail-actions">
+            <a class="btn btn--violet btn--sm detail-actions__visit" href="#visita">Request a viewing</a>
             <button class="pill" type="button" data-fav="29776364" aria-pressed="false">♡ Save</button>
             <button class="pill" type="button" data-dismiss="29776364" aria-pressed="false">Dismiss</button>
             <button class="pill" type="button" data-share="https://www.inmobiliariagrande.com/en/properties/piso-constitucion-granada-gral26-13.html" data-share-title="Flat in Constitucion, Granada">Share</button>
@@ -357,7 +358,7 @@
         </div>
 
         <div class="panel" id="visita">
-          <h2>Book a viewing</h2>
+          <h2>Request a viewing</h2>
           <p class="panel__sub">Choose a day and time slot; we will confirm by phone the same working day.</p>
           <form class="form" method="POST" name="visita" data-netlify="true" data-netlify-honeypot="bot-field" action="../../en/thanks.html">
             <input type="hidden" name="form-name" value="visita">
@@ -393,7 +394,7 @@
               <label for="v-consent">I have read and accept the <a href="../../privacidad.html" lang="es">privacy policy (Spanish)</a>.</label>
             </div>
             <p class="field__error" id="v-consent-error" hidden></p>
-            <button class="btn btn--violet btn--block" type="submit">Request viewing</button>
+            <button class="btn btn--violet btn--block" type="submit">Request a viewing</button>
           </form>
         </div>
 
@@ -455,6 +456,12 @@
       </aside>
     </div>
   </section>
+
+  <nav class="contact-bar" aria-label="Quick contact">
+    <a class="btn btn--ghost-light" href="tel:+34958252461">Call</a>
+    <a class="btn btn--wa" href="https://wa.me/34622350918?text=Hello%2C%20I%27m%20interested%20in%20reference%20GRAL26-13" rel="noopener">WhatsApp</a>
+    <a class="btn btn--violet" href="#visita">Request a viewing</a>
+  </nav>
 </main>
 <footer class="site-footer">
   <div class="container">
