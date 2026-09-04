@@ -17,7 +17,16 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 
 import path from "node:path";
 
 const ROOT = process.cwd();
+/* The only place the public origin is written. Every canonical, hreflang, Open Graph
+   URL, sitemap entry and JSON-LD link derives from it; robots.txt and llms.txt must
+   agree (scripts/check.sh verifies a single host across the output). Not confirmed
+   with the client yet: change it here when the final domain is known. */
 const SITE = "https://www.inmobiliariagrande.com";
+/* Public URL of an output file. Directory indexes are addressed by their folder
+   ("/", "/en/") so the home page has one canonical form, not two. */
+function publicUrl(outRel) {
+  return `${SITE}/${outRel.replace(/(^|\/)index\.html$/, "$1")}`;
+}
 const LANGS = ["es", "en"];
 const LISTING_DIR = { es: "inmuebles", en: "en/properties" };
 
@@ -307,11 +316,12 @@ function wrap(lang, outRel, meta, body, extra = {}) {
     ROOT: root,
     PAGE_TITLE: escAttr(meta.title),
     META_DESC: escAttr(meta.desc),
-    CANONICAL: `${SITE}/${outRel}`,
-    HREFLANG_ES: `${SITE}/${es}`,
-    HREFLANG_EN: `${SITE}/${en}`,
+    SITE,
+    CANONICAL: publicUrl(outRel),
+    HREFLANG_ES: publicUrl(es),
+    HREFLANG_EN: publicUrl(en),
     OG_IMAGE: meta.og ? `${SITE}/${meta.og}` : `${SITE}/assets/brand/icon-512.png`,
-    EXTRA_HEAD: (meta.extraHead || "").split("{{ROOT}}").join(root),
+    EXTRA_HEAD: (meta.extraHead || "").split("{{ROOT}}").join(root).split("{{SITE}}").join(SITE),
     HEADER_CLASS: meta.nav === "home" ? "site-header--overlay" : "",
     SELF_URL: root + outRel,
     ALT_URL: root + altRel,
@@ -431,7 +441,7 @@ function jsonLd(listing, desc, pageUrl) {
     offers: {
       "@type": "Offer", price: listing.price, priceCurrency: "EUR",
       availability: listing.status === "reservado" ? "https://schema.org/LimitedAvailability" : "https://schema.org/InStock",
-      seller: { "@type": "RealEstateAgent", name: "Inmobiliaria Grande", url: `${SITE}/index.html`, telephone: "+34958252461" },
+      seller: { "@type": "RealEstateAgent", name: "Inmobiliaria Grande", url: publicUrl("index.html"), telephone: "+34958252461" },
     },
   };
   return `<script type="application/ld+json">\n${JSON.stringify(data, null, 2)}\n</script>`;
@@ -439,7 +449,7 @@ function jsonLd(listing, desc, pageUrl) {
 function buildListing(listing, lang) {
   const outRel = listingUrl(listing, lang);
   const root = rootPrefix(outRel);
-  const pageUrl = `${SITE}/${outRel}`;
+  const pageUrl = publicUrl(outRel);
   const { body, note, first } = descriptionHtml(listing, lang);
   const sp = specs(listing, lang);
   const title = lang === "es"
@@ -475,9 +485,9 @@ function buildListing(listing, lang) {
 /* ------------------------------------------------------------ sitemap */
 function sitemapXml(entries) {
   const url = (e) => `  <url>
-    <loc>${SITE}/${e.self}</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="${SITE}/${e.es}"/>
-    <xhtml:link rel="alternate" hreflang="en" href="${SITE}/${e.en}"/>
+    <loc>${publicUrl(e.self)}</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="${publicUrl(e.es)}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${publicUrl(e.en)}"/>
   </url>`;
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">

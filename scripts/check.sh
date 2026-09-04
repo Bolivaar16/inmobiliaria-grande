@@ -54,6 +54,11 @@ done
 echo "== secrets"
 grep -rIl -E 'api_key|apikey|secret|token=|password=|PRIVATE KEY' --include='*.html' --include='*.js' --include='*.css' --include='*.json' --include='*.toml' . 2>/dev/null | grep -v node_modules | grep . && fail=1 || true
 
+echo "== one public origin (build.mjs SITE) across pages, sitemap, robots and llms"
+hosts=$(grep -rhoE 'https?://[^/"'"'"' <>]*inmobiliariagrande[^/"'"'"' <>]*' $pages sitemap.xml robots.txt llms.txt | sort -u)
+[ "$(echo "$hosts" | wc -l)" -eq 1 ] || { echo "$hosts" | sed 's/^/  /'; fail=1; }
+grep -l 'rel="canonical" href="[^"]*/index\.html"' $pages | sed 's/^/  canonical with index.html: /' | grep . && fail=1 || true
+
 echo "== production files"
 for f in robots.txt sitemap.xml llms.txt 404.html privacidad.html aviso-legal.html cookies.html assets/brand/favicon-32.png; do
   [ -e "$f" ] || { echo "  missing $f"; fail=1; }

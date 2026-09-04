@@ -3,7 +3,7 @@
   <url>
     <loc>https://www.inmobiliariagrande.com/aviso-legal.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/aviso-legal.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/"/>
   </url>
   <url>
     <loc>https://www.inmobiliariagrande.com/contacto.html</loc>
@@ -13,12 +13,12 @@
   <url>
     <loc>https://www.inmobiliariagrande.com/cookies.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/"/>
   </url>
   <url>
-    <loc>https://www.inmobiliariagrande.com/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+    <loc>https://www.inmobiliariagrande.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/"/>
   </url>
   <url>
     <loc>https://www.inmobiliariagrande.com/inmuebles.html</loc>
@@ -28,7 +28,7 @@
   <url>
     <loc>https://www.inmobiliariagrande.com/privacidad.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/"/>
   </url>
   <url>
     <loc>https://www.inmobiliariagrande.com/sobre-nosotros.html</loc>
@@ -51,9 +51,9 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/contact.html"/>
   </url>
   <url>
-    <loc>https://www.inmobiliariagrande.com/en/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/index.html"/>
+    <loc>https://www.inmobiliariagrande.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.inmobiliariagrande.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.inmobiliariagrande.com/en/"/>
   </url>
   <url>
     <loc>https://www.inmobiliariagrande.com/en/properties.html</loc>
