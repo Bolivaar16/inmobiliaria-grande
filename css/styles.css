@@ -160,10 +160,6 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
   font-weight: 600; color: var(--violet); border-bottom: 1px solid currentColor; padding-bottom: 2px;
 }
 .link-more:hover { color: var(--ink); }
-.to-confirm {
-  background: #FFF4D6; color: #6B4E00; padding: 0 6px; border-radius: var(--r-sm);
-  font-family: var(--font-mono); font-size: 0.85em;
-}
 
 /* ----------------------------------------------------------- buttons */
 .btn {

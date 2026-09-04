@@ -1,7 +1,8 @@
 # Datos pendientes de confirmar con el cliente
 
 Todo lo que el prototipo afirma y no está verificado lleva la marca `[DATO A CONFIRMAR]` en el
-HTML, bien visible o en un comentario junto a la cifra. Buscar en el código:
+HTML, **siempre como comentario junto al dato** (desde el 2026-09-04 ninguna marca es visible
+para el usuario; el texto se redactó sin el dato que falta). Buscar en el código:
 `grep -rn "A CONFIRMAR" src/ templates/`.
 
 ## Resuelto el 2026-09-03 (revisión con Alex)
