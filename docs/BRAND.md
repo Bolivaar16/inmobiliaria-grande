@@ -57,6 +57,9 @@ Files: `playfair-display-var.woff2` (38 KB), `libre-franklin-var.woff2` (29 KB),
 - Showcase: 1.6fr feature card with gradient veil + two horizontal side cards, then a row of four.
 - Family block (from direction 1a): dark `--ink-2` band, serif heading "Una inmobiliaria de
   familia, no una franquicia", 2×2 stats separated by 1 px lines.
+- Mobile contact bar (`.contact-bar`, ≤640 px, listing detail / results / sell): fixed to the
+  bottom on `--deep`, labelled buttons — ghost-light call, `.btn--wa` WhatsApp green (#25D366),
+  violet page action. It replaces the floating buttons on those pages.
 - Ornament: three rotated squares (diamonds) in `--violet-soft`, footer only. No tiled wallpaper.
 
 ## Logo

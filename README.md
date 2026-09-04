@@ -34,6 +34,7 @@ The full system (palette, type, components) is documented in `docs/BRAND.md`. `d
 - **docs/BRAND.md** — current design system (tokens, type, components, logo, contact data).
 - **docs/DESIGN-PLAN.md** — original plan; superseded on visuals, see the note at the top.
 - **docs/PENDIENTES.md** — every `[DATO A CONFIRMAR]` / `[FOTO A CONFIRMAR]` in the site, listed with why.
+- **docs/ROADMAP.md** — the 40 proposed improvements (external review, 2026-09-04) with a verdict each: done, worth it, needs the client, or not worth it and why.
 - **docs/audit/redesign/** — Lighthouse JSON and full-page screenshots (1440 + 375 px, ES + EN) from the last verification pass.
 - **docs/informe/**, **docs/audit/evidence.md** — the original audit report and evidence on the *current* live site (not this prototype).
 - **docs/competidores/** — competitor study; its "opportunities" section drove the "Desde 1970" positioning and copy.
@@ -103,4 +104,4 @@ This data and the brand materials belong to Inmobiliaria Grande and are protecte
 
 ## Known placeholders
 
-`docs/PENDIENTES.md` lists every `[DATO A CONFIRMAR]` / `[FOTO A CONFIRMAR]` marker in the site — invented figures from the design mockup (300 properties, 17 languages, 3 generations, 48-hour valuation), team photos, legal entity data, and the office hours (sourced from a directory, not the client). Verify all of them before deployment approval; `grep -rn "A CONFIRMAR" src/ templates/` finds every instance in the sources.
+`docs/PENDIENTES.md` lists every `[DATO A CONFIRMAR]` / `[FOTO A CONFIRMAR]` marker in the site — the 48-hour valuation promise, the AI-generated hero, legal entity data, a surname and a date. Since 2026-09-04 every marker is an HTML comment next to the sentence (nothing is visible to visitors); `grep -rn "A CONFIRMAR" src/ templates/` finds every instance in the sources. Verify all of them before deployment approval.
