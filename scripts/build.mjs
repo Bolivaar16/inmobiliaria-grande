@@ -508,7 +508,7 @@ function buildListing(listing, lang) {
     ? `${listing.type} en ${zoneOf(listing)}, ${listing.city} · ${fmtInt(listing.price, "es")} € | Inmobiliaria Grande, Granada`
     : `${typeName(listing, "en")} in ${zoneOf(listing)}, ${listing.city} · €${fmtInt(listing.price, "en")} | Inmobiliaria Grande, Granada`;
   const desc = lang === "es"
-    ? `${listing.type} en ${zoneOf(listing)}, ${listing.city}: ${sp.join(", ")} por ${fmtInt(listing.price, "es")} €. Ref. ${listing.ref}. Concierta tu visita con Inmobiliaria Grande, desde 1970.`
+    ? `${listing.type} en ${zoneOf(listing)}, ${listing.city}: ${sp.join(", ")} por ${fmtInt(listing.price, "es")} €. Ref. ${listing.ref}. Concierte su visita con Inmobiliaria Grande, desde 1970.`
     : `${typeName(listing, "en")} in ${zoneOf(listing)}, ${listing.city}: ${sp.join(", ")} for €${fmtInt(listing.price, "en")}. Ref. ${listing.ref}. Book a viewing with Inmobiliaria Grande, since 1970.`;
   const meta = { title, desc, nav: "buscar", alt: listingUrl(listing, lang === "es" ? "en" : "es"), og: listing.photos[0].src, extraHead: jsonLd(listing, lang, cleanText(first), pageUrl, root) };
   const tpl = read(`templates/listing.${lang}.html`);
