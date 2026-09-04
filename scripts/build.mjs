@@ -330,7 +330,10 @@ function wrap(lang, outRel, meta, body, extra = {}) {
     HREFLANG_EN: publicUrl(en),
     OG_IMAGE: meta.og ? `${SITE}/${meta.og}` : `${SITE}/assets/brand/icon-512.png`,
     EXTRA_HEAD: (meta.extraHead || "").split("{{ROOT}}").join(root).split("{{SITE}}").join(SITE),
-    HEADER_CLASS: meta.nav === "home" ? "site-header--overlay" : "",
+    // Overlay belongs to pages that open with the dark full-bleed hero, not to whichever
+    // nav item is active: 404 also marks "home" but sits on a light background, where a
+    // transparent header renders white text on white.
+    HEADER_CLASS: meta.headerOverlay ? "site-header--overlay" : "",
     SELF_URL: root + outRel,
     ALT_URL: root + altRel,
     ...navTokens(meta.nav),
