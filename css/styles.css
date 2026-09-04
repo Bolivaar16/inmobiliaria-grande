@@ -139,9 +139,6 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
   padding-bottom: calc(var(--section) * 0.75);
 }
 .section--light { background: var(--white); }
-.section--dark { background: var(--ink-2); color: var(--lilac-light); }
-.section--dark h1, .section--dark h2, .section--dark h3 { color: var(--paper); }
-.stack > * + * { margin-top: 1rem; }
 /* Only survives where it is a real lead-in sentence into the heading, not a label
    restating it. Set in the body face, sentence case, so it reads as prose. */
 .eyebrow {
@@ -149,12 +146,10 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
   color: var(--text-muted);
   margin: 0 0 0.35rem;
 }
-.section--dark .eyebrow { color: var(--violet-soft); }
 /* --violet fails AA on the dark ink tones (2.9:1); every dark box below is not
    .section--dark (it is a light-section child), so it needs its own override. */
 .family .eyebrow, .cta-band .eyebrow, .alert-box .eyebrow, .panel--ink .eyebrow { color: var(--lilac); }
 .lead { font-size: 1.125rem; color: var(--text-muted); max-width: 62ch; }
-.section--dark .lead { color: var(--lilac-light); }
 .section-head {
   display: flex; align-items: flex-end; justify-content: space-between; gap: 24px;
   margin-bottom: 30px; flex-wrap: wrap;
@@ -275,10 +270,20 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
   background-color: var(--ink-3);
   background-image: repeating-linear-gradient(115deg, #2A1F52 0 16px, #31255E 16px 32px);
 }
-.hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hero__veil {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(15,11,30,0.86) 0%, rgba(15,11,30,0.35) 40%, rgba(15,11,30,0.92) 100%);
+.hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 58% center; filter: saturate(0.9) brightness(0.78); }
+.hero__veil { position: absolute; inset: 0; }
+.hero__veil--strong {
+  /* Mobile: the copy spans the full width, so only a vertical veil works (denser across
+     the text band). From 900px a second, lateral veil darkens the left column and leaves
+     the view on the right clear. Both measured against WCAG AA (see docs/BRAND.md). */
+  background: linear-gradient(180deg, rgba(15,11,30,0.86) 0%, rgba(23,17,44,0.72) 34%, rgba(20,15,38,0.80) 62%, rgba(15,11,30,0.93) 100%);
+}
+@media (min-width: 900px) {
+  .hero__veil--strong {
+    background:
+      linear-gradient(100deg, rgba(15,11,30,0.90) 0%, rgba(15,11,30,0.78) 34%, rgba(15,11,30,0.10) 66%, rgba(15,11,30,0) 100%),
+      linear-gradient(180deg, rgba(15,11,30,0.82) 0%, rgba(35,26,69,0.42) 45%, rgba(15,11,30,0.92) 100%);
+  }
 }
 .hero__inner {
   position: relative; padding-top: calc(var(--header-h) + 40px); padding-bottom: 56px;
@@ -290,9 +295,6 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 }
 .hero h1 { color: #fff; margin-bottom: 20px; font-size: clamp(2.4rem, 5.6vw, 4.75rem); line-height: 1.02; }
 .hero__lead { font-size: 1.15rem; line-height: 1.55; color: var(--lilac-light); max-width: 600px; margin: 0; }
-.hero__note {
-  font-family: var(--font-mono); font-size: 0.7rem; color: rgba(255,255,255,0.45); white-space: nowrap;
-}
 
 /* ------------------------------------------------------------ search */
 .searchbar-wrap { position: relative; z-index: 5; transform: translateY(50%); margin-top: -1px; }
@@ -376,14 +378,12 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .feature-card__price { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.4rem, 2.2vw, 1.9rem); white-space: nowrap; }
 .side-card { display: flex; gap: 18px; background: #fff; border-radius: var(--r-md); padding: 14px; align-items: center; flex: 1; color: inherit; box-shadow: var(--shadow-card); }
 .side-card:hover { color: inherit; }
-.side-card__media { width: 170px; align-self: stretch; min-height: 150px; border-radius: 5px; overflow: hidden; background: var(--lilac-pale); flex: 0 0 170px; }
+.side-card__media { position: relative; width: 170px; align-self: stretch; min-height: 150px; border-radius: 5px; overflow: hidden; background: var(--lilac-pale); flex: 0 0 170px; }
 .side-card__media img { width: 100%; height: 100%; object-fit: cover; }
 .side-card__body { display: flex; flex-direction: column; gap: 6px; }
 .side-card h3 { font-size: 1.2rem; margin: 0; }
 .side-card__price { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 22px; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 
 /* -------------------------------------------------------------- bands */
 .family {
@@ -421,7 +421,6 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
   display: flex; align-items: flex-end; padding: 12px;
 }
 .person__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.person__photo .to-confirm { position: relative; font-size: 0.7rem; }
 .person__name { font-size: 1.1rem; font-weight: 700; margin: 0; font-family: var(--font-body); color: var(--ink); }
 .person__role { font-size: 0.875rem; color: var(--text-muted); margin: 0; }
 .person__role a { text-decoration: underline; text-underline-offset: 2px; }
@@ -534,7 +533,6 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .mortgage__out { background: var(--paper); border-radius: var(--r-md); padding: 16px; margin-top: 14px; }
 .mortgage__num { font-family: var(--font-display); font-weight: 700; font-size: 1.9rem; color: var(--ink); display: block; }
 .mortgage__note { font-size: 0.78rem; color: var(--text-soft); margin: 6px 0 0; }
-.share-row { display: flex; gap: 8px; flex-wrap: wrap; }
 
 /* ------------------------------------------------------------- forms */
 .form { display: flex; flex-direction: column; gap: 18px; }
@@ -549,13 +547,11 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--violet); outline: none; box-shadow: 0 0 0 3px rgba(123,79,209,0.2); }
 .field [aria-invalid="true"] { border-color: var(--danger); }
 .field__error { color: var(--danger); font-size: 0.85rem; margin: 0; }
-.field__hint { color: var(--text-soft); font-size: 0.8rem; margin: 0; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .req { color: var(--text-soft); font-weight: 400; letter-spacing: 0; text-transform: none; }
 .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; color: var(--text-muted); }
 .consent input { width: 18px; height: 18px; accent-color: var(--violet); margin: 3px 0 0; flex: 0 0 18px; }
 .form-alert { background: #FDECEA; color: var(--danger); border-radius: var(--r-sm); padding: 12px 14px; font-size: 0.9rem; }
-.form-ok { background: #E6F4EC; color: var(--ok); border-radius: var(--r-sm); padding: 12px 14px; font-size: 0.9rem; }
 .hp { position: absolute; left: -9999px; }
 .radio-pills { display: flex; gap: 8px; flex-wrap: wrap; }
 .radio-pills label { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid var(--line); border-radius: var(--r-pill); font-size: 0.875rem; cursor: pointer; background: #fff; }
@@ -623,24 +619,8 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 body.cookie-visible .fabs { bottom: 120px; }
 .notfound { text-align: center; padding: var(--section) 0; }
 .notfound__code { font-family: var(--font-display); font-size: clamp(5rem, 14vw, 10rem); line-height: 1; color: var(--lilac-pale); font-weight: 700; }
-.hero-photo-note { position: absolute; right: var(--gutter); top: calc(var(--header-h) + 12px); font-family: var(--font-mono); font-size: 0.68rem; color: rgba(255,255,255,0.4); }
 
-/* ------------------------------------------------ hero photo, map, group band, team quotes */
-.hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 58% center; filter: saturate(0.9) brightness(0.78); }
-.hero__veil--strong {
-  /* Mobile: the copy spans the full width, so only a vertical veil works (denser across
-     the text band). From 900px a second, lateral veil darkens the left column and leaves
-     the view on the right clear. Both measured against WCAG AA (see docs/BRAND.md). */
-  background: linear-gradient(180deg, rgba(15,11,30,0.86) 0%, rgba(23,17,44,0.72) 34%, rgba(20,15,38,0.80) 62%, rgba(15,11,30,0.93) 100%);
-}
-@media (min-width: 900px) {
-  .hero__veil--strong {
-    background:
-      linear-gradient(100deg, rgba(15,11,30,0.90) 0%, rgba(15,11,30,0.78) 34%, rgba(15,11,30,0.10) 66%, rgba(15,11,30,0) 100%),
-      linear-gradient(180deg, rgba(15,11,30,0.82) 0%, rgba(35,26,69,0.42) 45%, rgba(15,11,30,0.92) 100%);
-  }
-}
-.side-card__media { position: relative; }
+/* ------------------------------------------------ map, group band, team quotes */
 .side-card .badge { top: 10px; left: 10px; font-size: 0.62rem; padding: 5px 10px; }
 .range--stack { grid-template-columns: 1fr; }
 .range input { min-width: 0; width: 100%; border: 1px solid var(--line); border-radius: var(--r-sm); padding: 10px 12px; background: #fff; }
@@ -715,8 +695,6 @@ body.cookie-visible .fabs { bottom: 120px; }
   .group-band { grid-template-columns: 1fr; }
   .group-band__img { min-height: 220px; max-height: 320px; }
   .reviews { grid-template-columns: 1fr; gap: 30px; }
-}
-@media (max-width: 1100px) {
   .nav-toggle { display: inline-flex; }
   .nav {
     display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--deep);
@@ -731,21 +709,20 @@ body.cookie-visible .fabs { bottom: 120px; }
   .nav__phone { flex: 1; text-align: center; }
   .site-header--overlay { background: var(--deep); margin-bottom: 0; }
   .hero__inner { padding-top: 48px; flex-direction: column; align-items: flex-start; }
-  .hero__note { display: none; }
   .showcase { grid-template-columns: 1fr; }
   .feature-card { min-height: 360px; }
   .family, .cta-band, .contact-grid, .detail-layout, .alert-box { grid-template-columns: 1fr; }
   .cta-band .actions { justify-content: flex-start; }
   .listing-layout { grid-template-columns: 1fr; }
   .filters { position: static; }
-  .steps, .grid-3 { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
   .aside { position: static; }
   .gallery__thumbs { grid-template-columns: repeat(4, 1fr); }
 }
 @media (max-width: 640px) {
   :root { --header-h: 68px; }
   .brand__emblem { width: 38px; height: 38px; }
-  .grid-4, .results, .team, .grid-2, .site-footer__grid, .family__stats, .energy__grid, .field-row { grid-template-columns: 1fr; }
+  .grid-4, .results, .team, .site-footer__grid, .family__stats, .energy__grid, .field-row { grid-template-columns: 1fr; }
   .searchbar { grid-template-columns: 1fr; padding: 10px; }
   .side-card { flex-direction: column; align-items: stretch; }
   .side-card__media { width: 100%; flex-basis: auto; aspect-ratio: 3 / 2; }
