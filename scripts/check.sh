@@ -60,7 +60,7 @@ for f in robots.txt sitemap.xml llms.txt 404.html privacidad.html aviso-legal.ht
 done
 
 echo "== js size"
-wc -c js/main.js
+cat js/main.js js/modules/*.js | wc -c
 
 [ "$fail" -eq 0 ] && echo "ALL CHECKS PASSED" || echo "CHECKS FAILED"
 exit $fail
