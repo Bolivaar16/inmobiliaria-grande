@@ -426,25 +426,67 @@ function descriptionHtml(listing, lang) {
   }
   return { body, note, first: main[0] || "" };
 }
-function jsonLd(listing, desc, pageUrl) {
-  const data = {
-    "@context": "https://schema.org",
-    "@type": "RealEstateListing",
-    name: listing.title,
-    url: pageUrl,
-    description: desc,
-    image: listing.photos.map((p) => `${SITE}/${p.src}`),
+/* schema.org: the listing is a RealEstateListing *about* an Accommodation (Apartment
+   or House), with the sale or rental as its Offer. Rooms, surfaces and year go on the
+   accommodation, where the vocabulary defines them, not on the listing. */
+const SCHEMA_TYPE = { "Piso": "Apartment", "Ático Dúplex": "Apartment", "Ático": "Apartment", "Casa": "House", "Casa de campo": "House", "Pareado": "House", "Chalet": "House" };
+function pricePerM2(listing) {
+  if (listing.operation !== "venta" || !(listing.surface_built_m2 > 0)) return null;
+  return Math.round(listing.price / listing.surface_built_m2);
+}
+function jsonLd(listing, lang, desc, pageUrl, root) {
+  const ppm2 = pricePerM2(listing);
+  const about = {
+    "@type": SCHEMA_TYPE[listing.type] || "Accommodation",
+    name: listingTitle(listing, lang),
     numberOfRooms: listing.rooms,
     numberOfBathroomsTotal: listing.baths,
     floorSize: { "@type": "QuantitativeValue", value: listing.surface_built_m2, unitCode: "MTK" },
     address: { "@type": "PostalAddress", addressLocality: listing.city, addressRegion: "Granada", addressCountry: "ES" },
-    offers: {
-      "@type": "Offer", price: listing.price, priceCurrency: "EUR",
-      availability: listing.status === "reservado" ? "https://schema.org/LimitedAvailability" : "https://schema.org/InStock",
-      seller: { "@type": "RealEstateAgent", name: "Inmobiliaria Grande", url: publicUrl("index.html"), telephone: "+34958252461" },
-    },
   };
-  return `<script type="application/ld+json">\n${JSON.stringify(data, null, 2)}\n</script>`;
+  if (listing.year_built != null) about.yearBuilt = listing.year_built;
+  if (listing.plot_m2 != null) about.lotSize = { "@type": "QuantitativeValue", value: listing.plot_m2, unitCode: "MTK" };
+  if (listing.features && listing.features.length) {
+    about.amenityFeature = listing.features.map((f) => ({ "@type": "LocationFeatureSpecification", name: f, value: true }));
+  }
+  const offer = {
+    "@type": "Offer",
+    url: pageUrl,
+    price: listing.price,
+    priceCurrency: "EUR",
+    availability: listing.status === "reservado" ? "https://schema.org/LimitedAvailability" : "https://schema.org/InStock",
+    businessFunction: listing.operation === "alquiler" ? "http://purl.org/goodrelations/v1#LeaseOut" : "http://purl.org/goodrelations/v1#Sell",
+    seller: { "@type": "RealEstateAgent", name: "Inmobiliaria Grande", url: publicUrl("index.html"), telephone: "+34958252461" },
+  };
+  if (ppm2 != null) {
+    offer.priceSpecification = { "@type": "UnitPriceSpecification", price: ppm2, priceCurrency: "EUR", unitCode: "MTK", referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MTK" } };
+  }
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    name: listingTitle(listing, lang),
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    identifier: listing.ref,
+    inLanguage: lang,
+    description: desc,
+    image: listing.photos.map((p) => `${SITE}/${p.src}`),
+    about,
+    offers: offer,
+  };
+  const home = lang === "es" ? "Inicio" : "Home";
+  const list = lang === "es" ? "Inmuebles" : "Properties";
+  const crumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: home, item: publicUrl(lang === "es" ? "index.html" : "en/index.html") },
+      { "@type": "ListItem", position: 2, name: list, item: publicUrl(lang === "es" ? "inmuebles.html" : "en/properties.html") },
+      { "@type": "ListItem", position: 3, name: listingTitle(listing, lang), item: pageUrl },
+    ],
+  };
+  const block = (d) => `<script type="application/ld+json">\n${JSON.stringify(d, null, 2)}\n</script>`;
+  return block(data) + "\n" + block(crumbs);
 }
 function buildListing(listing, lang) {
   const outRel = listingUrl(listing, lang);
@@ -458,7 +500,7 @@ function buildListing(listing, lang) {
   const desc = lang === "es"
     ? `${listing.type} en ${zoneOf(listing)}, ${listing.city}: ${sp.join(", ")} por ${fmtInt(listing.price, "es")} €. Ref. ${listing.ref}. Concierta tu visita con Inmobiliaria Grande, desde 1970.`
     : `${typeName(listing, "en")} in ${zoneOf(listing)}, ${listing.city}: ${sp.join(", ")} for €${fmtInt(listing.price, "en")}. Ref. ${listing.ref}. Book a viewing with Inmobiliaria Grande, since 1970.`;
-  const meta = { title, desc, nav: "buscar", alt: listingUrl(listing, lang === "es" ? "en" : "es"), og: listing.photos[0].src, extraHead: jsonLd(listing, cleanText(first), pageUrl) };
+  const meta = { title, desc, nav: "buscar", alt: listingUrl(listing, lang === "es" ? "en" : "es"), og: listing.photos[0].src, extraHead: jsonLd(listing, lang, cleanText(first), pageUrl, root) };
   const tpl = read(`templates/listing.${lang}.html`);
   const tokens = {
     H1: esc(listingTitle(listing, lang)),
